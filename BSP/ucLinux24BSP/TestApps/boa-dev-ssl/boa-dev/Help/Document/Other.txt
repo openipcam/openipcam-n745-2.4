@@ -1,0 +1,41 @@
+1.
+HTTPSERVER StartThttpdEx(char *pcServerRoot,
+				int *piPort,
+				int iKeepAliveTimeout,
+				int iKeepAliveMax,
+				int iMaxConnections,
+				int (*pOnHttpInit)(HTTPSERVER hServer),
+				REQUEST_CALLBACK_PFUN pOnRequestBegin);
+	Description:
+		Start http service.
+	Param:
+		pcServerRoot - base directory for http server;
+		piPort - the array for listening port, should be terminated with 0;
+		iKeepAliveTimeout - timeout value in second in keep-alive mode;
+		iKeepAliveMax - maximum requests on each tcp connection in keep-alive mode;
+		iMaxConnections - maximum clients on each listen port at one time;
+		pOnHttpInit - callback function when http service initilized;
+		pOnRequestBegin - callback function on the beginning of a http request;
+
+
+2.
+HTTPSERVER StartThttpd(char *pcServerRoot,
+				int iPort,
+				int iKeepAliveTimeout,
+				int iKeepAliveMax,
+				int iMaxConnections,
+				int (*pOnHttpInit)(HTTPSERVER hServer),
+				REQUEST_CALLBACK_PFUN pOnRequestBegin);
+	Description:
+		Same as:
+			int aiPort[2];
+			aiPort[0] = iPort;
+			aiPort[1] = 0;
+			StartThttpdEx(pcServerRoot,
+				iPort,
+				iKeepAliveTimeout,
+				iKeepAliveMax,
+				iMaxConnections,
+				pOnHttpInit,
+				pOnRequestBegin);
+			

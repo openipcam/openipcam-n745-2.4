@@ -1,0 +1,97 @@
+Datei:      COBRA5272-FAQ_de.txt
+Ort:        uClinux-dist/Documentation/COBRA5272/de/
+Autor:      Heiko Degenhardt (linux@sentec-elektronik.de)
+Inhalt:     Haeufig gestellte Fragen zum Board.
+Version:    v01.00
+Datum:      Fri Mar 22 15:34:04 CET 2002
+Lizenz:     Dieses Dokument steht unter der GNU GPL
+            (siehe uClinux-dist/COPYING)
+______________________________________________________________________
+
+CHANGES
+020322   v01.00 Erstellung
+         (hede)
+______________________________________________________________________
+
+ALLGEMEIN
+
+Q: Was heisst "COBRA5272"?
+A: COBRA steht fuer "COldfire Board for Rapid Applications". Die 5272
+   zeigt an, dass dieses COBRA-Board auf dem Motorola ColdFire 5272
+   basiert.
+
+Q: Wo kann man das Board bestellen? Wo ist die Homepage?
+A: Der Vertrieb fuer das Board erfolgt ueber den ELEKTRONIKLADEN. Die 
+   Seite fuer Bestellungen und Preise findet man im Internet unter
+   http://www.elektronikladen.de/cobra5272.html.
+   Die Homepage fuer das Board (mit Software, Dokumentation u.s.w.) 
+   ist http://www.sentec-elektronik.de/cobra/.
+
+Q: Ok, ich habe ein nun ein Board. Was sind die ersten Schritte, um
+   zu einem funktionierenden Image fuer dieses zu kommen?
+A: Wenn Sie die uClinux-Sourcen entpackt haben, lesen Sie bitte
+   ./Documentation/COBRA5272/de/COBRA5272-Getting-started_de.txt
+   fuer eine kurze Einfuehrung.
+
+KOMMUNIKATION
+
+Q: Was fuer ein Kabel kann ich fuer die Kommunikation ueber die
+   serielle Schnittstelle des Boards verwenden?
+A: Man verwendet ein "normales" serielles Kabel (kein sogenanntes 
+   "Nullmodem-Kabel"!).
+
+Q: Welche Standartwerte fuer die Kommunikation sind eingestellt?
+A: Fuer die serielle Schnittstelle: 19200 Baud, 8n1
+   Server-IP:  192.168.100.1
+   Client-IP:  192.168.100.2
+   Netzmaske:  255.255.255.0
+   Gateway-IP: 0.0.0.0
+   Ethernet:   00:00:00:00:00:01 
+
+Q: Wo kann man die Befehle veraendern, die beim Start des Kernels
+   abgearbeitet werden (ifconfig, mount...)?
+A: Beim Start des uClinux-Kernels werden die Befehle der Datei
+   uClinux-dist/vendors/senTec/romfs/etc/rc ausgefuehrt. In ihr
+   koennen z. B. die IP-Adresse, Netzmaske, die mount-Optionen etc.
+   eingestellt werden.
+   (HINWEIS: Fuer eine Beschreibung der Befehle sei auf die Manual-
+   Seiten verwiesen, z. B. "man ifconfig").
+
+FEHLER/PROBLEME
+
+Q: Das Board resettet immer, was tun?
+A: Hier sind mehrere Punkte zu ueberpruefen:
+   a) Strombegrenzung erhoehen:
+   Das Netztteil sollte bei 6V etwa 500mA zur Verfuegung stellen
+   (bei Starterkits mit Laengsregler eventuell auch die Versorgungs-
+   spannung mal auf 7.5V erhoehen).
+
+   b) Spannung messen:
+   Bei Starterkit-Boards befindet sich am oberen Rand (auf der
+   Seite der Betriebsspannungszufuehrung) eine Leuchtdiodenleiste
+   (D3..D10) und links daneben eine Steckerleiste. Hier fuehren
+   die oberen Kontakte plus, die unteren Masse. Die Spannung
+   zwischen diesen muss >3.15V sein.
+
+Q: "make" bringt einen Fehler, ueber eine ungueltige Referenz zu
+   "del_mtd_partitions"?
+A: CONFIG_MTD_PARTITIONS in der Kernel-Config einschalten!
+
+Q: Nach Eingabe von "make dep" oder "make" kommen ploetzlich ganz
+   viele Meldungen. Wie kann man die ansehen?
+A: Es besteht die Moeglichkeit, die Ausgaben dieser Befehle in eine
+   Datei umzuleiten. Dazu ruft man z. B. auf:
+   "make 2>&1 | tee errs".
+   Hier werden die Ausgaben fuer Meldungen und Fehler an das Programm
+   "tee" uebergeben (ueber eine sog. "Pipe" mit dem Symbol "|"),
+   welches sie in eine Datei "errs" schreibt. Diese kann man sich dann
+   z. B. mit "less errs" ansehen.
+   
+FEEDBACK
+
+Hinweise, Kritik und Ideen zu dieser FAQ bitte per EMail an
+linux@sentec-elektronik.de.
+
+______________________________________________________________________
+(c) 2002, senTec Elektronik GmbH, Heiko Degenhardt
+

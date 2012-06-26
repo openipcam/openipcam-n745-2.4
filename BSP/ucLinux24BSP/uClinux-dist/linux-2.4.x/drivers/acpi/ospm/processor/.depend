@@ -1,0 +1,26 @@
+pr.o: pr.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/pr.h
+pr_osl.o: pr_osl.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/pr.h
+prperf.o: prperf.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/pr.h
+prpower.o: prpower.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/pr.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/smp.h)

@@ -1,0 +1,393 @@
+#!/usr/bin/perl
+
+use lib '/afs/dcas.ucdavis.edu/pkg/common/perl_modules';
+use getValues;
+use SNMP;
+use DBI;
+use Net::SMTP;
+init_mib;
+
+#===========================================================================
+#  Global defines
+#===========================================================================
+
+$hostname = 'localhost';          # Host that serves the mSQL Database
+$dbname = 'snmp';                 # mySQL Database name
+$smtpserver = 'localhost';
+$smtpfrom   = 'UCD-SNMP Manager <wjhardaker@ucdavis.edu>';
+$doit = 1;
+$somehosts = 0;
+
+sub usage {
+    print "$0 [-H host] [-u user] [-p password] [-l hostlist,...] [-v] [-h] [-n] [-d] <-m mibnode>\n";
+    exit 0;
+}
+
+while ($#ARGV > -1) {
+    $_ = shift @ARGV;
+    usage if (/-h/);
+    $hostname = shift if (/-H/);
+    if (/-l/) {
+	my $arg = shift;
+	my @a = split(/,/,$arg);
+	my $i;
+	$somehosts = 1;
+	foreach $i (@a) {
+	    $dohost{$i} = 1;
+	}
+    }
+    $user = shift if (/-u/);
+    $pass = shift if (/-p/);
+    $verbose = 1 if (/-v/);
+    $delete = 1 if (/-d/);
+    $doit = 0 if (/-n/);
+}
+
+#===========================================================================
+# Connect to the mSQL database with the appropriate driver
+( $dbh = DBI->connect("DBI:mysql:database=$dbname;host=$hostname", $user, $pass))
+    or die "\tConnect not ok: $DBI::errstr\n";
+
+#===========================================================================
+# Get host records from database and process
+
+$cursor = getcursor("SELECT distinct host FROM hosttables");
+nexthost: while (  $hostrow = $cursor->fetchrow_hashref ) {
+
+    my $host = $hostrow->{'host'};
+
+    next if ($somehosts && !defined($dohost{$host}));
+
+    #set up the session
+    print " starting $host\n" if ($verbose);
+    my $x = $dbh->prepare("select groupname from hostgroups where host = '$host'");
+    my $y = $x->execute();
+    my $group;
+    my @args = ('authgroup','default');
+    print "$host...$y\n" if ($verbose);
+    if (defined($y) && "$y" ne "0E0") {
+        push @args,'authgroup',${$x->fetchrow_hashref}{'groupname'};
+    }
+    push @args,'authhost',$host;
+    print STDERR "$host: $group\n" if ($verbose);
+
+    my %authvals = getValues($dbh, @args);
+    if ($verbose) {
+	print "parms for $host:";
+	foreach my $i (keys(%authvals)) {
+	    print "$i => $authvals{$i}, ";
+	}
+	print "\n";
+    }
+
+    my $sess = new SNMP::Session (  DestHost => $host, 
+				    UseSprintValue => 1,
+				    %authvals );
+    print "Sess ($host): $sess, ref=" . ref($sess). "\n" if ($verbose);
+    if (ref ($sess) ne "SNMP::Session") {
+#	print STDERR "ack: \$sess not a SNMP::Session for $host ($!)\n";
+	hosterror("$host");
+	next nexthost;
+    }
+
+
+    # get a list of tables we want to store
+    $cmd = "SELECT * FROM hosttables where (host = '$host')";
+    print " $cmd\n" if ($verbose);
+    ( $tblh = $dbh->prepare( $cmd ) )
+	or die "\nnot ok: $DBI::errstr\n";
+    ( $tblh->execute )
+	or print( "\tnot ok: $DBI::errstr\n" );
+
+    while (  $tablelist = $tblh->fetchrow_hashref ) {
+	print "starting table $tablelist->{'tablename'}\n" if ($verbose);
+	my $mib = $SNMP::MIB{SNMP::translateObj($tablelist->{'tablename'})};
+	die "mib node $tablelist->{'tablename'} doesn't exist" if (!$mib);
+	my $children = $$mib{'children'};
+	die "children of $mib->{label} don't exist\n" if ($#{$children} == -1);
+
+	# create the table in our database if it doesn't exist.
+	if ($delete) {
+	    setuptable($tablelist->{tablename});
+	} else {
+	    ($dbh->do("show tables like \"$tablelist->{tablename}\"") eq "0E0") &&
+		setuptable($tablelist->{tablename});
+	}
+	
+	$var = 
+	    new SNMP::Varbind([SNMP::translateObj($tablelist->{'tablename'})]);
+	my $void = SNMP::translateObj($tablelist->{'tablename'});
+	my $val = $sess->getnext($var);
+	print "init err: $sess->{'ErrorStr'}\n" if ($verbose);
+	if ($sess->{'ErrorStr'} =~ /Timeout/) {
+	    print "$host timed out\n" if ($verbose);
+	    hosterror($host);
+	    next nexthost;
+	}
+	$initlabel = "";
+	print " starting $tablelist->{tablename}\n" if ($verbose);
+	my %tbl_ids;
+	while (1) {
+	    my $varlabel = $var->[$SNMP::Varbind::tag_f];
+	    print "last $host " . SNMP::translateObj($varlabel) . ": $void\n" if ($verbose && SNMP::translateObj($varlabel) !~ /^$void/);
+
+	    last if (SNMP::translateObj($varlabel) !~ /^$void/);
+	    $varlabel = SNMP::translateObj($var->[$SNMP::Varbind::tag_f]) if ($varlabel =~ /^[\.0-9]+$/);
+	    $initlabel = $varlabel if ($initlabel eq "");
+
+	    my $val = $sess->getnext($var);
+	    if ($sess->{'ErrorStr'} =~ /Timeout/) {
+		print "$host timed out\n" if ($verbose);
+		hosterror($host);
+		next nexthost;
+	    }
+	    last if ($sess->{'ErrorStr'});
+	    my $id = $var->[$SNMP::Varbind::iid_f];
+	    print "$initlabel = $varlabel\n" if ($verbose);
+	    last if ($varlabel ne $initlabel);
+	    my %vals;
+	    $tbl_ids{$id} = 1;
+	    foreach $c (@$children) {
+		my $oid = $$c{'objectID'} . "." . $id;
+		my $newvar = new SNMP::Varbind([$oid]);
+		my $val = $sess->get($newvar);
+		my $label = SNMP::translateObj($$c{'objectID'});
+		$vals{$label} = $val;
+	    }
+	    my $cmd;
+
+	    # check to see if the error previously existed and then
+	    # delete the old entry.
+	    my $olderr =
+		checkrowforerrors($tablelist->{'tablename'}, $host, $id);
+	    $dbh->do("delete from $tablelist->{tablename} where ( host = '$host'  and oidindex = '$id')");
+	    $res = $dbh->do("select * from $tablelist->{'tablename'} where ( host = '$host' and oidindex = '$id')");
+	    print "  result: $res/$\n" if ($verbose);
+	    if ($res ne "0E0" && $tablelist->{'keephistory'} != 1) {
+		$cmd = "update $tablelist->{'tablename'} set ";
+		foreach $h (keys(%vals)) {
+		    $cmd .= "$h = '$vals{$h}', ";
+		}
+		$cmd .= " updated = NULL where (host = '$host' and oidindex = '$id')";
+		
+	    } else {
+		$cmd = "insert into $tablelist->{'tablename'}(host, oidindex, " . join(", ",keys(%vals)) .
+		    ") values('$host', '$id', '" .
+			join("', '",values(%vals)). "')";
+	    }
+	    print "  $cmd\n" if ($verbose);
+	    $dbh->do("$cmd")
+		or die "\nnot ok: $DBI::errstr\n" if ($doit);
+
+	    my $newerr = 
+		checkrowforerrors($tablelist->{'tablename'}, $host, $id);
+	    if ($newerr->{retval} != $olderr->{retval}) {
+		 logerror($host, $newerr->{retval}, $newerr->{errfield}, 
+			  $newerr->{errvalue});
+	     }
+	} # snmp loop
+	my $curs = getcursor("select oidindex from $tablelist->{tablename} where host = '$host'");
+	my $row;
+	while ($row = $curs->fetchrow_hashref) {
+	    print "  $row->{oidindex}\n" if ($verbose);
+	    if (!defined($tbl_ids{$row->{oidindex}})) {
+		$dbh->do("delete from $tablelist->{tablename} where oidindex = '$row->{oidindex}'");
+		print "deleting: $host $tablelist->{tablename} $row->{oidindex}\n" if ($verbose);
+	    }
+	}
+	print "  done with $tablelist->{tablename}\n" if ($verbose);
+    } # table loop
+
+    if (isbadhost($host)) {
+	# let them out, they're no longer being bad.
+	print "deleting: delete from hosterrors where host = '$host'\n" if ($verbose);
+	$dbh->do("delete from hosterrors where host = '$host'");
+	mailusers("$host responding again", "$host responding again",
+		  getoncallforhost($host));
+    }
+    print "  done with $host\n" if ($verbose);
+} # host loop
+
+# disconnect
+$cursor->finish();
+$dbh->disconnect();
+
+sub setuptable {
+
+    my %conversions = qw(INTEGER integer OCTETSTR varchar(254) COUNTER integer UINTEGER integer IPADDR varchar(254) OBJECTID varchar(254) GAGUE integer OPAQUE varchar(254) TICKS integer GAUGE integer);
+
+    # set up mib info
+    my ($mibnode) = @_;
+    my $mib = $SNMP::MIB{SNMP::translateObj($mibnode)};
+    my $children = $$mib{'children'};
+    die "$mib has no chlidren" if (ref($children) ne "ARRAY");
+    my ($cmd, $j);
+
+    print " creating table for $mibnode\n" if ($verbose);
+    if ($delete) {
+	$cmd = "drop table if exists $mib->{label}";
+	print "cmd: $cmd\n" if ($verbose);
+	$dbh->do($cmd)
+	    or die "\nnot ok: $DBI::errstr\n" if ($doit);
+    }
+
+    $cmd = "create table $mib->{label} (id integer auto_increment primary key, host varchar(16), oidindex varchar(254)";
+    foreach $j (@$children) {
+	if (!defined($conversions{$j->{type}})) {
+	    print "no conversion for ". $j->{type} . "!\n";
+	    return;
+	}
+	$cmd .= ", $j->{label} $conversions{$j->{type}}";
+    }
+    $cmd .= ", updated timestamp)";
+
+    print "cmd: $cmd\n" if ($verbose);
+    $dbh->do("$cmd")
+	or die "\nnot ok: $DBI::errstr\n" if ($doit);
+
+}
+
+sub getoncall {
+    my @groups = @_;
+    my $cur;
+    my $row;
+    my ($emails, @days, @hours, @two, $i);
+    my %dayscon = qw(Sun 0 Mon 1 Tue 2 Wed 3 Thu 4 Fri 5 Sat 6);
+    my @now = localtime(time());
+    my %people;
+    my $group;
+
+    foreach $group (@groups) {
+	$cur = getcursor("select * from oncall where groupname = '$group'");
+      row: while (  $row = $cur->fetchrow_hashref ) {
+	  @days = split(/,/,$row->{'days'});
+	  foreach $i (@days) {
+	      @two = split(/-/,$i);
+	      if ($row->{'days'} eq "*" ||
+		  (defined($dayscon{$i}) && $dayscon{$i} == $now[6]) ||
+		  (defined($dayscon{$two[0]}) && defined($dayscon{$two[1]}) &&
+		   (($dayscon{$two[0]} <= $now[6] && 
+		     $dayscon{$two[1]} >= $now[6]) ||
+		    (($dayscon{$two[0]} > $dayscon{$two[1]}) &&
+		     ($dayscon{$two[0]} <= $now[6] || 
+		      $dayscon{$two[1]} >= $now[6]))))) {
+		  # we hit a valid day range
+		  print "    hit it $row->{'email'} $now[6]\t($i)\t$row->{'days'}\n"
+		      if ($verbose);
+		  $people{$row->{'email'}} = $row->{'email'};
+	      } else {
+		  print "not hit it $row->{'email'} $now[6]\t($i)\t$row->{'days'}\n"
+		      if ($verbose);
+	      }	      
+	  }
+      }
+    }
+    return keys(%people);
+}
+
+sub getoncallforhost {
+    my $host = shift;
+    return getoncall(getgroupsforhost($host));
+}
+
+sub getcursor {
+    my $cmd = shift;
+    my $cursor;
+    print "cmd: $cmd\n" if ($verbose);
+    ( $cursor = $dbh->prepare( $cmd ))
+	or die "\nnot ok: $DBI::errstr\n";
+    ( $cursor->execute )
+	or print( "\tnot ok: $DBI::errstr\n" );
+    return $cursor;
+}
+
+sub checkrowforerrors {
+    my ($table, $host, $id) = @_;
+    my $exprs = getcursor("SELECT * FROM errorexpressions where (tablename = '$table')");
+    my $expr;
+    my $error;
+
+    my $lastres = 0, $lastfield = '';
+    while (  $expr = $exprs->fetchrow_hashref ) {
+	my $errors = getcursor("select * from $table where $expr->{expression} and host = '$host' and oidindex = '$id'");
+	while (  $error = $errors->fetchrow_hashref ) {
+	    print "$host: $expr->{returnfield} = $error->{$expr->{returnfield}}\n" if ($verbose);
+	    return {'retval', 1,
+		    'errfield', $expr->{'returnfield'},
+		    'errvalue', $error->{$expr->{'returnfield'}}};
+	}
+	$lastres = $error->{$expr->{'returnfield'}};
+	$lastfield = $expr->{'returnfield'};
+    }
+    return {'retval', 0, 
+	    'errfield', $lastfield,
+	    'errvalue', $lastres};
+}
+
+sub logerror {
+    my ($host, $err, $field, $result) = @_;
+    my $groups = getcursor("SELECT distinct groupname FROM hosttables where host = '$host'");
+    my ($group, $person);
+    my $msg = (($err) ? "error" : "normal");
+		    
+    my @people = getoncallforhost($host);
+    $msg = "$msg: $host";
+    $msg .= " $field = $result" if ($field || $result);
+    mailusers("SNMP: $msg: $host $field", "$msg\n", @people);
+}
+
+sub mailusers {
+    my $subject = shift;
+    my $msg = shift;
+    my @people = @_;
+    my $person;
+    my $smtpsock = Net::SMTP->new($smtpserver);
+
+    $smtpsock->mail($smtpfrom);
+    my $error = $smtpsock->recipient(@people);
+    if (!$error) {
+	print STDERR "failed to send mail to ",join(",",@people),"\n";
+    }
+    $smtpsock->data();
+    $subject =~ s/\n//;
+    $smtpsock->datasend("To: " . join(", ",@people) . "\n");
+    $smtpsock->datasend("From: $smtpfrom\n");
+    $smtpsock->datasend("Subject: $subject\n");
+    $smtpsock->datasend("\n");
+    $smtpsock->datasend("$msg\n");
+    $smtpsock->dataend();
+    $smtpsock->quit;
+    print "mailed ",join(",",@people)," with $msg, $subject ($!)\n" if ($verbose);
+}
+
+sub hosterror {
+    my $host = shift;
+    my $groups = getcursor("SELECT distinct groupname FROM hosttables where host = '$host'");
+    my ($group, $person);
+    my %mailed;
+
+    return if (isbadhost($host)); # only send out a message once.
+		    
+    $dbh->do("insert into hosterrors(host, errormsg) values('$host','No response');");
+    my @people = getoncallforhost($host);
+    mailusers("No Response from $host", "No Response from $host", @people);
+}
+
+sub isbadhost {
+    my $host = shift;
+    my $hosterr = getcursor("SELECT distinct host FROM hosterrors where host = '$host'");
+    if ($hosterr->fetchrow_hashref) {
+	return 1;
+    }
+    return 0;
+}
+
+sub getgroupsforhost {
+    my $host = shift;
+    my @retgroups;
+    my $groups = getcursor("SELECT distinct groupname FROM hosttables where host = '$host'");
+    while( $group = $groups->fetchrow_hashref ) {
+	push @retgroups,$group->{'groupname'};
+    }
+    @retgroups;
+}

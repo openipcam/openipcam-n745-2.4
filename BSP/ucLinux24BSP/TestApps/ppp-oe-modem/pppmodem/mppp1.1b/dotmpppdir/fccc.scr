@@ -1,0 +1,34 @@
+######################################################################
+# a Script file for mppp 
+# ma_muquit@fccc.edu, May-31-1997
+#
+# The format of this file is send expect sequence, one in each line.
+#
+#Connect to your ppp  server using minicom or some other dialing software
+#and keep a note  of the prompts and the string you responded with. You can
+#use a full  or a partial string in the sequence. Try to avoid confusing
+#specification.
+#
+# Three characters are considered special, they are: ^cr, ^crlf and ^lf. 
+# ^cr   indicates Carriage Return (\r)
+# ^crlf indicates Carriage Return-Line Feed (\r\n)
+# ^lf   indiates Line Feed (\n)
+#
+# NOTE: ^ is the literal ^ character, not a control character, that is
+#       you'll type it as Shift+6 (Press shift and 6 key)
+#  
+######################################################################
+send ^cr
+send ^cr
+
+expect Userid:
+send muquit
+send ^cr
+
+expect ssword
+send XXXXXXXX
+send ^cr
+
+expect >
+send ppp
+send ^cr

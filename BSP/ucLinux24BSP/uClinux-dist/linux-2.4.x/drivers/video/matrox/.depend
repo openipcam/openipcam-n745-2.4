@@ -1,0 +1,155 @@
+g450_pll.o: g450_pll.c \
+   g450_pll.h \
+   matroxfb_DAC1064.h
+g450_pll.h: \
+   matroxfb_base.h
+	@touch g450_pll.h
+i2c-matroxfb.o: i2c-matroxfb.c \
+   matroxfb_base.h \
+   matroxfb_maven.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2c.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2c-algo-bit.h
+matroxfb_accel.o: matroxfb_accel.c \
+   matroxfb_accel.h \
+   matroxfb_DAC1064.h \
+   matroxfb_Ti3026.h \
+   matroxfb_misc.h
+matroxfb_accel.h: \
+   matroxfb_base.h
+	@touch matroxfb_accel.h
+matroxfb_base.o: matroxfb_base.c \
+   matroxfb_base.h \
+   matroxfb_misc.h \
+   matroxfb_accel.h \
+   matroxfb_DAC1064.h \
+   matroxfb_Ti3026.h \
+   matroxfb_maven.h \
+   matroxfb_crtc2.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/matroxfb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ppc.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/32mb.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/multihead.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/compat/xpmac.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/millenium.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/mystique.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/g100.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/g450.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/all/ppc.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/nvram.h)
+matroxfb_base.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tty.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/console.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/selection.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/unaligned.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h) \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/video/fbcon.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/video/fbcon-cfb4.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/video/fbcon-cfb8.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/video/fbcon-cfb16.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/video/fbcon-cfb24.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/video/fbcon-cfb32.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/compat/xpmac.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ppc.h) \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/video/macmodes.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/mystique.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/g100.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/millenium.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/32mb.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/multihead.h)
+	@touch matroxfb_base.h
+matroxfb_crtc2.o: matroxfb_crtc2.c \
+   matroxfb_maven.h \
+   matroxfb_crtc2.h \
+   matroxfb_misc.h \
+   matroxfb_DAC1064.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/matroxfb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h
+matroxfb_crtc2.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2c.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2c-algo-bit.h \
+   matroxfb_base.h
+	@touch matroxfb_crtc2.h
+matroxfb_DAC1064.o: matroxfb_DAC1064.c \
+   matroxfb_DAC1064.h \
+   matroxfb_misc.h \
+   matroxfb_accel.h \
+   g450_pll.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/matroxfb.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/g450.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/mystique.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/g100.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/32mb.h)
+matroxfb_DAC1064.h: \
+   matroxfb_base.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/mystique.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/g100.h)
+	@touch matroxfb_DAC1064.h
+matroxfb_g450.o: matroxfb_g450.c \
+   matroxfb_g450.h \
+   matroxfb_misc.h \
+   matroxfb_DAC1064.h \
+   g450_pll.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/matroxfb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h
+matroxfb_g450.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   matroxfb_base.h
+	@touch matroxfb_g450.h
+matroxfb_maven.o: matroxfb_maven.c \
+   matroxfb_maven.h \
+   matroxfb_misc.h \
+   matroxfb_DAC1064.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2c.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/matroxfb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/div64.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h
+matroxfb_maven.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2c.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2c-algo-bit.h \
+   matroxfb_base.h
+	@touch matroxfb_maven.h
+matroxfb_misc.o: matroxfb_misc.c \
+   matroxfb_misc.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/matroxfb.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/multihead.h)
+matroxfb_misc.h: \
+   matroxfb_base.h
+	@touch matroxfb_misc.h
+matroxfb_Ti3026.o: matroxfb_Ti3026.c \
+   matroxfb_Ti3026.h \
+   matroxfb_misc.h \
+   matroxfb_accel.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/millenium.h)
+matroxfb_Ti3026.h: \
+   matroxfb_base.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fb/matrox/millenium.h)
+	@touch matroxfb_Ti3026.h
+.PRECIOUS:	g450_pll.h \
+	matroxfb_accel.h \
+	matroxfb_base.h \
+	matroxfb_crtc2.h \
+	matroxfb_DAC1064.h \
+	matroxfb_g450.h \
+	matroxfb_maven.h \
+	matroxfb_misc.h \
+	matroxfb_Ti3026.h \
+

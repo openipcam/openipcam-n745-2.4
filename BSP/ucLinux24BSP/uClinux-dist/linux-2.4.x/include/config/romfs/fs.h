@@ -1,0 +1,1 @@
+#define CONFIG_ROMFS_FS 1

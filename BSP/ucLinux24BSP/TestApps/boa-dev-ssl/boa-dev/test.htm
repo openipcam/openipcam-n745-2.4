@@ -1,0 +1,22 @@
+<iframe width=0 height=0 name=oFm src="/GetUser.txt"></iframe>
+<script>
+function TestFrameLoad()
+{
+	if (typeof(frames.oFm.document.body) == "object")
+	{
+		if (frames.oFm.document.body)
+		{
+			if (typeof(frames.oFm.document.body.innerText) == "string")
+			{
+				var as = frames.oFm.window.document.body.innerText.split('\n');
+				document.write(as.length, " users currently<br>");
+				for (var i = 0; i < as.length; i++)
+					document.write("User ", (i+1), ": ", as[i], "<br>");
+				return;
+			}
+		}
+	}
+	setTimeout("TestFrameLoad()", 5);
+}
+TestFrameLoad();
+</script>

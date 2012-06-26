@@ -1,0 +1,85 @@
+1.
+char *GetCurrentUser(HTTPCONNECTION hConnection, char *pcUser, int iUserLen);
+	Description:
+		Get current user who built the very http request.
+	Return:
+		Pointer to "pcUser". If no user, "pcUser" is set to blank string.
+
+
+2.
+int GetAuthPrivilege(HTTPCONNECTION hConnection);
+	Description:
+		Get current user's privilege level.
+	Return:
+		The definition of return value:
+		#define AUTH_ANY -1
+		#define AUTH_USER 0
+		#define AUTH_ADMIN 1
+		#define AUTH_SYSTEM 2
+
+
+3.
+int SendAuthRequired(HTTPCONNECTION hConnection, int iPrivilege);
+	Description:
+		Check if client's privilege level is greater than "iPrivilege", and send "auth_required" to client if necessary.
+
+
+4.
+void SetAuthPrompt(const char *pcUserPrompt, const char *pcAdminPrompt, const char *pcSystemPrompt);
+	Description:
+		Set prompt string for 3 privilege level. This function must not be called after "StartThttpd";
+	
+5.
+BOOL AuthGetUser(const char *pcUserName, char *pcPassword, int iMaxPassLen, int *piPrivilege);
+	Description:
+		Check if a user is legal for the http server, and return his/her password and privilege level if possible.
+
+6.
+int AuthSetUser(const char *pcUserName, const char *pcPassword, int iPrivilege);
+	Description:
+		Add a user or change his/her password.
+	Return: 0, success; -1, failed. 
+
+7.
+int AuthDelUser(const char *pUserName);
+	Description:
+		Del a user.
+	Return: 0, success; -1, failed.
+
+8.
+LIST **GetAuthUserList();
+	Descritipn:
+		Get users list. To display all user's, follow this:
+
+	LIST **ppList;
+	int i;
+	LISTNODE *pNode;
+	NAMEDSTRING_T *pNStr;
+
+	ppList = GetAuthUserList();
+
+	if (ppList == NULL) return;
+
+	for (i = AUTH_USER; i <= AUTH_SYSTEM; i++)
+	{
+		if (ppList[i] == NULL) continue;
+		for (pNode = ppList[i]->pFirstNode; pNode != ppList[i]->pLastNode; pNode = pNode->pNextNode)
+		{
+			if ((pNStr = pNode->pValue) == NULL) continue;
+			printf("Username: %s\n", pNStr->pcName);
+			printf("Password: %s\n", pNStr->pcValue);
+			printf("Privilege: %d\n", i);
+			printf("\n");
+		}
+	}			
+
+
+9.
+void EnableUserCheck(BOOL bIsEnable);
+	Description:
+		Enable or disable user authorization.
+
+10.
+BOOL IsEnableUserCheck(void);
+	Descrition:
+		Return the state of user authorization.

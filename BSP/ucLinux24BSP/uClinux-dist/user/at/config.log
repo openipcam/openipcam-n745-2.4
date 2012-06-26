@@ -1,0 +1,5 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:952: gcc -o conftest -O2   conftest.c  1>&5
+configure:972: gcc -c -O2  conftest.c 1>&5

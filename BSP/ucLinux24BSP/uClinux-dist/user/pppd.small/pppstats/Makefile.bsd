@@ -1,0 +1,10 @@
+#	$Id: Makefile.bsd,v 1.1.1.1 2006-07-11 09:32:11 andy Exp $
+
+PROG=	pppstats
+SRCS=	pppstats.c
+CFLAGS+=-I..
+MAN8=	pppstats.0
+MAN=	pppstats.cat8
+BINDIR=	/usr/sbin
+
+.include <bsd.prog.mk>

@@ -1,0 +1,1 @@
+#undef  CONFIG_W90N7453_SERIAL

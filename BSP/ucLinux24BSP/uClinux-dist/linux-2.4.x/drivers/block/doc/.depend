@@ -1,0 +1,365 @@
+bddefs.h: \
+   fltl.h \
+   flsocket.h \
+   flbuffer.h \
+   stdcomp.h
+	@touch bddefs.h
+blockdev.o: blockdev.c \
+   bddefs.h \
+   blockdev.h
+blockdev.h: \
+   flreq.h \
+   flfuncno.h \
+   docsys.h \
+   dosformt.h \
+   doc2exb.h \
+   docbdk.h \
+   _blkdev.h
+	@touch blockdev.h
+diskonc.o: diskonc.c \
+   reedsol.h \
+   diskonc.h
+diskonc.h: \
+   docsys.h
+	@touch diskonc.h
+doc2exb.o: doc2exb.c \
+   doc2exb.h \
+   bddefs.h
+_doc2exb.h: \
+   docbdk.h
+	@touch _doc2exb.h
+doc2exb.h: \
+   docbdk.h \
+   _doc2exb.h
+	@touch doc2exb.h
+docbdk.o: docbdk.c \
+   docbdk.h \
+   doc2exb.h \
+   blockdev.h
+docbdk.h: \
+   nanddefs.h \
+   flfuncno.h \
+   flreq.h \
+   _docbdk.h
+	@touch docbdk.h
+doconide.o: doconide.c \
+   reedsol.h \
+   diskonc.h
+docsoc.o: docsoc.c \
+   flsocket.h \
+   nanddefs.h
+docsys.o: docsys.c \
+   docsys.h
+_docsys.h: \
+   nanddefs.h
+	@touch _docsys.h
+docsys.h: \
+   _docsys.h
+	@touch docsys.h
+dosformt.o: dosformt.c \
+   fltl.h \
+   blockdev.h
+dosformt.h: \
+   flformat.h \
+   fltl.h \
+   _dosfrmt.h
+	@touch dosformt.h
+fatfilt.o: fatfilt.c \
+   fatfilt.h \
+   blockdev.h \
+   flflash.h \
+   bddefs.h
+fatfilt.h: \
+   dosformt.h \
+   flreq.h
+	@touch fatfilt.h
+fatlite.o: fatlite.c \
+   bddefs.h \
+   blockdev.h \
+   dosformt.h
+fatlite.h: \
+   blockdev.h \
+   dosformt.h \
+   fatfilt.h \
+   flioctl.h \
+   docbdk.h
+	@touch fatlite.h
+flbase.o: flbase.c \
+   flbase.h
+flbase.h: \
+   mtdsa.h \
+   flcustom.h \
+   flsystem.h \
+   flchkdef.h \
+   flstatus.h \
+   flsysfun.h
+	@touch flbase.h
+flbuffer.h: \
+   flbase.h
+	@touch flbuffer.h
+flcustom.o: flcustom.c \
+   stdcomp.h
+fldrvlnx.o: fldrvlnx.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/autoconf.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/smp.h) \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/malloc.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fcntl.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hdreg.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/genhd.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hdreg.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sockios.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/devfs_fs_kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/delay.h \
+   compat24.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/malloc.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fcntl.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hdreg.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/genhd.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hdreg.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sockios.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/delay.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/genhd.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/malloc.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hdreg.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/delay.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/unistd.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   fldrvlnx.h \
+   flioctl.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/major.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blk.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blkpg.h \
+   compat24.c \
+   tsi_doc.h \
+   fllnx.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/time.h
+flflash.o: flflash.c \
+   flflash.h \
+   docsys.h
+flflash.h: \
+   flbase.h \
+   flsocket.h \
+   flbuffer.h \
+   _flflash.h
+	@touch flflash.h
+flformat.h: \
+   flbase.h
+	@touch flformat.h
+flioctl.o: flioctl.c \
+   flioctl.h \
+   blockdev.h
+flioctl.h: \
+   flbase.h \
+   dosformt.h \
+   blockdev.h \
+   docbdk.h \
+   _flioctl.h
+	@touch flioctl.h
+fllnx.o: fllnx.c \
+   flcustom.h \
+   flstatus.h \
+   flreq.h \
+   flsocket.h \
+   flsystem.h \
+   fatfilt.h \
+   flioctl.h \
+   fllnx.h \
+   blockdev.h
+fllnx.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h
+	@touch fllnx.h
+flparse.o: flparse.c \
+   fatlite.h
+flreq.h: \
+   flbase.h \
+   _flreq.h
+	@touch flreq.h
+flsocket.o: flsocket.c \
+   flsocket.h
+flsocket.h: \
+   flbuffer.h \
+   _flsoc.h
+	@touch flsocket.h
+flsystem.o: flsystem.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/semaphore.h
+flsystem.h: \
+   fllnx.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sockios.h
+	@touch flsystem.h
+fltl.o: fltl.c \
+   fltl.h \
+   docbdk.h
+_fltl.h: \
+   dosformt.h
+	@touch _fltl.h
+fltl.h: \
+   flflash.h \
+   flfuncno.h \
+   flreq.h \
+   _fltl.h
+	@touch fltl.h
+flxscale.o: flxscale.c \
+   docsys.h
+idedoc.o: idedoc.c \
+   idedoc.h
+idedoc.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   flstatus.h
+	@touch idedoc.h
+idesys.o: idesys.c \
+   docsys.h \
+   idedoc.h
+inftl.o: inftl.c \
+   inftl.h
+inftl.h: \
+   flbuffer.h \
+   flflash.h \
+   fltl.h
+	@touch inftl.h
+mdocpide.o: mdocpide.c \
+   mdocplus.h \
+   reedsol.h \
+   idedoc.h \
+   protectp.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/intlv/mask.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/if/cfg/mask.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/max/id/mask.h)
+mdocplus.o: mdocplus.c \
+   mdocplus.h \
+   reedsol.h \
+   protectp.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/intlv/mask.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/if/cfg/mask.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/max/id/mask.h)
+mdocplus.h: \
+   docsys.h
+	@touch mdocplus.h
+mtdsa.o: mtdsa.c \
+   flbase.h \
+   nanddefs.h \
+   docsys.h \
+   flbuffer.h
+nanddefs.h: \
+   flflash.h
+	@touch nanddefs.h
+nfdc2148.h: \
+   diskonc.h
+	@touch nfdc2148.h
+nftllite.o: nftllite.c \
+   nftllite.h \
+   nanddefs.h
+nftllite.h: \
+   flbuffer.h \
+   flflash.h \
+   fltl.h
+	@touch nftllite.h
+osak.h: \
+   blockdev.h \
+   dosformt.h
+	@touch osak.h
+protectp.o: protectp.c \
+   mdocplus.h \
+   protectp.h \
+   docsys.h
+reedsol.o: reedsol.c \
+   reedsol.h
+reedsol.h: \
+   flbase.h
+	@touch reedsol.h
+stdcomp.h: \
+   flbase.h
+	@touch stdcomp.h
+tsi_doc.o: tsi_doc.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blk.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/hardware.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/irq.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   tsi_doc.h
+.PRECIOUS:	bddefs.h \
+	blockdev.h \
+	diskonc.h \
+	_doc2exb.h \
+	doc2exb.h \
+	docbdk.h \
+	_docsys.h \
+	docsys.h \
+	dosformt.h \
+	fatfilt.h \
+	fatlite.h \
+	flbase.h \
+	flbuffer.h \
+	flflash.h \
+	flformat.h \
+	flioctl.h \
+	fllnx.h \
+	flreq.h \
+	flsocket.h \
+	flsystem.h \
+	_fltl.h \
+	fltl.h \
+	idedoc.h \
+	inftl.h \
+	mdocplus.h \
+	nanddefs.h \
+	nfdc2148.h \
+	nftllite.h \
+	osak.h \
+	reedsol.h \
+	stdcomp.h \
+

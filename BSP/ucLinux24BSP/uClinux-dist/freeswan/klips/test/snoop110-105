@@ -1,0 +1,19 @@
+#
+# RCSID $Id: snoop110-105,v 1.2 2006-07-18 06:38:26 andy Exp $
+#
+tcpdump -i eth1 -N -s 800 ether host 00:60:08:3E:C5:1A and 08:00:20:0E:13:9F -a -vv -e
+
+#
+# $Log: snoop110-105,v $
+# Revision 1.2  2006-07-18 06:38:26  andy
+# *** empty log message ***
+#
+# Revision 1.1.1.1  2006/07/11 09:28:02  andy
+# W90N745 BSP
+#
+#
+# Revision 1.2  1999/04/06 04:54:32  rgb
+# Fix/Add RCSID Id: and Log: bits to make PHMDs happy.  This includes
+# patch shell fixes.
+#
+#

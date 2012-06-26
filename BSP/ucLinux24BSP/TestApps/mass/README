@@ -1,0 +1,3 @@
+Usage: mass [device]
+Example: mass /dev/sda1
+Note: Don't mount [device], or the result is unpredictable.

@@ -1,0 +1,14 @@
+lib:
+	rm -rf ./ssl/libssl.a
+	cd ./ssl; make -f makefile-arm; cd ..;
+	rm -rf ../Library/arm/lib/libssl.a
+	mv ./ssl/libssl.a ../Library/arm/lib/libssl.a
+	rm -rf ./crypto/libcrypto.a
+	cd ./crypto; make -f makefile-arm; cd ..;
+	rm -rf ../Library/arm/lib/libcrypto.a
+	mv ./crypto/libcrypto.a ../Library/arm/lib/libcrypto.a
+	cp -rfL ./include/openssl ../Library/arm/include/
+
+clean:
+	cd ./ssl; make -f makefile-arm clean; cd ..;
+	cd ./crypto; make -f makefile-arm clean; cd ..;

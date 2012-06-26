@@ -1,0 +1,71 @@
+skaddr.o: skaddr.c \
+   h/skdrv1st.h \
+   h/skdrv2nd.h
+skcsum.o: skcsum.c \
+   h/skdrv1st.h \
+   h/skcsum.h \
+   h/skdrv2nd.h
+skge.o: skge.c \
+   h/skversion.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   h/skdrv1st.h \
+   h/skdrv2nd.h
+skgehwt.o: skgehwt.c \
+   h/skdrv1st.h \
+   h/skdrv2nd.h
+skgeinit.o: skgeinit.c \
+   h/skdrv1st.h \
+   h/xmac_ii.h \
+   h/skdrv2nd.h
+skgepnmi.o: skgepnmi.c \
+   h/skdrv1st.h \
+   h/sktypes.h \
+   h/xmac_ii.h \
+   h/skdebug.h \
+   h/skqueue.h \
+   h/skgepnmi.h \
+   h/skgesirq.h \
+   h/skcsum.h \
+   h/skvpd.h \
+   h/skgehw.h \
+   h/skgeinit.h \
+   h/skdrv2nd.h \
+   h/skgepnm2.h
+skgesirq.o: skgesirq.c \
+   h/skdrv1st.h \
+   h/skgepnmi.h \
+   h/skrlmt.h \
+   h/skdrv2nd.h
+ski2c.o: ski2c.c \
+   h/skdrv1st.h \
+   h/lm80.h \
+   h/skdrv2nd.h
+sklm80.o: sklm80.c \
+   h/skdrv1st.h \
+   h/lm80.h \
+   h/skdrv2nd.h
+skproc.o: skproc.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   h/skdrv1st.h \
+   h/skdrv2nd.h
+skqueue.o: skqueue.c \
+   h/skdrv1st.h \
+   h/skqueue.h \
+   h/skdrv2nd.h
+skrlmt.o: skrlmt.c \
+   h/skdrv1st.h \
+   h/skdrv2nd.h
+sktimer.o: sktimer.c \
+   h/skdrv1st.h \
+   h/skdrv2nd.h
+skvpd.o: skvpd.c \
+   h/skdrv1st.h \
+   h/sktypes.h \
+   h/skdebug.h \
+   h/skdrv2nd.h
+skxmac2.o: skxmac2.c \
+   h/skdrv1st.h \
+   h/xmac_ii.h \
+   h/skdrv2nd.h

@@ -1,0 +1,101 @@
+#! /bin/sh
+#############################################################################
+#
+#	Generate the vendor/product menu entries for the top level config
+#
+#############################################################################
+
+fix_name()
+{
+	echo $1 | tr '[\-\.\/\+a-z]' '[____A-Z]'
+}
+
+#############################################################################
+#
+# the header of the config
+#
+
+cat <<!EOF
+mainmenu_name 'uClinux Configuration'
+mainmenu_option next_comment
+comment 'Target Platform Selection'
+comment 'Choose a Vendor/Product combination.'
+!EOF
+
+#############################################################################
+#
+# Figure out the vendor/products dynamically, allows people to add there
+# own without messin with the config.in file
+#
+
+echo -n "choice 'Vendor/Product' \""
+
+find vendors/*/*/config.arch -print | sed -e 's?/? ?g' | \
+		sort | while read t1 v p t2
+do
+	[ "$v" = "config" ] && continue
+	if [ -f "vendors/$v/$p/config.languages" ]
+	then
+		for i in `cat "vendors/$v/$p/config.languages"`
+		do
+			echo "${v}/${p}($i) CONFIG_DEFAULTS_`fix_name ${v}`_`fix_name ${p}`_`fix_name ${i}` \\"
+		done
+	else
+		echo "${v}/${p} CONFIG_DEFAULTS_`fix_name ${v}`_`fix_name ${p}` \\"
+	fi
+done
+
+echo "\" SecureEdge/SecureEdgeVPN"
+
+#############################################################################
+#
+# Which kernel do they want,  if only one then just set it,  I don't
+# expect an explosion of kernels just yet ;-)
+#
+
+KERNELS="`ls -d linux-* 2>/dev/null`"
+NKERNELS="`echo ${KERNELS} | wc -w`"
+if [ ${NKERNELS} -gt 1 ]; then
+	echo -n "choice 'Kernel Version' \""
+	for i in ${KERNELS}; do
+		VER=${i##linux-}
+		CFG="CONFIG_DEFAULTS_KERNEL_`echo ${VER%%.x}|sed -e 's/\./_/'`"
+		DEF="linux-${VER}"
+		echo "${DEF} ${CFG} \\"
+	done
+	echo "\" $DEF"
+elif [ ${NKERNELS} -eq 1 ]; then
+	VER=${KERNELS##linux-}
+	CFG="CONFIG_DEFAULTS_KERNEL_`echo ${VER%%.x}|sed -e 's/\./_/'`"
+	echo "comment 'Kernel is linux-${VER}'"
+	echo "define_bool ${CFG} y"
+else
+	echo "ERROR: you have no kernels available in this directory." >&2
+	exit 1
+fi
+
+#############################################################################
+#
+# Which libc do they want,  if only one then just set it,  I don't
+# expect an explosion of libc's just yet ;-)
+#
+
+
+#############################################################################
+#
+# the rest of the config
+#
+
+cat <<!EOF
+bool 'Default all settings (lose changes)'	CONFIG_DEFAULTS_OVERRIDE
+bool 'Customize Kernel Settings'			CONFIG_DEFAULTS_KERNEL
+!EOF
+[ -d modules ] &&
+	echo "bool 'Customize Module Settings'			CONFIG_DEFAULTS_MODULES"
+cat <<!EOF
+bool 'Customize Vendor/User Settings'		CONFIG_DEFAULTS_VENDOR
+bool 'Update Default Vendor Settings'		CONFIG_DEFAULTS_VENDOR_UPDATE
+endmenu
+!EOF
+
+############################################################################

@@ -1,0 +1,1 @@
+#undef  CONFIG_W90N745_PS2

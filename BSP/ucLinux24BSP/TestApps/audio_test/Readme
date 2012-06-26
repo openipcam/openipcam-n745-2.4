@@ -1,0 +1,33 @@
+Winbond W90N745 Audio Test Program Readme
+==============================
+
+This program check whether the hardware or audio driver can work.
+
+
+The sequence and detail of tests code is as following.
+
+1. Select Device
+	W90N745 Audio can support two kind of codec standard, IIS and AC97.
+	/dev/dsp0 and /dev/mixer0 (IIS)
+	/dev/dsp1 and /dev/mixer1 (AC97)
+
+2. IOCTL Test
+	First 	make sure that the device is audio device, which based on OSS standard.
+	Then	get internal fragment size of audio driver. It is most efficient if user read/write audio device with the size.
+	Last		Set Volume to MAX
+
+3. Play and SampleRate Test
+	Test all samplerate supported by codec ( 8K, 11.025K, 16K, 22.05K, 24K, 32K, 44.1K, 48K).
+
+	*Note : at least 44.1k.pcm must be provided at current directory.
+
+4. Mixer Test
+	Change volume to 33%, 66% and 100% for mixer test
+
+5. Record Test
+	In this part, the program will record 6 second from input path ( LINE IN, or MIC ) and then playback.
+
+6. Poll Test
+	First		Test whether driver can work in None Block Mode.
+	Then	Test poll system call of audio driver.
+

@@ -1,0 +1,1095 @@
+Archive member included       because of file (symbol)
+
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(isdigit.o)
+                              iwcommon.o (isdigit)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(isspace.o)
+                              iwconfig.o (isspace)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__uClibc_main.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/crt0.o (__uClibc_main)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__errno_location.o)
+                              iwconfig.o (__errno_location)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__h_errno_location.o)
+                              iwcommon.o (__h_errno_location)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(weaks.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__uClibc_main.o) (__pthread_initialize_minimal)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fclose.o)
+                              iwconfig.o (fclose)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fflush.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fclose.o) (fflush_unlocked)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fopen.o)
+                              iwconfig.o (fopen)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(perror.o)
+                              iwconfig.o (perror)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fgets.o)
+                              iwconfig.o (fgets)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fopen.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fopen.o) (_stdio_fopen)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fwrite.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fflush.o) (_stdio_fwrite)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_lseek.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fwrite.o) (_stdio_lseek)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_init.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fclose.o) (_cs_read)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fprintf.o)
+                              iwconfig.o (fprintf)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(printf.o)
+                              iwconfig.o (printf)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sprintf.o)
+                              iwcommon.o (sprintf)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fprintf.o) (vfprintf)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_store_inttype.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (_store_inttype)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_load_inttype.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (_load_inttype)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sscanf.o)
+                              iwconfig.o (sscanf)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vsscanf.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sscanf.o) (vsscanf)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfscanf.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vsscanf.o) (vfscanf)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(memcpy.o)
+                              iwconfig.o (memcpy)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(memset.o)
+                              iwconfig.o (memset)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strcasecmp.o)
+                              iwconfig.o (strcasecmp)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strchr.o)
+                              iwconfig.o (index)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strcmp.o)
+                              iwconfig.o (strcmp)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strcpy.o)
+                              iwconfig.o (strcpy)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strlen.o)
+                              iwconfig.o (strlen)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strncasecmp.o)
+                              iwconfig.o (strncasecmp)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strncmp.o)
+                              iwconfig.o (strncmp)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strncpy.o)
+                              iwconfig.o (strncpy)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strnlen.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (strnlen)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strtok.o)
+                              iwconfig.o (strtok)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strtok_r.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strtok.o) (strtok_r)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strerror.o)
+                              iwconfig.o (strerror)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_susv3_strerror_r.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strerror.o) (_susv3_strerror_r)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_string_syserrmsgs.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_susv3_strerror_r.o) (_string_syserrmsgs)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_glibc_strerror_r.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (_glibc_strerror_r)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(isatty.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fopen.o) (isatty)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(tcgetattr.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(isatty.o) (tcgetattr)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname.o)
+                              iwcommon.o (gethostbyname)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname_r.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname.o) (gethostbyname_r)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(socket.o)
+                              iwcommon.o (socket)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetbynm.o)
+                              iwcommon.o (getnetbyname)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdlib_strto_ll.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfscanf.o) (_stdlib_strto_ll)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(atexit.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__uClibc_main.o) (atexit)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__exit_handler.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(atexit.o) (__exit_count)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(exit.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(atexit.o) (__exit_cleanup)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(abort.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/crt0.o (abort)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(malloc.o)
+                              iwconfig.o (malloc)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(free.o)
+                              iwconfig.o (free)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(realloc.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(atexit.o) (realloc)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(heap_alloc.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(malloc.o) (__heap_alloc)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(heap_alloc_at.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(realloc.o) (__heap_alloc_at)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(heap_free.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(malloc.o) (__heap_free)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(llseek.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_lseek.o) (lseek64)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_exit.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(exit.o) (_exit)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_read.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_init.o) (read)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_write.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_init.o) (write)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__syscall_open.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fopen.o) (open)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_close.o)
+                              iwconfig.o (close)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__syscall_ioctl.o)
+                              iwconfig.o (ioctl)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_fcntl.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fopen.o) (fcntl)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_mmap.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(malloc.o) (mmap)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(munmap.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(free.o) (munmap)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__socketcall.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(socket.o) (__socketcall)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__rt_sigprocmask.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(abort.o) (sigprocmask)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(usleep.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fclose.o) (usleep)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(isxdigit.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfscanf.o) (isxdigit)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(tolower.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strcasecmp.o) (tolower)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(errno.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__errno_location.o) (errno)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fgetc.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fgets.o) (fgetc_unlocked)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fputs.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (fputs)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(ungetc.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfscanf.o) (ungetc)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fseek.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fwrite.o) (fseek)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fseeko64.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fseek.o) (fseeko64)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fread.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fgetc.o) (_stdio_fread)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_adjpos.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fseeko64.o) (_stdio_adjpos)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_uintmaxtostr.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (_uintmaxtostr)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vsnprintf.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sprintf.o) (vsnprintf)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_init.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (_ppfs_init)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_prepargs.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (_ppfs_prepargs)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_setargs.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (_ppfs_setargs)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_parsespec.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o) (_custom_printf_spec)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(mempcpy.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(tcgetattr.o) (mempcpy)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strpbrk.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strtok_r.o) (strpbrk)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strspn.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strtok_r.o) (strspn)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(inet_aton.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname_r.o) (inet_aton)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(decoded.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname_r.o) (__decode_dotted)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname_r.o) (__dns_lookup)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname_r.o) (__resolv_lock)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(get_hosts_byname_r.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname_r.o) (__get_hosts_byname_r)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(connect.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (connect)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(recv.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (recv)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(send.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (send)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetent.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetbynm.o) (setnetent)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(inet_net.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetent.o) (inet_network)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(raise.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(abort.o) (raise)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sigaction.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(abort.o) (sigaction)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sigsetops.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(abort.o) (__sigaddset)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_getpid.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(raise.o) (getpid)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__syscall_kill.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(raise.o) (kill)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_newselect.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (select)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_nanosleep.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(usleep.o) (nanosleep)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__syscall_rt_sigaction.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sigaction.o) (__syscall_rt_sigaction)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sigrestorer.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sigaction.o) (__default_sa_restorer)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(islower.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(inet_net.o) (islower)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(rewind.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetent.o) (rewind)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strdup.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o) (strdup)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strncat.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (strncat)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(inet_addr.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (inet_addr)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(encodeh.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (__encode_header)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(decodeh.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (__decode_header)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(encodeq.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (__encode_question)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(lengthq.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (__length_question)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(decodea.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (__decode_answer)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(read_etc_hosts_r.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(get_hosts_byname_r.o) (__read_etc_hosts_r)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(ntop.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(read_etc_hosts_r.o) (inet_pton)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(encoded.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(encodeq.o) (__encode_dotted)
+/home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(lengthd.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(lengthq.o) (__length_dotted)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_udivsi3.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_uintmaxtostr.o) (__udivsi3)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_umodsi3.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_uintmaxtostr.o) (__umodsi3)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_modsi3.o)
+                              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o) (__modsi3)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_dvmd_tls.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_udivsi3.o) (__div0)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fixunsdfsi.o)
+                              iwcommon.o (__fixunsdfsi)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+                              iwconfig.o (__gccmain)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ctors.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o) (__CTOR_LIST__)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_sf_to_df.o)
+                              iwconfig.o (__extendsfdf2)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o)
+                              iwcommon.o (__adddf3)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_mul_df.o)
+                              iwconfig.o (__muldf3)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_div_df.o)
+                              iwconfig.o (__divdf3)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ge_df.o)
+                              iwconfig.o (__gedf2)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lt_df.o)
+                              iwconfig.o (__ltdf2)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_si_to_df.o)
+                              iwconfig.o (__floatsidf)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_si.o)
+                              iwconfig.o (__fixdfsi)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_df.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_sf_to_df.o) (__make_dp)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_sf.o)
+                              iwconfig.o (__truncdfsf2)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_thenan_df.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o) (__thenan_df)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o) (__register_frame_info)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-sjlj.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o) (_Unwind_GetRegionStart)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lshrdi3.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_si.o) (__lshrdi3)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_sf.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_sf_to_df.o) (__unpack_f)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_sf.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_sf.o) (__make_fp)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_df.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o) (__pack_d)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_df.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o) (__unpack_d)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fpcmp_parts_df.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ge_df.o) (__fpcmp_parts_d)
+/home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_sf.o)
+                              /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_sf.o) (__pack_f)
+
+Allocating common symbols
+Common symbol       size              file
+
+_net_stayopen       0x4               /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetent.o)
+__searchdomain      0x10              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o)
+_custom_printf_arginfo
+                    0x28              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_parsespec.o)
+__nameserver        0xc               /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o)
+__nameservers       0x4               /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o)
+__EH_FRAME_BEGIN__  0x4               /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+__searchdomains     0x4               /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o)
+_custom_printf_handler
+                    0x28              /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_parsespec.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flatmem          0x00000000         0x00100000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/crt0.o
+
+.text           0x00000000     0xd480
+                0x00000000                .=ALIGN(0x4)
+                0x00000000                _stext=.
+                0x00000000                _start=.
+ *(.text)
+ .text          0x00000000       0x18 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/crt0.o
+ .text          0x00000018     0x2a58 iwconfig.o
+                0x00002974                main
+ .text          0x00002a70      0xd48 iwcommon.o
+                0x00002d34                freq2float
+                0x00002c20                get_priv_info
+                0x00002af4                get_range_info
+                0x000031fc                print_retry_value
+                0x00002e68                print_stats
+                0x00003794                byte_size
+                0x00002df0                dbm2mwatt
+                0x00002e34                mwatt2dbm
+                0x00003024                print_pm_value
+                0x00002f74                print_key
+                0x00002c7c                float2freq
+                0x00003414                pr_ether
+                0x00002a70                sockets_open
+                0x00003468                in_ether
+                0x0000334c                check_addr_type
+                0x0000365c                in_addr
+                0x00003170                print_pm_mode
+                0x00003578                in_inet
+ .text          0x000037b8       0x14 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(isdigit.o)
+                0x000037b8                isdigit
+ .text          0x000037cc       0x20 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(isspace.o)
+                0x000037cc                isspace
+ .text          0x000037ec      0x128 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__uClibc_main.o)
+                0x000037ec                __uClibc_init
+                0x000038f4                __uClibc_main
+                0x00003848                __uClibc_start_main
+ .text          0x00003914        0xc /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__errno_location.o)
+                0x00003914                __errno_location
+ .text          0x00003920        0xc /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__h_errno_location.o)
+                0x00003920                __h_errno_location
+ .text          0x0000392c       0x28 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(weaks.o)
+                0x00003940                pthread_cond_signal
+                0x00003940                pthread_mutexattr_gettype
+                0x00003940                pthread_attr_destroy
+                0x00003940                pthread_attr_getstacksize
+                0x00003940                __pthread_once
+                0x00003950                __pthread_return_void
+                0x00003940                pthread_rwlock_rdlock
+                0x00003940                pthread_attr_init
+                0x00003940                pthread_rwlock_init
+                0x0000392c                pthread_exit
+                0x00003940                pthread_rwlockattr_setpshared
+                0x00003940                pthread_condattr_init
+                0x00003940                pthread_attr_getstackaddr
+                0x00003940                pthread_mutexattr_destroy
+                0x00003948                pthread_equal
+                0x00003940                pthread_attr_getscope
+                0x00003940                pthread_rwlock_destroy
+                0x00003940                pthread_rwlock_unlock
+                0x00003940                pthread_attr_getinheritsched
+                0x00003940                pthread_attr_getschedpolicy
+                0x00003940                pthread_attr_setstackaddr
+                0x00003940                pthread_getschedparam
+                0x00003940                pthread_setcancelstate
+                0x00003940                pthread_getcancelstate
+                0x00003940                pthread_condattr_destroy
+                0x00003940                pthread_attr_setscope
+                0x00003940                pthread_cond_broadcast
+                0x00003940                pthread_attr_setinheritsched
+                0x00003940                pthread_setschedparam
+                0x00003950                __pthread_initialize_minimal
+                0x00003940                pthread_setconcurrency
+                0x00003940                pthread_attr_setstacksize
+                0x00003940                pthread_rwlock_wrlock
+                0x00003940                pthread_rwlockattr_getpshared
+                0x00003940                pthread_cond_init
+                0x00003940                pthread_rwlockattr_init
+                0x00003940                pthread_mutexattr_settype
+                0x00003940                pthread_attr_getdetachstate
+                0x00003940                pthread_mutex_unlock
+                0x00003940                pthread_rwlockattr_destroy
+                0x00003940                pthread_rwlock_trywrlock
+                0x00003940                pthread_rwlock_tryrdlock
+                0x00003940                __pthread_return_0
+                0x00003940                pthread_self
+                0x00003940                pthread_setcanceltype
+                0x00003940                pthread_mutexattr_init
+                0x00003940                pthread_mutex_destroy
+                0x00003948                __pthread_return_1
+                0x00003940                pthread_mutex_lock
+                0x00003940                pthread_cond_wait
+                0x00003940                pthread_mutex_trylock
+                0x00003940                pthread_cond_destroy
+                0x00003940                pthread_attr_setschedpolicy
+                0x00003940                pthread_mutex_init
+                0x00003940                pthread_attr_setschedparam
+                0x00003940                pthread_attr_setdetachstate
+                0x00003940                pthread_getconcurrency
+                0x00003940                pthread_cond_timedwait
+                0x00003940                pthread_attr_getschedparam
+ .text          0x00003954      0x190 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fclose.o)
+                0x00003954                fclose
+ .text          0x00003ae4      0x158 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fflush.o)
+                0x00003ae4                fflush
+                0x00003b5c                fflush_unlocked
+ .text          0x00003c3c       0x14 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fopen.o)
+                0x00003c3c                fopen
+ .text          0x00003c50       0x58 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(perror.o)
+                0x00003c50                perror
+ .text          0x00003ca8       0xe0 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fgets.o)
+                0x00003ca8                fgets
+                0x00003d10                fgets_unlocked
+ .text          0x00003d88      0x28c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fopen.o)
+                0x00003d88                _stdio_fopen
+ .text          0x00004014      0x32c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fwrite.o)
+                0x00004094                _stdio_fwrite
+ .text          0x00004340       0x74 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_lseek.o)
+                0x00004340                _stdio_lseek
+ .text          0x000043b4      0x12c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_init.o)
+                0x000043d4                _cs_close
+                0x000043e4                __stdio_init_mutex
+                0x000043fc                _stdio_term
+                0x000043b4                _cs_read
+                0x000043c4                _cs_write
+                0x00004498                _stdio_init
+ .text          0x000044e0       0x20 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fprintf.o)
+                0x000044e0                fprintf
+ .text          0x00004500       0x2c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(printf.o)
+                0x00004500                printf
+ .text          0x0000452c       0x24 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sprintf.o)
+                0x0000452c                sprintf
+ .text          0x00004550      0x5b0 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o)
+                0x000049ac                vfprintf
+ .text          0x00004b00       0x2c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_store_inttype.o)
+                0x00004b00                _store_inttype
+ .text          0x00004b2c       0x64 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_load_inttype.o)
+                0x00004b2c                _load_inttype
+ .text          0x00004b90       0x20 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sscanf.o)
+                0x00004b90                sscanf
+ .text          0x00004bb0       0x60 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vsscanf.o)
+                0x00004bb0                vsscanf
+ .text          0x00004c10      0x9a8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfscanf.o)
+                0x00004e00                vfscanf
+ .text          0x000055b8       0x20 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(memcpy.o)
+                0x000055b8                memcpy
+ .text          0x000055d8       0x1c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(memset.o)
+                0x000055d8                memset
+ .text          0x000055f4       0x50 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strcasecmp.o)
+                0x000055f4                strcasecmp
+ .text          0x00005644       0x24 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strchr.o)
+                0x00005644                index
+                0x00005644                strchr
+ .text          0x00005668       0x28 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strcmp.o)
+                0x00005668                strcoll
+                0x00005668                strcmp
+ .text          0x00005690       0x18 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strcpy.o)
+                0x00005690                strcpy
+ .text          0x000056a8       0x24 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strlen.o)
+                0x000056a8                strlen
+ .text          0x000056cc       0x60 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strncasecmp.o)
+                0x000056cc                strncasecmp
+ .text          0x0000572c       0x38 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strncmp.o)
+                0x0000572c                strncmp
+ .text          0x00005764       0x28 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strncpy.o)
+                0x00005764                strncpy
+ .text          0x0000578c       0x38 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strnlen.o)
+                0x0000578c                strnlen
+ .text          0x000057c4       0x14 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strtok.o)
+                0x000057c4                strtok
+ .text          0x000057d8       0x70 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strtok_r.o)
+                0x000057d8                strtok_r
+ .text          0x00005848       0x28 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strerror.o)
+                0x00005848                strerror
+ .text          0x00005870       0xf0 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_susv3_strerror_r.o)
+                0x00005870                _susv3_strerror_r
+ .text          0x00005960       0x1c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_glibc_strerror_r.o)
+                0x00005960                __strerror_r
+                0x00005960                _glibc_strerror_r
+ .text          0x0000597c       0x28 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(isatty.o)
+                0x0000597c                isatty
+ .text          0x000059a4       0x78 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(tcgetattr.o)
+                0x000059a4                tcgetattr
+ .text          0x00005a1c       0x4c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname.o)
+                0x00005a1c                gethostbyname
+ .text          0x00005a68      0x334 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname_r.o)
+                0x00005a68                gethostbyname_r
+ .text          0x00005d9c       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(socket.o)
+                0x00005d9c                socket
+ .text          0x00005dd0       0x9c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetbynm.o)
+                0x00005dd0                getnetbyname
+ .text          0x00005e6c      0x258 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdlib_strto_ll.o)
+                0x00005e6c                _stdlib_strto_ll
+ .text          0x000060c4       0xfc /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(atexit.o)
+                0x000060c4                atexit
+ .text          0x000061c0       0xbc /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__exit_handler.o)
+                0x000061c0                __exit_handler
+ .text          0x0000627c       0x68 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(exit.o)
+                0x0000627c                exit
+ .text          0x000062e4      0x148 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(abort.o)
+                0x000062e4                abort
+ .text          0x0000642c      0x164 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(malloc.o)
+                0x00006570                malloc
+ .text          0x00006590      0x1cc /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(free.o)
+                0x00006748                free
+ .text          0x0000675c      0x100 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(realloc.o)
+                0x0000675c                realloc
+ .text          0x0000685c       0x9c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(heap_alloc.o)
+                0x0000685c                __heap_alloc
+ .text          0x000068f8       0x94 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(heap_alloc_at.o)
+                0x000068f8                __heap_alloc_at
+ .text          0x0000698c      0x12c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(heap_free.o)
+                0x0000698c                __heap_free
+ .text          0x00006ab8       0x64 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(llseek.o)
+                0x00006ab8                __libc_lseek64
+                0x00006ab8                llseek
+                0x00006ab8                lseek64
+ .text          0x00006b1c       0x2c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_exit.o)
+                0x00006b1c                _exit
+ .text          0x00006b48       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_read.o)
+                0x00006b48                __libc_read
+                0x00006b48                read
+ .text          0x00006b7c       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_write.o)
+                0x00006b7c                __write
+                0x00006b7c                write
+                0x00006b7c                __libc_write
+ .text          0x00006bb0       0x3c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__syscall_open.o)
+                0x00006bb0                __libc_open
+                0x00006bb0                open
+ .text          0x00006bec       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_close.o)
+                0x00006bec                __libc_close
+                0x00006bec                close
+ .text          0x00006c20       0x50 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__syscall_ioctl.o)
+                0x00006c54                ioctl
+                0x00006c20                __syscall_ioctl
+ .text          0x00006c70       0x50 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_fcntl.o)
+                0x00006ca4                __libc_fcntl
+                0x00006ca4                fcntl
+                0x00006c70                _fcntl
+ .text          0x00006cc0       0x74 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_mmap.o)
+                0x00006cf4                mmap
+                0x00006cc0                _mmap
+ .text          0x00006d34       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(munmap.o)
+                0x00006d34                munmap
+ .text          0x00006d68       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__socketcall.o)
+                0x00006d68                __socketcall
+ .text          0x00006d9c       0x44 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__rt_sigprocmask.o)
+                0x00006d9c                __rt_sigprocmask
+                0x00006dd0                sigprocmask
+ .text          0x00006de0       0x64 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(usleep.o)
+                0x00006de0                usleep
+ .text          0x00006e44       0x28 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(isxdigit.o)
+                0x00006e44                isxdigit
+ .text          0x00006e6c       0x18 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(tolower.o)
+                0x00006e6c                tolower
+ .text          0x00006e84       0x84 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fgetc.o)
+                0x00006e84                fgetc
+                0x00006ed8                fgetc_unlocked
+ .text          0x00006f08       0x9c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fputs.o)
+                0x00006f68                fputs_unlocked
+                0x00006f08                fputs
+ .text          0x00006fa4       0xc8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(ungetc.o)
+                0x00006fa4                ungetc
+ .text          0x0000706c       0x20 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fseek.o)
+                0x0000706c                fseeko
+                0x0000706c                fseek
+ .text          0x0000708c      0x110 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(fseeko64.o)
+                0x0000708c                fseeko64
+ .text          0x0000719c      0x220 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_fread.o)
+                0x00007214                _stdio_fread
+ .text          0x000073bc       0x6c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_adjpos.o)
+                0x000073bc                _stdio_adjpos
+ .text          0x00007428      0x140 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_uintmaxtostr.o)
+                0x00007428                _uintmaxtostr
+ .text          0x00007568       0xa4 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vsnprintf.o)
+                0x00007568                vsnprintf
+ .text          0x0000760c       0xd8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_init.o)
+                0x0000760c                _ppfs_init
+ .text          0x000076e4       0x40 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_prepargs.o)
+                0x000076e4                _ppfs_prepargs
+ .text          0x00007724      0x178 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_setargs.o)
+                0x00007724                _ppfs_setargs
+ .text          0x0000789c      0x534 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_parsespec.o)
+                0x0000792c                _ppfs_parsespec
+ .text          0x00007dd0       0x1c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(mempcpy.o)
+                0x00007dd0                mempcpy
+                0x00007dd0                __mempcpy
+ .text          0x00007dec       0x48 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strpbrk.o)
+                0x00007dec                strpbrk
+ .text          0x00007e34       0x40 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strspn.o)
+                0x00007e34                strspn
+ .text          0x00007e74       0xd8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(inet_aton.o)
+                0x00007e74                inet_aton
+ .text          0x00007f4c      0x104 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(decoded.o)
+                0x00007f4c                __decode_dotted
+ .text          0x00008050      0x70c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o)
+                0x00008050                __dns_lookup
+ .text          0x0000875c      0x3b0 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o)
+                0x0000875c                __open_nameservers
+ .text          0x00008b0c       0x54 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(get_hosts_byname_r.o)
+                0x00008b0c                __get_hosts_byname_r
+ .text          0x00008b60       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(connect.o)
+                0x00008b60                connect
+                0x00008b60                __libc_connect
+ .text          0x00008b94       0x38 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(recv.o)
+                0x00008b94                recv
+                0x00008b94                __libc_recv
+ .text          0x00008bcc       0x38 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(send.o)
+                0x00008bcc                send
+                0x00008bcc                __libc_send
+ .text          0x00008c04      0x2d0 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetent.o)
+                0x00008c78                endnetent
+                0x00008d14                getnetent
+                0x00008c04                setnetent
+ .text          0x00008ed4      0x15c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(inet_net.o)
+                0x00008ed4                inet_network
+ .text          0x00009030       0x20 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(raise.o)
+                0x00009030                raise
+ .text          0x00009050       0xe8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sigaction.o)
+                0x00009050                __libc_sigaction
+                0x00009050                sigaction
+ .text          0x00009138       0x74 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sigsetops.o)
+                0x00009184                __sigdelset
+                0x0000915c                __sigaddset
+                0x00009138                __sigismember
+ .text          0x000091ac       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_getpid.o)
+                0x000091ac                __getpid
+                0x000091ac                getpid
+                0x000091ac                __libc_getpid
+ .text          0x000091e0       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__syscall_kill.o)
+                0x000091e0                kill
+ .text          0x00009214       0x38 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_newselect.o)
+                0x00009214                select
+                0x00009214                _newselect
+ .text          0x0000924c       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__libc_nanosleep.o)
+                0x0000924c                __libc_nanosleep
+                0x0000924c                nanosleep
+ .text          0x00009280       0x34 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__syscall_rt_sigaction.o)
+                0x00009280                __syscall_rt_sigaction
+ *fill*         0x000092b4        0xc
+ .text          0x000092c0       0x20 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(sigrestorer.o)
+                0x000092c0                __default_sa_restorer
+                0x000092d0                __default_rt_sa_restorer
+ .text          0x000092e0       0x14 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(islower.o)
+                0x000092e0                islower
+ .text          0x000092f4       0x5c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(rewind.o)
+                0x000092f4                rewind
+ .text          0x00009350       0x38 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strdup.o)
+                0x00009350                strdup
+ .text          0x00009388       0x48 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strncat.o)
+                0x00009388                strncat
+ .text          0x000093d0       0x2c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(inet_addr.o)
+                0x000093d0                inet_addr
+ .text          0x000093fc       0xe4 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(encodeh.o)
+                0x000093fc                __encode_header
+ .text          0x000094e0       0xb8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(decodeh.o)
+                0x000094e0                __decode_header
+ .text          0x00009598       0x6c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(encodeq.o)
+                0x00009598                __encode_question
+ .text          0x00009604       0x24 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(lengthq.o)
+                0x00009604                __length_question
+ .text          0x00009628       0xdc /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(decodea.o)
+                0x00009628                __decode_answer
+ .text          0x00009704      0x310 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(read_etc_hosts_r.o)
+                0x00009754                __read_etc_hosts_r
+                0x00009704                __open_etc_hosts
+ .text          0x00009a14      0x2b8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(ntop.o)
+                0x00009c94                inet_pton
+                0x00009c58                inet_ntop
+ .text          0x00009ccc       0xb0 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(encoded.o)
+                0x00009ccc                __encode_dotted
+ .text          0x00009d7c       0x5c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(lengthd.o)
+                0x00009d7c                __length_dotted
+ .text          0x00009dd8       0x98 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_udivsi3.o)
+                0x00009dd8                __udivsi3
+ .text          0x00009e70       0xc0 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_umodsi3.o)
+                0x00009e70                __umodsi3
+ .text          0x00009f30       0xd4 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_modsi3.o)
+                0x00009f30                __modsi3
+ .text          0x0000a004        0x4 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_dvmd_tls.o)
+                0x0000a004                __div0
+ .text          0x0000a008       0x6c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fixunsdfsi.o)
+                0x0000a008                __fixunsdfsi
+ .text          0x0000a074      0x134 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+                0x0000a180                __gccmain
+                0x0000a074                __do_global_dtors
+                0x0000a0ec                __do_global_ctors
+ .text          0x0000a1a8       0x54 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_sf_to_df.o)
+                0x0000a1a8                __extendsfdf2
+ .text          0x0000a1fc      0x418 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o)
+                0x0000a500                __adddf3
+                0x0000a560                __subdf3
+ .text          0x0000a614      0x4fc /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_mul_df.o)
+                0x0000a614                __muldf3
+ .text          0x0000ab10      0x2e8 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_div_df.o)
+                0x0000ab10                __divdf3
+ .text          0x0000adf8       0x9c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ge_df.o)
+                0x0000adf8                __gedf2
+ .text          0x0000ae94       0x9c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lt_df.o)
+                0x0000ae94                __ltdf2
+ .text          0x0000af30       0xc4 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_si_to_df.o)
+                0x0000af30                __floatsidf
+ .text          0x0000aff4      0x108 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_si.o)
+                0x0000aff4                __fixdfsi
+ .text          0x0000b0fc       0x40 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_df.o)
+                0x0000b0fc                __make_dp
+ .text          0x0000b13c       0x6c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_sf.o)
+                0x0000b13c                __truncdfsf2
+ .text          0x0000b1a8     0x15f0 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+                0x0000bf3c                _Unwind_Find_FDE
+                0x0000b494                __register_frame
+                0x0000b54c                __register_frame_table
+                0x0000b410                __register_frame_info_bases
+                0x0000b660                __deregister_frame_info
+                0x0000b574                __deregister_frame_info_bases
+                0x0000b4bc                __register_frame_info_table_bases
+                0x0000b674                __deregister_frame
+                0x0000b530                __register_frame_info_table
+                0x0000b478                __register_frame_info
+ .text          0x0000c798      0x480 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-sjlj.o)
+                0x0000c7b0                _Unwind_SjLj_Unregister
+                0x0000c7f0                _Unwind_GetIP
+                0x0000c81c                _Unwind_GetRegionStart
+                0x0000caa0                _Unwind_SjLj_ForcedUnwind
+                0x0000c798                _Unwind_SjLj_Register
+                0x0000cb7c                _Unwind_DeleteException
+                0x0000c8e8                _Unwind_SjLj_RaiseException
+                0x0000cb08                _Unwind_SjLj_Resume
+                0x0000c800                _Unwind_SetIP
+                0x0000c82c                _Unwind_GetTextRelBase
+                0x0000c810                _Unwind_GetLanguageSpecificData
+                0x0000c7dc                _Unwind_SetGR
+                0x0000c7c8                _Unwind_GetGR
+                0x0000c824                _Unwind_GetDataRelBase
+ .text          0x0000cc18       0x48 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lshrdi3.o)
+                0x0000cc18                __lshrdi3
+ .text          0x0000cc60       0xbc /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_sf.o)
+                0x0000cc60                __unpack_f
+ .text          0x0000cd1c       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_sf.o)
+                0x0000cd1c                __make_fp
+ .text          0x0000cd4c      0x294 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_df.o)
+                0x0000cd4c                __pack_d
+ .text          0x0000cfe0      0x150 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_df.o)
+                0x0000cfe0                __unpack_d
+ .text          0x0000d130      0x1cc /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fpcmp_parts_df.o)
+                0x0000d130                __fpcmp_parts_d
+ .text          0x0000d2fc      0x178 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_sf.o)
+                0x0000d2fc                __pack_f
+ *(.text.*)
+ *(.gnu.warning)
+ *(.stub)
+ *(.gnu.linkonce.t*)
+ *(.glue_7t)
+ *(.glue_7)
+ *(.init)
+ *fill*         0x0000d474        0xc
+                0x0000d480                .=ALIGN(0x10)
+                0x0000d480                _etext=.
+
+.data           0x0000d480     0x2660
+                0x0000d480                .=ALIGN(0x4)
+                0x0000d480                _sdata=.
+                0x0000d480                __data_start=.
+                0x0000d480                data_start=.
+ *(.rela.got)
+ *(.rel.got)
+ *(.got.plt)
+ *(.got)
+                0x0000d480        0x4 LONG 0xffffffff
+ *(.rodata)
+ .rodata        0x0000d484      0x930 iwconfig.o
+ .rodata        0x0000ddb4      0x3d8 iwcommon.o
+ .rodata        0x0000e18c        0xc /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(perror.o)
+ .rodata        0x0000e198       0x18 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_init.o)
+ .rodata        0x0000e1b0       0x24 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfprintf.o)
+ .rodata        0x0000e1d4       0x20 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(vfscanf.o)
+ .rodata        0x0000e1f4        0xe /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_susv3_strerror_r.o)
+ *fill*         0x0000e202        0x2
+ .rodata        0x0000e204      0xb5c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_string_syserrmsgs.o)
+                0x0000e204                _string_syserrmsgs
+ .rodata        0x0000ed60       0xec /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname_r.o)
+ .rodata        0x0000ee4c       0x7c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_parsespec.o)
+ .rodata        0x0000eec8       0x18 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(decoded.o)
+ .rodata        0x0000eee0      0x1f8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o)
+ .rodata        0x0000f0d8       0xc0 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o)
+ .rodata        0x0000f198       0x1c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetent.o)
+ .rodata        0x0000f1b4       0x14 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(decodea.o)
+ .rodata        0x0000f1c8       0x48 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(read_etc_hosts_r.o)
+ .rodata        0x0000f210        0x4 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(ntop.o)
+ .rodata        0x0000f214       0x14 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_thenan_df.o)
+                0x0000f214                __thenan_df
+ *(.rodata.*)
+ *(.gnu.linkonce.r*)
+ *(.rodata1)
+ *(.data)
+ .data          0x0000f228       0x18 iwconfig.o
+                0x0000f228                operation_mode
+ .data          0x0000f240        0x8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__uClibc_main.o)
+                0x0000f240                __environ
+                0x0000f240                environ
+ .data          0x0000f248      0x124 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_init.o)
+                0x0000f348                stdout
+                0x0000f350                _stdio_openlist
+                0x0000f344                stdin
+                0x0000f34c                stderr
+                0x0000f354                _stdio_openlist_lock
+ .data          0x0000f36c        0xc /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(__exit_handler.o)
+                0x0000f370                __exit_function_table
+                0x0000f36c                __exit_count
+                0x0000f374                __exit_slots
+ .data          0x0000f378       0x1c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(exit.o)
+                0x0000f378                __exit_cleanup
+                0x0000f37c                mylock
+ .data          0x0000f394       0x1c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(abort.o)
+ .data          0x0000f3b0      0x16c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(malloc.o)
+                0x0000f4b0                __malloc_heap
+                0x0000f4cc                __malloc_mmapped_blocks
+                0x0000f500                __malloc_mmb_heap
+ .data          0x0000f51c        0x8 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(errno.o)
+                0x0000f520                _h_errno
+                0x0000f51c                errno
+                0x0000f520                h_errno
+                0x0000f51c                _errno
+ .data          0x0000f524        0x4 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_parsespec.o)
+                0x0000f524                _custom_printf_spec
+ .data          0x0000f528       0x20 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(dnslookup.o)
+ .data          0x0000f548       0x18 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o)
+                0x0000f548                __resolv_lock
+ .data          0x0000f560       0x1c /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetent.o)
+ .data          0x0000f57c        0x8 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+ .data          0x0000f584       0x10 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ctors.o)
+                0x0000f584                __CTOR_LIST__
+                0x0000f58c                __DTOR_LIST__
+ .data          0x0000f594        0x4 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+ *(.data1)
+ *(.eh_frame)
+ .eh_frame      0x0000f598      0x448 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+ .eh_frame      0x0000f9e0       0xf0 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-sjlj.o)
+ *(.gcc_except_table)
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+                0x0000fad0                .=ALIGN(0x4)
+ *(.ctors.*)
+ *(.ctors)
+                0x0000fad0        0x4 LONG 0x0
+ *(.dtors.*)
+ *(.dtors)
+                0x0000fad4        0x4 LONG 0x0
+ *fill*         0x0000fad8        0x8
+                0x0000fae0                .=ALIGN(0x10)
+                0x0000fae0                _edata=.
+
+.bss            0x0000fae0      0x63c
+                0x0000fae0                .=ALIGN(0x4)
+                0x0000fae0                _sbss=ALIGN(0x4)
+                0x0000fae0                __bss_start__=.
+ *(.dynsbss)
+ *(.sbss)
+ *(.sbss.*)
+ *(.scommon)
+ *(.dynbss)
+ *(.bss)
+ .bss           0x0000fae0       0x40 iwcommon.o
+ .bss           0x0000fb20      0x200 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_stdio_init.o)
+ .bss           0x0000fd20        0x4 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strtok.o)
+ .bss           0x0000fd24       0x32 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(strerror.o)
+ *fill*         0x0000fd56        0x2
+ .bss           0x0000fd58      0x160 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(gethostbyname.o)
+ .bss           0x0000feb8        0xa /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_parsespec.o)
+ *fill*         0x0000fec2        0x2
+ .bss           0x0000fec4      0x1a0 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetent.o)
+ .bss           0x00010064       0x1c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+ .bss           0x00010080        0xc /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+ .bss           0x0001008c        0x4 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-sjlj.o)
+ *(.bss.*)
+ *(COMMON)
+ COMMON         0x00010090       0x58 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(_ppfs_parsespec.o)
+                                  0x0 (size before relaxing)
+                0x00010090                _custom_printf_arginfo
+                0x000100c0                _custom_printf_handler
+ *fill*         0x000100e8        0x8
+ COMMON         0x000100f0       0x24 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(opennameservers.o)
+                                  0x0 (size before relaxing)
+                0x000100f0                __searchdomain
+                0x00010100                __nameserver
+                0x0001010c                __nameservers
+                0x00010110                __searchdomains
+ COMMON         0x00010114        0x4 /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a(getnetent.o)
+                                  0x0 (size before relaxing)
+                0x00010114                _net_stayopen
+ COMMON         0x00010118        0x4 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+                                  0x0 (size before relaxing)
+                0x00010118                __EH_FRAME_BEGIN__
+                0x0001011c                .=ALIGN(0x4)
+                0x0001011c                __bss_end__=.
+                0x0001011c                _end=.
+                0x0001011c                end=.
+LOAD iwconfig.o
+LOAD iwcommon.o
+LOAD /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a
+LOAD /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a
+LOAD /home/clyu2/newuc/20030305/uClinux-dist/lib/uClibc/lib/libc.a
+OUTPUT(iwconfig.x elf32-littlearm)
+
+.debug_abbrev   0x00000000      0x4d6
+ .debug_abbrev  0x00000000       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fixunsdfsi.o)
+ .debug_abbrev  0x00000025       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+ .debug_abbrev  0x0000004a       0x12 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ctors.o)
+ .debug_abbrev  0x0000005c       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_sf_to_df.o)
+ .debug_abbrev  0x00000081       0x50 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o)
+ .debug_abbrev  0x000000d1       0x4c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_mul_df.o)
+ .debug_abbrev  0x0000011d       0x4c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_div_df.o)
+ .debug_abbrev  0x00000169       0x3f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ge_df.o)
+ .debug_abbrev  0x000001a8       0x3f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lt_df.o)
+ .debug_abbrev  0x000001e7       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_si_to_df.o)
+ .debug_abbrev  0x0000020c       0x3f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_si.o)
+ .debug_abbrev  0x0000024b       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_df.o)
+ .debug_abbrev  0x00000270       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_sf.o)
+ .debug_abbrev  0x00000295       0x12 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_thenan_df.o)
+ .debug_abbrev  0x000002a7       0x81 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+ .debug_abbrev  0x00000328       0x5d /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-sjlj.o)
+ .debug_abbrev  0x00000385       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lshrdi3.o)
+ .debug_abbrev  0x000003aa       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_sf.o)
+ .debug_abbrev  0x000003cf       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_sf.o)
+ .debug_abbrev  0x000003f4       0x3f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_df.o)
+ .debug_abbrev  0x00000433       0x25 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_df.o)
+ .debug_abbrev  0x00000458       0x3f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fpcmp_parts_df.o)
+ .debug_abbrev  0x00000497       0x3f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_sf.o)
+
+.debug_info     0x00000000     0x148a
+ .debug_info    0x00000000       0x74 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fixunsdfsi.o)
+ .debug_info    0x00000074       0xb3 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+ .debug_info    0x00000127       0x57 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ctors.o)
+ .debug_info    0x0000017e       0x62 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_sf_to_df.o)
+ .debug_info    0x000001e0       0xf3 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o)
+ .debug_info    0x000002d3       0xe1 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_mul_df.o)
+ .debug_info    0x000003b4       0xe1 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_div_df.o)
+ .debug_info    0x00000495       0x75 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ge_df.o)
+ .debug_info    0x0000050a       0x75 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lt_df.o)
+ .debug_info    0x0000057f       0x60 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_si_to_df.o)
+ .debug_info    0x000005df       0xaa /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_si.o)
+ .debug_info    0x00000689       0x5e /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_df.o)
+ .debug_info    0x000006e7       0x61 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_sf.o)
+ .debug_info    0x00000748       0x44 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_thenan_df.o)
+ .debug_info    0x0000078c      0x5e5 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+ .debug_info    0x00000d71      0x38d /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-sjlj.o)
+ .debug_info    0x000010fe       0x70 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lshrdi3.o)
+ .debug_info    0x0000116e       0x5f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_sf.o)
+ .debug_info    0x000011cd       0x5e /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_sf.o)
+ .debug_info    0x0000122b       0xa8 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_df.o)
+ .debug_info    0x000012d3       0x5f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_df.o)
+ .debug_info    0x00001332       0xb0 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fpcmp_parts_df.o)
+ .debug_info    0x000013e2       0xa8 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_sf.o)
+
+.debug_line     0x00000000      0x50f
+ .debug_line    0x00000000       0x43 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fixunsdfsi.o)
+ .debug_line    0x00000043       0x43 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+ .debug_line    0x00000086       0x43 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ctors.o)
+ .debug_line    0x000000c9       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_sf_to_df.o)
+ .debug_line    0x000000f9       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o)
+ .debug_line    0x00000129       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_mul_df.o)
+ .debug_line    0x00000159       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_div_df.o)
+ .debug_line    0x00000189       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ge_df.o)
+ .debug_line    0x000001b9       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lt_df.o)
+ .debug_line    0x000001e9       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_si_to_df.o)
+ .debug_line    0x00000219       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_si.o)
+ .debug_line    0x00000249       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_df.o)
+ .debug_line    0x00000279       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_sf.o)
+ .debug_line    0x000002a9       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_thenan_df.o)
+ .debug_line    0x000002d9       0x7e /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+ .debug_line    0x00000357       0x55 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-sjlj.o)
+ .debug_line    0x000003ac       0x43 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lshrdi3.o)
+ .debug_line    0x000003ef       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_sf.o)
+ .debug_line    0x0000041f       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_sf.o)
+ .debug_line    0x0000044f       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_df.o)
+ .debug_line    0x0000047f       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_df.o)
+ .debug_line    0x000004af       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fpcmp_parts_df.o)
+ .debug_line    0x000004df       0x30 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_sf.o)
+
+.debug_pubnames
+                0x00000000      0x547
+ .debug_pubnames
+                0x00000000       0x23 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fixunsdfsi.o)
+ .debug_pubnames
+                0x00000023       0x4c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+ .debug_pubnames
+                0x0000006f       0x24 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_sf_to_df.o)
+ .debug_pubnames
+                0x00000093       0x2c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o)
+ .debug_pubnames
+                0x000000bf       0x1f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_mul_df.o)
+ .debug_pubnames
+                0x000000de       0x1f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_div_df.o)
+ .debug_pubnames
+                0x000000fd       0x1e /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ge_df.o)
+ .debug_pubnames
+                0x0000011b       0x1e /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lt_df.o)
+ .debug_pubnames
+                0x00000139       0x22 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_si_to_df.o)
+ .debug_pubnames
+                0x0000015b       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_si.o)
+ .debug_pubnames
+                0x0000017b       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_df.o)
+ .debug_pubnames
+                0x0000019b       0x23 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_sf.o)
+ .debug_pubnames
+                0x000001be      0x12c /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+ .debug_pubnames
+                0x000002ea      0x177 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-sjlj.o)
+ .debug_pubnames
+                0x00000461       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lshrdi3.o)
+ .debug_pubnames
+                0x00000481       0x21 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_sf.o)
+ .debug_pubnames
+                0x000004a2       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_sf.o)
+ .debug_pubnames
+                0x000004c2       0x1f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_df.o)
+ .debug_pubnames
+                0x000004e1       0x21 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_df.o)
+ .debug_pubnames
+                0x00000502       0x26 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fpcmp_parts_df.o)
+ .debug_pubnames
+                0x00000528       0x1f /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_sf.o)
+
+.debug_aranges  0x00000000      0x2a0
+ .debug_aranges
+                0x00000000       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fixunsdfsi.o)
+ .debug_aranges
+                0x00000020       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(__main.o)
+ .debug_aranges
+                0x00000040       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_sf_to_df.o)
+ .debug_aranges
+                0x00000060       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_addsub_df.o)
+ .debug_aranges
+                0x00000080       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_mul_df.o)
+ .debug_aranges
+                0x000000a0       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_div_df.o)
+ .debug_aranges
+                0x000000c0       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_ge_df.o)
+ .debug_aranges
+                0x000000e0       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lt_df.o)
+ .debug_aranges
+                0x00000100       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_si_to_df.o)
+ .debug_aranges
+                0x00000120       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_si.o)
+ .debug_aranges
+                0x00000140       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_df.o)
+ .debug_aranges
+                0x00000160       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_df_to_sf.o)
+ .debug_aranges
+                0x00000180       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-dw2-fde.o)
+ .debug_aranges
+                0x000001a0       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(unwind-sjlj.o)
+ .debug_aranges
+                0x000001c0       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_lshrdi3.o)
+ .debug_aranges
+                0x000001e0       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_sf.o)
+ .debug_aranges
+                0x00000200       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_make_sf.o)
+ .debug_aranges
+                0x00000220       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_df.o)
+ .debug_aranges
+                0x00000240       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_unpack_df.o)
+ .debug_aranges
+                0x00000260       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_fpcmp_parts_df.o)
+ .debug_aranges
+                0x00000280       0x20 /home/clyu2/arm_com/lib/gcc-lib/arm-elf/3.0/libgcc.a(_pack_sf.o)

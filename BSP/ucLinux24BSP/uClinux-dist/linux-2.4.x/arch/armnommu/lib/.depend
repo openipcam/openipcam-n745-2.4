@@ -1,0 +1,139 @@
+backtrace.o: backtrace.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/no/frame/pointer.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/cpu/32.h)
+changebit.o: changebit.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+clearbit.o: clearbit.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+copy_page.o: copy_page.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/constants.h
+csumipv6.o: csumipv6.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+csumpartialcopy.o: csumpartialcopy.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   csumpartialcopygeneric.S
+csumpartialcopyuser.o: csumpartialcopyuser.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/errno.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/constants.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/cpu/32.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/cpu/26.h) \
+   csumpartialcopygeneric.S
+csumpartial.o: csumpartial.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+delay.o: delay.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+ecard.o: ecard.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/hardware.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/cpu/26.h)
+findbit.o: findbit.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+floppydma.o: floppydma.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+io-acorn.o: io-acorn.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/hardware.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/cpu/26.h)
+io.o: io.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h
+io-pcio.o: io-pcio.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/hardware.h
+io-readsb.o: io-readsb.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+io-readsl-armv3.o: io-readsl-armv3.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/hardware.h
+io-readsl-armv4.o: io-readsl-armv4.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+io-readsw-armv3.o: io-readsw-armv3.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/hardware.h
+io-readsw-armv4.o: io-readsw-armv4.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+io-shark.o: io-shark.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h
+io-writesb.o: io-writesb.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+io-writesl.o: io-writesl.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/hardware.h
+io-writesw-armv3.o: io-writesw-armv3.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/hardware.h
+io-writesw-armv4.o: io-writesw-armv4.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+memchr.o: memchr.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+memcpy.o: memcpy.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+memset.o: memset.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+memzero.o: memzero.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+setbit.o: setbit.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+strchr.o: strchr.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+strncpy_from_user.o: strncpy_from_user.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/errno.h
+strnlen_user.o: strnlen_user.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/errno.h
+strrchr.o: strrchr.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+testchangebit.o: testchangebit.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+testclearbit.o: testclearbit.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+testsetbit.o: testsetbit.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+uaccess-armo.o: uaccess-armo.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h
+uaccess.o: uaccess.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/assembler.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/errno.h

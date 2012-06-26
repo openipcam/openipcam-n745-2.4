@@ -1,0 +1,70 @@
+# drivers/mtd/nand/Config.in
+
+# $Id: Config.in,v 1.3 2007-07-31 03:38:17 andy Exp $
+
+mainmenu_option next_comment
+
+comment 'NAND Flash Device Drivers'
+
+dep_tristate '  NAND Device Support' CONFIG_MTD_NAND $CONFIG_MTD
+if [ "$CONFIG_MTD_NAND" = "y" -o "$CONFIG_MTD_NAND" = "m" ]; then
+   bool '    Verify NAND page writes' CONFIG_MTD_NAND_VERIFY_WRITE
+fi
+
+if [ "$CONFIG_ARM" = "y" ]; then
+   dep_tristate '  NAND Flash device on WINBOND board' CONFIG_MTD_NAND_WINBOND $CONFIG_MTD_NAND $CONFIG_ARCH_WINBOND
+   if [ "$CONFIG_MTD_NAND_WINBOND" != "n" ]; then
+                   choice 'NAND is to be used in the system' \
+                   "128MB_2k_page_size       CONFIG_128MB_NAND\
+                   32MB_512_page_size        CONFIG_32MB_NAND" 128MB_2k_page_size
+   fi
+      # NAND type must be set, makefile use this to decide which yaffs2 directory to link.
+      if [ "$CONFIG_128MB_NAND" = "y" ]; then
+         define_bool CONFIG_2K_PAGE_SIZE y
+      fi
+      if [ "$CONFIG_32MB_NAND" = "y" ]; then
+         define_bool CONFIG_512B_PAGE_SIZE y
+      fi   
+   dep_tristate '  NAND Flash device on SPIA board' CONFIG_MTD_NAND_SPIA $CONFIG_MTD_NAND $CONFIG_ARCH_P720T
+   dep_tristate '  NAND Flash device on TOTO board' CONFIG_MTD_NAND_TOTO $CONFIG_MTD_NAND $CONFIG_ARCH_OMAP
+   dep_tristate '  SmartMedia Card on AUTCPU12 board' CONFIG_MTD_NAND_AUTCPU12 $CONFIG_MTD_NAND $CONFIG_ARCH_AUTCPU12
+   dep_tristate '  NAND Flash device on EDP7312 board' CONFIG_MTD_NAND_EDB7312 $CONFIG_MTD_NAND $CONFIG_ARCH_EDB7312
+fi
+
+if [ "$CONFIG_MTD_DOC2001PLUS" = "y" -o "$CONFIG_MTD_DOC2001" = "y" -o "$CONFIG_MTD_DOC2000" = "y" -o "$CONFIG_MTD_NAND" = "y" ]; then
+   define_bool CONFIG_MTD_NAND_IDS y
+else
+  if [ "$CONFIG_MTD_DOC2001PLUS" = "m" -o "$CONFIG_MTD_DOC2001" = "m" -o "$CONFIG_MTD_DOC2000" = "m" -o "$CONFIG_MTD_NAND" = "m" ]; then
+     define_bool CONFIG_MTD_NAND_IDS m
+  fi
+fi
+
+if [ "$CONFIG_TOSHIBA_RBTX4925" = "y" ]; then
+   dep_tristate '  SmartMedia Card on Toshiba RBTX4925 reference board' CONFIG_MTD_NAND_TX4925NDFMC $CONFIG_MTD_NAND $CONFIG_TOSHIBA_RBTX4925_MPLEX_NAND
+fi
+
+if [ "$CONFIG_TOSHIBA_RBTX4938" = "y" ]; then
+   dep_tristate '  NAND Flash device on Toshiba RBTX4938 reference board' CONFIG_MTD_NAND_TX4938NDFMC $CONFIG_MTD_NAND $CONFIG_TOSHIBA_RBTX4938_MPLEX_NAND
+fi
+
+if [ "$CONFIG_PPCHAMELEONEVB" = "y" ]; then
+    dep_tristate '  NAND Flash device on PPChameleonEVB board' CONFIG_MTD_NAND_PPCHAMELEONEVB $CONFIG_MTD_NAND
+fi
+
+if [ "$CONFIG_SOC_AU1550" = "y" ]; then
+   dep_tristate '  NAND Flash Driver for Au1550 controller' CONFIG_MTD_NAND_AU1550 $CONFIG_MTD_NAND 
+fi
+
+if [ "$CONFIG_SH_SOLUTION_ENGINE" = "y" ]; then
+   dep_tristate '  Renesas Flash ROM 4-slot interface board (FROM_BOARD4)' CONFIG_MTD_NAND_RTC_FROM4 $CONFIG_MTD_NAND
+fi
+
+dep_tristate '  DiskOnChip 2000, Millennium and Millennium Plus (NAND reimplementation) (EXPERIMENTAL)' CONFIG_MTD_NAND_DISKONCHIP $CONFIG_MTD_NAND $CONFIG_EXPERIMENTAL
+if [ "$CONFIG_MTD_NAND_DISKONCHIP" = "y" -o "$CONFIG_MTD_NAND_DISKONCHIP" = "m" ]; then
+   bool '    Advanced detection options for DiskOnChip' CONFIG_MTD_NAND_DISKONCHIP_PROBE_ADVANCED
+   hex  '    Physical address of DiskOnChip' CONFIG_MTD_NAND_DISKONCHIP_PROBE_ADDRESS 
+   bool '    Probe high addresses' CONFIG_MTD_NAND_DISKONCHIP_PROBE_HIGH $CONFIG_MTD_NAND_DISKONCHIP_PROBE_ADVANCED
+   bool '    Allow BBT write on DiskOnChip Millennium and 2000TSOP' CONFIG_MTD_NAND_DISKONCHIP_BBTWRITE
+fi
+
+endmenu

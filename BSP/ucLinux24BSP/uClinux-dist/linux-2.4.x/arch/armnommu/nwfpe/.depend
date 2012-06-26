@@ -1,0 +1,78 @@
+double_cpdo.o: double_cpdo.c \
+   softfloat.h \
+   fpopcode.h \
+   fpa11.h
+entry26.o: entry26.S \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/constants.h
+extended_cpdo.o: extended_cpdo.c \
+   softfloat.h \
+   fpopcode.h \
+   fpa11.h
+fpa11.o: fpa11.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   fpa11.h \
+   fpopcode.h \
+   fpmodule.h \
+   fpmodule.inl
+fpa11_cpdo.o: fpa11_cpdo.c \
+   fpa11.h \
+   fpopcode.h
+fpa11_cpdt.o: fpa11_cpdt.c \
+   softfloat.h \
+   fpopcode.h \
+   fpa11.h \
+   fpmodule.h \
+   fpmodule.inl \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h
+fpa11_cprt.o: fpa11_cprt.c \
+   milieu.h \
+   softfloat.h \
+   fpopcode.h \
+   fpa11.h \
+   fpa11.inl \
+   fpmodule.h \
+   fpmodule.inl
+fpa11.h: \
+   fpsr.h \
+   softfloat.h
+	@touch fpa11.h
+fpmodule.o: fpmodule.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/signal.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   softfloat.h \
+   fpopcode.h \
+   fpmodule.h \
+   fpa11.h \
+   fpa11.inl \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/debug/user.h)
+fpmodule.h: \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/cpu/32.h)
+	@touch fpmodule.h
+fpopcode.o: fpopcode.c \
+   softfloat.h \
+   fpopcode.h \
+   fpsr.h \
+   fpa11.h \
+   fpmodule.h \
+   fpmodule.inl
+milieu.h: \
+   ARM-gcc.h
+	@touch milieu.h
+single_cpdo.o: single_cpdo.c \
+   softfloat.h \
+   fpopcode.h \
+   fpa11.h
+softfloat.o: softfloat.c \
+   milieu.h \
+   softfloat.h \
+   softfloat-macros \
+   softfloat-specialize
+.PRECIOUS:	fpa11.h \
+	fpmodule.h \
+	milieu.h \
+

@@ -1,0 +1,1 @@
+#define CONFIG_WBFLASHDRV 1

@@ -1,0 +1,83 @@
+Intel IXDP425
+-------------
+
+1. Compiler Tool Chain
+
+   Before you can compile the Linux kernel, libraries and applications to
+   generate an IXP425 image you must install an appropriate compiler tool
+   chain. I suggest you use the arm-linux tool chain that accompanies this
+   source distribution (the arm-linux-XXXXXXXX.tar.gz package). To install
+   this toolchain do:
+
+   1. login as root
+   2. cd /
+   3. tar xvzf arm-linux-XXXXXXXX.tar.gz
+
+   This package contains binaries of the following tools:
+
+        binutils-2.13.2
+        gcc-3.2.1
+        glibc-2.2.5
+
+2. Building the Source
+
+   Follow these simple steps to compile binary images ready to run on the
+   Intel IXDP425 board:
+
+   1.  tar xvzf uClinux-dist-XXXXXXXX.tar.gz
+   2.  cd uClinux-dist
+   3.  make xconfig
+
+       . Choose the "Target Platform Selection" menu item
+       . Select the "Vendor/Product" tab and choose "Intel/IXP425"
+       . Select the "Libc version" tab and choose "Glibc"
+       . "Save and Exit" this configuration
+
+   4.  make dep
+   5.  make
+
+   That is it!  The final make step will run through and compile the Linux
+   kernel, glibc library and a sample application set. It will also package
+   the result into two files ready to load onto the IXDP425 board, zImage
+   and ramdisk.gz.
+
+   Only the linux-2.4.x kernel and glibc libraries can currently be used
+   on the IXDP425 board. There is no linux-2.0.x kernel support, uC-libc or
+   uClibc support for this board.
+
+
+3.  Loading and Running
+
+    You will need an Intel IXDP425 board fitted with the RedBoot loader in
+    flash. You should firstly setup RedBoot configuration with a client
+    and server IP address.
+
+    Copy the binary files from uClinux-dist, images/zImage and
+    images/ramdisk.gz to the TFTP area of the download server.
+
+    To load and run Linux issue the following RedBoot commands:
+
+        load -r -v -b 0x11600000 zImage
+        load -r -v -b 0x10800000 ramdisk.gz
+        go 0x11600000
+
+    You should see the Linux boot banner, and then be presented with a
+    bash shell prompt. A reasonable utility set is in place, mostly using
+    the busybox tool set. By default the rc script will run a dhcp client,
+    and so with a local dhcp server in place Linux will acquire an IP
+    address.
+
+
+4. Customizing the Build
+
+   Using "make xconfig" in uClinux-dist you can customize the kernel and
+   application configurations. There is a large selection of packages in
+   the application configuration.
+
+   Consult the README file at the top level of uClinux-dist for some more
+   information about configuration and building.
+
+   Note also that uClinux-dist does not contain the Intel Access Library or
+   Drivers patch. So only the external PCI EEPRO 10/100 ethernet board can
+   be used by default.
+

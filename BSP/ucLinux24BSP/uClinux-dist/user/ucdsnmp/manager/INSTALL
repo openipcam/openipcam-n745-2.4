@@ -1,0 +1,65 @@
+REQUIREMENTS
+
+  Get and install:
+  
+    the mysql (www.mysql.com) database
+    The following perl modules (www.cpan.org):
+      SNMP
+      DBI
+      Data-Dumper
+      Data-ShowTable
+      Msql-Mysql-modules
+
+  Setting up mysql:
+     ./configure
+     make
+     make install
+     scripts/mysql_install_db
+  
+     start it by running 'safe_mysqld'.
+     To run the sql commands listed in the following text, run 'mysql'.
+
+
+SETTING UP THE MYSQL DATABASES
+  Use mysql itself to set up the mysql database resquired:
+
+    ./setupdb -u root -p PASS -h SQLHOST
+
+  For each host you want to monitor, put an entry in the hosts table
+  using:
+  
+    insert into hosts(name, community) values(HOSTNAME, COMMUNITY);
+  
+  Then, for each thing you want to monitor on a given host:
+  
+    insert into hosttables(host, groupname, tablename) values(HOSTNAME, GROUPNAME, TABLENAME)
+
+  This can be automatted using the setupnewhost command, like:
+
+    setupnewhost -u root -p password GROUP host1 host2 ...
+
+  which will put the standard list of ucd-snmp specific mib tables in
+  the table for you.
+
+COLLECTING THE DATA
+
+  The command you need to run to collect data is snmptosql, which will 
+  use the information defined above to fill your data base with all
+  sorts of useful information that you've asked it to collect.
+  Something like:
+
+    snmptosql -u root -p password
+
+  should be put in cron to update a regular intervals.
+
+DISPLAYING THE RESULTS
+
+  Put the script snmptohtml somewhere in your cgi-bin directory, and
+  view it.  It should take care of everything else and display neat
+  pretty tables for you.
+
+  Idealy, it should be put behind a user/password database in your web
+  server (something that sets REMOTE_USER for in an environmental for
+  CGI scripts).  This will greatly enhance its operation so that
+  different users can be users of different groups of hosts, etc...
+  If this is not done, everyone will use the user name "guest".

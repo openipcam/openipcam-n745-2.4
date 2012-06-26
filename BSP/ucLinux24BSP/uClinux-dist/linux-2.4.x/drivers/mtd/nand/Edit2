@@ -1,0 +1,70 @@
+unsigned char Read_ChipID(struct DiskOnChip* doc)
+{
+	unsigned char tmp2,tmp,chip_id,tmpb,tmpc;
+	tmp  = ReadDOC(doc->physadr, Mplus_Toggle);
+	
+	for (tmp = 0; (tmp < 4); tmp++)
+			ReadDOC(doc->physadr, Mplus_Power);
+
+		/* Reset the DiskOnChip ASIC */
+		tmp = DOC_MODE_RESET | DOC_MODE_MDWREN | DOC_MODE_RST_LAT |
+			DOC_MODE_BDECT;//0x1c
+		WriteDOC(tmp, doc->physadr, Mplus_DOCControl);
+		WriteDOC(~tmp, doc->physadr, Mplus_CtrlConfirm);
+	
+		//mdelay(1);
+		/* Enable the DiskOnChip ASIC */
+		tmp = DOC_MODE_NORMAL | DOC_MODE_MDWREN | DOC_MODE_RST_LAT |
+			DOC_MODE_BDECT;
+		WriteDOC(tmp, doc->physadr, Mplus_DOCControl);
+		WriteDOC(~tmp, doc->physadr, Mplus_CtrlConfirm);
+		//mdelay(1);
+		
+		tmp=ReadDOC(doc->physadr,Mplus_DOCControl);
+		
+		if((tmp&0x01)!=1)
+		{
+			printf("Set to normal mode error %x\n",tmp);
+			return 0;
+		}
+		
+
+
+		doc->ChipID = ReadDOC(doc->physadr, ChipID);
+		
+		if(doc->ChipID!=DOC_ChipID_DocMilPlus32)
+		{
+			printf("Not this chip %x\n",chip_id);
+			return 0;
+		}
+
+
+
+	tmp  = ReadDOC(doc->physadr, Mplus_Toggle) & DOC_TOGGLE_BIT;
+	tmpb = ReadDOC(doc->physadr, Mplus_Toggle) & DOC_TOGGLE_BIT;
+	tmpc = ReadDOC(doc->physadr, Mplus_Toggle) & DOC_TOGGLE_BIT;
+	
+		
+	if (tmp != tmpb &&tmpb!=tmpc && tmp == tmpc)
+	{
+		printf("Found DocMilPlus 32M OK\n");
+		
+		WriteDOC(0x11,doc->physadr,Mplus_AliasResolution);
+      		tmp=ReadDOC(doc->physadr,Mplus_AliasResolution);
+      		
+      		if(tmp!=0x11)
+      			return 0;
+      		
+      		WriteDOC(0x04,doc->physadr,Mplus_AliasResolution);
+      		tmp=ReadDOC(doc->physadr,Mplus_AliasResolution);
+      		
+      		if(tmp!=0x04)
+      			return 0;
+      	
+		return 1;
+	}
+      
+      printf("No chip OK\n");
+      
+      return 0;
+}

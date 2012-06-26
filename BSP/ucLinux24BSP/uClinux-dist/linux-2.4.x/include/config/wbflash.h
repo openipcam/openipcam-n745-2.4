@@ -1,0 +1,1 @@
+#define CONFIG_WBFLASH 1

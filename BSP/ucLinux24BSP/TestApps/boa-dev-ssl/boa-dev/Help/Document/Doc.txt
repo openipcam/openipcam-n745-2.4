@@ -1,0 +1,66 @@
+1. CGI
+	int RegisterEmbedFun(const char *pcAccessName, REQUEST_CALLBACK_PFUN funRequestCallBack, void *pParam);
+	int RegisterEmbedFunEx(const char *pcAccessName, REQUEST_CALLBACK_PFUN funRequestCallBack, int iPrivilegeRequired, void *pParam);
+	BOOL IsRegisterEmbedFunEx(const char *pcAccessName, REQUEST_CALLBACK_PFUN *pfunRequestCallBack, int *piPrivilegeRequired, void **ppParam);
+	int UnregisterEmbedFun(const char *pcAccessName);
+	void ClearEmbedFun(void);
+
+
+2. REQUEST
+	int GetHttpMethod(HTTPCONNECTION hConnection);
+	struct in_addr GetClientAddr(HTTPCONNECTION hConnection);
+	char *GetClientMac(HTTPCONNECTION hConnection);
+	char *GetQueryString(HTTPCONNECTION hConnection);
+	char *GetRequestPath(HTTPCONNECTION hConnection);
+	char *GetRequestFilePath(HTTPCONNECTION hConnection);
+	char *GetDocumentRoot(HTTPCONNECTION hConnection);
+	char *GetReferer(HTTPCONNECTION hConnection);
+	char *GetContentType(HTTPCONNECTION hConnection);
+	int GetContentLength(HTTPCONNECTION hConnection);
+
+
+
+	typedef int (*SEND_DATA_OVER_PFUN)(HTTPCONNECTION hConnection, time_t *tLastFill, void *pParam);
+	void SetSendDataOverFun(HTTPCONNECTION hConnection, SEND_DATA_OVER_PFUN funOnSendDataOver, void *pParam);
+
+	typedef int (*POST_DATA_PFUN)(HTTPCONNECTION hConnection,
+				char **ppcPostBuf,
+				int *piPostBufLen,
+				int *piPostDataLen,
+				char *pcFillData,
+				int iFillDataLen,
+				int iIsMoreData/*bool*/,
+				void *pParam/*other parameter for extend use*/);
+	void SetPostDataFun(HTTPCONNECTION hConnection, POST_DATA_PFUN funPostDataGot, void *pParam);
+
+
+3. RESPONSE
+	void SetKeepAliveMode(HTTPCONNECTION hConnection, BOOL bIsKeepAlive);
+	void SetHttpHeader(HTTPCONNECTION hConnection, int iStatus, const char *pcTitle, const char *pcEncodings, const char *pcExtraheads, const char *pcContentType, BOOL bShowLength);
+
+	void AddHttpBody(HTTPCONNECTION hConnection, const char *pcBuf2Add, int iBufLen);
+	void AddHttpBodyString(HTTPCONNECTION hConnection, const char *pcString);
+
+
+4. USER AUTHORIZATION
+	char *GetCurrentUser(HTTPCONNECTION hConnection, char *pcUser, int iUserLen);
+	int GetAuthPrivilege(HTTPCONNECTION hConnection);
+	int SendAuthRequired(HTTPCONNECTION hConnection, int iPrivilege);
+	void SetAuthPrompt(const char *pcUserPrompt, const char *pcAdminPrompt, const char *pcSystemPrompt);
+	BOOL AuthGetUser(const char *pcUserName, char *pcPassword, int iMaxPassLen, int *piPrivilege);
+	int AuthSetUser(const char *pcUserName, const char *pcPassword, int iPrivilege);
+	int AuthDelUser(const char *pUserName);
+	LIST **GetAuthUserList();
+	void EnableUserCheck(BOOL bIsEnable);
+	BOOL IsEnableUserCheck(void);
+
+
+5. OHTER
+	char *GetDocumentBasedPath(char *pcUriPath);
+	HTTPSERVER StartThttpd(char *pcServerRoot,
+				int iPort,
+				int iKeepAliveTimeout,
+				int iKeepAliveMax,
+				int iMaxConnections,
+				int (*pOnHttpInit)(HTTPSERVER hServer),
+				REQUEST_CALLBACK_PFUN pOnRequestBegin);

@@ -1,0 +1,29 @@
+			Introduction of W90N745 Demo Applications
+
+
+There are following contents under "TestApps":
+	AC97 sample program(audio_test)
+	UART sample program(uart)
+	I2C sample program(i2c)
+	Keypad sample program(Keypad)
+	smartcard sample program(smartcard)
+	C++ sample program(cpp_sample)
+	USI sample program(usi)
+        Mass storage USB device sample program(mass)
+        VCOM USB device sample code(vcom)
+        Boa web server (boa-dev-ssl)
+                1. Execute openssl/createlink.sh before build the application
+                2. Exeute boa-dev/mkcert.sh and copy the *.pem to romdisk/etc
+                3. Remove -DSERVER_SSL if you don't need SSL support
+                4. Copy web pages into romdisk/etc/Html
+        PPPoE & PPP dial up utility (ppp-oe-modem)
+                PPPoE:
+                        1. Edit and copy chap-secret, pap-secret, and pppoe-options into romdisk/etc/ppp
+                        2. Usage: pppd <dial_type> <interface> <username> <password>
+                PPP:
+                        1. Edit and copy chap-secret, pap-secret to romdisk/etc/ppp. mppp.cfg and fccc.scr to romdisk/etc
+                        2. Build applications in mppp, and pppd
+                        3. Usage: mppp
+				
+	NOTE: Some program folder has README or documents in it,
+		Please read them before you want to use or modify the demo code.

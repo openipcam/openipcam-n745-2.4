@@ -1,0 +1,190 @@
+agpsupport.o: agpsupport.c \
+   drmP.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h
+auth.o: auth.c \
+   drmP.h
+bufs.o: bufs.c \
+   drmP.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/un.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp/module.h)
+context.o: context.c \
+   drmP.h
+ctxbitmap.o: ctxbitmap.c \
+   drmP.h
+dma.o: dma.c \
+   drmP.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h
+drawable.o: drawable.c \
+   drmP.h
+drm.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/ioctl.h \
+   mga_drm.h \
+   i810_drm.h \
+   r128_drm.h \
+   radeon_drm.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/drm40/sis.h)
+	@touch drm.h
+drmP.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/current.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/miscdevice.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/major.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/file.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/pgtable.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/mman.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp/module.h) \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/agp_backend.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   drm.h
+	@touch drmP.h
+ffb_context.o: ffb_context.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   drmP.h \
+   ffb_drv.h
+ffb_drv.o: ffb_drv.c \
+   drmP.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/shmparam.h \
+   ffb_drv.h
+fops.o: fops.c \
+   drmP.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h
+gamma_dma.o: gamma_dma.c \
+   drmP.h \
+   gamma_drv.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h
+gamma_drv.o: gamma_drv.c \
+   drmP.h \
+   gamma_drv.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h)
+i810_bufs.o: i810_bufs.c \
+   drmP.h \
+   i810_drv.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/un.h
+i810_context.o: i810_context.c \
+   drmP.h \
+   i810_drv.h
+i810_dma.o: i810_dma.c \
+   drmP.h \
+   i810_drv.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h
+i810_drv.o: i810_drv.c \
+   drmP.h \
+   i810_drv.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h)
+init.o: init.c \
+   drmP.h
+ioctl.o: ioctl.c \
+   drmP.h
+lists.o: lists.c \
+   drmP.h
+lock.o: lock.c \
+   drmP.h
+memory.o: memory.c \
+   drmP.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp/module.h)
+mga_bufs.o: mga_bufs.c \
+   drmP.h \
+   mga_drv.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/un.h
+mga_context.o: mga_context.c \
+   drmP.h \
+   mga_drv.h
+mga_dma.o: mga_dma.c \
+   drmP.h \
+   mga_drv.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h
+mga_drv.o: mga_drv.c \
+   drmP.h \
+   mga_drv.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h)
+mga_state.o: mga_state.c \
+   drmP.h \
+   mga_drv.h \
+   drm.h
+proc.o: proc.c \
+   drmP.h
+r128_bufs.o: r128_bufs.c \
+   drmP.h \
+   r128_drv.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/un.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp/module.h)
+r128_cce.o: r128_cce.c \
+   drmP.h \
+   r128_drv.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+r128_context.o: r128_context.c \
+   drmP.h \
+   r128_drv.h
+r128_drv.o: r128_drv.c \
+   drmP.h \
+   r128_drv.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp/module.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h)
+r128_state.o: r128_state.c \
+   drmP.h \
+   r128_drv.h \
+   drm.h
+radeon_bufs.o: radeon_bufs.c \
+   drmP.h \
+   radeon_drv.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/un.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp/module.h)
+radeon_context.o: radeon_context.c \
+   drmP.h \
+   radeon_drv.h
+radeon_cp.o: radeon_cp.c \
+   drmP.h \
+   radeon_drv.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+radeon_drv.o: radeon_drv.c \
+   drmP.h \
+   radeon_drv.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp/module.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h)
+radeon_state.o: radeon_state.c \
+   drmP.h \
+   radeon_drv.h \
+   drm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+tdfx_context.o: tdfx_context.c \
+   drmP.h \
+   tdfx_drv.h
+tdfx_drv.o: tdfx_drv.c \
+   drmP.h \
+   tdfx_drv.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp/module.h) \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h)
+vm.o: vm.c \
+   drmP.h
+.PRECIOUS:	drm.h \
+	drmP.h \
+

@@ -1,0 +1,784 @@
+*************************************************************************
+*                                                                      	*
+*  DiskOnChip(R) TrueFFS(R) driver for Linux				*
+*                                                                      	*
+*  Version 5.0.0, released on August 1, 2001				*
+*  Based on TrueFFS version 5.0.0 from August 1, 2001			*
+*                                                                      	*
+*  Copyright M-Systems (c) 2001						*
+*                                                                      	*
+*  Release Notes							*
+*                                                                      	*
+*************************************************************************
+
+This installation manual will guide through the process installing the 
+DiskOnChip TrueFFS driver for Linux as a loadubale module (GPL complient).
+
+Note: Installing this driver as part of the Linux kernel is NOT GPL complient 
+and should only be used for testing or R&D purposes. 
+
+This manual also includes instructions of preparing a bootable miniature 
+version of Redhat 6.2 Linux on a 16MB DiskOnChip (DOC). 
+
+Requirements:
+	1. DOS diskette with M-Systems DOS utilities
+	2. RedHat 6.2 CDROM
+	3. 16MB (or larger) DiskOnChip
+
+
+Table of content:
+-----------------
+0. What's new in version 5.0
+1. Introduction
+2. Before you begin
+3. Install RedHat on your server
+4. Unpack the M-Systems Linux support
+5. Install doc-lilo and verify operation
+6. Install driver, compile and create initrd file
+7. Verify system can find and use DiskOnChip
+8. Copy System files to DiskOnChip
+9. Update DiskOnChip to make it bootable
+10. Using DiskOnChip extended functionality
+11. Known limitations
+12. Contact information
+
+
+0. New in TrueFFS version 5.0 for Linux
+---------------------------------------
+1. TrueFFS 5.0 supports the new 32MB DiskOnChip Millennium Plus (MD2811-D32) 
+   and the 16MB DiskOnChip 2000 TSOP (MD2211-D16).
+2. Improved BIOS driver for automatic detection of the DiskOnChip by the system
+   BIOS.
+3. Support for DiskOnChip extended functionalities (not supported by the 
+   regular file system API) through IOCTLs. This functionality goes beyond 
+   simple data storage capability, and includes features like: format the 
+   media, Read/Write protect, Binary Partitions access, Flash defragmentation 
+   and other options. This functionality cannot be called using regular file 
+   system API (simply since there is none that relates to such operations).
+
+
+New in TrueFFS 4.2.2 for Linux
+------------------------------
+1. Full support for Linux Kernels 2.4.x. 
+2. Support for Linux kernel 2.3.99 as well as for Linux 2.0.x, 2.2.x and 2.4.x.
+
+
+New in TrueFFS 4.2.1 for Linux
+------------------------------
+1. Supports Linux Kernel 2.4.x (tested on 2.4.0 test 8).
+2. Same software package supports Linux 2.0x, 2.2x and 2.4x.
+3. Version 4.2.1 of the TrueFFS can be installed as a loadable kernel 
+module (GPL compliant), in all supported Linux kernels.
+
+
+1. Introduction
+---------------
+
+M-Systems DiskOnChip may be used either as a supplemental (non-boot) disk or 
+as a bootable disk. The DiskOnChip TrueFFS Linux driver can be installed as a 
+loadable kernel module (GPL compliant).
+
+If you need to distribute a working solution you must compile the driver
+as a loadable module. If you plan to boot from the DiskOnChip, you must
+use the kernel INITRD facilities to load the driver module during the
+boot process. 
+
+Hints:
+
+If you decide to work in /usr/src/linux, or are a little rusty at building
+kernels, be sure to back up _both_ the kernel source tree in /usr/src/linux
+and the modules in /lib/modules/_whatever_.
+
+The file /usr/src/linux/READEME contains (among other bits of useful info)
+a rough outline of the kernel build process.
+
+Some of the steps below produce lots of output.  The easiest way to save it
+all for later perusal is to use the "script" command.  The simple way to use
+it is:
+
+	script output.file
+	command_that_prompts_for_input_and/or_produces_lots_of_output
+	exit
+
+This starts a subshell and copy all input and output to the
+file "output.file".  Unfortunately screen oriented programs like "vi" and
+"make menuconfig" put a lot of trash in the script file because even the
+terminal escape sequences are caught, but it is still useable.  See
+"man script" for details.
+
+
+2. Before you begin
+-------------------
+This install process assumes that you can boot your system from a hard drive 
+with the DiskOnChip hardware in place. If your system cannot be booted with the 
+DiskOnChip hardware in place or if after boot, the DiskOnChip is not recognised 
+as an additional drive then you should do one of the following:
+
+- If your system boots but does not recognise the DiskOnChip as an additional 
+  drive:
+
+  Follow the instructions specified in section 6.0 below.
+
+- If your system does not boot at all:
+
+  This may be due to compatibility issues with some LILO version. This can be 
+  prevented in two ways: 
+  First in some BIOS systems you can prevent the M-Systems firmware from 
+  loading if you press and hold down <ctrl><alt>B while booting. Second you 
+  can boot from a DOS diskette and install a dummy firmware, then reboot 
+  your machine and update your Linux installation with the DiskOnChip TrueFFS 
+  driver. When done - update DiskOnChip with the real firmware file and the 
+  Linux system files.
+
+  + Installing the dummy firmware:	
+	
+	DFORMAT /WIN:xxxx /S:doc50.EXB /EMPTY /Y 
+
+  + Installing real firmware:
+	
+	DFORMAT /WIN:xxxx /S:doc50.EXB /NOFORMAT /Y  
+
+  + Installing DOC as bootable	(after the system files have been installed on the DiskOnChip)
+
+	DFORMAT /WIN:xxxx /UPDATE:doc50.EXB /FIRST /Y 
+
+3. Install RedHat
+-----------------
+
+	Goal: working redhat, create bootable floppy for emergencies
+
+We assume a simple text mode server install, with normal defaults, and
+no modifications whatsoever made to it afterwards.
+
+
+3.1 Emergency Bootdisk
+----------------------
+
+	Goal: Create a working emergency boot diskette
+
+If you created an emergency boot floppy during the system install you can
+skip this step.  In any case - You don't HAVE to do this step; but if you 
+install a non-bootable kernel, you will need this floppy for recovery purposes.
+
+During the DiskOnChip installation process, we will be modifying the boot 
+sequence of the BIOS, installing new versions of lilo and boot loaders. 
+Any failure will lead to the system being unable to boot. The system should be 
+configured so that it will first look for a bootable floppy disk (Check the 
+BIOS settings and set them accordingly).
+
+To build an emergency floppy disk, do the following:
+
+	mkbootdisk --device /dev/fd0 2.2.14-5.0
+
+Label this "Emergency Boot disk - no DiskOnChip".
+
+
+3.2 Install Kernel source on your hard drive
+-------------------------------------------
+
+	Goal: Install kernel source and prepare for use
+
+Mount the 1st RedHat CDROM on /mnt/cdrom:
+
+	mount -o ro /dev/cdrom /mnt/cdrom
+
+Install the kernel source binary RPM like this:
+
+	cd /mnt/cdrom/RedHat/RPMS
+	ls kernel-source-
+	rpm -ivh kernel-source-2.2.14-5.0-i386.rpm
+
+The kernel source version number may vary if you are using something other 
+than Redhat 6.2; just install whatever kernel-source package you have or prefer.
+
+If you are using Redhat 5.2 (because kernel 2.0.38 doesn't compile
+with stock RHAT6.2), make sure you install the sharutils and ncurses-devel
+packages; if you don't install ncurses-devel, make menuconfig won't work
+
+	rpm -ivh sharutils-4.2-10.i386.rpm
+	rpm -ivh ncurses-devel-4.2-10.i386.rpm
+
+Unmount and eject the cdrom:
+
+	cd /
+	umount /mnt/cdrom
+	eject cdrom
+
+
+4. Unpack DiskOnChip Kit
+------------------------
+
+	Goal: get the DiskOnChip Linux Kit unpacked.
+
+Assuming that you have put the DiskOnChip kit in /tmp:
+
+	cd /tmp
+	tar xvfz /tmp/doc-linux-5.0.0.tgz
+
+
+5. Install doc-lilo
+-------------------
+
+	Goal: Install doc-lilo, create modified current lilo.conf-doc 
+
+Current versions of lilo have a problem with systems that use a large
+EBDA (Extended BIOS Data Area). The kit includes a version of lilo called
+doc-lilo that has been modified to fix this problem.
+
+Assuming that you have the DiskOnChip kit in /tmp:
+
+	cd /tmp/doc-linux-5.0.0/lilo
+	rpm -ivh doc-lilo-0.21-19.i386.rhat62.rpm
+
+If you are using Redhat 5.2, do this instead:
+
+	rpm -ivh doc-lilo-0.21-19.i386.rhat52.rpm
+
+This will have installed:
+
+	/sbin/doc-lilo
+	/boot/doc.b
+
+It will also create:
+
+	/etc/doc-lilo.conf
+
+Verify that the lilo.conf modifications succeeded (verify that
+install=/boot/doc.b):
+
+	more /etc/doc-lilo.conf 
+
+Use doc-lilo as your new bootloader:
+
+	doc-lilo -v -C /etc/doc-lilo.conf
+
+Reboot:
+
+	shutdown -r now
+Or:
+	<ctrl><alt><del>
+
+You should see modified lilo prompt
+
+	dLILO
+	Low memory: 02CF Kb
+
+
+5.1 Make a doc-lilo boot floppy
+-------------------------------
+
+	Goal: Create a doc-lilo emergency boot floppy
+
+The previous step installed and verified that we now have a version of the
+lilo bootloader that should be able to boot your system with a DiskOnChip
+installed.
+
+Assuming that you have the DiskOnChip kit in /tmp:
+
+	cd /tmp/doc-linux-5.0.0/
+	./mkbootdisk_doc --device /dev/fd0 2.2.14-5.0
+
+Label this "Emergency Boot disk - no DiskOnChip, doc-lilo".
+
+
+6. Install DiskOnChip Linux Driver 
+----------------------------------
+
+	Goal: Install the DiskOnChip driver, and compile as a module 
+	      (GPL compliant).
+	
+
+6.1 Installing the DiskOnChip Linux driver
+------------------------------------------
+Assuming that you have the DiskOnChip kit in /tmp:
+
+	cd /tmp/doc-linux-5.0.0/driver
+	./patch_linux linux-2_2-patch driver-patch
+	./mknod_fl
+
+
+6.2 Compile the DiskOnChip Linux Driver
+----------------------------------------
+
+	Goal: Change kernel config to automatically make DiskOnChip module
+
+Assuming that you have the kernel /usr/src/linux:
+
+	cd /usr/src/linux
+	make menuconfig
+
+Select the Loadable module support by entering:
+
+	L <enter>
+
+Make sure all the options on that menu are turned ON.
+
+Exit that screen, and select the block device screen by entering:
+
+	B <enter>
+
+Use the cursor keys to go to the bottom of the list and select the M-Systems
+driver as a Module:
+
+	<DnArrow>
+	M
+
+Do not unselect Loopback device or RAM disk support, or the build will fail.
+
+Using the cursor and enter keys, select exit, exit and save.
+
+Then compile the modules:
+
+	make dep
+	make clean
+	make bzImage
+	make install
+	make modules 
+	make modules_install
+
+
+6.3 Create Initrd file
+----------------------
+
+	Goal: Get initrd file containing doc.o created,
+              create modified lilo.conf-initrd,
+	      test that the new initrd works from the hard drive.
+
+	Note: If you are using Linux kernel 2.4.2, this step may hang your 
+	      machine. See section 11.5 below for a workaround.
+
+At this point, if you are compiling the DiskOnChip with a kernel
+whose version is NOT the same as the current kernel, as reported by `uname -a`,
+you must run doc-lilo and reboot into the kernel you want to DiskOnChip to run. 
+For instance, Redhat 6.2 installs with kernel 2.2.14 by default; to make this 
+work with 2.2.16, or even 2.4, you must reboot into those kernels.
+
+If you have built loopback device support as a module, do this:
+	insmod loop
+
+Verify that the loopback device is built into the kernel, or inserted
+into the kernel as a module, or the following steps will fail.
+
+Assuming that you have the DiskOnChip kit in /tmp:
+
+	cd /tmp/doc-linux-5.0.0/driver
+	./mkinitrd_doc
+
+	Note: This will fail if you did not run 'make modules_install'
+
+Verify that the script modified the lilo.conf file to correctly include
+the initrd file. 
+
+	more /etc/lilo.conf-initrd 
+
+	Note: If your system previously had an initrd file then lilo.conf-initrd
+	may now have two lines that refer to initrd. Remove the previous file 
+	reference.
+
+Once correct:
+
+	doc-lilo -v -C /etc/lilo.conf-initrd
+
+Reboot:
+	shutdown -r now 
+
+
+6.4 Make a doc-lilo boot floppy
+-------------------------------
+ 	Goal: Make a DiskOnChip aware emergency boot floppy
+
+The previous step installed the DiskOnChip driver module. It is convenient to 
+have an emergency boot floppy with this. As with the earlier emergency
+rescue floppy, you do not HAVE to do this.
+
+Assuming that you have the DiskOnChip kit in /tmp:
+	
+	cd /tmp/doc-linux-5.0.0
+	./mkbootdisk_doc --device /dev/fd0 2.2.14-5.0
+
+Label this "Emergency Boot disk - DiskOnChip, doc-lilo".
+
+
+7. Test DiskOnChip
+-------------------
+
+	Goal: Verify DiskOnChip module loads and find the DiskOnChip device
+
+Assuming you haven't already, reboot now:
+
+	shutdown -r now
+
+When the system starts you should see something like the following (you can
+also use dmesg or less /var/log/dmesg):
+
+	Flash disk driver for DiskOnChip2000
+	Copyright (C) 1998,2001 M-Systems Flash Disk Pioneers Ltd.
+	DOC device(s) found: 1
+	Fat Filter Enabled
+	fl_init: registered device at major: 100
+	fl :fl_doc_mount: VOL: 0
+	fl :debug: entering NFDC 2148 identification routine.
+	fl :Debug: identified NFDC 2148.
+	fl :Debug: starting NFTL mount.
+	fl :Debug: finished NFTL mount.
+	 fla: unknown partition table
+	partition: 0: start_sect: 0, nr_sects: 7cf0 Fl_blk_size[]: 3e78kb
+	partition: 1: start_sect: 0, nr_sects: 0 Fl_blk_size[]: 0kb
+
+You can also use:
+
+	lsmod
+
+This should list the DiskOnChip module.
+
+
+8. Partition DiskOnChip 
+-------------------------
+
+	Goal: Change partition type to linux native
+
+The DiskOnChip partition needs to be changed from DOS to Linux native:
+
+	fdisk /dev/msys/fla
+
+To view:
+
+	p<enter>
+
+If you see one DOS partition (the normal default) you simply have to change
+it to a Linux parition:
+
+	t<enter>
+	1<enter>
+	83<enter>
+
+If there are no partitions you will have to create one, use the new command
+to create primary partition one with the default sizes (full DiskOnChip):
+
+	n<enter>
+	p<enter>
+	1<enter>
+	<enter>
+	<enter>
+
+To save:
+
+	w<enter>
+
+
+8.1 Place Linux system files on DiskOnChip
+------------------------------------------
+
+	Goal: Copy Linux system files to the DiskOnChip so that it will 
+	      become a bootable Linux disk.
+
+This will copy all of the files contained in a list to your DiskOnChip. This 
+will also copy selected files from your system that contain locally customized 
+information.
+
+Assuming that you have the DiskOnChip kit in /tmp:
+
+	cd /tmp/doc-linux-5.0.0/build
+	./mkdocimg redhat-6.2.files
+
+Reboot:
+	
+	shutdown -r now
+
+
+9. Make DiskOnChip Bootable
+----------------------------
+
+	Goal: Update DiskOnChip firmware to make DiskOnChip bootable
+
+If you installed the dummy firmware you need to install the correct
+firmware at this point. 
+
+The DiskOnChip must now be made bootable. This is done by putting the correct
+firmware onto it using the dformat utility. Boot the system using the
+M-Systems DOS disk:
+
+	dformat /win:d000 /update:doc50.exb /first /y
+
+
+9.1 Test DiskOnChip
+--------------------
+
+	Goal: Verify that the system boots from DiskOnChip
+
+Power on. Check that the system boots from DiskOnChip and not your hard disk.
+
+When you insmod the DiskOnChip, you can set the priority; it must be a number
+between 20 and -20 under kernels >2.4.0, and 40-0 for kernels <2.2.39
+By default it is set to 10 less than the maximum.  To speed up
+writing to the DiskOnChip, one may wish to set the priority to maximum. To
+speed up interactive response, one may wish to set it halfway between
+minima and maxima.  Its not a good idea to set the priority lower than
+that.
+
+To see how many reads and writes the DiskOnChip has taken since the module
+was inserted, one may cat /proc/fl_queue.  This should identify any
+problems with IO speed.  This only works under kernels 2.4.0 and
+above.
+
+
+9.2 Hard Disk
+--------------
+
+You may now either remove the hard disk entirely or leave it in. 
+
+When left in, you may wish to modify /etc/fstab to leave some partitions enabled. 
+If you leave the original root file system enabled be sure to modify it's mount 
+point to something other than /.
+
+
+10. Using DiskOnChip extended functionality
+-------------------------------------------
+The basic function of TrueFFS is to enable regular file systems to access the
+DiskOnChip as if it were a block device (disk). To do this, TrueFFS provides 
+a standard block-device interface, with the capability of reading and writing 
+logical sectors to and from the DiskOnChip. This capability, along with 
+advanced Flash management features (transparent to the OS and file system) are 
+enough to enable file-systems and operating systems to manage the DiskOnChip as 
+a standard storage device.
+
+In addition to the standard storage device functionality, the TrueFFS 5.0 
+driver provides access to extended functionality, not part of standard 
+file systems API.
+
+The driver implements the interface of the extended functionality by exporting 
+a list of extended functions (through IOCTLs). Every extended function is 
+represented by a code defined as enumerated type defined in flioctl.h.
+
+Note: See implementation example of IOCTL Functionality of DiskOnChip at the end 
+of this section.
+
+Note: Detailed explenations regarding the DiskOnChip extended functionality 
+      is found in application note #46 (Extended functions of TrueFFS 
+      driver for DiskOnChip).
+
+10.1 Using IOCTLs to access binary partitions in Linux.
+-------------------------------------------------------
+Accessing binary partitions in Linux requires an IOCTL that does not exist 
+in other TrueFFS drivers for other OSs. The additional IOCTL is:
+
+FL_IOCTL_LNX
+        
+        Input Record:
+        typedef struct
+        {
+            unsigned long command;
+            unsigned long data;
+        }flInputLnxRecord;
+
+        Output Record:
+        typedef struct
+        {
+            unsigned long status;
+            unsigned long data;
+        }flOutputLnxRecord;
+
+
+It is used to specify which is the active BDK partition. For example, before 
+calling to FL_IOCTL_BINARY_HW_PROTECTION or FL_IOCTL_BDK_OPERATION IOCTLs you 
+must specify the number of the active BDK partition by calling FL_IOCTL_LNX 
+with following parameters:
+
+     Input:
+     flInputLnxRecord.command        0
+     flInputLnxRecord.data           bits 0-3 - DiskOnChip number, 
+                                     bits 4-7 - BDK partition number
+
+     Output:
+     flOutputLnxRecord.status        flOK or flBadParameter
+     flOutputLnxRecord.data          nothing
+
+10.2 Source code example of accessing binary partition using IOCTLs
+-------------------------------------------------------------------
+#include <stdio.h>
+
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include <fcntl.h>
+
+#include <sys/ioctl.h>
+
+#include <linux/fs.h>
+
+#include "flioctl.h"
+
+#define DEV1 "/dev/msys/fla1"
+
+int main()
+{
+	int fd1,ioctlResult;
+	FILE*log;
+	flIOctlRecord ioctlRecord;
+	flBDKOperationInput bdkOperationInput;
+	flOutputStatusRecord outputStatusRecord;
+	flInputLnxRecord inputLnxRecord;
+	flOutputLnxRecord outputLnxRecord;
+
+	char pBuffW[512];
+	char pBuffR[512];
+
+	if( (log=fopen("log.txt","wb"))==NULL )
+	{
+		perror("Opening log ");
+		exit(1);
+	}
+
+	if( (fd1=open(DEV1, O_RDWR))==0 )
+	{
+		perror("Opening device ");
+		goto close_log;
+	}
+
+	ioctlRecord.inputRecord=&inputLnxRecord;
+	ioctlRecord.outputRecord=&outputLnxRecord;
+	inputLnxRecord.command=0;
+	inputLnxRecord.data=0;
+	if( (ioctlResult = ioctl(fd1,FL_IOCTL_LNX,&ioctlRecord)) != 0)
+	{
+		perror("Error in ioctl(FL_IOCTL_LNX) ");
+		goto close_fd1;
+	}
+	if(outputLnxRecord.status!=flOK)
+	{
+		printf("ioctl(FL_IOCTL_LNX) returns %d\n",outputStatusRecord.status);
+		goto close_fd1;
+	}
+
+	ioctlRecord.inputRecord=&bdkOperationInput;
+	ioctlRecord.outputRecord=&outputStatusRecord;
+	bdkOperationInput.bdkStruct.flags=0;
+	bdkOperationInput.bdkStruct.length=512;
+	bdkOperationInput.bdkStruct.startingBlock=5;
+	bdkOperationInput.bdkStruct.signOffset=8;
+	memcpy(bdkOperationInput.bdkStruct.oldSign,"BIPO",4);
+
+	bdkOperationInput.type=BDK_INIT_WRITE;
+	if( (ioctlResult = ioctl(fd1,FL_IOCTL_BDK_OPERATION,&ioctlRecord)) != 0)
+	{
+		perror("Error in ioctl(FL_IOCTL_BDK_OPERATION:BDK_INIT_WRITE) ");
+		goto close_fd1;
+	}
+	if(outputStatusRecord.status!=flOK)
+	{
+		printf("ioctl(FL_IOCTL_BDK_OPERATION:BDK_INIT_WRITE) returns %d\n",outputStatusRecord.status);
+		goto close_fd1;
+	}
+
+	bdkOperationInput.type=BDK_WRITE;
+	bdkOperationInput.bdkStruct.bdkBuffer=pBuffW;
+	memset(pBuffW,0xa5,512);
+	if( (ioctlResult = ioctl(fd1,FL_IOCTL_BDK_OPERATION,&ioctlRecord)) != 0)
+	{
+		perror("Error in ioctl(FL_IOCTL_BDK_OPERATION:BDK_WRITE) ");
+		goto close_fd1;
+	}
+	if(outputStatusRecord.status!=flOK)
+	{
+		printf("ioctl(FL_IOCTL_BDK_OPERATION:BDK_WRITE) returns %d\n",outputStatusRecord.status);
+		goto close_fd1;
+	}
+
+	bdkOperationInput.type=BDK_INIT_READ;
+	if( (ioctlResult = ioctl(fd1,FL_IOCTL_BDK_OPERATION,&ioctlRecord)) != 0)
+	{
+		perror("Error in ioctl(FL_IOCTL_BDK_OPERATION:BDK_INIT_READ) ");
+		goto close_fd1;
+	}
+	if(outputStatusRecord.status!=flOK)
+	{
+		printf("ioctl(FL_IOCTL_BDK_OPERATION:BDK_INIT_READ) returns %d\n",outputStatusRecord.status);
+		goto close_fd1;
+	}
+
+	bdkOperationInput.type=BDK_READ;
+	bdkOperationInput.bdkStruct.bdkBuffer=pBuffR;
+	memset(pBuffR,0,512);
+	if( (ioctlResult = ioctl(fd1,FL_IOCTL_BDK_OPERATION,&ioctlRecord)) != 0)
+	{
+		perror("Error in ioctl(FL_IOCTL_BDK_OPERATION:BDK_READ) ");
+		goto close_fd1;
+	}
+
+	if((ioctlResult=memcmp(pBuffW,pBuffR,512)))
+	{
+		printf("Error comparing buffers in byte %d.\n",ioctlResult);
+		goto close_fd1;
+	}
+
+	if(outputStatusRecord.status!=flOK)
+	{
+		printf("ioctl(FL_IOCTL_BDK_OPERATION:BDK_read) returns %d\n",outputStatusRecord.status);
+		goto close_fd1;
+	}
+
+	printf("\nOK\n");
+
+close_fd1:
+	close(fd1);
+close_log:
+	fclose(log);
+	exit(0);
+}
+
+
+11. Known limitations
+---------------------
+11.1 When formatting an 8MB BDTL partition, use the native file systems high 
+     level format and not the TrueFFS built in FAT formatter.
+
+11.2 To view the IPL part of a newly updated EXB in the DiskOnChip 2000 TSOP,
+     the DiskOnChip must recieve a H/W reset signal (hard reset), else the
+     DiskOnChip memory window shows the previous data.
+
+11.3 The multiple BDTL partition feature is not supported in DiskOnChip 2000 
+     TSOP (MD2211-D16). 
+
+11.4 If write protection is activated on a partition that was not mounted as write 
+     protected, then writing to a write protected partition will show a fail message 
+     only after the data is flushed from the system cache.
+
+11.5 Step 6.3 in the installation (mkinitrd_doc) may hang the computer when 
+     performed in Linux kernel 2.4.2. To avoid this, and assuming you are 
+     interested to keep using kernel version 2.4.2, perform the following:
+
+     (A) follow the installation instructions on your 2.4.2 machine up until 
+         step 6.2 (including). Perform step 6.3 on another machine, running 
+	 with another Linux kernel (2.4.4, 2.4.0, and so on). Return to your 
+	 2.4.2 machine to complete the rest of the installation.
+
+     
+
+12. Contact information
+-----------------------
+Internet: http://www.m-sys.com
+
+E-mail:	info@m-sys.com
+
+USA Office:	M-Systems Inc.8371 Central Ave, Suite A Newark CA  94560
+		Phone: 1-510-494-2090
+		Fax: 1-510-494-5545
+Taiwan Office:  M-System Asia Ltd. 11F-2, No. 81, Sec.2, Chang Teh Rd. Taipei, Taiwan
+		Phone: 886-2-2550-1741
+		Fax: 886-2-2550-1745	
+Japan Office:	M-Systems Japan Inc. Arakyu Bldg., 5F 2-19-2 Nishi-Gotanda Shinagawa-ku, Tokyo 141-0031
+		Phone: 81-3-5437-5739
+		Fax: 81-3-5437-5759
+U.K. Office:	M-Systems UK Ltd.PO Box 20 Chalgrove SPDO OX44 7YP
+		Phone: 44-1865-891-123
+		Fax: 44-1865-891-391
+Israel Office:	M-Systems Ltd. Central Park 2000 7 Atir Yeda St. Kfar Saba 44425, Israel
+		Tel: 972-9-764-5000
+		Fax: 972-3-548-8666
+
+Please checkout our web site for the latest driver versions and updated 
+information.
+
+
+		

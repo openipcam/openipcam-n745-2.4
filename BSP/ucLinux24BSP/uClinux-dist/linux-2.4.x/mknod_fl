@@ -1,0 +1,84 @@
+#! /bin/sh
+
+FLA_MAJOR=100
+DEVS="a b c d"
+FLA_MINORS="1 2 3 4"
+
+# "math" function and friends borrowed from /dev/MAKEDEV
+#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#
+
+# For bash and ksh, we can use faster builtin routines to do manipulation,
+# otherwise (ash) fall back to slower method using `expr'.
+# The extra level of indirection using `eval' is necessary a) for ksh, and
+# b) to get past ash.
+
+if [ "$RANDOM" != "$RANDOM" ]
+then
+	math () {
+		eval echo "\$(($*))"
+	}
+	index () {	# index string c
+		eval "I=\${1%$2*}"
+		eval echo "\${#I}"
+	}
+	suffix () {
+	    eval echo "\${1#$2}"
+	}
+	strip () {
+		eval echo "\${1% $2 *} \${1#* $2 }"
+	}
+	first () {
+	    eval echo "\${1:0:1}"
+	}
+	second () {
+	    eval echo "\${1:1:1}"
+	}
+else
+	math () {
+		expr "$@"
+	}
+	index () {	# index string c
+		expr $1 : ".*$2" - 1
+	}
+	suffix () {
+		expr "$1" : "$2\(.*\)"
+	}
+	strip () {
+		echo "[$1][$2]" >&2
+		echo "`expr \"$1\" : \"\(.*\) $2 \"` `expr \"$1\" : \".* $2 \(.*\)\"`"
+	}
+	first () {
+		expr "$1" : "\(.\)"
+	}
+	second () {
+		expr "$1" : ".\(.\)"
+	}
+fi
+
+#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#---#
+
+mkdir -p /dev/msys
+cd /dev/msys
+
+# Turn this on for gory detail...
+# set -x
+
+MINORBASE=0
+
+for i in ${DEVS} ; do
+
+	echo mknod fl${i}  b ${FLA_MAJOR} ${MINORBASE}
+	mknod fl${i}  b ${FLA_MAJOR} ${MINORBASE}
+	for m in ${FLA_MINORS}; do
+		echo mknod fl${i}${m} b ${FLA_MAJOR} `math ${m} + ${MINORBASE}`
+		mknod fl${i}${m} b ${FLA_MAJOR} `math ${m} + ${MINORBASE}`
+	done
+
+	echo chmod 600 fl${i}*
+	chmod 600 fl${i}*
+
+	MINORBASE=`math ${MINORBASE} + 64`
+
+done
+
+exit 0

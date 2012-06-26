@@ -1,0 +1,271 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/config-language.txt.
+#
+mainmenu_name "Linux Kernel Configuration"
+
+define_bool CONFIG_ARM y
+define_bool CONFIG_SBUS n
+define_bool CONFIG_UID16 y
+define_bool CONFIG_RWSEM_GENERIC_SPINLOCK y
+
+# Begin uclinux additions -----------------------------------------------------
+define_bool CONFIG_UCLINUX y
+define_bool MAGIC_ROM_PTR y
+# End uclinux additions -------------------------------------------------------
+
+#------------------------------------------------------------------------------
+#                      Target Board Selection added by yachen
+#------------------------------------------------------------------------------
+mainmenu_option next_comment
+comment 'Target board selection'
+                   choice 'is selected as target board' \
+                   "EV_BOARD         CONFIG_WINBOND_EVB\
+                   POS-TAX_DEMO_BOARD        CONFIG_WINBOND_PTB" EV_BOARD
+endmenu
+#------------------------------------------------------------------------------
+#                         C o d e    m a t u r i t y
+#------------------------------------------------------------------------------
+mainmenu_option next_comment
+comment 'Code maturity level options'
+bool 'Prompt for development and/or incomplete code/drivers' CONFIG_EXPERIMENTAL
+bool 'Prompt for obsolete code/drivers' CONFIG_OBSOLETE
+endmenu
+#------------------------------------------------------------------------------
+#                      L o a d a b l e    M o d u l e
+#------------------------------------------------------------------------------
+mainmenu_option next_comment
+comment 'Loadable module support'
+bool 'Enable loadable module support' CONFIG_MODULES
+if [ "$CONFIG_MODULES" = "y" ]; then
+   bool '  Set version information on all module symbols' CONFIG_MODVERSIONS
+   bool '  Kernel module loader' CONFIG_KMOD
+fi
+endmenu
+#------------------------------------------------------------------------------
+#                               S y s t e m
+#------------------------------------------------------------------------------
+
+mainmenu_option next_comment
+comment 'System Type'
+choice 'ARM system type'	\
+	 "Winbond		CONFIG_ARCH_WINBOND \
+	  " TI-DSC21
+
+bool 'Generate big endian code' CONFIG_CPU_BIG_ENDIAN
+
+bool 'Set flash/sdram size and base addr' CONFIG_SET_MEM_PARAM
+if [ "$CONFIG_SET_MEM_PARAM" = "y" ]; then
+   hex '(S)DRAM Base Address' DRAM_BASE 0x00800000
+   hex '(S)DRAM Size ' DRAM_SIZE 0x00800000
+   hex 'FLASH Base Address ' FLASH_MEM_BASE 0x00400000
+   hex 'FLASH Size ' FLASH_SIZE 0x00400000
+fi
+
+if [ "$CONFIG_ARCH_WINBOND" = "y" ]; then
+   hex 'ROMFS Base Address ' ROMFS_BASE 0x00700000
+fi
+
+choice 'Kernel executes from' \
+	"RAM	CONFIG_RAMKERNEL \
+	 ROM	CONFIG_ROMKERNEL" ROM
+
+# ARM940T
+
+
+if [ "$CONFIG_ARCH_WINBOND" = "y" ]; then
+   choice 'Board Implementation' \
+   "WINBOND-W90N745 CONFIG_BOARD_W90N745" WINBOND-W90N745
+fi
+
+if [ "$CONFIG_BOARD_W90N745" = "y" ]; then
+    define_string CONFIG_SPU_NAME "W90N745"
+    define_bool CONFIG_CPU_W90N745      y
+    define_bool CONFIG_CPU_ARM710       y
+    define_bool CONFIG_CPU_32v4         y
+    define_bool CONFIG_CPU_32           y
+    define_bool CONFIG_CPU_26           n
+    define_bool CONFIG_NO_PGT_CACHE     y
+    define_bool CONFIG_CPU_WITH_CACHE   y
+    define_bool CONFIG_CPU_WITH_MCR_INSTRUCTION n
+    define_int  CONFIG_ARM_CLK          80000000
+    define_bool CONFIG_SERIAL_W90N745   y
+    if [ "$CONFIG_SET_MEM_PARAM" = "n" ]; then
+       define_hex DRAM_BASE 0x00000000
+       define_hex DRAM_SIZE 0x00800000
+       define_hex FLASH_MEM_BASE 0xFF000000
+       define_hex FLASH_SIZE 0x00200000
+    fi
+fi
+
+endmenu
+
+#------------------------------------------------------------------------------
+#                             G e n e r a l
+#------------------------------------------------------------------------------
+mainmenu_option next_comment
+comment 'General setup'
+source drivers/pci/Config.in
+bool 'Support hot-pluggable devices' CONFIG_HOTPLUG
+if [ "$CONFIG_HOTPLUG" = "y" ]; then
+   source drivers/pcmcia/Config.in
+else
+   define_bool CONFIG_PCMCIA n
+fi
+bool 'Networking support' CONFIG_NET
+bool 'System V IPC' CONFIG_SYSVIPC
+bool 'Reduced memory footprint' CONFIG_REDUCED_MEMORY
+bool 'BSD Process Accounting' CONFIG_BSD_PROCESS_ACCT
+bool 'Sysctl support' CONFIG_SYSCTL
+tristate 'NWFPE math emulation' CONFIG_NWFPE
+choice 'Kernel core (/proc/kcore) format' \
+	"ELF		CONFIG_KCORE_ELF	\
+	 A.OUT		CONFIG_KCORE_AOUT" ELF
+define_bool CONFIG_BINFMT_FLAT y
+if [ "$CONFIG_BINFMT_FLAT" != "n" ]; then
+   bool '    Enable ZFLAT support' CONFIG_BINFMT_ZFLAT
+fi
+define_bool CONFIG_KERNEL_ELF y
+
+if [ "$CONFIG_EXPERIMENTAL" = "y" ]; then
+   bool 'Power Management support' CONFIG_PM
+fi
+
+if [ "$CONFIG_CPU_32" = "y" ]; then
+   tristate 'RISC OS personality' CONFIG_ARTHUR
+fi
+
+if [ "$CONFIG_CPU_32" = "y" -a "$CONFIG_ARCH_EBSA110" != "y" ]; then
+   bool 'Kernel-mode alignment trap handler' CONFIG_ALIGNMENT_TRAP
+fi
+
+endmenu
+#------------------------------------------------------------------------------
+#                           N e t    D e v i c e s
+#------------------------------------------------------------------------------
+if [ "$CONFIG_NET" = "y" ]; then
+   source net/Config.in
+   mainmenu_option next_comment
+   comment 'Network device support'
+   bool 'Network device support?' CONFIG_NETDEVICES
+   if [ "$CONFIG_NETDEVICES" = "y" ]; then
+      source drivers/net/Config.in
+   fi
+   endmenu
+   source net/ax25/Config.in
+   source net/irda/Config.in
+   source net/bluetooth/Config.in
+fi
+#------------------------------------------------------------------------------
+#                               A T E / I D E
+#------------------------------------------------------------------------------
+mainmenu_option next_comment
+comment 'ATA/IDE/MFM/RLL support'
+tristate 'ATA/IDE/MFM/RLL support' CONFIG_IDE
+if [ "$CONFIG_IDE" != "n" ]; then
+  source drivers/ide/Config.in
+else
+  define_bool CONFIG_BLK_DEV_IDE_MODES n
+  define_bool CONFIG_BLK_DEV_HD n
+fi
+endmenu
+#------------------------------------------------------------------------------
+#                                  S C S I
+#------------------------------------------------------------------------------
+mainmenu_option next_comment
+comment 'SCSI support'
+tristate 'SCSI support?' CONFIG_SCSI
+if [ "$CONFIG_SCSI" != "n" ]; then
+   source drivers/scsi/Config.in
+fi
+endmenu
+#------------------------------------------------------------------------------
+#                                  I S D N
+#------------------------------------------------------------------------------
+mainmenu_option next_comment
+comment 'ISDN subsystem'
+tristate 'ISDN support' CONFIG_ISDN
+if [ "$CONFIG_ISDN" != "n" ]; then
+   source drivers/isdn/Config.in
+fi
+endmenu
+#------------------------------------------------------------------------------
+#                              C o n s o l e
+#------------------------------------------------------------------------------
+if [ "$CONFIG_VT" = "y" ]; then
+   mainmenu_option next_comment
+   comment 'Console drivers'
+   if [ "$CONFIG_ARCH_ACORN" != "y" -a "$CONFIG_ARCH_EBSA110" != "y" ]; then
+      bool 'VGA text console' CONFIG_VGA_CONSOLE
+   fi
+   bool 'Support Frame buffer devices' CONFIG_FB
+   source drivers/video/Config.in
+   endmenu
+fi
+
+#------------------------------------------------------------------------------
+#                        M i s c    D r i v e r s
+#------------------------------------------------------------------------------
+source drivers/parport/Config.in
+source drivers/mtd/Config.in
+source drivers/pnp/Config.in
+source drivers/block/Config.in
+source drivers/media/Config.in
+source fs/Config.in
+source drivers/char/Config.in
+source drivers/usb/Config.in
+source drivers/ieee1394/Config.in
+source drivers/message/i2o/Config.in
+
+if [ "$CONFIG_BOARD_W90N745" = "y" ]; then
+source drivers/gpio/Config.in
+fi
+
+#------------------------------------------------------------------------------
+#                         S o u n d    D e v i c e s
+#------------------------------------------------------------------------------
+mainmenu_option next_comment
+comment 'Sound support'
+tristate 'Sound support?' CONFIG_SOUND
+if [ "$CONFIG_SOUND" != "n" ]; then
+   source drivers/sound/Config.in
+fi
+endmenu
+
+#------------------------------------------------------------------------------
+#                     K e r n e l    H a c k i n g
+#------------------------------------------------------------------------------
+mainmenu_option next_comment
+comment 'Kernel hacking'
+
+define_bool CONFIG_FRAME_POINTER y
+bool 'Find REVISITS' CONFIG_REVISIT
+bool 'Verbose kernel error messages' CONFIG_DEBUG_ERRORS
+bool 'Verbose user fault messages' CONFIG_DEBUG_USER
+bool 'Include debugging information in kernel binary' CONFIG_DEBUG_INFO
+dep_bool 'Magic SysRq key' CONFIG_MAGIC_SYSRQ $CONFIG_VT
+if [ "$CONFIG_CPU_26" = "y" ]; then
+   bool 'Disable pgtable cache' CONFIG_NO_PGT_CACHE
+fi
+if [ "$CONFIG_EXPERIMENTAL" = "y" ]; then
+   bool 'Kernel low-level debugging functions' CONFIG_DEBUG_LL
+   if [ "$CONFIG_DEBUG_LL" = "y" ]; then
+      if [ "$CONFIG_FOOTBRIDGE" = "y" ]; then
+         bool 'Kernel low-level debugging messages via footbridge serial port' CONFIG_DEBUG_DC21285_PORT
+      fi
+   fi
+   bool 'Non power-of-2 kernel allocator (EXPERIMENTAL)' CONFIG_CONTIGUOUS_PAGE_ALLOC
+   dep_bool '  include /proc/mem_map' CONFIG_MEM_MAP $CONFIG_CONTIGUOUS_PAGE_ALLOC
+fi
+endmenu
+
+source lib/Config.in
+
+
+
+
+
+
+
+
+

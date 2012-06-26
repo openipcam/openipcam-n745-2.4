@@ -1,0 +1,6 @@
+#define UTS_VERSION "#632 Tue May 6 13:13:34 CST 2003"
+#define LINUX_COMPILE_TIME "13:13:34"
+#define LINUX_COMPILE_BY "xfhu"
+#define LINUX_COMPILE_HOST "pc32server"
+#define LINUX_COMPILE_DOMAIN "(none)"
+#define LINUX_COMPILER "gcc version 3.0"

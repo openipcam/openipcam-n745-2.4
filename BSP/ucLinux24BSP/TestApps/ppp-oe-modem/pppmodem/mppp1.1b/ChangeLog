@@ -1,0 +1,8 @@
+    Mar-22-1998
+        * don't use regex(). use strstr() instead.
+        * pppd arguments can be provided at the cfg file. That means that
+          the program can be used if CHAP is ON.
+
+--
+Muhammad A Muquit
+Mar-22-1998

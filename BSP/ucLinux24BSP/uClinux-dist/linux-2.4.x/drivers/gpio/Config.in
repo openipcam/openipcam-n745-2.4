@@ -1,0 +1,7 @@
+#
+# Gpio device configuration
+#
+mainmenu_option next_comment
+comment 'Winbond advanced setting'
+	dep_tristate 'Support W90N745 Chipset' CONFIG_W90N745
+endmenu

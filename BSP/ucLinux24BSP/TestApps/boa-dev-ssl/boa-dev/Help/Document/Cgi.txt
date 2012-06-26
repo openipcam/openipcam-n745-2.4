@@ -1,0 +1,34 @@
+1.
+int RegisterEmbedFunEx(const char *pcAccessName, REQUEST_CALLBACK_PFUN funRequestCallBack, int iPrivilegeRequired, void *pParam);
+	Description:
+		Registered by "RegisterEmbedFunEx", the very http request specified by "pcAccessName" will to be processed by "funRequestCallBack".
+	Param:
+		typedef int (*REQUEST_CALLBACK_PFUN)(HTTPCONNECTION hc, void *pParam);
+		pcAccessName - the file path in URL;
+		funRequestCallBack - the function to process http request;
+		iPrivilegeRequired - minimal privilege required;
+		pParam - a additional parameter when calling "funRequestCallBack", which can be used to transfer any pointer specified by user;
+	Return: 0, success; -1, failed.
+	
+2.
+int RegisterEmbedFun(const char *pcAccessName, REQUEST_CALLBACK_PFUN funRequestCallBack, void *pParam);
+	Description:
+		Same as:
+		RegisterEmbedFunEx(pcAccessName, funRequestCallBack, AUTH_USER, pParam);
+
+3.
+BOOL IsRegisterEmbedFunEx(const char *pcAccessName, REQUEST_CALLBACK_PFUN *pfunRequestCallBack, int *piPrivilegeRequired, void **ppParam);
+	Description:
+		To determine whether a function associated with "pcAccessName" has already been registered, and if it is, the other three corresponding parameters return.
+
+4.
+int UnregisterEmbedFun(const char *pcAccessName);
+	Description:
+		"UnregisterEmbedFun" removes the function recorded by "RegisterEmbedFun".
+	Return: 0, success; -1, failed.
+
+5.
+void ClearEmbedFun(void);
+	Description:
+		"ClearEmbedFun" removes all of the functions recorded by "RegisterEmbedFun".
+

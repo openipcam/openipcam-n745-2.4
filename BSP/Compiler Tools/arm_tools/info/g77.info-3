@@ -1,0 +1,700 @@
+This is g77.info, produced by makeinfo version 4.0 from g77.texi.
+
+INFO-DIR-SECTION Programming
+START-INFO-DIR-ENTRY
+* g77: (g77).                  The GNU Fortran compiler.
+END-INFO-DIR-ENTRY
+   This file documents the use and the internals of the GNU Fortran
+(`g77') compiler.  It corresponds to the GCC-3.0 version of `g77'.
+
+   Published by the Free Software Foundation 59 Temple Place - Suite 330
+Boston, MA 02111-1307 USA
+
+   Copyright (C) 1995,1996,1997,1998,1999,2000,2001 Free Software
+Foundation, Inc.
+
+   Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.1 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "GNU General Public License", the Front-Cover
+texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+   (a) The FSF's Front-Cover Text is:
+
+   A GNU Manual
+
+   (b) The FSF's Back-Cover Text is:
+
+   You have freedom to copy and modify this GNU Manual, like GNU
+software.  Copies published by the Free Software Foundation raise
+funds for GNU development.
+
+   Contributed by James Craig Burley (<craig@jcb-sc.com>).  Inspired by
+a first pass at translating `g77-0.5.16/f/DOC' that was contributed to
+Craig by David Ronis (<ronis@onsager.chem.mcgill.ca>).
+
+
+File: g77.info,  Node: Debugging Options,  Next: Optimize Options,  Prev: Warning Options,  Up: Invoking G77
+
+Options for Debugging Your Program or GNU Fortran
+=================================================
+
+   GNU Fortran has various special options that are used for debugging
+either your program or `g77'.
+
+`-g'
+     Produce debugging information in the operating system's native
+     format (stabs, COFF, XCOFF, or DWARF).  GDB can work with this
+     debugging information.
+
+     Support for this option in Fortran programs was incomplete up till
+     version 0.5.26 of `g77'.  In particular, names of variables and
+     arrays in common blocks or that are storage-associated via
+     `EQUIVALENCE' were unavailable to the debugger.
+
+     However, version 0.5.19 of `g77' does provide this information in
+     a rudimentary way, as controlled by the `-fdebug-kludge' option.
+
+     Because version 0.5.26 of `g77' enables full debug information of
+     COMMON BLOCK and EQUIVALENCE items, this option has been disabled.
+
+     *Note Options for Code Generation Conventions: Code Gen Options,
+     for more information.
+
+   *Note Options for Debugging Your Program or GNU CC: (gcc)Debugging
+Options, for more information on debugging options.
+
+
+File: g77.info,  Node: Optimize Options,  Next: Preprocessor Options,  Prev: Debugging Options,  Up: Invoking G77
+
+Options That Control Optimization
+=================================
+
+   Most Fortran users will want to use no optimization when developing
+and testing programs, and use `-O' or `-O2' when compiling programs for
+late-cycle testing and for production use.  However, note that certain
+diagnostics--such as for uninitialized variables--depend on the flow
+analysis done by `-O', i.e. you must use `-O' or `-O2' to get such
+diagnostics.
+
+   The following flags have particular applicability when compiling
+Fortran programs:
+
+`-malign-double'
+     (Intel x86 architecture only.)
+
+     Noticeably improves performance of `g77' programs making heavy use
+     of `REAL(KIND=2)' (`DOUBLE PRECISION') data on some systems.  In
+     particular, systems using Pentium, Pentium Pro, 586, and 686
+     implementations of the i386 architecture execute programs faster
+     when `REAL(KIND=2)' (`DOUBLE PRECISION') data are aligned on
+     64-bit boundaries in memory.
+
+     This option can, at least, make benchmark results more consistent
+     across various system configurations, versions of the program, and
+     data sets.
+
+     _Note:_ The warning in the `gcc' documentation about this option
+     does not apply, generally speaking, to Fortran code compiled by
+     `g77'.
+
+     *Note Aligned Data::, for more information on alignment issues.
+
+     _Also also note:_ The negative form of `-malign-double' is
+     `-mno-align-double', not `-benign-double'.
+
+`-ffloat-store'
+     Might help a Fortran program that depends on exact IEEE
+     conformance on some machines, but might slow down a program that
+     doesn't.
+
+     This option is effective when the floating-point unit is set to
+     work in IEEE 854 `extended precision'--as it typically is on x86
+     and m68k GNU systems--rather than IEEE 754 double precision.
+     `-ffloat-store' tries to remove the extra precision by spilling
+     data from floating-point registers into memory and this typically
+     involves a big performance hit.  However, it doesn't affect
+     intermediate results, so that it is only partially effective.
+     `Excess precision' is avoided in code like:
+          a = b + c
+          d = a * e
+     but not in code like:
+                d = (b + c) * e
+
+     For another, potentially better, way of controlling the precision,
+     see *Note Floating-point precision::.
+
+`-fforce-mem'
+
+`-fforce-addr'
+     Might improve optimization of loops.
+
+`-fno-inline'
+     Don't compile statement functions inline.  Might reduce the size
+     of a program unit--which might be at expense of some speed (though
+     it should compile faster).  Note that if you are not optimizing,
+     no functions can be expanded inline.
+
+`-ffast-math'
+     Might allow some programs designed to not be too dependent on IEEE
+     behavior for floating-point to run faster, or die trying.
+
+`-fstrength-reduce'
+     Might make some loops run faster.
+
+`-frerun-cse-after-loop'
+
+`-fexpensive-optimizations'
+
+`-fdelayed-branch'
+
+`-fschedule-insns'
+
+`-fschedule-insns2'
+
+`-fcaller-saves'
+     Might improve performance on some code.
+
+`-funroll-loops'
+     Typically improves performance on code using iterative `DO' loops
+     by unrolling them and is probably generally appropriate for
+     Fortran, though it is not turned on at any optimization level.
+     Note that outer loop unrolling isn't done specifically; decisions
+     about whether to unroll a loop are made on the basis of its
+     instruction count.
+
+     Also, no `loop discovery'(1) is done, so only loops written with
+     `DO' benefit from loop optimizations, including--but not limited
+     to--unrolling.  Loops written with `IF' and `GOTO' are not
+     currently recognized as such.  This option unrolls only iterative
+     `DO' loops, not `DO WHILE' loops.
+
+`-funroll-all-loops'
+     Probably improves performance on code using `DO WHILE' loops by
+     unrolling them in addition to iterative `DO' loops.  In the absence
+     of `DO WHILE', this option is equivalent to `-funroll-loops' but
+     possibly slower.
+
+`-fno-move-all-movables'
+
+`-fno-reduce-all-givs'
+
+`-fno-rerun-loop-opt'
+     _Version info:_ These options are not supported by versions of
+     `g77' based on `gcc' version 2.8.
+
+     Each of these might improve performance on some code.
+
+     Analysis of Fortran code optimization and the resulting
+     optimizations triggered by the above options were contributed by
+     Toon Moene (<toon@moene.indiv.nluug.nl>).
+
+     These three options are intended to be removed someday, once they
+     have helped determine the efficacy of various approaches to
+     improving the performance of Fortran code.
+
+     Please let us know how use of these options affects the
+     performance of your production code.  We're particularly
+     interested in code that runs faster when these options are
+     _disabled_, and in non-Fortran code that benefits when they are
+     _enabled_ via the above `gcc' command-line options.
+
+   *Note Options That Control Optimization: (gcc)Optimize Options, for
+more information on options to optimize the generated machine code.
+
+   ---------- Footnotes ----------
+
+   (1) "loop discovery" refers to the process by which a compiler, or
+indeed any reader of a program, determines which portions of the
+program are more likely to be executed repeatedly as it is being run.
+Such discovery typically is done early when compiling using
+optimization techniques, so the "discovered" loops get more
+attention--and more run-time resources, such as registers--from the
+compiler.  It is easy to "discover" loops that are constructed out of
+looping constructs in the language (such as Fortran's `DO').  For some
+programs, "discovering" loops constructed out of lower-level constructs
+(such as `IF' and `GOTO') can lead to generation of more optimal code
+than otherwise.
+
+
+File: g77.info,  Node: Preprocessor Options,  Next: Directory Options,  Prev: Optimize Options,  Up: Invoking G77
+
+Options Controlling the Preprocessor
+====================================
+
+   These options control the C preprocessor, which is run on each C
+source file before actual compilation.
+
+   *Note Options Controlling the Preprocessor: (gcc)Preprocessor
+Options, for information on C preprocessor options.
+
+   Some of these options also affect how `g77' processes the `INCLUDE'
+directive.  Since this directive is processed even when preprocessing
+is not requested, it is not described in this section.  *Note Options
+for Directory Search: Directory Options, for information on how `g77'
+processes the `INCLUDE' directive.
+
+   However, the `INCLUDE' directive does not apply preprocessing to the
+contents of the included file itself.
+
+   Therefore, any file that contains preprocessor directives (such as
+`#include', `#define', and `#if') must be included via the `#include'
+directive, not via the `INCLUDE' directive.  Therefore, any file
+containing preprocessor directives, if included, is necessarily
+included by a file that itself contains preprocessor directives.
+
+
+File: g77.info,  Node: Directory Options,  Next: Code Gen Options,  Prev: Preprocessor Options,  Up: Invoking G77
+
+Options for Directory Search
+============================
+
+   These options affect how the `cpp' preprocessor searches for files
+specified via the `#include' directive.  Therefore, when compiling
+Fortran programs, they are meaningful when the preprocessor is used.
+
+   Some of these options also affect how `g77' searches for files
+specified via the `INCLUDE' directive, although files included by that
+directive are not, themselves, preprocessed.  These options are:
+
+`-I-'
+
+`-IDIR'
+     These affect interpretation of the `INCLUDE' directive (as well as
+     of the `#include' directive of the `cpp' preprocessor).
+
+     Note that `-IDIR' must be specified _without_ any spaces between
+     `-I' and the directory name--that is, `-Ifoo/bar' is valid, but
+     `-I foo/bar' is rejected by the `g77' compiler (though the
+     preprocessor supports the latter form).  Also note that the
+     general behavior of `-I' and `INCLUDE' is pretty much the same as
+     of `-I' with `#include' in the `cpp' preprocessor, with regard to
+     looking for `header.gcc' files and other such things.
+
+     *Note Options for Directory Search: (gcc)Directory Options, for
+     information on the `-I' option.
+
+
+File: g77.info,  Node: Code Gen Options,  Next: Environment Variables,  Prev: Directory Options,  Up: Invoking G77
+
+Options for Code Generation Conventions
+=======================================
+
+   These machine-independent options control the interface conventions
+used in code generation.
+
+   Most of them have both positive and negative forms; the negative form
+of `-ffoo' would be `-fno-foo'.  In the table below, only one of the
+forms is listed--the one which is not the default.  You can figure out
+the other form by either removing `no-' or adding it.
+
+`-fno-automatic'
+     Treat each program unit as if the `SAVE' statement was specified
+     for every local variable and array referenced in it.  Does not
+     affect common blocks.  (Some Fortran compilers provide this option
+     under the name `-static'.)
+
+`-finit-local-zero'
+     Specify that variables and arrays that are local to a program unit
+     (not in a common block and not passed as an argument) are to be
+     initialized to binary zeros.
+
+     Since there is a run-time penalty for initialization of variables
+     that are not given the `SAVE' attribute, it might be a good idea
+     to also use `-fno-automatic' with `-finit-local-zero'.
+
+`-fno-f2c'
+     Do not generate code designed to be compatible with code generated
+     by `f2c'; use the GNU calling conventions instead.
+
+     The `f2c' calling conventions require functions that return type
+     `REAL(KIND=1)' to actually return the C type `double', and
+     functions that return type `COMPLEX' to return the values via an
+     extra argument in the calling sequence that points to where to
+     store the return value.  Under the GNU calling conventions, such
+     functions simply return their results as they would in GNU
+     C--`REAL(KIND=1)' functions return the C type `float', and
+     `COMPLEX' functions return the GNU C type `complex' (or its
+     `struct' equivalent).
+
+     This does not affect the generation of code that interfaces with
+     the `libg2c' library.
+
+     However, because the `libg2c' library uses `f2c' calling
+     conventions, `g77' rejects attempts to pass intrinsics implemented
+     by routines in this library as actual arguments when `-fno-f2c' is
+     used, to avoid bugs when they are actually called by code
+     expecting the GNU calling conventions to work.
+
+     For example, `INTRINSIC ABS;CALL FOO(ABS)' is rejected when
+     `-fno-f2c' is in force.  (Future versions of the `g77' run-time
+     library might offer routines that provide GNU-callable versions of
+     the routines that implement the `f2c'-callable intrinsics that may
+     be passed as actual arguments, so that valid programs need not be
+     rejected when `-fno-f2c' is used.)
+
+     *Caution:* If `-fno-f2c' is used when compiling any source file
+     used in a program, it must be used when compiling _all_ Fortran
+     source files used in that program.
+
+`-ff2c-library'
+     Specify that use of `libg2c' (or the original `libf2c') is
+     required.  This is the default for the current version of `g77'.
+
+     Currently it is not valid to specify `-fno-f2c-library'.  This
+     option is provided so users can specify it in shell scripts that
+     build programs and libraries that require the `libf2c' library,
+     even when being compiled by future versions of `g77' that might
+     otherwise default to generating code for an incompatible library.
+
+`-fno-underscoring'
+     Do not transform names of entities specified in the Fortran source
+     file by appending underscores to them.
+
+     With `-funderscoring' in effect, `g77' appends two underscores to
+     names with underscores and one underscore to external names with
+     no underscores.  (`g77' also appends two underscores to internal
+     names with underscores to avoid naming collisions with external
+     names.  The `-fno-second-underscore' option disables appending of
+     the second underscore in all cases.)
+
+     This is done to ensure compatibility with code produced by many
+     UNIX Fortran compilers, including `f2c', which perform the same
+     transformations.
+
+     Use of `-fno-underscoring' is not recommended unless you are
+     experimenting with issues such as integration of (GNU) Fortran into
+     existing system environments (vis-a-vis existing libraries, tools,
+     and so on).
+
+     For example, with `-funderscoring', and assuming other defaults
+     like `-fcase-lower' and that `j()' and `max_count()' are external
+     functions while `my_var' and `lvar' are local variables, a
+     statement like
+
+          I = J() + MAX_COUNT (MY_VAR, LVAR)
+
+     is implemented as something akin to:
+
+          i = j_() + max_count__(&my_var__, &lvar);
+
+     With `-fno-underscoring', the same statement is implemented as:
+
+          i = j() + max_count(&my_var, &lvar);
+
+     Use of `-fno-underscoring' allows direct specification of
+     user-defined names while debugging and when interfacing
+     `g77'-compiled code with other languages.
+
+     Note that just because the names match does _not_ mean that the
+     interface implemented by `g77' for an external name matches the
+     interface implemented by some other language for that same name.
+     That is, getting code produced by `g77' to link to code produced
+     by some other compiler using this or any other method can be only a
+     small part of the overall solution--getting the code generated by
+     both compilers to agree on issues other than naming can require
+     significant effort, and, unlike naming disagreements, linkers
+     normally cannot detect disagreements in these other areas.
+
+     Also, note that with `-fno-underscoring', the lack of appended
+     underscores introduces the very real possibility that a
+     user-defined external name will conflict with a name in a system
+     library, which could make finding unresolved-reference bugs quite
+     difficult in some cases--they might occur at program run time, and
+     show up only as buggy behavior at run time.
+
+     In future versions of `g77', we hope to improve naming and linking
+     issues so that debugging always involves using the names as they
+     appear in the source, even if the names as seen by the linker are
+     mangled to prevent accidental linking between procedures with
+     incompatible interfaces.
+
+`-fno-second-underscore'
+     Do not append a second underscore to names of entities specified
+     in the Fortran source file.
+
+     This option has no effect if `-fno-underscoring' is in effect.
+
+     Otherwise, with this option, an external name such as `MAX_COUNT'
+     is implemented as a reference to the link-time external symbol
+     `max_count_', instead of `max_count__'.
+
+`-fno-ident'
+     Ignore the `#ident' directive.
+
+`-fzeros'
+     Treat initial values of zero as if they were any other value.
+
+     As of version 0.5.18, `g77' normally treats `DATA' and other
+     statements that are used to specify initial values of zero for
+     variables and arrays as if no values were actually specified, in
+     the sense that no diagnostics regarding multiple initializations
+     are produced.
+
+     This is done to speed up compiling of programs that initialize
+     large arrays to zeros.
+
+     Use `-fzeros' to revert to the simpler, slower behavior that can
+     catch multiple initializations by keeping track of all
+     initializations, zero or otherwise.
+
+     _Caution:_ Future versions of `g77' might disregard this option
+     (and its negative form, the default) or interpret it somewhat
+     differently.  The interpretation changes will affect only
+     non-standard programs; standard-conforming programs should not be
+     affected.
+
+`-fdebug-kludge'
+     Emit information on `COMMON' and `EQUIVALENCE' members that might
+     help users of debuggers work around lack of proper debugging
+     information on such members.
+
+     As of version 0.5.19, `g77' offers this option to emit information
+     on members of aggregate areas to help users while debugging.  This
+     information consists of establishing the type and contents of each
+     such member so that, when a debugger is asked to print the
+     contents, the printed information provides rudimentary debugging
+     information.  This information identifies the name of the
+     aggregate area (either the `COMMON' block name, or the
+     `g77'-assigned name for the `EQUIVALENCE' name) and the offset, in
+     bytes, of the member from the beginning of the area.
+
+     Using `gdb', this information is not coherently displayed in the
+     Fortran language mode, so temporarily switching to the C language
+     mode to display the information is suggested.  Use `set language
+     c' and `set language fortran' to accomplish this.
+
+     As of version 0.5.26 of `g77' this option has been disabled, as the
+     compiler is now able to emit correct and complete debug information
+     for COMMON BLOCK and EQUIVALENCE items.
+
+     For example:
+
+                COMMON /X/A,B
+                EQUIVALENCE (C,D)
+                CHARACTER XX*50
+                EQUIVALENCE (I,XX(20:20))
+                END
+          
+          GDB is free software and you are welcome to distribute copies of it
+           under certain conditions; type "show copying" to see the conditions.
+          There is absolutely no warranty for GDB; type "show warranty" for details.
+          GDB 4.16 (lm-gnits-dwim), Copyright 1996 Free Software Foundation, Inc...
+          (gdb) b MAIN__
+          Breakpoint 1 at 0t1200000201120112: file cd.f, line 5.
+          (gdb) r
+          Starting program: /home/user/a.out
+          
+          Breakpoint 1, MAIN__ () at cd.f:5
+          Current language:  auto; currently fortran
+          (gdb) set language c
+          Warning: the current language does not match this frame.
+          (gdb) p a
+          $2 = "At (COMMON) `x_' plus 0 bytes"
+          (gdb) p b
+          $3 = "At (COMMON) `x_' plus 4 bytes"
+          (gdb) p c
+          $4 = "At (EQUIVALENCE) `__g77_equiv_c' plus 0 bytes"
+          (gdb) p d
+          $5 = "At (EQUIVALENCE) `__g77_equiv_c' plus 0 bytes"
+          (gdb) p i
+          $6 = "At (EQUIVALENCE) `__g77_equiv_xx' plus 20 bytes"
+          (gdb) p xx
+          $7 = "At (EQUIVALENCE) `__g77_equiv_xx' plus 1 bytes"
+          (gdb) set language fortran
+          (gdb)
+
+     Use `-fdebug-kludge' to generate this information, which might
+     make some programs noticeably larger.
+
+     _Caution:_ Future versions of `g77' might disregard this option
+     (and its negative form).  Current plans call for this to happen
+     when published versions of `g77' and `gdb' exist that provide
+     proper access to debugging information on `COMMON' and
+     `EQUIVALENCE' members.  This is believed to have happened as of
+     version 0.5.26 of `g77', so that this option has been disabled
+     starting with this release.
+
+`-femulate-complex'
+     Implement `COMPLEX' arithmetic via emulation, instead of using the
+     facilities of the `gcc' back end that provide direct support of
+     `complex' arithmetic.
+
+     (`gcc' had some bugs in its back-end support for `complex'
+     arithmetic, due primarily to the support not being completed as of
+     version 2.8.1 and `egcs' 1.1.2.)
+
+     Use `-femulate-complex' if you suspect code-generation bugs, or
+     experience compiler crashes, that might result from `g77' using
+     the `COMPLEX' support in the `gcc' back end.  If using that option
+     fixes the bugs or crashes you are seeing, that indicates a likely
+     `g77' bugs (though, all compiler crashes are considered bugs), so,
+     please report it.  (Note that the known bugs, now believed fixed,
+     produced compiler crashes rather than causing the generation of
+     incorrect code.)
+
+     Use of this option should not affect how Fortran code compiled by
+     `g77' works in terms of its interfaces to other code, e.g. that
+     compiled by `f2c'.
+
+     _Caution:_ Future versions of `g77' might ignore both forms of
+     this option.
+
+`-falias-check'
+
+`-fargument-alias'
+
+`-fargument-noalias'
+
+`-fno-argument-noalias-global'
+     _Version info:_ These options are not supported by versions of
+     `g77' based on `gcc' version 2.8.
+
+     These options specify to what degree aliasing (overlap) is
+     permitted between arguments (passed as pointers) and `COMMON'
+     (external, or public) storage.
+
+     The default for Fortran code, as mandated by the FORTRAN 77 and
+     Fortran 90 standards, is `-fargument-noalias-global'.  The default
+     for code written in the C language family is `-fargument-alias'.
+
+     Note that, on some systems, compiling with `-fforce-addr' in
+     effect can produce more optimal code when the default aliasing
+     options are in effect (and when optimization is enabled).
+
+     *Note Aliasing Assumed To Work::, for detailed information on the
+     implications of compiling Fortran code that depends on the ability
+     to alias dummy arguments.
+
+`-fno-globals'
+     Disable diagnostics about inter-procedural analysis problems, such
+     as disagreements about the type of a function or a procedure's
+     argument, that might cause a compiler crash when attempting to
+     inline a reference to a procedure within a program unit.  (The
+     diagnostics themselves are still produced, but as warnings, unless
+     `-Wno-globals' is specified, in which case no relevant diagnostics
+     are produced.)
+
+     Further, this option disables such inlining, to avoid compiler
+     crashes resulting from incorrect code that would otherwise be
+     diagnosed.
+
+     As such, this option might be quite useful when compiling
+     existing, "working" code that happens to have a few bugs that do
+     not generally show themselves, but which `g77' diagnoses.
+
+     Use of this option therefore has the effect of instructing `g77'
+     to behave more like it did up through version 0.5.19.1, when it
+     paid little or no attention to disagreements between program units
+     about a procedure's type and argument information, and when it
+     performed no inlining of procedures (except statement functions).
+
+     Without this option, `g77' defaults to performing the potentially
+     inlining procedures as it started doing in version 0.5.20, but as
+     of version 0.5.21, it also diagnoses disagreements that might
+     cause such inlining to crash the compiler as (fatal) errors, and
+     warns about similar disagreements that are currently believed to
+     not likely to result in the compiler later crashing or producing
+     incorrect code.
+
+`-fflatten-arrays'
+     Use back end's C-like constructs (pointer plus offset) instead of
+     its `ARRAY_REF' construct to handle all array references.
+
+     _Note:_ This option is not supported.  It is intended for use only
+     by `g77' developers, to evaluate code-generation issues.  It might
+     be removed at any time.
+
+`-fbounds-check'
+`-ffortran-bounds-check'
+     Enable generation of run-time checks for array subscripts and
+     substring start and end points against the (locally) declared
+     minimum and maximum values.
+
+     The current implementation uses the `libf2c' library routine
+     `s_rnge' to print the diagnostic.
+
+     However, whereas `f2c' generates a single check per reference for
+     a multi-dimensional array, of the computed offset against the
+     valid offset range (0 through the size of the array), `g77'
+     generates a single check per _subscript_ expression.  This catches
+     some cases of potential bugs that `f2c' does not, such as
+     references to below the beginning of an assumed-size array.
+
+     `g77' also generates checks for `CHARACTER' substring references,
+     something `f2c' currently does not do.
+
+     Use the new `-ffortran-bounds-check' option to specify
+     bounds-checking for only the Fortran code you are compiling, not
+     necessarily for code written in other languages.
+
+     _Note:_ To provide more detailed information on the offending
+     subscript, `g77' provides the `libg2c' run-time library routine
+     `s_rnge' with somewhat differently-formatted information.  Here's
+     a sample diagnostic:
+
+          Subscript out of range on file line 4, procedure rnge.f/bf.
+          Attempt to access the -6-th element of variable b[subscript-2-of-2].
+          Aborted
+
+     The above message indicates that the offending source line is line
+     4 of the file `rnge.f', within the program unit (or statement
+     function) named `bf'.  The offended array is named `b'.  The
+     offended array dimension is the second for a two-dimensional array,
+     and the offending, computed subscript expression was `-6'.
+
+     For a `CHARACTER' substring reference, the second line has this
+     appearance:
+
+          Attempt to access the 11-th element of variable a[start-substring].
+
+     This indicates that the offended `CHARACTER' variable or array is
+     named `a', the offended substring position is the starting
+     (leftmost) position, and the offending substring expression is
+     `11'.
+
+     (Though the verbage of `s_rnge' is not ideal for the purpose of
+     the `g77' compiler, the above information should provide adequate
+     diagnostic abilities to it users.)
+
+   *Note Options for Code Generation Conventions: (gcc)Code Gen
+Options, for information on more options offered by the GBE shared by
+`g77', `gcc', and other GNU compilers.
+
+   Some of these do _not_ work when compiling programs written in
+Fortran:
+
+`-fpcc-struct-return'
+
+`-freg-struct-return'
+     You should not use these except strictly the same way as you used
+     them to build the version of `libg2c' with which you will be
+     linking all code compiled by `g77' with the same option.
+
+`-fshort-double'
+     This probably either has no effect on Fortran programs, or makes
+     them act loopy.
+
+`-fno-common'
+     Do not use this when compiling Fortran programs, or there will be
+     Trouble.
+
+`-fpack-struct'
+     This probably will break any calls to the `libg2c' library, at the
+     very least, even if it is built with the same option.
+
+
+File: g77.info,  Node: Environment Variables,  Prev: Code Gen Options,  Up: Invoking G77
+
+Environment Variables Affecting GNU Fortran
+===========================================
+
+   GNU Fortran currently does not make use of any environment variables
+to control its operation above and beyond those that affect the
+operation of `gcc'.
+
+   *Note Environment Variables Affecting GNU CC: (gcc)Environment
+Variables, for information on environment variables.
+

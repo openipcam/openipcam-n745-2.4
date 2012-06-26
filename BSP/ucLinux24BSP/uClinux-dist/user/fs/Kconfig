@@ -1,0 +1,136 @@
+config JFFS_FS
+	tristate "Journalling Flash File System (JFFS) support"
+	depends on MTD
+	help
+	  JFFS is the Journaling Flash File System developed by Axis
+	  Communications in Sweden, aimed at providing a crash/powerdown-safe
+	  file system for disk-less embedded devices. Further information is
+	  available at (<http://developer.axis.com/software/jffs/>).
+
+config JFFS_FS_VERBOSE
+	int "JFFS debugging verbosity (0 = quiet, 3 = noisy)"
+	depends on JFFS_FS
+	default "0"
+	help
+	  Determines the verbosity level of the JFFS debugging messages.
+
+config JFFS_PROC_FS
+	bool "JFFS stats available in /proc filesystem"
+	depends on JFFS_FS && PROC_FS
+	help
+	  Enabling this option will cause statistics from mounted JFFS file systems
+	  to be made available to the user in the /proc/fs/jffs/ directory.
+
+config JFFS2_FS
+	tristate "Journalling Flash File System v2 (JFFS2) support"
+        select CRC32
+	depends on MTD
+	help
+	  JFFS2 is the second generation of the Journalling Flash File System
+	  for use on diskless embedded devices. It provides improved wear
+	  levelling, compression and support for hard links. You cannot use
+	  this on normal block devices, only on 'MTD' devices.
+
+	  Further information on the design and implementation of JFFS2 is
+	  available at <http://sources.redhat.com/jffs2/>.
+
+config JFFS2_FS_DEBUG
+	int "JFFS2 debugging verbosity (0 = quiet, 2 = noisy)"
+	depends on JFFS2_FS
+	default "0"
+	help
+	  This controls the amount of debugging messages produced by the JFFS2
+	  code. Set it to zero for use in production systems. For evaluation,
+	  testing and debugging, it's advisable to set it to one. This will
+	  enable a few assertions and will print debugging messages at the
+	  KERN_DEBUG loglevel, where they won't normally be visible. Level 2
+	  is unlikely to be useful - it enables extra debugging in certain
+	  areas which at one point needed debugging, but when the bugs were
+	  located and fixed, the detailed messages were relegated to level 2.
+
+	  If reporting bugs, please try to have available a full dump of the
+	  messages at debug level 1 while the misbehaviour was occurring.
+
+config JFFS2_FS_NAND
+	bool "JFFS2 support for NAND flash (EXPERIMENTAL)"
+	depends on JFFS2_FS && EXPERIMENTAL
+	default n
+	help
+	  This enables the experimental support for NAND flash in JFFS2. NAND
+	  is a newer type of flash chip design than the traditional NOR flash,
+	  with higher density but a handful of characteristics which make it
+	  more interesting for the file system to use. Support for NAND flash
+	  is not yet complete and may corrupt data. For further information,
+	  including a link to the mailing list where details of the remaining
+	  work to be completed for NAND flash support can be found, see the 
+	  JFFS2 web site at <http://sources.redhat.com/jffs2>.
+
+	  Say 'N' unless you have NAND flash and you are willing to test and
+	  develop JFFS2 support for it.
+
+config JFFS2_COMPRESSION_OPTIONS
+	bool "Advanced compression options for JFFS2"
+	default n
+	help
+	  Enabling this option allows you to explicitly choose which
+	  compression modules, if any, are enabled in JFFS2. Removing
+	  compressors and mean you cannot read existing file systems,
+	  and enabling experimental compressors can mean that you
+	  write a file system which cannot be read by a standard kernel.
+
+	  If unsure, you should _definitely_ say 'N'.
+
+config JFFS2_ZLIB
+	bool "JFFS2 ZLIB compression support" if JFFS2_COMPRESSION_OPTIONS
+	select ZLIB_INFLATE
+	select ZLIB_DEFLATE
+	depends on JFFS2_FS
+	default y
+        help
+          Zlib is designed to be a free, general-purpose, legally unencumbered,
+          lossless data-compression library for use on virtually any computer 
+          hardware and operating system. See http://www.gzip.org/zlib/ for
+          further information.
+          
+          Say 'Y' if unsure.
+
+config JFFS2_RTIME
+	bool "JFFS2 RTIME compression support" if JFFS2_COMPRESSION_OPTIONS
+	depends on JFFS2_FS
+	default y
+        help
+          Rtime does manage to recompress already-compressed data. Say 'Y' if unsure.
+
+config JFFS2_RUBIN
+	bool "JFFS2 RUBIN compression support" if JFFS2_COMPRESSION_OPTIONS
+	depends on JFFS2_FS
+	default n
+        help
+          RUBINMIPS and DYNRUBIN compressors. Say 'N' if unsure.
+
+choice
+        prompt "JFFS2 default compression mode" if JFFS2_COMPRESSION_OPTIONS
+        default JFFS2_CMODE_PRIORITY
+        depends on JFFS2_FS
+        help
+          You can set here the default compression mode of JFFS2 from 
+          the avaiable compression modes. Don't touch if unsure.
+
+config JFFS2_CMODE_NONE
+        bool "no compression"
+        help
+          Uses no compression.
+
+config JFFS2_CMODE_PRIORITY
+        bool "priority"
+        help
+          Tries the compressors in a predefinied order and chooses the first 
+          successful one.
+
+config JFFS2_CMODE_SIZE
+        bool "size (EXPERIMENTAL)"
+        help
+          Tries all compressors and chooses the one which has the smallest 
+          result.
+
+endchoice

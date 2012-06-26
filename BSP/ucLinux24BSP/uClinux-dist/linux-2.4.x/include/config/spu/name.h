@@ -1,0 +1,1 @@
+#define CONFIG_SPU_NAME "W90N745"

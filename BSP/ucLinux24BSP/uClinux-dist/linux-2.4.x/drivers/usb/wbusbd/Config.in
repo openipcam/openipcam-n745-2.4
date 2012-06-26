@@ -1,0 +1,17 @@
+#
+# Winbond W90N745 USB device configuration
+#
+mainmenu_option next_comment
+comment 'Support for W90N745 USB Device 1.1'
+
+dep_bool 'Support W90N745 USB Device' CONFIG_WINBOND_USBD $CONFIG_USB
+
+   if [ "$CONFIG_WINBOND_USBD" = "y" ]; then
+                   choice ' usbd function support' \
+                   "VCOM         CONFIG_WINBOND_USBD_VCOM\
+                    MASS        CONFIG_WINBOND_USBD_MASS" MASS
+   fi
+
+
+endmenu
+

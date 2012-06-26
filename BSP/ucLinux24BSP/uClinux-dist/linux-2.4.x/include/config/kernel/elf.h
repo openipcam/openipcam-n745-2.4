@@ -1,0 +1,1 @@
+#define CONFIG_KERNEL_ELF 1

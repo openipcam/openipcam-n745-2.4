@@ -1,0 +1,2 @@
+comment 'Winbond low level flash drivers'
+dep_tristate '  Winbond low level flash driver support' CONFIG_WBFLASHDRV $CONFIG_WBFLASH

@@ -1,0 +1,78 @@
+card.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/isdnif.h \
+   message.h
+	@touch card.h
+command.o: command.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   includes.h \
+   hardware.h \
+   message.h \
+   card.h \
+   scioc.h
+debug.o: debug.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h
+event.o: event.c \
+   includes.h \
+   hardware.h \
+   message.h \
+   card.h
+hardware.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/param.h
+	@touch hardware.h
+includes.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/isdnif.h \
+   debug.h
+	@touch includes.h
+init.o: init.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   includes.h \
+   hardware.h \
+   card.h
+interrupt.o: interrupt.c \
+   includes.h \
+   hardware.h \
+   message.h \
+   card.h
+ioctl.o: ioctl.c \
+   includes.h \
+   hardware.h \
+   message.h \
+   card.h \
+   scioc.h
+message.o: message.c \
+   includes.h \
+   hardware.h \
+   message.h \
+   card.h
+packet.o: packet.c \
+   includes.h \
+   hardware.h \
+   message.h \
+   card.h
+shmem.o: shmem.c \
+   includes.h \
+   hardware.h \
+   card.h
+timer.o: timer.c \
+   includes.h \
+   hardware.h \
+   message.h \
+   card.h
+.PRECIOUS:	card.h \
+	hardware.h \
+	includes.h \
+

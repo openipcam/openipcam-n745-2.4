@@ -1,0 +1,371 @@
+2002-09-18  Erik Andersen  <andersen@dillweed>
+
+	* top.c:
+	Backport vodz's patch, plus Manuel's tweak to change TracePid to TracerPid.
+	Now works on i386 (2.4.19) and arm (2.4.6).
+
+	* libbb/copy_file.c, libbb/inode_hash.c, libbb/libbb.h, Makefile, du.c:
+	Backport copy_file and inode_hash from unstable.  This fixes the last
+	of the bugs I know about, so we should be set for a release
+	 -Erik
+
+	* modprobe.c: Fix a silly bug
+
+	* klogd.c:
+	patch from John Hall <john.hall@optionexist.co.uk> to change the
+	klogd specific messages to facility LOG_SYSLOG and tidies up some
+	of the priorities.
+
+2002-09-17  Erik Andersen  <andersen@dillweed>
+
+	* usage.h: Fixup top usage
+
+	* debian/Config.h-udeb, debian/Config.h-deb, debian/Config.h-static, Config.h, applets.h, top.c, usage.h:
+	Add a new 'top' applet
+	 -Erik
+
+	* reset.c: clear screen and reset console too
+
+	* reset.c: re-enable the cursor, in case it got disabled
+	 -Erik
+
+	* ash.c: Geez...  I should get some sleep....
+	 -Erik
+
+	* ash.c: Fix a stupid typo.
+	 -Erik
+
+	* klogd.c: I am an idiot.
+	 -Erik
+
+	* syslogd.c: Vodz' last_patch57:
+	    Ok. Patch with reduce size ready.
+	    Notes: syslogd imposible close logsocket,
+	    the real programm write logmessages (hmm, cycle loop?)
+
+	    (Excuse me - this have small tab-formats rewroting also)
+
+	       text    data     bss     dec     hex filename
+	       2913     332   12388   15633    3d11 syslogd.o
+	       3109     332    9252   12693    3195 syslogd_old.o
+
+	* syslogd.c: Oops!  I'm an idiot.
+	 -Erik
+
+	* libbb/copy_file.c: Apply vodz' last_patch56
+
+	* fbset.c: Support setting depth
+
+	* debian/Config.h-deb, debian/Config.h-static, debian/Config.h-udeb:
+	Minor adaptions for uClinux (not that it matters here)
+	 -Erik
+
+	* ps.c, reboot.c:
+	More patches from David McCullough <davidm@snapgear.com>
+
+	* Config.h, ash.c, msh.c, syslogd.c: More uClinux adaptations
+	 -Erik
+
+	* ping.c, route.c, sed.c, usage.h, tar.c, uudecode.c, libbb/arith.c, libbb/copy_file.c:
+	Some cleanup patches from David McCullough
+
+	* libbb/Makefile, libbb/gz_open.c, libbb/libbb.h, libbb/libc5.c, free.c, head.c, klogd.c, mk_loop_h.sh, msh.c, tail.c:
+	A batch of uClinux support patches from David McCullough <davidm@snapgear.com>
+
+	* libbb/arith.c, ash.c:
+	Backport ash from busybox unstable tree, as it seems more solid
+	these days thanks to Vladimir, Manuel, and Aaron.
+	 -Erik
+
+	* libbb/interface.c: Use "MiB" not "Mb"
+	 -Erik
+
+2002-09-16  Erik Andersen  <andersen@dillweed>
+
+	* xargs.c:
+	Backport vodz' last_patch55, but remove bb_asprintf (unstable only)
+	 -Erik
+
+	* Makefile: Bump version in preparation for a release
+
+	* libbb/copy_file.c: Let people force overwrite links
+	 -Erik
+
+	* debian/Config.h-deb, debian/Config.h-udeb, debian/changelog:
+	update preparing for a release...
+
+	* libbb/copy_file.c:
+	Properly honor FILEUTILS_INTERACTIVE and FILEUTILS_FORCE for
+	file all file types (not just regular files and dirs).  Unlink
+	destination files when needed.
+	 -Erik
+
+	* debian/Config.h-udeb: Fix debian bug #158706
+
+	* mount.c:
+	Backport patch from unstable to provide support for mount -t <type>,
+	fixing bug #1255.
+
+	* libbb/unzip.c:
+	Patch from Matthias Lang <matthias@corelatus.se> to fix gunzip
+	error handling and prevent gunzip from hanging.
+
+	* init.c: Backport typo
+
+	* init.c: Let people run SHUTDOWN actions prior to killing everything
+	 -Erik
+
+	* pwd_grp/initgroups.c:
+	Doh!  Fix stupid typo noticed by John Mullin <john.mullin@homenetcomm.com>
+
+	* dpkg.c: Fix a silly typo, noticed by Michael Smith <msmith@cbnco.com>
+
+	* kill.c: Update kill applet, per vodz' last_patch52
+
+	* chvt.c, deallocvt.c, libbb/get_console.c, libbb/libbb.h, setkeycodes.c:
+	Cleanup get_console_fd() from vodz' last_patch52
+
+	* ls.c: Don't assume we know the type of uid and gid
+	 -Erik
+
+	* insmod.c, lsmod.c: Support module tainting
+	 -Erik
+
+2002-09-10  Erik Andersen  <andersen@dillweed>
+
+	* tftp.c:
+	Fix for handling of "tftp -l -" from Jean Wolter <jw5@os.inf.tu-dresden.de>
+
+	* pwd_grp/putpwent.c: Yipe.  uid and gid were reversed.
+	 -Erik
+
+2002-08-26  Erik Andersen  <andersen@dillweed>
+
+	* init.c, telnet.c: Eliminate use of obsolete sys_errlist[]
+	 -Erik
+
+2002-08-25  Erik Andersen  <andersen@dillweed>
+
+	* init.c: Patch from Thomas Gleixner <tglx@linutronix.de> to do
+	automatic child reaping to avoid zombies
+
+2002-08-15  Erik Andersen  <andersen@dillweed>
+
+	* libbb/libc5.c: I'm was an idiot and messed up the dietlibc junk
+
+2002-08-13  Erik Andersen  <andersen@dillweed>
+
+	* libbb/libc5.c: Try to be a touch more dietlibc friendly
+
+2002-08-05  Erik Andersen  <andersen@dillweed>
+
+	* syslogd.c:
+	Oops.  Code things so it actually works this time around...
+	 -Erik
+
+	* syslogd.c:
+	Joel Coltoff <joel@wmi.com> noticed that following a recent
+	change in uClibc that changed opening the /dev/log socket as
+	SOCK_STREAM to SOCK_DGRAM, busybox syslogd no longer worked
+	since it needed a matching change.  This fixes it so it
+	works once again.
+
+2002-08-01  Erik Andersen  <andersen@dillweed>
+
+	* pwd_grp/initgroups.c:
+	Joseph Chiu <josephc@idealab.com> found an off-by-one bug.  oops!
+
+2002-07-31  Erik Andersen  <andersen@dillweed>
+
+	* lash.c:
+	A couple of small bugfixes from Marshall M. Midden <m4@brecis.com>
+
+	* Makefile: Update default uClibc toolchain dir.  Be more portable with
+	find, for those that prefer programming on *BSD, etc.
+
+2002-07-29  Erik Andersen  <andersen@dillweed>
+
+	* init.c: Kill a silly warning
+
+	* init.c: Patch from Tim Riker to allow tty* in inittab if the tty
+	actually exists -- serial console is not the issue...
+
+2002-07-23  Erik Andersen  <andersen@dillweed>
+
+	* kill.c: Support kill
+
+	* kill.c: Adjust indentation
+
+2002-07-04  Erik Andersen  <andersen@dillweed>
+
+	* ash.c:
+	Patch from Stewart Brodie <stewart.brodie@pace.co.uk> to fix ash:
+
+	When alias support is not configured, ash believes that command parameters
+	that look like dd's "if=/dev/zero" are requests to set a temporary
+	environment variable whilst dd is running, even though it appears after the
+	command name.  This is caused by the re-use of the checkalias global variable
+	to indicate when both alias checking and environment variable checking.  The
+	failure to reset this flag is due to the reset action being performed only
+	inside the feature check ASH_ALIAS.  Hence ash works as expected when
+	aliases are configured in, and fails when not.
+
+	Example script using 'date' with different settings of TZ:
+
+	# TZ=Europe/London
+	# export TZ
+	# date
+	Thu May 30 17:18:49 BST 2002
+	# TZ=America/New_York date
+	Thu May 30 12:19:10 EDT 2002
+	# date
+	Thu May 30 17:19:12 BST 2002
+	# date TZ=America/New_York
+	Thu May 30 12:19:30 EDT 2002    <----- wrong, should be BST time (or error!)
+	# date
+	Thu May 30 17:19:35 BST 2002
+
+	Attached is a patch against revision 1.52 of ash.c which moves the checks so
+	that checkalias is updated regardless of whether ASH_ALIAS is set.
+	With this patch applied, the command shown above which should generate an
+	error does generate an error.
+
+	I have tested this patch with the 'dd' command too and that now works
+	correctly.
+
+2002-07-03  Erik Andersen  <andersen@dillweed>
+
+	* init.c: This is last_patch48 from vodz.  More cleanups, kills a bit
+	of dead code, fixes one blatent bug.
+
+	* init.c:
+	Apply last_patch47 from vodz to fix several problems, such as the ash "job
+	control turned off" bug, console_setup() was called with a closed file
+	descriptor, setsid() inconsistancy, and silly string handling bugs.   I have
+	modified his patch to allow the askfirst init actions to have a controlling
+	terminal.
+	 -Erik
+
+	* init.c: Fix from vodz so that complex init commands actually work
+
+	* dutmp.c:
+	Patch from Danny Lepage <danny.lepage@cognicase.com> to fix dutmp
+	when used with uClibc
+
+	* init.c: Patch from till busch <buti@gmx.at> -- unblock all signals
+	in exec_signal() before calling exec()
+
+	* usage.h: Silly spelling fix
+
+2002-07-02  Erik Andersen  <andersen@dillweed>
+
+	* insmod.c, modprobe.c:
+	David Frascone <dave@frascone.com> noticed two problems.  First, modprobe was
+	trying to call 'insmod -q', which wasn't supported.  Secondly, when modprobe
+	was fed blank lines from modules.dep, we ended up calling xstrndup(ptr, -1),
+	which with suitably bad results.  David provided a patch to catch the blank
+	lines, and I have added insmod -q support.  So modprobe should work again.
+	 -Erik
+
+2002-06-23  Erik Andersen  <andersen@dillweed>
+
+	* Makefile: Rework compiler optimization
+	 -Erik
+
+	* Makefile: Be much more compiler specific about optimizations.
+	 -Erik
+
+2002-06-22  Erik Andersen  <andersen@dillweed>
+
+	* mount.c: Backport mount.  This fixes some buffer overflows per vodz'
+	last_patch46 and brings a few other little things like noauto.
+	 -Erik
+
+2002-06-18  Erik Andersen  <andersen@dillweed>
+
+	* insmod.c:
+	As noted by Yves Lavoie ing. <yves.lavoie.ing@sympatico.ca>, don't
+	lose the last letter of the module name.
+
+2002-06-15  Erik Andersen  <andersen@dillweed>
+
+	* date.c: Don't use the _d GNU-ism
+
+2002-06-08  Erik Andersen  <andersen@dillweed>
+
+	* makedevs.c:
+	vodz' last_patch42_2, which is an updated fix for buffer overflows
+	noted by Gerardo Puga
+
+2002-06-06  Erik Andersen  <andersen@dillweed>
+
+	* dos2unix.c, lash.c, makedevs.c, modprobe.c, syslogd.c, libbb/vdprintf.c:
+	Plug some buffer overflows, per work done by Gerardo Puga <gpuga@gioia.ing.unlp.edu.ar>
+
+	* makedevs.c, insmod.c: Fix buffer overflows noted by Gerardo Puga
+	 -Erik
+
+	* traceroute.c: Some cleanups suggested by Gyepi SAM
+
+	* lash.c:
+	Fix a buffer overflow found by Gerardo Puga <gpuga@gioia.ing.unlp.edu.ar>
+	 -Erik
+
+	* libbb/interface.c:
+	Backport patch from Gyepi SAM <gyepi@praxis-sw.com>:
+	    When DEBUG is defined
+	    1. need to include resolv.h (for _resinit())
+	    2. remove _() call around string. It appears to be a remnant of i18n or some such notion
+
+	* ash.c:
+	Patch from vodz to only setenv PATH when PATH changes, which is much
+	smarter than my quick fix.
+
+	* stty.c: last_patch41 from vodz to fix stty -F and similar
+
+	* modprobe.c: backport Robert Griebl's cleanup of my modprobe changes.
+
+2002-06-01  Erik Andersen  <andersen@dillweed>
+
+	* modprobe.c: Oops.  Properly simulate fgets
+	 -Erik
+
+	* modprobe.c:
+	Since the kernel can call modprobe from a kernel thread, avoid
+	using insane amount of stack and bypass stdio (we don't need it)
+	to be sure it doesn't use much stack space either.  This patch
+	fixes Oopses I was seeing on the tuxscreen phone.
+	 -Erik
+
+2002-05-24  Erik Andersen  <andersen@dillweed>
+
+	* insmod.c:
+	Patch from Magnus Damm <damm@opensource.se> to rework things
+	greatly, and keep the arch specific relocations together,
+	fixes R_PPC_ADDR32 handling so powerpc can work, and changes the
+	tlb tables to be linked lists (again so powerpc can work).
+
+2002-05-15  Erik Andersen  <andersen@dillweed>
+
+	* init.c: Doh!  Remember to close the /etc/inittab file descriptor.
+	 -Erik
+
+2002-05-05  Erik Andersen  <andersen@dillweed>
+
+	* nc.c:
+	Tom Oehser noticed that we need to use SO_REUSEADDR to make things
+	work as expected.
+
+2002-05-03  Erik Andersen  <andersen@dillweed>
+
+	* modprobe.c: Fix show_only to match modutils behavior
+
+	* modprobe.c: Make verbose and show_only work as expected
+
+	* insmod.c:
+	Patch from Robert Griebl <griebl@gmx.de> to ignore the -s flag
+
+2002-04-30  Erik Andersen  <andersen@dillweed>
+
+	* gunzip.c: Backported Matt Kraai's gunzip fix
+

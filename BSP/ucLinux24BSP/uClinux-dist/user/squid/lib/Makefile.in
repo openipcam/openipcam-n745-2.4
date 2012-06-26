@@ -1,0 +1,91 @@
+#
+#  $Id: Makefile.in,v 1.1.1.1 2006-07-11 09:33:06 andy Exp $
+#
+prefix		= @prefix@
+top_srcdir	= @top_srcdir@
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+
+
+# CC		= @CC@
+BUILD_CC	= CC
+MAKEDEPEND	= @MAKEDEPEND@
+INSTALL		= @INSTALL@
+INSTALL_BIN 	= @INSTALL_PROGRAM@
+INSTALL_FILE 	= @INSTALL_DATA@
+# RANLIB		= @RANLIB@
+AC_CFLAGS	= # @CFLAGS@
+# LDFLAGS		= @LDFLAGS@
+XTRA_LIBS	= @XTRA_LIBS@
+RM		= @RM@
+LIBOBJS		= @LIBOBJS@
+AR_R		= $(AR) r
+
+INCLUDE		= -I../include -I$(top_srcdir)/include
+UTILOBJS	= rfc1123.o \
+		  rfc1738.o \
+		  rfc1035.o \
+		  util.o \
+		  getfullhostname.o \
+		  base64.o \
+		  uudecode.o \
+		  splay.o \
+		  safe_inet_addr.o \
+		  iso3307.o \
+		  snprintf.o \
+		  md5.o \
+		  radix.o \
+		  stub_memaccount.o \
+		  Array.o \
+		  Stack.o \
+		  hash.o \
+		  heap.o \
+		  $(LIBOBJS)
+REGEXOBJS	= GNUregex.o
+DLMALLOCOBJS	= dlmalloc.o
+LIBS		= libmiscutil.a @LIBREGEX@ @LIBDLMALLOC@ libhostutil.a
+
+CFLAGS		+= $(AC_CFLAGS) $(INCLUDE)
+BUILD_CFLAGS	= $(AC_CFLAGS) $(INCLUDE)
+
+all: $(LIBS)
+
+.c.o:
+	$(BUILD_CC) -c $(BUILD_CFLAGS) $(CPPFLAGS) -o $@ $<
+	mv $@ host-$@
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+	
+$(UTILOBJS): $(top_srcdir)/include/version.h
+
+libhostutil.a: $(UTILOBJS)
+	$(RM) -f $@
+	for i in $(UTILOBJS); do ar -r $@ host-$$i; done
+	ranlib $@
+
+libmiscutil.a: $(UTILOBJS)
+	$(RM) -f $@
+	$(AR_R) $@ $(UTILOBJS)
+	$(RANLIB) $@
+
+libregex.a: $(REGEXOBJS)
+	$(RM) -f $@
+	$(AR_R) $@ $(REGEXOBJS)
+	$(RANLIB) $@
+
+libdlmalloc.a: $(DLMALLOCOBJS)
+	$(RM) -f $@
+	$(AR_R) $@ $(DLMALLOCOBJS)
+	$(RANLIB) $@
+
+clean:
+	-rm -f *.o $(LIBS) core
+
+distclean: clean
+	-rm -f libregex.a
+	-rm -f Makefile Makefile.bak
+
+install: all
+
+depend:
+	$(MAKEDEPEND) -I../include -I. -fMakefile *.c
+

@@ -1,0 +1,47 @@
+(cd ..; make -f Makefile.ssl DIRS=ssl all)
+make[1]: Entering directory `/home/xhchen/Test/openssl-0.9.7c'
+making all in ssl...
+make[2]: Entering directory `/home/xhchen/Test/openssl-0.9.7c/ssl'
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s2_meth.o s2_meth.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s2_srvr.o s2_srvr.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s2_clnt.o s2_clnt.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s2_lib.o s2_lib.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s2_enc.o s2_enc.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s2_pkt.o s2_pkt.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s3_meth.o s3_meth.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s3_srvr.o s3_srvr.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s3_clnt.o s3_clnt.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s3_lib.o s3_lib.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s3_enc.o s3_enc.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s3_pkt.o s3_pkt.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s3_both.o s3_both.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s23_meth.o s23_meth.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s23_srvr.o s23_srvr.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s23_clnt.o s23_clnt.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s23_lib.o s23_lib.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o s23_pkt.o s23_pkt.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o t1_meth.o t1_meth.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o t1_srvr.o t1_srvr.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o t1_clnt.o t1_clnt.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o t1_lib.o t1_lib.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o t1_enc.o t1_enc.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_lib.o ssl_lib.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_err2.o ssl_err2.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_cert.o ssl_cert.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_sess.o ssl_sess.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_ciph.o ssl_ciph.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_stat.o ssl_stat.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_rsa.o ssl_rsa.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_asn1.o ssl_asn1.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_txt.o ssl_txt.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_algs.o ssl_algs.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o bio_ssl.o bio_ssl.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o ssl_err.o ssl_err.c
+gcc -I../crypto -I.. -I../include  -DOPENSSL_NO_KRB5 -DOPENSSL_NO_ENGINE -DOPENSSL_NO_HW -DOPENSSL_NO_ASM -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall   -c -o kssl.o kssl.c
+ar  r ../libssl.a s2_meth.o  s2_srvr.o  s2_clnt.o  s2_lib.o  s2_enc.o s2_pkt.o s3_meth.o  s3_srvr.o  s3_clnt.o  s3_lib.o  s3_enc.o s3_pkt.o s3_both.o s23_meth.o s23_srvr.o s23_clnt.o s23_lib.o          s23_pkt.o t1_meth.o   t1_srvr.o t1_clnt.o  t1_lib.o  t1_enc.o ssl_lib.o ssl_err2.o ssl_cert.o ssl_sess.o ssl_ciph.o ssl_stat.o ssl_rsa.o ssl_asn1.o ssl_txt.o ssl_algs.o bio_ssl.o ssl_err.o kssl.o
+/usr/bin/ranlib ../libssl.a || echo Never mind.
+if [ -n "" ]; then \
+	(cd ..; make -f Makefile.ssl libssl.so.0.9.7); \
+fi
+make[2]: Leaving directory `/home/xhchen/Test/openssl-0.9.7c/ssl'
+make[1]: Leaving directory `/home/xhchen/Test/openssl-0.9.7c'

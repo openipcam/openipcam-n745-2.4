@@ -1,0 +1,7 @@
+$ $Id: set15,v 1.1.1.1 2006-07-11 09:33:29 andy Exp $
+$ sh.func.c
+$set 15 
+1 %s: %s: Can't %s%s limit\n
+2 remove
+3 set
+4 \040hard

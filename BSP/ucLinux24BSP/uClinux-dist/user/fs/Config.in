@@ -1,0 +1,21 @@
+dep_tristate 'Journalling Flash File System (JFFS) support' CONFIG_JFFS_FS $CONFIG_MTD
+if [ "$CONFIG_JFFS_FS" = "y" -o "$CONFIG_JFFS_FS" = "m" ] ; then
+   int 'JFFS debugging verbosity (0 = quiet, 3 = noisy)' CONFIG_JFFS_FS_VERBOSE 0
+   bool 'JFFS stats available in /proc filesystem' CONFIG_JFFS_PROC_FS
+fi
+dep_tristate 'Journalling Flash File System v2 (JFFS2) support' CONFIG_JFFS2_FS $CONFIG_MTD
+if [ "$CONFIG_JFFS2_FS" = "y" -o "$CONFIG_JFFS2_FS" = "m" ] ; then
+   int 'JFFS2 debugging verbosity (0 = quiet, 2 = noisy)' CONFIG_JFFS2_FS_DEBUG 0
+   bool 'JFFS2 support for NAND chips' CONFIG_JFFS2_FS_NAND
+   bool 'JFFS2 ZLIB compression support (recommended)' CONFIG_JFFS2_ZLIB
+   bool 'JFFS2 RTIME compression support (recommended)' CONFIG_JFFS2_RTIME
+   bool 'JFFS2 RUBIN compression support' CONFIG_JFFS2_RUBIN
+   bool 'JFFS2 LZO compression support' CONFIG_JFFS2_LZO
+   bool 'JFFS2 LZARI compression support' CONFIG_JFFS2_LZARI
+   choice 'JFFS2 default compression mode' \
+        "none                                   CONFIG_JFFS2_CMODE_NONE \
+         priority                               CONFIG_JFFS2_CMODE_PRIORITY \
+         size                                   CONFIG_JFFS2_CMODE_SIZE" priority
+
+   bool 'JFFS2 proc interface support' CONFIG_JFFS2_PROC
+fi

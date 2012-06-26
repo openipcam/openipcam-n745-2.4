@@ -1,0 +1,40 @@
+TARGET = http
+TESTTARGET = TestBoa
+
+GCC_FLAGS = -Wstrict-prototypes -Wpointer-arith -Wcast-align -Wcast-qual\
+  -Wtraditional\
+  -Wshadow\
+  -Wconversion\
+  -Waggregate-return\
+  -Wmissing-prototypes\
+  -Wnested-externs\
+  -Wall
+
+# Add -DNO_DAEMON if you do not want the server to fork upon launch
+LDFLAGS = -L../Library/i386/lib -l$(TARGET) -lssl -lcrypto
+CFLAGS = -g -O -I../openssl/include -DDEBUG -DSERVER_SSL
+
+CC = gcc
+
+SOURCES = alias.c boa.c config.c get.c hash.c log.c \
+	queue.c read.c request.c response.c signals.c util.c \
+	Help/HttpServer.c Help/C_List.c Help/C_String.c \
+	Help/C_ConfigFile.c Help/C_HttpSupport.c Help/C_MultiPart.c \
+	Help/C_SendFile.c
+
+OBJS = ${SOURCES:.c=.o}
+
+all: lib test
+
+lib: ${OBJS}
+	rm -rf ../Library/i386/lib/lib$(TARGET).a
+	$(AR) -r ../Library/i386/lib/lib$(TARGET).a $(OBJS)
+	cp ./Help/*.h ../Library/i386/include
+
+test: $(TESTTARGET).o
+	$(CC) -o $(TESTTARGET) $(TESTTARGET).o $(LDFLAGS)
+
+clean:
+	rm -f ${OBJS}
+	rm -f *.o
+	rm -f ${TESTTARGET}

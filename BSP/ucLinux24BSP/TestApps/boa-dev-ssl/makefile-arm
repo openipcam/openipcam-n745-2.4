@@ -1,0 +1,8 @@
+all:
+	cd ./openssl; make -f makefile-740; cd ..;
+	cd ./boa-dev; make -f makefile-740; cd ..;
+
+clean:
+	cd ./openssl; make -f makefile-740 clean; cd ..;
+	cd ./boa-dev; make -f makefile-740 clean; cd ..;
+	find ./Library -regex '.*\.[ha]' | xargs rm -f 

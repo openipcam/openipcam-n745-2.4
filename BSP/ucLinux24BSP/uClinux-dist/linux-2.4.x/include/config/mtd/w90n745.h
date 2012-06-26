@@ -1,0 +1,1 @@
+#define CONFIG_MTD_W90N745 1

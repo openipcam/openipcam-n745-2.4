@@ -1,0 +1,324 @@
+
+Winbond W90N745 Audio Driver
+================================
+
+
+Contents
+--------
+
+    1) Introduction
+    2) Directory
+    3) How to use
+    4) Bug report
+
+
+1) Introduction
+===============
+
+	This driver is used for W90N745 Audio only. It is based on OSS standard. If you are familiar with OSS user
+interface, please skip this document. W90N745 Audio module can support two kind of codec standard : IIS and AC97.
+The device, /dev/dsp0 and /dev/mixer0, select IIS interface, and the device, /dev/dsp1 and /dev/mixer1, select
+AC97 interface.
+
+2) Directory
+============
+
+	DRIVERROOT stands for driver root directory
+
+	DRIVERROOT ---- README 			this file
+		    |-- w90n745_audio.c		driver source
+		    |-- w90n745_audio.h		driver source header	
+		    |-- w90n745_audio_regs.h	register map
+		    |-- w90n745_ac97.c			AC97 module
+		    |-- w90n745_ac97.h			AC97 header
+		    |-- w90n745_i2s.c			IIS module
+		    |__ w90n745_i2s.h			IIS header
+
+3) How to use
+=============
+
+	1. Audio Programming
+
+		a) Declarations for an Audio Program
+			All programs using the OSS API should include <soundcard.h> which is a C language header
+			file containing the definitions for the API. The other header files to be included are <ioctl.h>,
+			<unistd.h> and <fcntl.h>. The following is an example of declarations for a simple audio program:
+
+			/*
+			* Standard includes
+			*/
+			#include <ioctl.h>
+			#include <unistd.h>
+			#include <fcntl.h>
+			#include <sys/soundcard.h>
+			
+
+		b) Selecting and Opening the Sound Device
+			An audio device must be opened before it can be used. There are two devices here, /dev/dsp0
+			and /dev/dsp1, just select the correct device, and open it. 
+			It is recommended that the device file is opened in read only (O_RDONLY) or write only
+			(O_WRONLY) mode. Read write mode (O_RDWR) should be used only when it is necessary to record
+			and play back at the same time (full duplex mode).
+
+			The following code fragment can be used to open the selected device defined as DEVICE_NAME).
+			The value of open_mode should be O_WRONLY, O_RDONLY or O_RDWR. Other flags are undefined
+			and must not be used with audio devices.
+			
+			
+			if ((audio_fd = open(DEVICE_NAME, open_mode, 0)) == -1) {
+				/* Open of device failed */
+				perror(DEVICE_NAME);
+				exit(1);
+			}
+
+		c) A Simple Recording Application
+			The following code fragment can be used to read data from the device:
+
+			int len;
+			if ((len = read(audio_fd, audio_buffer, count)) == -1) {
+				perror("audio read");
+				exit(1);
+			}
+
+			In the above example, variable count defines the number of bytes the program wants to read from
+			the device. It must be less or equal to the size of audio_buffer. In addition, it must always be
+			an integer multiple of the sample size. Using an integer power of 2 (i.e. 4, 8, 16, 32, etc.) is
+			recommended as this works best with the buffering used internally by the driver.
+
+			The number of bytes recorded from the device can be used to measure time precisely. The audio data
+			rate (bytes per second) depends on sampling speed, sample size and number of channels. For
+			example, when using 8 kHz 16-bit stereo sampling the data rate is 8000 * 2 * 2 = 32000
+			bytes/second. This is actually the only way to know when to stop recording. It is important to notice
+			that there is no end of file condition defined for audio devices.
+
+			* Note : W90N745 can only record one channel, the left channel. So it must be working in mono mode.
+
+		d) Simple Playback Application
+			A simple playback program works exactly like a recording program. The only difference is that a
+			playback program calls write.
+
+		e) Setting Sampling Parameters
+			There are three parameters which affect the sound quality (and therefore memory and bandwidth
+			requirements) of sampled audio data. These are:
+				* sample format (sometimes called as number of bits),
+				* number of channels (mono or stereo), and
+				* sampling rate (speed).
+
+		f) Selecting Audio Format
+
+			We are only support one format: 
+			
+				AFMT_S16_LE		The standard 16-bit signed little-endian (Intel) sample format used in PC soundcards	
+
+			There is no need to set this parameter, although we provide this command.
+
+			The sample format can be set using the ioctl call SNDCTL_DSP_SETFMT. 	The following code 
+			fragment sets the audio format to AFMT_S16_LE
+
+			int format;
+			format = AFMT_S16_LE;
+			if (ioctl(audio_fd, SNDCTL_DSP_SETFMT, &format) == -1) {
+				/* fatal error */
+				perror("SNDCTL_DSP_SETFMT");
+				exit(1);
+			}
+			
+			if (format != AFMT_S16_LE) {
+				/* The device doesn't support the requested audio format. The
+				program should use another format (for example the one returned
+				in "format") or alternatively it must display an error message
+				and to abort. */
+			}
+
+
+			A program can check which formats are supported by the device by calling ioctl
+			SNDCTL_DSP_GETFMTS as in the listing below:
+
+			int mask;
+			if (ioctl(audio_fd, SNDCTL_DSP_GETFMTS, &mask) == -1) {
+				/* Handle fatal error ... */
+			}
+			if (mask & AFMT_S16_LE) {
+				/* The device supports AFMT_S16_LE format ... */
+			}
+
+		g) Selecting the Number of Channels (Mono/Stereo)
+			W90N745 Audio module support stereo mode. The default mode is stereo. An application can
+			select the number of channels calling ioctl SNDCTL_DSP_CHANNELS with an argument
+			specifying the number of channels (1 or 2).
+
+			int channels = 2; /* 1=mono, 2=stereo */
+			if (ioctl(audio_fd, SNDCTL_DSP_CHANNELS, &channels) == -1) {
+				/* Fatal error */
+				perror("SNDCTL_DSP_CHANNELS");
+				exit(1);
+			}
+			if (channels != 2)
+			{
+				/* The device doesn't support stereo mode ... */
+			}
+
+		h) Selecting Sampling Rate (speed)
+			Sampling rate is the parameter that determines much of the quality of an audio sample. The OSS API
+			permits selecting any frequency between 1 Hz and 2 GHz. However in W90N745 there are 8KHz,
+			11.025KHz, 16KHz, 22.05KHz, 24KHz, 32KHz, 44.1KHz and 48KHz by the audio device being used.
+
+			The default sampling rate is 44.1KHz.The following code fragment can be used to select the sampling
+			speed by calling ioctl SNDCTL_DSP_SPEED :
+
+			int speed = 11025;
+			if (ioctl(audio_fd, SNDCTL_DSP_SPEED, &speed)==-1) {
+				/* Fatal error */
+				perror("SNDCTL_DSP_SPEED");
+				exit(Error code);
+			}
+			if ( /* returned speed differs significantly from the requested one... */ ) {
+				/* The device doesn't support the requested speed... */
+			}
+
+		g) Other Commonly Used ioctl Calls
+			It is possible to implement most audio processing programs without using any ioctl calls other
+			than the three described earlier. This is possible if the application just opens the device, sets
+			parameters, calls read or write continuously (without noticeable delays or pauses) and finally
+			closes the device. This kind of application can be described as stream or batch application.
+
+			There are two additional calls which may be required with slightly more complicated programs.
+			All of them do not require or return an argument (just use an argument of 0).
+			
+			The ioctl SNDCTL_DSP_SYNC can be used when an application wants to wait until the last byte
+			written to the device has been played (it doesn't wait in recording mode). When that occurs, the call
+			resets (stops) the device and returns back to the calling program. Note that this call may take several
+			seconds to execute depending on the amount of data in the buffers. 
+
+			The ioctl SNDCTL_DSP_RESET stops the device immediately and returns it to a state where it
+			can accept new parameters.
+
+	2. Mixer Programming
+		a) Introduction
+			Most sound cards have some kind of mixer which can be used for controlling volume levels. The
+			OSS API defines a device file, /dev/mixer0 or /dev/mixer1, which can be used to access the 
+			mixer functions of the card.
+
+			The OSS mixer API is based on channels. A mixer channel is a numbered object which represents
+			a physical control or slider of the mixer. Each of the channels have independently adjustable values
+			which may vary between 0 (off) and 100 (maximum volume). Most of the channels are stereo
+			controls, so it is possible to set values for both stereo channels separately which permits the control
+			of balance. The mixer API contains a few ioctl calls for setting and getting the values of these
+			mixer channels.
+
+			In addition to volumes, the mixer API also controls the selection of recording sources. We have
+			only one record source depending on hardware setting.
+
+		b) Mixer Channels
+			The mixer channels have an unique number between 0 and 30. The file <soundcard.h> defines
+			some mnemonic names for the channels.
+
+			W90N745 has some channels as below:
+
+			* SOUND_MIXER_VOLUME	Master output level (headphone/line out volume)
+			* SOUND_MIXER_PCM 		Output level for the audio (Codec, PCM, ADC) device (/dev/dsp and
+									/dev/audio)
+			* SOUND_MIXER_MIC		Volume for the signal coming from the microphone jack. In some cases
+									his signal controls only the recording volume from the microphone and
+									on some cards it controls the volume of the microphone signal routed to
+									the output of the card too. In some cards the microphone is not connected
+									to the true microphone input at all but to one of the line level inputs of the
+									mixer chip.
+
+		c) Meaning of Volume Levels
+			The OSS driver specifies volume levels using integer values from 0 to 100. The value 0 means
+			minimum volume (off) and 100 means maximum volume.
+			
+			Most mixers have anywhere from 3 to 8 bits of accuracy for controlling the volume at the hardware
+			level. The OSS driver scales between the local (0-100) and hardware defined volume. Since this
+			scaling is not exact, the application should be careful when using the volume returned by the ioctl
+			calls. If the application writes the volume and then reads it back, the returned volume is usually
+			slightly different (smaller) than the requested one. If the write-read sequence is repeated several
+			times, the volume level slides to zero even if the application makes no changes itself. It is
+			recommended, therefore, that the application reads the volume just during initialization and ignores
+			the volume returned later.
+
+		d) Getting and Setting Volumes
+
+			An application program can read and/or write the volume setting of a mixer device by calling the
+			ioctl functions SOUND_MIXER_READ and SOUND_MIXER_WRITE. The mixer channel is given
+			as an argument to the macro. The channel number may be one of the channel identifiers defined in
+			<soundcard.h> or an integer between 0 and SOUND_MIXER_NRDEVICES. For example, the
+			following call reads the current volume of the microphone input:
+
+			int vol;
+			if (ioctl(mixer_fd, SOUND_MIXER_READ(SOUND_MIXER_MIC), &vol) == -1) {
+				/* An undefined mixer channel was accessed... */
+			}
+
+			The program should check if an error was returned from the ioctl call. The driver will return -1
+			and set errno if the mixer channel is not known or if there is no mixer at all.
+
+			The volumes for both stereo channels are returned in the same integer variable. The least significant
+			byte gives volume for the left channel and the next 8 bits for the right channel. The upper 16 bits are
+			undefined and should be ignored. For mono devices just the left channel value is valid (the right
+			channel value is set to the left channel value by the driver).
+
+			The volume setting can be altered by using the ioctl SOUND_MIXER_WRITE. It works just like
+			SOUND_MIXER_READ, but in addition it alters the actual hardware volume of the channel. Note
+			that this call also returns the new volume in the variable passed as an argument to the ioctl call.
+			In some cases the value may be slightly different from the value passed to the call.
+
+	3. Advanced Programming Topics
+		
+			Normally programs don't need to care about the buffering parameters of audio devices. However,
+			most of the features presented in this document have been designed to work with full fragments. For
+			this reason your program may work better if it reads and writes data one buffer fragment at time
+			(please note that this is not normally required).
+
+			Application may ask the buffer size by using the following ioctl call:
+
+			int frag_size;
+			if (ioctl(audio_fd, SNDCTL_DSP_GETBLKSIZE, &frag_size) == -1)
+				error();
+
+			The above call returns the static fragment size. There are two additional calls which return
+			information about the live situation.
+
+			audio_buf_info info;
+
+			ioctl(audio_fd, SNDCTL_DSP_GETISPACE, &info);
+			ioctl(audio_fd, SNDCTL_DSP_GETOSPACE, &info);
+
+			The above calls return information about output and input buffering, respectively. The
+			audio_buf_info record contains the following fields:
+
+			int fragments;
+
+			Number of full fragments that can be read or written without blocking. Note that this field is reliable
+			only when the application reads/writes full fragments at time.
+
+			int fragstotal;
+
+			Total number of fragments allocated for buffering.
+
+			int fragsize;
+
+			Size of a fragment in bytes. This is the same value than returned by
+
+			ioctl(SNDCTL_DSP_GETBLKSIZE).
+
+			int bytes;
+
+			Number of bytes that can be read or written immediately without blocking.
+
+			These two calls, together with poll, can be used for writing asynchronous or non-blocking
+			applications. It is important that SNDCTL_DSP_GETBLKSIZE be the last ioctl call made before
+			the first read or write.
+
+
+4) Bug report
+==============
+	If you have any question or bug report, plese contact me.
+
+	NM53 QFu
+	Tel: 021-62365999 # 1747
+	Email: QFu@Winbond.com.tw
+	Winbond Electronics (ShangHai) Co. Ltd. 2005-11-24
+
+

@@ -1,0 +1,19 @@
+tz.o: tz.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/tz.h
+tz_osl.o: tz_osl.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/tz.h
+tzpolicy.o: tzpolicy.c \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sysctl.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bm.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/tz.h

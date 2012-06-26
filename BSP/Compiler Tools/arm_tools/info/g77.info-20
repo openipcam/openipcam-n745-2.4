@@ -1,0 +1,128 @@
+This is g77.info, produced by makeinfo version 4.0 from g77.texi.
+
+INFO-DIR-SECTION Programming
+START-INFO-DIR-ENTRY
+* g77: (g77).                  The GNU Fortran compiler.
+END-INFO-DIR-ENTRY
+   This file documents the use and the internals of the GNU Fortran
+(`g77') compiler.  It corresponds to the GCC-3.0 version of `g77'.
+
+   Published by the Free Software Foundation 59 Temple Place - Suite 330
+Boston, MA 02111-1307 USA
+
+   Copyright (C) 1995,1996,1997,1998,1999,2000,2001 Free Software
+Foundation, Inc.
+
+   Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.1 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "GNU General Public License", the Front-Cover
+texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+   (a) The FSF's Front-Cover Text is:
+
+   A GNU Manual
+
+   (b) The FSF's Back-Cover Text is:
+
+   You have freedom to copy and modify this GNU Manual, like GNU
+software.  Copies published by the Free Software Foundation raise
+funds for GNU development.
+
+   Contributed by James Craig Burley (<craig@jcb-sc.com>).  Inspired by
+a first pass at translating `g77-0.5.16/f/DOC' that was contributed to
+Craig by David Ronis (<ronis@onsager.chem.mcgill.ca>).
+
+
+File: g77.info,  Node: GLOBALS,  Next: LINKFAIL,  Prev: LEX,  Up: Diagnostics
+
+`GLOBALS'
+=========
+
+     Global name NAME defined at ... already defined...
+     Global name NAME at ... has different type...
+     Too many arguments passed to NAME at ...
+     Too few arguments passed to NAME at ...
+     Argument #N of NAME is ...
+
+   These messages all identify disagreements about the global procedure
+named NAME among different program units (usually including NAME
+itself).
+
+   Whether a particular disagreement is reported as a warning or an
+error can depend on the relative order of the disagreeing portions of
+the source file.
+
+   Disagreements between a procedure invocation and the _subsequent_
+procedure itself are, usually, diagnosed as errors when the procedure
+itself _precedes_ the invocation.  Other disagreements are diagnosed
+via warnings.
+
+   This distinction, between warnings and errors, is due primarily to
+the present tendency of the `gcc' back end to inline only those
+procedure invocations that are _preceded_ by the corresponding
+procedure definitions.  If the `gcc' back end is changed to inline
+"forward references", in which invocations precede definitions, the
+`g77' front end will be changed to treat both orderings as errors,
+accordingly.
+
+   The sorts of disagreements that are diagnosed by `g77' include
+whether a procedure is a subroutine or function; if it is a function,
+the type of the return value of the procedure; the number of arguments
+the procedure accepts; and the type of each argument.
+
+   Disagreements regarding global names among program units in a
+Fortran program _should_ be fixed in the code itself.  However, if that
+is not immediately practical, and the code has been working for some
+time, it is possible it will work when compiled with the `-fno-globals'
+option.
+
+   The `-fno-globals' option causes these diagnostics to all be warnings
+and disables all inlining of references to global procedures (to avoid
+subsequent compiler crashes and bad-code generation).  Use of the
+`-Wno-globals' option as well as `-fno-globals' suppresses all of these
+diagnostics.  (`-Wno-globals' by itself disables only the warnings, not
+the errors.)
+
+   After using `-fno-globals' to work around these problems, it is wise
+to stop using that option and address them by fixing the Fortran code,
+because such problems, while they might not actually result in bugs on
+some systems, indicate that the code is not as portable as it could be.
+In particular, the code might appear to work on a particular system,
+but have bugs that affect the reliability of the data without
+exhibiting any other outward manifestations of the bugs.
+
+
+File: g77.info,  Node: LINKFAIL,  Next: Y2KBAD,  Prev: GLOBALS,  Up: Diagnostics
+
+`LINKFAIL'
+==========
+
+On AIX 4.1, `g77' might not build with the native (non-GNU) tools due
+to a linker bug in coping with the `-bbigtoc' option which leads to a
+`Relocation overflow' error.  The GNU linker is not recommended on
+current AIX versions, though; it was developed under a now-unsupported
+version.  This bug is said to be fixed by `update PTF U455193 for APAR
+IX75823'.
+
+   Compiling with `-mminimal-toc' might solve this problem, e.g. by
+adding
+     BOOT_CFLAGS='-mminimal-toc -O2 -g'
+   to the `make bootstrap' command line.
+
+
+File: g77.info,  Node: Y2KBAD,  Prev: LINKFAIL,  Up: Diagnostics
+
+`Y2KBAD'
+========
+
+     Intrinsic `NAME', invoked at (^), known to be non-Y2K-compliant...
+
+   This diagnostic indicates that the specific intrinsic invoked by the
+name NAME is known to have an interface that is not Year-2000 (Y2K)
+compliant.
+
+   *Note Year 2000 (Y2K) Problems::.
+

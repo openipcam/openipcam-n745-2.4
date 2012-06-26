@@ -1,0 +1,76 @@
+1.
+int GetHttpMethod(HTTPCONNECTION hConnection);
+	Description:
+		Get http request method.
+	Return:
+		The definition for return value:
+		#define	M_INVALID	-1
+		#define	M_SHORT		0
+		#define M_GET		1
+		#define M_HEAD		2
+		#define M_PUT		3
+		#define M_POST		4
+		#define M_DELETE	5
+		#define M_LINK		6
+		#define M_UNLINK	7
+
+2.
+struct in_addr GetClientAddr(HTTPCONNECTION hConnection);
+	Description:
+		Get the client's IP address.
+
+3.
+char *GetClientMac(HTTPCONNECTION hConnection);
+	Description:
+		Get the client's MAC address.
+
+4.
+char *GetQueryString(HTTPCONNECTION hConnection);
+	Description:
+		Get the query string of the request.
+
+5.
+char *GetRequestPath(HTTPCONNECTION hConnection);
+	Description:
+		Get the file path in the http request.
+
+6.
+char *GetRequestFilePath(HTTPCONNECTION hConnection);
+	Description:
+		Get the true path in server's file system of the file requested by this http connection.
+
+//char *GetDocumentRoot(HTTPCONNECTION hConnection);
+
+
+7.
+char *GetReferer(HTTPCONNECTION hConnection);
+	Description:
+		Get referer of the http request.
+
+8.
+char *GetContentType(HTTPCONNECTION hConnection);
+	Description:
+		Get the mime type of the data posted by client.
+
+9.
+int GetContentLength(HTTPCONNECTION hConnection);
+	Description:
+		Get the data length posted by client.
+
+
+10.
+void SetPostDataFun(HTTPCONNECTION hConnection, POST_DATA_PFUN funPostDataGot, void *pParam);
+	Description:
+		Specify a function which to be called when data posted by client (with method POST) received.
+	Param:
+		typedef int (*POST_DATA_PFUN)(HTTPCONNECTION hConnection,
+				char **ppcPostBuf,
+				int *piPostBufLen,
+				int *piPostDataLen,
+				char *pcFillData,
+				int iFillDataLen,
+				int iIsMoreData/*bool*/,
+				void *pParam/*other parameter for extend use*/);
+		funPostDataGot - function that processes posted data.
+		pParam - a additional parameter when calling "funPostDataGot", which can be used to transfer any pointer specified by user;
+	

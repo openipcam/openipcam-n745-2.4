@@ -1,0 +1,1231 @@
+This is g77.info, produced by makeinfo version 4.0 from g77.texi.
+
+INFO-DIR-SECTION Programming
+START-INFO-DIR-ENTRY
+* g77: (g77).                  The GNU Fortran compiler.
+END-INFO-DIR-ENTRY
+   This file documents the use and the internals of the GNU Fortran
+(`g77') compiler.  It corresponds to the GCC-3.0 version of `g77'.
+
+   Published by the Free Software Foundation 59 Temple Place - Suite 330
+Boston, MA 02111-1307 USA
+
+   Copyright (C) 1995,1996,1997,1998,1999,2000,2001 Free Software
+Foundation, Inc.
+
+   Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.1 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "GNU General Public License", the Front-Cover
+texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+   (a) The FSF's Front-Cover Text is:
+
+   A GNU Manual
+
+   (b) The FSF's Back-Cover Text is:
+
+   You have freedom to copy and modify this GNU Manual, like GNU
+software.  Copies published by the Free Software Foundation raise
+funds for GNU development.
+
+   Contributed by James Craig Burley (<craig@jcb-sc.com>).  Inspired by
+a first pass at translating `g77-0.5.16/f/DOC' that was contributed to
+Craig by David Ronis (<ronis@onsager.chem.mcgill.ca>).
+
+
+File: g77.info,  Node: Simplify Porting,  Next: More Extensions,  Prev: Better Optimization,  Up: Projects
+
+Simplify Porting
+================
+
+   Making `g77' easier to configure, port, build, and install, either
+as a single-system compiler or as a cross-compiler, would be very
+useful.
+
+   * A new library (replacing `libg2c') should improve portability as
+     well as produce more optimal code.  Further, `g77' and the new
+     library should conspire to simplify naming of externals, such as
+     by removing unnecessarily added underscores, and to
+     reduce/eliminate the possibility of naming conflicts, while making
+     debugger more straightforward.
+
+     Also, it should make multi-language applications more feasible,
+     such as by providing Fortran intrinsics that get Fortran unit
+     numbers given C `FILE *' descriptors.
+
+   * Possibly related to a new library, `g77' should produce the
+     equivalent of a `gcc' `main(argc, argv)' function when it compiles
+     a main program unit, instead of compiling something that must be
+     called by a library implementation of `main()'.
+
+     This would do many useful things such as provide more flexibility
+     in terms of setting up exception handling, not requiring
+     programmers to start their debugging sessions with `breakpoint
+     MAIN__' followed by `run', and so on.
+
+   * The GBE needs to understand the difference between alignment
+     requirements and desires.  For example, on Intel x86 machines,
+     `g77' currently imposes overly strict alignment requirements, due
+     to the back end, but it would be useful for Fortran and C
+     programmers to be able to override these _recommendations_ as long
+     as they don't violate the actual processor _requirements_.
+
+
+File: g77.info,  Node: More Extensions,  Next: Machine Model,  Prev: Simplify Porting,  Up: Projects
+
+More Extensions
+===============
+
+   These extensions are not the sort of things users ask for "by name",
+but they might improve the usability of `g77', and Fortran in general,
+in the long run.  Some of these items really pertain to improving `g77'
+internals so that some popular extensions can be more easily supported.
+
+   * Look through all the documentation on the GNU Fortran language,
+     dialects, compiler, missing features, bugs, and so on.  Many
+     mentions of incomplete or missing features are sprinkled
+     throughout.  It is not worth repeating them here.
+
+   * Consider adding a `NUMERIC' type to designate typeless numeric
+     constants, named and unnamed.  The idea is to provide a
+     forward-looking, effective replacement for things like the
+     old-style `PARAMETER' statement when people really need
+     typelessness in a maintainable, portable, clearly documented way.
+     Maybe `TYPELESS' would include `CHARACTER', `POINTER', and
+     whatever else might come along.  (This is not really a call for
+     polymorphism per se, just an ability to express limited, syntactic
+     polymorphism.)
+
+   * Support `OPEN(...,KEY=(...),...)'.
+
+   * Support arbitrary file unit numbers, instead of limiting them to 0
+     through `MXUNIT-1'.  (This is a `libg2c' issue.)
+
+   * `OPEN(NOSPANBLOCKS,...)' is treated as
+     `OPEN(UNIT=NOSPANBLOCKS,...)', so a later `UNIT=' in the first
+     example is invalid.  Make sure this is what users of this feature
+     would expect.
+
+   * Currently `g77' disallows `READ(1'10)' since it is an obnoxious
+     syntax, but supporting it might be pretty easy if needed.  More
+     details are needed, such as whether general expressions separated
+     by an apostrophe are supported, or maybe the record number can be
+     a general expression, and so on.
+
+   * Support `STRUCTURE', `UNION', `MAP', and `RECORD' fully.
+     Currently there is no support at all for `%FILL' in `STRUCTURE'
+     and related syntax, whereas the rest of the stuff has at least
+     some parsing support.  This requires either major changes to
+     `libg2c' or its replacement.
+
+   * F90 and `g77' probably disagree about label scoping relative to
+     `INTERFACE' and `END INTERFACE', and their contained procedure
+     interface bodies (blocks?).
+
+   * `ENTRY' doesn't support F90 `RESULT()' yet, since that was added
+     after S8.112.
+
+   * Empty-statement handling (10 ;;CONTINUE;;) probably isn't
+     consistent with the final form of the standard (it was vague at
+     S8.112).
+
+   * It seems to be an "open" question whether a file, immediately
+     after being `OPEN'ed,is positioned at the beginning, the end, or
+     wherever--it might be nice to offer an option of opening to
+     "undefined" status, requiring an explicit absolute-positioning
+     operation to be performed before any other (besides `CLOSE') to
+     assist in making applications port to systems (some IBM?) that
+     `OPEN' to the end of a file or some such thing.
+
+
+File: g77.info,  Node: Machine Model,  Next: Internals Documentation,  Prev: More Extensions,  Up: Projects
+
+Machine Model
+=============
+
+   This items pertain to generalizing `g77''s view of the machine model
+to more fully accept whatever the GBE provides it via its configuration.
+
+   * Switch to using `REAL_VALUE_TYPE' to represent floating-point
+     constants exclusively so the target float format need not be
+     required.  This means changing the way `g77' handles
+     initialization of aggregate areas having more than one type, such
+     as `REAL' and `INTEGER', because currently it initializes them as
+     if they were arrays of `char' and uses the bit patterns of the
+     constants of the various types in them to determine what to stuff
+     in elements of the arrays.
+
+   * Rely more and more on back-end info and capabilities, especially
+     in the area of constants (where having the `g77' front-end's IL
+     just store the appropriate tree nodes containing constants might
+     be best).
+
+   * Suite of C and Fortran programs that a user/administrator can run
+     on a machine to help determine the configuration for `g77' before
+     building and help determine if the compiler works (especially with
+     whatever libraries are installed) after building.
+
+
+File: g77.info,  Node: Internals Documentation,  Next: Internals Improvements,  Prev: Machine Model,  Up: Projects
+
+Internals Documentation
+=======================
+
+   Better info on how `g77' works and how to port it is needed.  Much
+of this should be done only after the redesign planned for 0.6 is
+complete.
+
+   *Note Front End::, which contains some information on `g77'
+internals.
+
+
+File: g77.info,  Node: Internals Improvements,  Next: Better Diagnostics,  Prev: Internals Documentation,  Up: Projects
+
+Internals Improvements
+======================
+
+   Some more items that would make `g77' more reliable and easier to
+maintain:
+
+   * Generally make expression handling focus more on critical syntax
+     stuff, leaving semantics to callers.  For example, anything a
+     caller can check, semantically, let it do so, rather than having
+     `expr.c' do it.  (Exceptions might include things like diagnosing
+     `FOO(I--K:)=BAR' where `FOO' is a `PARAMETER'--if it seems
+     important to preserve the left-to-right-in-source order of
+     production of diagnostics.)
+
+   * Come up with better naming conventions for `-D' to establish
+     requirements to achieve desired implementation dialect via
+     `proj.h'.
+
+   * Clean up used tokens and `ffewhere's in `ffeglobal_terminate_1'.
+
+   * Replace `sta.c' `outpooldisp' mechanism with `malloc_pool_use'.
+
+   * Check for `opANY' in more places in `com.c', `std.c', and `ste.c',
+     and get rid of the `opCONVERT(opANY)' kludge (after determining if
+     there is indeed no real need for it).
+
+   * Utility to read and check `bad.def' messages and their references
+     in the code, to make sure calls are consistent with message
+     templates.
+
+   * Search and fix `&ffe...' and similar so that `ffe...ptr...' macros
+     are available instead (a good argument for wishing this could have
+     written all this stuff in C++, perhaps).  On the other hand, it's
+     questionable whether this sort of improvement is really necessary,
+     given the availability of tools such as Emacs and Perl, which make
+     finding any address-taking of structure members easy enough?
+
+   * Some modules truly export the member names of their structures
+     (and the structures themselves), maybe fix this, and fix other
+     modules that just appear to as well (by appending `_', though it'd
+     be ugly and probably not worth the time).
+
+   * Implement C macros `RETURNS(value)' and `SETS(something,value)' in
+     `proj.h' and use them throughout `g77' source code (especially in
+     the definitions of access macros in `.h' files) so they can be
+     tailored to catch code writing into a `RETURNS()' or reading from
+     a `SETS()'.
+
+   * Decorate throughout with `const' and other such stuff.
+
+   * All F90 notational derivations in the source code are still based
+     on the S8.112 version of the draft standard.  Probably should
+     update to the official standard, or put documentation of the rules
+     as used in the code...uh...in the code.
+
+   * Some `ffebld_new' calls (those outside of `ffeexpr.c' or inside
+     but invoked via paths not involving `ffeexpr_lhs' or
+     `ffeexpr_rhs') might be creating things in improper pools, leading
+     to such things staying around too long or (doubtful, but possible
+     and dangerous) not long enough.
+
+   * Some `ffebld_list_new' (or whatever) calls might not be matched by
+     `ffebld_list_bottom' (or whatever) calls, which might someday
+     matter.  (It definitely is not a problem just yet.)
+
+   * Probably not doing clean things when we fail to `EQUIVALENCE'
+     something due to alignment/mismatch or other problems--they end up
+     without `ffestorag' objects, so maybe the backend (and other parts
+     of the front end) can notice that and handle like an `opANY' (do
+     what it wants, just don't complain or crash).  Most of this seems
+     to have been addressed by now, but a code review wouldn't hurt.
+
+
+File: g77.info,  Node: Better Diagnostics,  Prev: Internals Improvements,  Up: Projects
+
+Better Diagnostics
+==================
+
+   These are things users might not ask about, or that need to be
+looked into, before worrying about.  Also here are items that involve
+reducing unnecessary diagnostic clutter.
+
+   * When `FUNCTION' and `ENTRY' point types disagree (`CHARACTER'
+     lengths, type classes, and so on), `ANY'-ize the offending `ENTRY'
+     point and any _new_ dummies it specifies.
+
+   * Speed up and improve error handling for data when repeat-count is
+     specified.  For example, don't output 20 unnecessary messages
+     after the first necessary one for:
+
+          INTEGER X(20)
+          CONTINUE
+          DATA (X(I), J= 1, 20) /20*5/
+          END
+
+     (The `CONTINUE' statement ensures the `DATA' statement is
+     processed in the context of executable, not specification,
+     statements.)
+
+
+File: g77.info,  Node: Front End,  Next: Diagnostics,  Prev: Projects,  Up: Top
+
+Front End
+*********
+
+   This chapter describes some aspects of the design and implementation
+of the `g77' front end.  Much of the information below applies not to
+current releases of `g77', but to the 0.6 rewrite being designed and
+implemented as of late May, 1999.
+
+   To find about things that are "To Be Determined" or "To Be Done",
+search for the string TBD.  If you want to help by working on one or
+more of these items, email <gcc@gcc.gnu.org>.  If you're planning to do
+more than just research issues and offer comments, see
+`http://www.gnu.org/software/contribute.html' for steps you might need
+to take first.
+
+* Menu:
+
+* Overview of Sources::
+* Overview of Translation Process::
+* Philosophy of Code Generation::
+* Two-pass Design::
+* Challenges Posed::
+* Transforming Statements::
+* Transforming Expressions::
+* Internal Naming Conventions::
+
+
+File: g77.info,  Node: Overview of Sources,  Next: Overview of Translation Process,  Up: Front End
+
+Overview of Sources
+===================
+
+   The current directory layout includes the following:
+
+`{No value for `srcdir'}/gcc/'
+     Non-g77 files in gcc
+
+`{No value for `srcdir'}/gcc/f/'
+     GNU Fortran front end sources
+
+`{No value for `srcdir'}/libf2c/'
+     `libg2c' configuration and `g2c.h' file generation
+
+`{No value for `srcdir'}/libf2c/libF77/'
+     General support and math portion of `libg2c'
+
+`{No value for `srcdir'}/libf2c/libI77/'
+     I/O portion of `libg2c'
+
+`{No value for `srcdir'}/libf2c/libU77/'
+     Additional interfaces to Unix `libc' for `libg2c'
+
+   Components of note in `g77' are described below.
+
+   `f/' as a whole contains the source for `g77', while `libf2c/'
+contains a portion of the separate program `f2c'.  Note that the
+`libf2c' code is not part of the program `g77', just distributed with
+it.
+
+   `f/' contains text files that document the Fortran compiler, source
+files for the GNU Fortran Front End (FFE), and some other stuff.  The
+`g77' compiler code is placed in `f/' because it, along with its
+contents, is designed to be a subdirectory of a `gcc' source directory,
+`gcc/', which is structured so that language-specific front ends can be
+"dropped in" as subdirectories.  The C++ front end (`g++'), is an
+example of this--it resides in the `cp/' subdirectory.  Note that the C
+front end (also referred to as `gcc') is an exception to this, as its
+source files reside in the `gcc/' directory itself.
+
+   `libf2c/' contains the run-time libraries for the `f2c' program,
+also used by `g77'.  These libraries normally referred to collectively
+as `libf2c'.  When built as part of `g77', `libf2c' is installed under
+the name `libg2c' to avoid conflict with any existing version of
+`libf2c', and thus is often referred to as `libg2c' when the `g77'
+version is specifically being referred to.
+
+   The `netlib' version of `libf2c/' contains two distinct libraries,
+`libF77' and `libI77', each in their own subdirectories.  In `g77',
+this distinction is not made, beyond maintaining the subdirectory
+structure in the source-code tree.
+
+   `libf2c/' is not part of the program `g77', just distributed with it.
+It contains files not present in the official (`netlib') version of
+`libf2c', and also contains some minor changes made from `libf2c', to
+fix some bugs, and to facilitate automatic configuration, building, and
+installation of `libf2c' (as `libg2c') for use by `g77' users.  See
+`libf2c/README' for more information, including licensing conditions
+governing distribution of programs containing code from `libg2c'.
+
+   `libg2c', `g77''s version of `libf2c', adds Dave Love's
+implementation of `libU77', in the `libf2c/libU77/' directory.  This
+library is distributed under the GNU Library General Public License
+(LGPL)--see the file `libf2c/libU77/COPYING.LIB' for more information,
+as this license governs distribution conditions for programs containing
+code from this portion of the library.
+
+   Files of note in `f/' and `libf2c/' are described below:
+
+`f/BUGS'
+     Lists some important bugs known to be in g77.  Or use Info (or GNU
+     Emacs Info mode) to read the "Actual Bugs" node of the `g77'
+     documentation:
+
+          info -f f/g77.info -n "Actual Bugs"
+
+`f/ChangeLog'
+     Lists recent changes to `g77' internals.
+
+`libf2c/ChangeLog'
+     Lists recent changes to `libg2c' internals.
+
+`f/NEWS'
+     Contains the per-release changes.  These include the user-visible
+     changes described in the node "Changes" in the `g77'
+     documentation, plus internal changes of import.  Or use:
+
+          info -f f/g77.info -n News
+
+`f/g77.info*'
+     The `g77' documentation, in Info format, produced by building
+     `g77'.
+
+     All users of `g77' (not just installers) should read this, using
+     the `more' command if neither the `info' command, nor GNU Emacs
+     (with its Info mode), are available, or if users aren't yet
+     accustomed to using these tools.  All of these files are readable
+     as "plain text" files, though they're easier to navigate using
+     Info readers such as `info' and GNU Emacs Info mode.
+
+   If you want to explore the FFE code, which lives entirely in `f/',
+here are a few clues.  The file `g77spec.c' contains the `g77'-specific
+source code for the `g77' command only--this just forms a variant of the
+`gcc' command, so, just as the `gcc' command itself does not contain
+the C front end, the `g77' command does not contain the Fortran front
+end (FFE).  The FFE code ends up in an executable named `f771', which
+does the actual compiling, so it contains the FFE plus the `gcc' back
+end (GBE), the latter to do most of the optimization, and the code
+generation.
+
+   The file `parse.c' is the source file for `yyparse()', which is
+invoked by the GBE to start the compilation process, for `f771'.
+
+   The file `top.c' contains the top-level FFE function `ffe_file' and
+it (along with top.h) define all `ffe_[a-z].*', `ffe[A-Z].*', and
+`FFE_[A-Za-z].*' symbols.
+
+   The file `fini.c' is a `main()' program that is used when building
+the FFE to generate C header and source files for recognizing keywords.
+The files `malloc.c' and `malloc.h' comprise a memory manager that
+defines all `malloc_[a-z].*', `malloc[A-Z].*', and `MALLOC_[A-Za-z].*'
+symbols.
+
+   All other modules named XYZ are comprised of all files named
+`XYZ*.EXT' and define all `ffeXYZ_[a-z].*', `ffeXYZ[A-Z].*', and
+`FFEXYZ_[A-Za-z].*' symbols.  If you understand all this,
+congratulations--it's easier for me to remember how it works than to
+type in these regular expressions.  But it does make it easy to find
+where a symbol is defined.  For example, the symbol
+`ffexyz_set_something' would be defined in `xyz.h' and implemented
+there (if it's a macro) or in `xyz.c'.
+
+   The "porting" files of note currently are:
+
+`proj.c'
+`proj.h'
+     This defines the "language" used by all the other source files,
+     the language being Standard C plus some useful things like
+     `ARRAY_SIZE' and such.
+
+`target.c'
+`target.h'
+     These describe the target machine in terms of what data types are
+     supported, how they are denoted (to what C type does an
+     `INTEGER*8' map, for example), how to convert between them, and so
+     on.  Over time, versions of `g77' rely less on this file and more
+     on run-time configuration based on GBE info in `com.c'.
+
+`com.c'
+`com.h'
+     These are the primary interface to the GBE.
+
+`ste.c'
+`ste.h'
+     This contains code for implementing recognized executable
+     statements in the GBE.
+
+`src.c'
+`src.h'
+     These contain information on the format(s) of source files (such
+     as whether they are never to be processed as case-insensitive with
+     regard to Fortran keywords).
+
+   If you want to debug the `f771' executable, for example if it
+crashes, note that the global variables `lineno' and `input_filename'
+are usually set to reflect the current line being read by the lexer
+during the first-pass analysis of a program unit and to reflect the
+current line being processed during the second-pass compilation of a
+program unit.
+
+   If an invocation of the function `ffestd_exec_end' is on the stack,
+the compiler is in the second pass, otherwise it is in the first.
+
+   (This information might help you reduce a test case and/or work
+around a bug in `g77' until a fix is available.)
+
+
+File: g77.info,  Node: Overview of Translation Process,  Next: Philosophy of Code Generation,  Prev: Overview of Sources,  Up: Front End
+
+Overview of Translation Process
+===============================
+
+   The order of phases translating source code to the form accepted by
+the GBE is:
+
+  1. Stripping punched-card sources (`g77stripcard.c')
+
+  2. Lexing (`lex.c')
+
+  3. Stand-alone statement identification (`sta.c')
+
+  4. INCLUDE handling (`sti.c')
+
+  5. Order-dependent statement identification (`stq.c')
+
+  6. Parsing (`stb.c' and `expr.c')
+
+  7. Constructing (`stc.c')
+
+  8. Collecting (`std.c')
+
+  9. Expanding (`ste.c')
+
+   To get a rough idea of how a particularly twisted Fortran statement
+gets treated by the passes, consider:
+
+           FORMAT(I2 4H)=(J/
+          &   I3)
+
+   The job of `lex.c' is to know enough about Fortran syntax rules to
+break the statement up into distinct lexemes without requiring any
+feedback from subsequent phases:
+
+     `FORMAT'
+     `('
+     `I24H'
+     `)'
+     `='
+     `('
+     `J'
+     `/'
+     `I3'
+     `)'
+
+   The job of `sta.c' is to figure out the kind of statement, or, at
+least, statement form, that sequence of lexemes represent.
+
+   The sooner it can do this (in terms of using the smallest number of
+lexemes, starting with the first for each statement), the better,
+because that leaves diagnostics for problems beyond the recognition of
+the statement form to subsequent phases, which can usually better
+describe the nature of the problem.
+
+   In this case, the `=' at "level zero" (not nested within parentheses)
+tells `sta.c' that this is an _assignment-form_, not `FORMAT',
+statement.
+
+   An assignment-form statement might be a statement-function
+definition or an executable assignment statement.
+
+   To make that determination, `sta.c' looks at the first two lexemes.
+
+   Since the second lexeme is `(', the first must represent an array
+for this to be an assignment statement, else it's a statement function.
+
+   Either way, `sta.c' hands off the statement to `stq.c' (via `sti.c',
+which expands INCLUDE files).  `stq.c' figures out what a statement
+that is, on its own, ambiguous, must actually be based on the context
+established by previous statements.
+
+   So, `stq.c' watches the statement stream for executable statements,
+END statements, and so on, so it knows whether `A(B)=C' is (intended
+as) a statement-function definition or an assignment statement.
+
+   After establishing the context-aware statement info, `stq.c' passes
+the original sample statement on to `stb.c' (either its
+statement-function parser or its assignment-statement parser).
+
+   `stb.c' forms a statement-specific record containing the pertinent
+information.  That information includes a source expression and, for an
+assignment statement, a destination expression.  Expressions are parsed
+by `expr.c'.
+
+   This record is passed to `stc.c', which copes with the implications
+of the statement within the context established by previous statements.
+
+   For example, if it's the first statement in the file or after an
+`END' statement, `stc.c' recognizes that, first of all, a main program
+unit is now being lexed (and tells that to `std.c' before telling it
+about the current statement).
+
+   `stc.c' attaches whatever information it can, usually derived from
+the context established by the preceding statements, and passes the
+information to `std.c'.
+
+   `std.c' saves this information away, since the GBE cannot cope with
+information that might be incomplete at this stage.
+
+   For example, `I3' might later be determined to be an argument to an
+alternate `ENTRY' point.
+
+   When `std.c' is told about the end of an external (top-level)
+program unit, it passes all the information it has saved away on
+statements in that program unit to `ste.c'.
+
+   `ste.c' "expands" each statement, in sequence, by constructing the
+appropriate GBE information and calling the appropriate GBE routines.
+
+   Details on the transformational phases follow.  Keep in mind that
+Fortran numbering is used, so the first character on a line is column 1,
+decimal numbering is used, and so on.
+
+* Menu:
+
+* g77stripcard::
+* lex.c::
+* sta.c::
+* sti.c::
+* stq.c::
+* stb.c::
+* expr.c::
+* stc.c::
+* std.c::
+* ste.c::
+
+* Gotchas (Transforming)::
+* TBD (Transforming)::
+
+
+File: g77.info,  Node: g77stripcard,  Next: lex.c,  Up: Overview of Translation Process
+
+g77stripcard
+------------
+
+   The `g77stripcard' program handles removing content beyond column 72
+(adjustable via a command-line option), optionally warning about that
+content being something other than trailing whitespace or Fortran
+commentary.
+
+   This program is needed because `lex.c' doesn't pay attention to
+maximum line lengths at all, to make it easier to maintain, as well as
+faster (for sources that don't depend on the maximum column length
+vis-a-vis trailing non-blank non-commentary content).
+
+   Just how this program will be run--whether automatically for old
+source (perhaps as the default for `.f' files?)--is not yet determined.
+
+   In the meantime, it might as well be implemented as a typical UNIX
+pipe.
+
+   It should accept a `-fline-length-N' option, with the default line
+length set to 72.
+
+   When the text it strips off the end of a line is not blank (not
+spaces and tabs), it should insert an additional comment line
+(beginning with `!', so it works for both fixed-form and free-form
+files) containing the text, following the stripped line.  The inserted
+comment should have a prefix of some kind, TBD, that distinguishes the
+comment as representing stripped text.  Users could use that to `sed'
+out such lines, if they wished--it seems silly to provide a
+command-line option to delete information when it can be so easily
+filtered out by another program.
+
+   (This inserted comment should be designed to "fit in" well with
+whatever the Fortran community is using these days for preprocessor,
+translator, and other such products, like OpenMP.  What that's all
+about, and how `g77' can elegantly fit its special comment conventions
+into it all, is TBD as well.  We don't want to reinvent the wheel here,
+but if there turn out to be too many conflicting conventions, we might
+have to invent one that looks nothing like the others, but which offers
+their host products a better infrastructure in which to fit and coexist
+peacefully.)
+
+   `g77stripcard' probably shouldn't do any tab expansion or other
+fancy stuff.  People can use `expand' or other pre-filtering if they
+like.  The idea here is to keep each stage quite simple, while providing
+excellent performance for "normal" code.
+
+   (Code with junk beyond column 73 is not really "normal", as it comes
+from a card-punch heritage, and will be increasingly hard for
+tomorrow's Fortran programmers to read.)
+
+
+File: g77.info,  Node: lex.c,  Next: sta.c,  Prev: g77stripcard,  Up: Overview of Translation Process
+
+lex.c
+-----
+
+   To help make the lexer simple, fast, and easy to maintain, while
+also having `g77' generally encourage Fortran programmers to write
+simple, maintainable, portable code by maximizing the performance of
+compiling that kind of code:
+
+   * There'll be just one lexer, for both fixed-form and free-form
+     source.
+
+   * It'll care about the form only when handling the first 7 columns of
+     text, stuff like spaces between strings of alphanumerics, and how
+     lines are continued.
+
+     Some other distinctions will be handled by subsequent phases, so
+     at least one of them will have to know which form is involved.
+
+     For example, `I = 2 . 4' is acceptable in fixed form, and works in
+     free form as well given the implementation `g77' presently uses.
+     But the standard requires a diagnostic for it in free form, so the
+     parser has to be able to recognize that the lexemes aren't
+     contiguous (information the lexer _does_ have to provide) and that
+     free-form source is being parsed, so it can provide the diagnostic.
+
+     The `g77' lexer doesn't try to gather `2 . 4' into a single lexeme.
+     Otherwise, it'd have to know a whole lot more about how to parse
+     Fortran, or subsequent phases (mainly parsing) would have two
+     paths through lots of critical code--one to handle the lexeme `2',
+     `.', and `4' in sequence, another to handle the lexeme `2.4'.
+
+   * It won't worry about line lengths (beyond the first 7 columns for
+     fixed-form source).
+
+     That is, once it starts parsing the "statement" part of a line
+     (column 7 for fixed-form, column 1 for free-form), it'll keep
+     going until it finds a newline, rather than ignoring everything
+     past a particular column (72 or 132).
+
+     The implication here is that there shouldn't _be_ anything past
+     that last column, other than whitespace or commentary, because
+     users using typical editors (or viewing output as typically
+     printed) won't necessarily know just where the last column is.
+
+     Code that has "garbage" beyond the last column (almost certainly
+     only fixed-form code with a punched-card legacy, such as code
+     using columns 73-80 for "sequence numbers") will have to be run
+     through `g77stripcard' first.
+
+     Also, keeping track of the maximum column position while also
+     watching out for the end of a line _and_ while reading from a file
+     just makes things slower.  Since a file must be read, and watching
+     for the end of the line is necessary (unless the typical input
+     file was preprocessed to include the necessary number of trailing
+     spaces), dropping the tracking of the maximum column position is
+     the only way to reduce the complexity of the pertinent code while
+     maintaining high performance.
+
+   * ASCII encoding is assumed for the input file.
+
+     Code written in other character sets will have to be converted
+     first.
+
+   * Tabs (ASCII code 9) will be converted to spaces via the
+     straightforward approach.
+
+     Specifically, a tab is converted to between one and eight spaces
+     as necessary to reach column N, where dividing `(N - 1)' by eight
+     results in a remainder of zero.
+
+     That saves having to pass most source files through `expand'.
+
+   * Linefeeds (ASCII code 10) mark the ends of lines.
+
+   * A carriage return (ASCII code 13) is accept if it immediately
+     precedes a linefeed, in which case it is ignored.
+
+     Otherwise, it is rejected (with a diagnostic).
+
+   * Any other characters other than the above that are not part of the
+     GNU Fortran Character Set (*note Character Set::) are rejected
+     with a diagnostic.
+
+     This includes backspaces, form feeds, and the like.
+
+     (It might make sense to allow a form feed in column 1 as long as
+     that's the only character on a line.  It certainly wouldn't seem
+     to cost much in terms of performance.)
+
+   * The end of the input stream (EOF) ends the current line.
+
+   * The distinction between uppercase and lowercase letters will be
+     preserved.
+
+     It will be up to subsequent phases to decide to fold case.
+
+     Current plans are to permit any casing for Fortran (reserved)
+     keywords while preserving casing for user-defined names.  (This
+     might not be made the default for `.f' files, though.)
+
+     Preserving case seems necessary to provide more direct access to
+     facilities outside of `g77', such as to C or Pascal code.
+
+     Names of intrinsics will probably be matchable in any case,
+     However, there probably won't be any option to require a
+     particular mixed-case appearance of intrinsics (as there was for
+     `g77' prior to version 0.6), because that's painful to maintain,
+     and probably nobody uses it.
+
+     (How `external SiN; r = sin(x)' would be handled is TBD.  I think
+     old `g77' might already handle that pretty elegantly, but whether
+     we can cope with allowing the same fragment to reference a
+     _different_ procedure, even with the same interface, via `s =
+     SiN(r)', needs to be determined.  If it can't, we need to make
+     sure that when code introduces a user-defined name, any intrinsic
+     matching that name using a case-insensitive comparison is "turned
+     off".)
+
+   * Backslashes in `CHARACTER' and Hollerith constants are not allowed.
+
+     This avoids the confusion introduced by some Fortran compiler
+     vendors providing C-like interpretation of backslashes, while
+     others provide straight-through interpretation.
+
+     Some kind of lexical construct (TBD) will be provided to allow
+     flagging of a `CHARACTER' (but probably not a Hollerith) constant
+     that permits backslashes.  It'll necessarily be a prefix, such as:
+
+          PRINT *, C'This line has a backspace \b here.'
+          PRINT *, F'This line has a straight backslash \ here.'
+
+     Further, command-line options might be provided to specify that
+     one prefix or the other is to be assumed as the default for
+     `CHARACTER' constants.
+
+     However, it seems more helpful for `g77' to provide a program that
+     converts prefix all constants (or just those containing
+     backslashes) with the desired designation, so printouts of code
+     can be read without knowing the compile-time options used when
+     compiling it.
+
+     If such a program is provided (let's name it `g77slash' for now),
+     then a command-line option to `g77' should not be provided.
+     (Though, given that it'll be easy to implement, it might be hard
+     to resist user requests for it "to compile faster than if we have
+     to invoke another filter".)
+
+     This program would take a command-line option to specify the
+     default interpretation of slashes, affecting which prefix it uses
+     for constants.
+
+     `g77slash' probably should automatically convert Hollerith
+     constants that contain slashes to the appropriate `CHARACTER'
+     constants.  Then `g77' wouldn't have to define a prefix syntax for
+     Hollerith constants specifying whether they want C-style or
+     straight-through backslashes.
+
+   * To allow for form-neutral INCLUDE files without requiring them to
+     be preprocessed, the fixed-form lexer should offer an extension
+     (if possible) allowing a trailing `&' to be ignored, especially if
+     after column 72, as it would be using the traditional Unix Fortran
+     source model (which ignores _everything_ after column 72).
+
+   The above implements nearly exactly what is specified by *Note
+Character Set::, and *Note Lines::, except it also provides automatic
+conversion of tabs and ignoring of newline-related carriage returns, as
+well as accommodating form-neutral INCLUDE files.
+
+   It also implements the "pure visual" model, by which is meant that a
+user viewing his code in a typical text editor (assuming it's not
+preprocessed via `g77stripcard' or similar) doesn't need any special
+knowledge of whether spaces on the screen are really tabs, whether
+lines end immediately after the last visible non-space character or
+after a number of spaces and tabs that follow it, or whether the last
+line in the file is ended by a newline.
+
+   Most editors don't make these distinctions, the ANSI FORTRAN 77
+standard doesn't require them to, and it permits a standard-conforming
+compiler to define a method for transforming source code to "standard
+form" however it wants.
+
+   So, GNU Fortran defines it such that users have the best chance of
+having the code be interpreted the way it looks on the screen of the
+typical editor.
+
+   (Fancy editors should _never_ be required to correctly read code
+written in classic two-dimensional-plaintext form.  By correct reading
+I mean ability to read it, book-like, without mistaking text ignored by
+the compiler for program code and vice versa, and without having to
+count beyond the first several columns.  The vague meaning of ASCII
+TAB, among other things, complicates this somewhat, but as long as
+"everyone", including the editor, other tools, and printer, agrees
+about the every-eighth-column convention, the GNU Fortran "pure visual"
+model meets these requirements.  Any language or user-visible source
+form requiring special tagging of tabs, the ends of lines after
+spaces/tabs, and so on, fails to meet this fairly straightforward
+specification.  Fortunately, Fortran _itself_ does not mandate such a
+failure, though most vendor-supplied defaults for their Fortran
+compilers _do_ fail to meet this specification for readability.)
+
+   Further, this model provides a clean interface to whatever
+preprocessors or code-generators are used to produce input to this
+phase of `g77'.  Mainly, they need not worry about long lines.
+
+
+File: g77.info,  Node: sta.c,  Next: sti.c,  Prev: lex.c,  Up: Overview of Translation Process
+
+sta.c
+-----
+
+
+File: g77.info,  Node: sti.c,  Next: stq.c,  Prev: sta.c,  Up: Overview of Translation Process
+
+sti.c
+-----
+
+
+File: g77.info,  Node: stq.c,  Next: stb.c,  Prev: sti.c,  Up: Overview of Translation Process
+
+stq.c
+-----
+
+
+File: g77.info,  Node: stb.c,  Next: expr.c,  Prev: stq.c,  Up: Overview of Translation Process
+
+stb.c
+-----
+
+
+File: g77.info,  Node: expr.c,  Next: stc.c,  Prev: stb.c,  Up: Overview of Translation Process
+
+expr.c
+------
+
+
+File: g77.info,  Node: stc.c,  Next: std.c,  Prev: expr.c,  Up: Overview of Translation Process
+
+stc.c
+-----
+
+
+File: g77.info,  Node: std.c,  Next: ste.c,  Prev: stc.c,  Up: Overview of Translation Process
+
+std.c
+-----
+
+
+File: g77.info,  Node: ste.c,  Next: Gotchas (Transforming),  Prev: std.c,  Up: Overview of Translation Process
+
+ste.c
+-----
+
+
+File: g77.info,  Node: Gotchas (Transforming),  Next: TBD (Transforming),  Prev: ste.c,  Up: Overview of Translation Process
+
+Gotchas (Transforming)
+----------------------
+
+   This section is not about transforming "gotchas" into something else.
+It is about the weirder aspects of transforming Fortran, however that's
+defined, into a more modern, canonical form.
+
+Multi-character Lexemes
+.......................
+
+   Each lexeme carries with it a pointer to where it appears in the
+source.
+
+   To provide the ability for diagnostics to point to column numbers,
+in addition to line numbers and names, lexemes that represent more than
+one (significant) character in the source code need, generally, to
+provide pointers to where each _character_ appears in the source.
+
+   This provides the ability to properly identify the precise location
+of the problem in code like
+
+     SUBROUTINE X
+     END
+     BLOCK DATA X
+     END
+
+   which, in fixed-form source, would result in single lexemes
+consisting of the strings `SUBROUTINEX' and `BLOCKDATAX'.  (The problem
+is that `X' is defined twice, so a pointer to the `X' in the second
+definition, as well as a follow-up pointer to the corresponding pointer
+in the first, would be preferable to pointing to the beginnings of the
+statements.)
+
+   This need also arises when parsing (and diagnosing) `FORMAT'
+statements.
+
+   Further, it arises when diagnosing `FMT=' specifiers that contain
+constants (or partial constants, or even propagated constants!)  in I/O
+statements, as in:
+
+     PRINT '(I2, 3HAB)', J
+
+   (A pointer to the beginning of the prematurely-terminated Hollerith
+constant, and/or to the close parenthese, is preferable to a pointer to
+the open-parenthese or the apostrophe that precedes it.)
+
+   Multi-character lexemes, which would seem to naturally include at
+least digit strings, alphanumeric strings, `CHARACTER' constants, and
+Hollerith constants, therefore need to provide location information on
+each character.  (Maybe Hollerith constants don't, but it's unnecessary
+to except them.)
+
+   The question then arises, what about _other_ multi-character lexemes,
+such as `**' and `//', and Fortran 90's `(/', `/)', `::', and so on?
+
+   Turns out there's a need to identify the location of the second
+character of these two-character lexemes.  For example, in `I(/J) = K',
+the slash needs to be diagnosed as the problem, not the open parenthese.
+Similarly, it is preferable to diagnose the second slash in `I = J //
+K' rather than the first, given the implicit typing rules, which would
+result in the compiler disallowing the attempted concatenation of two
+integers.  (Though, since that's more of a semantic issue, it's not
+_that_ much preferable.)
+
+   Even sequences that could be parsed as digit strings could use
+location info, for example, to diagnose the `9' in the octal constant
+`O'129''.  (This probably will be parsed as a character string, to be
+consistent with the parsing of `Z'129A''.)
+
+   To avoid the hassle of recording the location of the second
+character, while also preserving the general rule that each significant
+character is distinctly pointed to by the lexeme that contains it, it's
+best to simply not have any fixed-size lexemes larger than one
+character.
+
+   This new design is expected to make checking for two `*' lexemes in
+a row much easier than the old design, so this is not much of a
+sacrifice.  It probably makes the lexer much easier to implement than
+it makes the parser harder.
+
+Space-padding Lexemes
+.....................
+
+   Certain lexemes need to be padded with virtual spaces when the end
+of the line (or file) is encountered.
+
+   This is necessary in fixed form, to handle lines that don't extend
+to column 72, assuming that's the line length in effect.
+
+Bizarre Free-form Hollerith Constants
+.....................................
+
+   Last I checked, the Fortran 90 standard actually required the
+compiler to silently accept something like
+
+     FORMAT ( 1 2   Htwelve chars )
+
+   as a valid `FORMAT' statement specifying a twelve-character
+Hollerith constant.
+
+   The implication here is that, since the new lexer is a zero-feedback
+one, it won't know that the special case of a `FORMAT' statement being
+parsed requires apparently distinct lexemes `1' and `2' to be treated as
+a single lexeme.
+
+   (This is a horrible misfeature of the Fortran 90 language.  It's one
+of many such misfeatures that almost make me want to not support them,
+and forge ahead with designing a new "GNU Fortran" language that has
+the features, but not the misfeatures, of Fortran 90, and provide
+utility programs to do the conversion automatically.)
+
+   So, the lexer must gather distinct chunks of decimal strings into a
+single lexeme in contexts where a single decimal lexeme might start a
+Hollerith constant.
+
+   (Which probably means it might as well do that all the time for all
+multi-character lexemes, even in free-form mode, leaving it to
+subsequent phases to pull them apart as they see fit.)
+
+   Compare the treatment of this to how
+
+     CHARACTER * 4 5 HEY
+
+   and
+
+     CHARACTER * 12 HEY
+
+   must be treated--the former must be diagnosed, due to the separation
+between lexemes, the latter must be accepted as a proper declaration.
+
+Hollerith Constants
+...................
+
+   Recognizing a Hollerith constant--specifically, that an `H' or `h'
+after a digit string begins such a constant--requires some knowledge of
+context.
+
+   Hollerith constants (such as `2HAB') can appear after:
+
+   * `('
+
+   * `,'
+
+   * `='
+
+   * `+', `-', `/'
+
+   * `*', except as noted below
+
+   Hollerith constants don't appear after:
+
+   * `CHARACTER*', which can be treated generally as any `*' that is
+     the second lexeme of a statement
+
+Confusing Function Keyword
+..........................
+
+   While
+
+     REAL FUNCTION FOO ()
+
+   must be a `FUNCTION' statement and
+
+     REAL FUNCTION FOO (5)
+
+   must be a type-definition statement,
+
+     REAL FUNCTION FOO (NAMES)
+
+   where NAMES is a comma-separated list of names, can be one or the
+other.
+
+   The only way to disambiguate that statement (short of mandating
+free-form source or a short maximum length for name for external
+procedures) is based on the context of the statement.
+
+   In particular, the statement is known to be within an
+already-started program unit (but not at the outer level of the
+`CONTAINS' block), it is a type-declaration statement.
+
+   Otherwise, the statement is a `FUNCTION' statement, in that it
+begins a function program unit (external, or, within `CONTAINS',
+nested).
+
+Weird READ
+..........
+
+   The statement
+
+     READ (N)
+
+   is equivalent to either
+
+     READ (UNIT=(N))
+
+   or
+
+     READ (FMT=(N))
+
+   depending on which would be valid in context.
+
+   Specifically, if `N' is type `INTEGER', `READ (FMT=(N))' would not
+be valid, because parentheses may not be used around `N', whereas they
+may around it in `READ (UNIT=(N))'.
+
+   Further, if `N' is type `CHARACTER', the opposite is true--`READ
+(UNIT=(N))' is not valid, but `READ (FMT=(N))' is.
+
+   Strictly speaking, if anything follows
+
+     READ (N)
+
+   in the statement, whether the first lexeme after the close
+parenthese is a comma could be used to disambiguate the two cases,
+without looking at the type of `N', because the comma is required for
+the `READ (FMT=(N))' interpretation and disallowed for the `READ
+(UNIT=(N))' interpretation.
+
+   However, in practice, many Fortran compilers allow the comma for the
+`READ (UNIT=(N))' interpretation anyway (in that they generally allow a
+leading comma before an I/O list in an I/O statement), and much code
+takes advantage of this allowance.
+
+   (This is quite a reasonable allowance, since the juxtaposition of a
+comma-separated list immediately after an I/O control-specification
+list, which is also comma-separated, without an intervening comma,
+looks sufficiently "wrong" to programmers that they can't resist the
+itch to insert the comma.  `READ (I, J), K, L' simply looks cleaner than
+`READ (I, J) K, L'.)
+
+   So, type-based disambiguation is needed unless strict adherence to
+the standard is always assumed, and we're not going to assume that.
+
+
+File: g77.info,  Node: TBD (Transforming),  Prev: Gotchas (Transforming),  Up: Overview of Translation Process
+
+TBD (Transforming)
+------------------
+
+   Continue researching gotchas, designing the transformational process,
+and implementing it.
+
+   Specific issues to resolve:
+
+   * Just where should (if it was implemented) `USE' processing take
+     place?
+
+     This gets into the whole issue of how `g77' should handle the
+     concept of modules.  I think GNAT already takes on this issue, but
+     don't know more than that.  Jim Giles has written extensively on
+     `comp.lang.fortran' about his opinions on module handling, as have
+     others.  Jim's views should be taken into account.
+
+     Actually, Richard M. Stallman (RMS) also has written up some
+     guidelines for implementing such things, but I'm not sure where I
+     read them.  Perhaps the old <gcc2@cygnus.com> list.
+
+     If someone could dig references to these up and get them to me,
+     that would be much appreciated!  Even though modules are not on
+     the short-term list for implementation, it'd be helpful to know
+     _now_ how to avoid making them harder to implement them _later_.
+
+   * Should the `g77' command become just a script that invokes all the
+     various preprocessing that might be needed, thus making it seem
+     slower than necessary for legacy code that people are unwilling to
+     convert, or should we provide a separate script for that, thus
+     encouraging people to convert their code once and for all?
+
+     At least, a separate script to behave as old `g77' did, perhaps
+     named `g77old', might ease the transition, as might a
+     corresponding one that converts source codes named `g77oldnew'.
+
+     These scripts would take all the pertinent options `g77' used to
+     take and run the appropriate filters, passing the results to `g77'
+     or just making new sources out of them (in a subdirectory, leaving
+     the user to do the dirty deed of moving or copying them over the
+     old sources).
+
+   * Do other Fortran compilers provide a prefix syntax to govern the
+     treatment of backslashes in `CHARACTER' (or Hollerith) constants?
+
+     Knowing what other compilers provide would help.
+
+   * Is it okay to drop support for the `-fintrin-case-initcap',
+     `-fmatch-case-initcap', `-fsymbol-case-initcap', and
+     `-fcase-initcap' options?
+
+     I've asked <info-gnu-fortran@gnu.org> for input on this.  Not
+     having to support these makes it easier to write the new front end,
+     and might also avoid complicated its design.
+
+     The consensus to date (1999-11-17) has been to drop this support.
+     Can't recall anybody saying they're using it, in fact.
+

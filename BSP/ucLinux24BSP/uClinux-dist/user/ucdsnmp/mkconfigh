@@ -1,0 +1,21 @@
+#!/bin/sh
+
+LIBCDIR=$1
+ROUTE=${LIBCDIR}/include/net/route.h
+SEDCMD=
+
+for field in rt_unit rt_use rt_refcnt rt_hash
+do
+	FIELD=`echo $field | tr 'a-z' 'A-Z'`
+	DEFINE="STRUCT_RTENTRY_HAS_$FIELD"
+	if grep -q $field $ROUTE
+	then
+		REPSTR="#define $DEFINE 1"
+	else
+		REPSTR="\/* #undef $DEFINE *\/"
+	fi
+	SEDCMD="$SEDCMD --expression='s/@${DEFINE}@/${REPSTR}/g'"
+done
+
+eval sed $SEDCMD < config.h.template > config.h
+exit 0

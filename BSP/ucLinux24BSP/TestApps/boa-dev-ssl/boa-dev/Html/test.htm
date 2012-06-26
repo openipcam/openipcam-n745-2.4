@@ -1,0 +1,27 @@
+<script>
+var t;
+function ld()
+{
+	t = new Date();
+	sh();
+}
+var i = 0;
+var iEnd = 300;
+function sh()
+{
+	tt.src = "Img"+i+".jpg";
+}
+function rs()
+{
+	if (event.srcElement.readyState == "complete")
+	{
+		i++;
+		if (i<iEnd) setTimeout("sh()",0);
+		else alert(new Date() - t);
+	}
+}
+</script>
+<Body onload="ld()">
+<img id=tt onreadystatechange="rs();">
+</body>
+

@@ -1,0 +1,7 @@
+#!/usr/bin/perl -n
+
+# $RCSfile: rmfrom,v $$Revision: 1.1.1.1 $$Date: 2006-07-11 09:31:43 $
+
+# A handy (but dangerous) script to put after a find ... -print.
+
+chop; unlink;

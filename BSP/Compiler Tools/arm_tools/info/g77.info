@@ -1,0 +1,768 @@
+This is g77.info, produced by makeinfo version 4.0 from g77.texi.
+
+INFO-DIR-SECTION Programming
+START-INFO-DIR-ENTRY
+* g77: (g77).                  The GNU Fortran compiler.
+END-INFO-DIR-ENTRY
+   This file documents the use and the internals of the GNU Fortran
+(`g77') compiler.  It corresponds to the GCC-3.0 version of `g77'.
+
+   Published by the Free Software Foundation 59 Temple Place - Suite 330
+Boston, MA 02111-1307 USA
+
+   Copyright (C) 1995,1996,1997,1998,1999,2000,2001 Free Software
+Foundation, Inc.
+
+   Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.1 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "GNU General Public License", the Front-Cover
+texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+   (a) The FSF's Front-Cover Text is:
+
+   A GNU Manual
+
+   (b) The FSF's Back-Cover Text is:
+
+   You have freedom to copy and modify this GNU Manual, like GNU
+software.  Copies published by the Free Software Foundation raise
+funds for GNU development.
+
+   Contributed by James Craig Burley (<craig@jcb-sc.com>).  Inspired by
+a first pass at translating `g77-0.5.16/f/DOC' that was contributed to
+Craig by David Ronis (<ronis@onsager.chem.mcgill.ca>).
+
+
+Indirect:
+g77.info-1: 1425
+g77.info-2: 50016
+g77.info-3: 99231
+g77.info-4: 127436
+g77.info-5: 176427
+g77.info-6: 226134
+g77.info-7: 275785
+g77.info-8: 325688
+g77.info-9: 375596
+g77.info-10: 425203
+g77.info-11: 473188
+g77.info-12: 522836
+g77.info-13: 572134
+g77.info-14: 617021
+g77.info-15: 666114
+g77.info-16: 715677
+g77.info-17: 764139
+g77.info-18: 813917
+g77.info-19: 861477
+g77.info-20: 909753
+g77.info-21: 913391
+
+Tag Table:
+(Indirect)
+Node: Top1425
+Node: Copying3519
+Node: GNU Free Documentation License22724
+Node: Contributors42609
+Node: Funding45849
+Node: Funding GNU Fortran48352
+Node: Look and Feel49514
+Node: Getting Started50016
+Node: What is GNU Fortran?52356
+Node: G77 and GCC62244
+Node: Invoking G7763442
+Node: Option Summary65392
+Node: Overall Options70141
+Node: Shorthand Options76789
+Node: Fortran Dialect Options79087
+Node: Warning Options90345
+Node: Debugging Options99231
+Node: Optimize Options100482
+Ref: Optimize Options-Footnote-1105729
+Node: Preprocessor Options106422
+Node: Directory Options107603
+Node: Code Gen Options108915
+Node: Environment Variables126978
+Node: News127436
+Node: Changes176427
+Node: Language198849
+Node: Direction of Language Development201052
+Node: Standard Support207291
+Node: No Passing External Assumed-length208012
+Node: No Passing Dummy Assumed-length208489
+Node: No Pathological Implied-DO209004
+Node: No Useless Implied-DO209691
+Node: Conformance210422
+Node: Notation Used212445
+Node: Terms and Concepts216651
+Node: Syntactic Items217163
+Node: Statements Comments Lines217845
+Node: Scope of Names and Labels219710
+Node: Characters Lines Sequence220140
+Node: Character Set220746
+Node: Lines221747
+Node: Continuation Line224223
+Node: Statements225178
+Node: Statement Labels226134
+Node: Order226826
+Node: INCLUDE227711
+Node: Cpp-style directives230483
+Node: Data Types and Constants230938
+Node: Types234459
+Node: Double Notation235548
+Node: Star Notation236620
+Node: Kind Notation239565
+Node: Constants247985
+Node: Integer Type249501
+Node: Character Type250099
+Node: Expressions250863
+Node: %LOC()251279
+Node: Specification Statements254009
+Node: NAMELIST254466
+Node: DOUBLE COMPLEX255217
+Node: Control Statements255471
+Node: DO WHILE255963
+Node: END DO256268
+Node: Construct Names257275
+Node: CYCLE and EXIT258015
+Node: Functions and Subroutines260779
+Node: %VAL()261425
+Node: %REF()262789
+Node: %DESCR()264617
+Node: Generics and Specifics266750
+Node: REAL() and AIMAG() of Complex273952
+Node: CMPLX() of DOUBLE PRECISION275785
+Node: MIL-STD 1753277511
+Node: f77/f2c Intrinsics277853
+Node: Table of Intrinsic Functions278423
+Node: Abort Intrinsic295135
+Node: Abs Intrinsic295399
+Node: Access Intrinsic296267
+Node: AChar Intrinsic297103
+Node: ACos Intrinsic297625
+Node: AdjustL Intrinsic298086
+Node: AdjustR Intrinsic298411
+Node: AImag Intrinsic298737
+Node: AInt Intrinsic299542
+Node: Alarm Intrinsic300170
+Node: All Intrinsic301002
+Node: Allocated Intrinsic301314
+Node: ALog Intrinsic301643
+Node: ALog10 Intrinsic302033
+Node: AMax0 Intrinsic302431
+Node: AMax1 Intrinsic302916
+Node: AMin0 Intrinsic303369
+Node: AMin1 Intrinsic303853
+Node: AMod Intrinsic304305
+Node: And Intrinsic304731
+Node: ANInt Intrinsic305237
+Node: Any Intrinsic306001
+Node: ASin Intrinsic306308
+Node: Associated Intrinsic306766
+Node: ATan Intrinsic307100
+Node: ATan2 Intrinsic307566
+Node: BesJ0 Intrinsic308117
+Node: BesJ1 Intrinsic308578
+Node: BesJN Intrinsic309039
+Node: BesY0 Intrinsic309538
+Node: BesY1 Intrinsic310000
+Node: BesYN Intrinsic310462
+Node: Bit_Size Intrinsic310965
+Node: BTest Intrinsic311624
+Node: CAbs Intrinsic312344
+Node: CCos Intrinsic312731
+Node: Ceiling Intrinsic313123
+Node: CExp Intrinsic313445
+Node: Char Intrinsic313837
+Node: ChDir Intrinsic (subroutine)315091
+Node: ChMod Intrinsic (subroutine)316095
+Node: CLog Intrinsic317366
+Node: Cmplx Intrinsic317770
+Node: Complex Intrinsic318571
+Node: Conjg Intrinsic320017
+Node: Cos Intrinsic320441
+Node: CosH Intrinsic320904
+Node: Count Intrinsic321279
+Node: CPU_Time Intrinsic321597
+Node: CShift Intrinsic322388
+Node: CSin Intrinsic322710
+Node: CSqRt Intrinsic323102
+Node: CTime Intrinsic (subroutine)323512
+Node: CTime Intrinsic (function)324267
+Node: DAbs Intrinsic324901
+Node: DACos Intrinsic325297
+Node: DASin Intrinsic325688
+Node: DATan Intrinsic326080
+Node: DATan2 Intrinsic326473
+Node: Date_and_Time Intrinsic326928
+Node: DbesJ0 Intrinsic328292
+Node: DbesJ1 Intrinsic328685
+Node: DbesJN Intrinsic329071
+Node: DbesY0 Intrinsic329495
+Node: DbesY1 Intrinsic329881
+Node: DbesYN Intrinsic330267
+Node: Dble Intrinsic330689
+Node: DCos Intrinsic331395
+Node: DCosH Intrinsic331779
+Node: DDiM Intrinsic332169
+Node: DErF Intrinsic332601
+Node: DErFC Intrinsic332970
+Node: DExp Intrinsic333345
+Node: Digits Intrinsic333731
+Node: DiM Intrinsic334048
+Node: DInt Intrinsic334547
+Node: DLog Intrinsic334931
+Node: DLog10 Intrinsic335316
+Node: DMax1 Intrinsic335714
+Node: DMin1 Intrinsic336168
+Node: DMod Intrinsic336620
+Node: DNInt Intrinsic337048
+Node: Dot_Product Intrinsic337447
+Node: DProd Intrinsic337787
+Node: DSign Intrinsic338169
+Node: DSin Intrinsic338608
+Node: DSinH Intrinsic338993
+Node: DSqRt Intrinsic339384
+Node: DTan Intrinsic339775
+Node: DTanH Intrinsic340160
+Node: DTime Intrinsic (subroutine)340564
+Node: EOShift Intrinsic341835
+Node: Epsilon Intrinsic342174
+Node: ErF Intrinsic342498
+Node: ErFC Intrinsic342904
+Node: ETime Intrinsic (subroutine)343464
+Node: ETime Intrinsic (function)344627
+Node: Exit Intrinsic345667
+Node: Exp Intrinsic346144
+Node: Exponent Intrinsic346606
+Node: FDate Intrinsic (subroutine)346945
+Node: FDate Intrinsic (function)347855
+Node: FGet Intrinsic (subroutine)348627
+Node: FGetC Intrinsic (subroutine)349464
+Node: Float Intrinsic350341
+Node: Floor Intrinsic350741
+Node: Flush Intrinsic351057
+Node: FNum Intrinsic351636
+Node: FPut Intrinsic (subroutine)352084
+Node: FPutC Intrinsic (subroutine)352881
+Node: Fraction Intrinsic353728
+Node: FSeek Intrinsic354069
+Node: FStat Intrinsic (subroutine)354794
+Node: FStat Intrinsic (function)356319
+Node: FTell Intrinsic (subroutine)357609
+Node: FTell Intrinsic (function)358282
+Node: GError Intrinsic358799
+Node: GetArg Intrinsic359173
+Node: GetCWD Intrinsic (subroutine)359809
+Node: GetCWD Intrinsic (function)360665
+Node: GetEnv Intrinsic361285
+Node: GetGId Intrinsic361872
+Node: GetLog Intrinsic362178
+Node: GetPId Intrinsic362716
+Node: GetUId Intrinsic363024
+Node: GMTime Intrinsic363329
+Node: HostNm Intrinsic (subroutine)364337
+Node: HostNm Intrinsic (function)365427
+Node: Huge Intrinsic366270
+Node: IAbs Intrinsic366593
+Node: IAChar Intrinsic366984
+Node: IAnd Intrinsic367524
+Node: IArgC Intrinsic368012
+Node: IBClr Intrinsic368388
+Node: IBits Intrinsic368899
+Node: IBSet Intrinsic369613
+Node: IChar Intrinsic370115
+Node: IDate Intrinsic (UNIX)371334
+Node: IDiM Intrinsic372137
+Node: IDInt Intrinsic372586
+Node: IDNInt Intrinsic372979
+Node: IEOr Intrinsic373378
+Node: IErrNo Intrinsic373876
+Node: IFix Intrinsic374203
+Node: Imag Intrinsic374591
+Node: ImagPart Intrinsic375596
+Node: Index Intrinsic376622
+Node: Int Intrinsic377175
+Node: Int2 Intrinsic377890
+Node: Int8 Intrinsic378600
+Node: IOr Intrinsic379310
+Node: IRand Intrinsic379790
+Node: IsaTty Intrinsic380710
+Node: IShft Intrinsic381134
+Node: IShftC Intrinsic381964
+Node: ISign Intrinsic382893
+Node: ITime Intrinsic383343
+Node: Kill Intrinsic (subroutine)383745
+Node: Kind Intrinsic384582
+Node: LBound Intrinsic384907
+Node: Len Intrinsic385224
+Node: Len_Trim Intrinsic385860
+Node: LGe Intrinsic386272
+Node: LGt Intrinsic387685
+Node: Link Intrinsic (subroutine)388590
+Node: LLe Intrinsic389555
+Node: LLt Intrinsic390460
+Node: LnBlnk Intrinsic391354
+Node: Loc Intrinsic391757
+Node: Log Intrinsic392188
+Node: Log10 Intrinsic392779
+Node: Logical Intrinsic393321
+Node: Long Intrinsic393644
+Node: LShift Intrinsic394168
+Node: LStat Intrinsic (subroutine)395204
+Node: LStat Intrinsic (function)397016
+Node: LTime Intrinsic398579
+Node: MatMul Intrinsic399583
+Node: Max Intrinsic399901
+Node: Max0 Intrinsic400452
+Node: Max1 Intrinsic400903
+Node: MaxExponent Intrinsic401387
+Node: MaxLoc Intrinsic401727
+Node: MaxVal Intrinsic402054
+Node: MClock Intrinsic402376
+Node: MClock8 Intrinsic403274
+Node: Merge Intrinsic404462
+Node: Min Intrinsic404778
+Node: Min0 Intrinsic405329
+Node: Min1 Intrinsic405780
+Node: MinExponent Intrinsic406264
+Node: MinLoc Intrinsic406604
+Node: MinVal Intrinsic406931
+Node: Mod Intrinsic407250
+Node: Modulo Intrinsic407773
+Node: MvBits Intrinsic408092
+Node: Nearest Intrinsic408958
+Node: NInt Intrinsic409282
+Node: Not Intrinsic410120
+Node: Or Intrinsic410515
+Node: Pack Intrinsic411013
+Node: PError Intrinsic411323
+Node: Precision Intrinsic411777
+Node: Present Intrinsic412112
+Node: Product Intrinsic412442
+Node: Radix Intrinsic412768
+Node: Rand Intrinsic413085
+Node: Random_Number Intrinsic413972
+Node: Random_Seed Intrinsic414325
+Node: Range Intrinsic414673
+Node: Real Intrinsic414994
+Node: RealPart Intrinsic416000
+Node: Rename Intrinsic (subroutine)417033
+Node: Repeat Intrinsic418005
+Node: Reshape Intrinsic418341
+Node: RRSpacing Intrinsic418670
+Node: RShift Intrinsic419005
+Node: Scale Intrinsic420003
+Node: Scan Intrinsic420319
+Node: Second Intrinsic (function)420643
+Node: Second Intrinsic (subroutine)421474
+Node: Selected_Int_Kind Intrinsic422449
+Node: Selected_Real_Kind Intrinsic422840
+Node: Set_Exponent Intrinsic423227
+Node: Shape Intrinsic423584
+Node: Short Intrinsic423907
+Node: Sign Intrinsic424603
+Node: Signal Intrinsic (subroutine)425203
+Node: Sin Intrinsic427417
+Node: SinH Intrinsic427892
+Node: Sleep Intrinsic428265
+Node: Sngl Intrinsic428607
+Node: Spacing Intrinsic428996
+Node: Spread Intrinsic429320
+Node: SqRt Intrinsic429641
+Node: SRand Intrinsic430245
+Node: Stat Intrinsic (subroutine)430622
+Node: Stat Intrinsic (function)432237
+Node: Sum Intrinsic433601
+Node: SymLnk Intrinsic (subroutine)433933
+Node: System Intrinsic (subroutine)434965
+Node: System_Clock Intrinsic435904
+Node: Tan Intrinsic437028
+Node: TanH Intrinsic437488
+Node: Time Intrinsic (UNIX)437870
+Node: Time8 Intrinsic438855
+Node: Tiny Intrinsic440034
+Node: Transfer Intrinsic440349
+Node: Transpose Intrinsic440680
+Node: Trim Intrinsic441014
+Node: TtyNam Intrinsic (subroutine)441344
+Node: TtyNam Intrinsic (function)442046
+Node: UBound Intrinsic442615
+Node: UMask Intrinsic (subroutine)442960
+Node: Unlink Intrinsic (subroutine)443657
+Node: Unpack Intrinsic444555
+Node: Verify Intrinsic444890
+Node: XOr Intrinsic445209
+Node: ZAbs Intrinsic445725
+Node: ZCos Intrinsic446094
+Node: ZExp Intrinsic446467
+Node: ZLog Intrinsic446840
+Node: ZSin Intrinsic447213
+Node: ZSqRt Intrinsic447587
+Node: Scope and Classes of Names447944
+Node: Underscores in Symbol Names448426
+Node: I/O448673
+Node: Fortran 90 Features449446
+Node: Other Dialects452248
+Node: Source Form453407
+Node: Carriage Returns454758
+Node: Tabs455087
+Node: Short Lines456796
+Node: Long Lines457770
+Node: Ampersands458381
+Node: Trailing Comment458635
+Node: Debug Line459411
+Node: Dollar Signs460080
+Node: Case Sensitivity460366
+Node: VXT Fortran468982
+Node: Double Quote Meaning470165
+Node: Exclamation Point471093
+Node: Fortran 90472136
+Node: Pedantic Compilation473188
+Node: Distensions477152
+Node: Ugly Implicit Argument Conversion478116
+Node: Ugly Assumed-Size Arrays478730
+Node: Ugly Complex Part Extraction480451
+Node: Ugly Null Arguments482073
+Node: Ugly Conversion of Initializers483676
+Node: Ugly Integer Conversions485441
+Node: Ugly Assigned Labels486549
+Node: Compiler488480
+Node: Compiler Limits489118
+Node: Run-time Environment Limits490009
+Node: Timer Wraparounds491951
+Node: Year 2000 (Y2K) Problems493230
+Node: Array Size497736
+Node: Character-variable Length498921
+Node: Year 10000 (Y10K) Problems499430
+Node: Compiler Types499976
+Node: Compiler Constants504687
+Node: Compiler Intrinsics505546
+Node: Intrinsic Groups506473
+Node: Other Intrinsics509914
+Node: ACosD Intrinsic517512
+Node: AIMax0 Intrinsic517793
+Node: AIMin0 Intrinsic518102
+Node: AJMax0 Intrinsic518412
+Node: AJMin0 Intrinsic518722
+Node: ASinD Intrinsic519031
+Node: ATan2D Intrinsic519337
+Node: ATanD Intrinsic519645
+Node: BITest Intrinsic519951
+Node: BJTest Intrinsic520260
+Node: CDAbs Intrinsic520569
+Node: CDCos Intrinsic520942
+Node: CDExp Intrinsic521317
+Node: CDLog Intrinsic521692
+Node: CDSin Intrinsic522067
+Node: CDSqRt Intrinsic522443
+Node: ChDir Intrinsic (function)522836
+Node: ChMod Intrinsic (function)523665
+Node: CosD Intrinsic524779
+Node: DACosD Intrinsic525091
+Node: DASinD Intrinsic525399
+Node: DATan2D Intrinsic525710
+Node: DATanD Intrinsic526024
+Node: Date Intrinsic526333
+Node: DbleQ Intrinsic527052
+Node: DCmplx Intrinsic527356
+Node: DConjg Intrinsic528987
+Node: DCosD Intrinsic529372
+Node: DFloat Intrinsic529678
+Node: DFlotI Intrinsic530050
+Node: DFlotJ Intrinsic530360
+Node: DImag Intrinsic530669
+Node: DReal Intrinsic531046
+Node: DSinD Intrinsic532193
+Node: DTanD Intrinsic532497
+Node: DTime Intrinsic (function)532812
+Node: FGet Intrinsic (function)534042
+Node: FGetC Intrinsic (function)534815
+Node: FloatI Intrinsic535631
+Node: FloatJ Intrinsic535951
+Node: FPut Intrinsic (function)536270
+Node: FPutC Intrinsic (function)537006
+Node: IDate Intrinsic (VXT)537799
+Node: IIAbs Intrinsic538843
+Node: IIAnd Intrinsic539153
+Node: IIBClr Intrinsic539458
+Node: IIBits Intrinsic539767
+Node: IIBSet Intrinsic540077
+Node: IIDiM Intrinsic540386
+Node: IIDInt Intrinsic540692
+Node: IIDNnt Intrinsic541001
+Node: IIEOr Intrinsic541310
+Node: IIFix Intrinsic541615
+Node: IInt Intrinsic541918
+Node: IIOr Intrinsic542217
+Node: IIQint Intrinsic542517
+Node: IIQNnt Intrinsic542825
+Node: IIShftC Intrinsic543136
+Node: IISign Intrinsic543450
+Node: IMax0 Intrinsic543760
+Node: IMax1 Intrinsic544065
+Node: IMin0 Intrinsic544369
+Node: IMin1 Intrinsic544673
+Node: IMod Intrinsic544976
+Node: INInt Intrinsic545276
+Node: INot Intrinsic545578
+Node: IZExt Intrinsic545878
+Node: JIAbs Intrinsic546181
+Node: JIAnd Intrinsic546485
+Node: JIBClr Intrinsic546790
+Node: JIBits Intrinsic547099
+Node: JIBSet Intrinsic547409
+Node: JIDiM Intrinsic547718
+Node: JIDInt Intrinsic548024
+Node: JIDNnt Intrinsic548333
+Node: JIEOr Intrinsic548642
+Node: JIFix Intrinsic548947
+Node: JInt Intrinsic549250
+Node: JIOr Intrinsic549549
+Node: JIQint Intrinsic549849
+Node: JIQNnt Intrinsic550157
+Node: JIShft Intrinsic550467
+Node: JIShftC Intrinsic550778
+Node: JISign Intrinsic551092
+Node: JMax0 Intrinsic551402
+Node: JMax1 Intrinsic551707
+Node: JMin0 Intrinsic552011
+Node: JMin1 Intrinsic552315
+Node: JMod Intrinsic552618
+Node: JNInt Intrinsic552918
+Node: JNot Intrinsic553220
+Node: JZExt Intrinsic553520
+Node: Kill Intrinsic (function)553833
+Node: Link Intrinsic (function)554515
+Node: QAbs Intrinsic555327
+Node: QACos Intrinsic555637
+Node: QACosD Intrinsic555941
+Node: QASin Intrinsic556249
+Node: QASinD Intrinsic556555
+Node: QATan Intrinsic556863
+Node: QATan2 Intrinsic557169
+Node: QATan2D Intrinsic557479
+Node: QATanD Intrinsic557793
+Node: QCos Intrinsic558102
+Node: QCosD Intrinsic558403
+Node: QCosH Intrinsic558706
+Node: QDiM Intrinsic559009
+Node: QExp Intrinsic559308
+Node: QExt Intrinsic559606
+Node: QExtD Intrinsic559905
+Node: QFloat Intrinsic560209
+Node: QInt Intrinsic560516
+Node: QLog Intrinsic560816
+Node: QLog10 Intrinsic561116
+Node: QMax1 Intrinsic561423
+Node: QMin1 Intrinsic561728
+Node: QMod Intrinsic562031
+Node: QNInt Intrinsic562331
+Node: QSin Intrinsic562633
+Node: QSinD Intrinsic562933
+Node: QSinH Intrinsic563236
+Node: QSqRt Intrinsic563540
+Node: QTan Intrinsic563843
+Node: QTanD Intrinsic564143
+Node: QTanH Intrinsic564446
+Node: Rename Intrinsic (function)564762
+Node: Secnds Intrinsic565567
+Node: Signal Intrinsic (function)566166
+Node: SinD Intrinsic568995
+Node: SnglQ Intrinsic569307
+Node: SymLnk Intrinsic (function)569622
+Node: System Intrinsic (function)570490
+Node: TanD Intrinsic571817
+Node: Time Intrinsic (VXT)572134
+Node: UMask Intrinsic (function)572888
+Node: Unlink Intrinsic (function)573496
+Node: ZExt Intrinsic574225
+Node: Other Compilers574513
+Node: Dropping f2c Compatibility577033
+Node: Compilers Other Than f2c580105
+Node: Other Languages581903
+Node: Interoperating with C and C++582155
+Node: C Interfacing Tools583188
+Node: C Access to Type Information584116
+Node: f2c Skeletons and Prototypes584803
+Ref: f2c Skeletons and Prototypes-Footnote-1586250
+Node: C++ Considerations586504
+Node: Startup Code587159
+Node: Installation591948
+Node: Debugging and Interfacing592203
+Node: Main Program Unit594887
+Node: Procedures597381
+Node: Functions600039
+Node: Names601657
+Node: Common Blocks604800
+Node: Local Equivalence Areas607021
+Node: Complex Variables609708
+Node: Arrays610828
+Node: Adjustable Arrays614162
+Node: Alternate Entry Points617021
+Node: Alternate Returns623723
+Node: Assigned Statement Labels624624
+Node: Run-time Library Errors626469
+Node: Collected Fortran Wisdom628421
+Node: Advantages Over f2c629857
+Node: Language Extensions630838
+Node: Diagnostic Abilities632012
+Node: Compiler Options632403
+Node: Compiler Speed633451
+Node: Program Speed634161
+Node: Ease of Debugging635746
+Node: Character and Hollerith Constants638176
+Node: Block Data and Libraries639148
+Node: Loops642477
+Node: Working Programs647703
+Node: Not My Type648447
+Node: Variables Assumed To Be Zero650378
+Node: Variables Assumed To Be Saved651432
+Node: Unwanted Variables652802
+Node: Unused Arguments653682
+Node: Surprising Interpretations of Code654145
+Node: Aliasing Assumed To Work654992
+Node: Output Assumed To Flush661189
+Node: Large File Unit Numbers663962
+Node: Floating-point precision666114
+Node: Inconsistent Calling Sequences667375
+Node: Overly Convenient Options668355
+Node: Faster Programs671661
+Node: Aligned Data672107
+Node: Prefer Automatic Uninitialized Variables676984
+Node: Avoid f2c Compatibility678350
+Node: Use Submodel Options678818
+Node: Trouble679822
+Node: But-bugs681287
+Node: Signal 11 and Friends683060
+Node: Cannot Link Fortran Programs685140
+Node: Large Common Blocks686423
+Node: Debugger Problems686849
+Node: NeXTStep Problems687564
+Node: Stack Overflow689390
+Node: Nothing Happens692279
+Node: Strange Behavior at Run Time693893
+Node: Floating-point Errors696382
+Node: Known Bugs702676
+Node: Missing Features710880
+Node: Better Source Model712807
+Node: Fortran 90 Support714576
+Node: Intrinsics in PARAMETER Statements715677
+Node: Arbitrary Concatenation716557
+Node: SELECT CASE on CHARACTER Type716960
+Node: RECURSIVE Keyword717247
+Node: Increasing Precision/Range717674
+Node: Popular Non-standard Types719212
+Node: Full Support for Compiler Types719629
+Node: Array Bounds Expressions720301
+Node: POINTER Statements720748
+Node: Sensible Non-standard Constructs721631
+Node: READONLY Keyword723957
+Node: FLUSH Statement724867
+Node: Expressions in FORMAT Statements725237
+Node: Explicit Assembler Code726412
+Node: Q Edit Descriptor726701
+Node: Old-style PARAMETER Statements727205
+Node: TYPE and ACCEPT I/O Statements727939
+Node: STRUCTURE UNION RECORD MAP728505
+Node: OPEN CLOSE and INQUIRE Keywords728991
+Node: ENCODE and DECODE729971
+Node: AUTOMATIC Statement731066
+Node: Suppressing Space Padding732313
+Node: Fortran Preprocessor733540
+Node: Bit Operations on Floating-point Data734113
+Node: Really Ugly Character Assignments734646
+Node: POSIX Standard735021
+Node: Floating-point Exception Handling735261
+Node: Nonportable Conversions736665
+Node: Large Automatic Arrays737208
+Node: Support for Threads737615
+Node: Enabling Debug Lines738040
+Node: Better Warnings738417
+Node: Gracefully Handle Sensible Bad Code740121
+Node: Non-standard Conversions740865
+Node: Non-standard Intrinsics741208
+Node: Modifying DO Variable741624
+Node: Better Pedantic Compilation742300
+Node: Warn About Implicit Conversions742928
+Node: Invalid Use of Hollerith Constant743515
+Node: Dummy Array Without Dimensioning Dummy744058
+Node: Invalid FORMAT Specifiers744971
+Node: Ambiguous Dialects745372
+Node: Unused Labels745783
+Node: Informational Messages746005
+Node: Uninitialized Variables at Run Time746408
+Node: Portable Unformatted Files747014
+Ref: Portable Unformatted Files-Footnote-1749970
+Node: Better List-directed I/O749998
+Node: Default to Console I/O750903
+Node: Labels Visible to Debugger751551
+Node: Disappointments751952
+Node: Mangling of Names752590
+Node: Multiple Definitions of External Names753440
+Node: Limitation on Implicit Declarations754803
+Node: Non-bugs755087
+Node: Backslash in Constants756212
+Node: Initializing Before Specifying761101
+Node: Context-Sensitive Intrinsicness762243
+Node: Context-Sensitive Constants764139
+Node: Equivalence Versus Equality767095
+Node: Order of Side Effects770138
+Node: Warnings and Errors771866
+Node: Open Questions773550
+Node: Bugs774019
+Node: Bug Criteria775524
+Node: Bug Lists781757
+Node: Bug Reporting782546
+Node: Sending Patches796170
+Node: Service801656
+Node: Adding Options802122
+Node: Projects806715
+Node: Efficiency807650
+Node: Better Optimization810547
+Node: Simplify Porting813917
+Node: More Extensions815672
+Node: Machine Model818760
+Node: Internals Documentation820046
+Node: Internals Improvements820435
+Node: Better Diagnostics823979
+Node: Front End824896
+Node: Overview of Sources825832
+Node: Overview of Translation Process833221
+Node: g77stripcard837499
+Node: lex.c839976
+Node: sta.c849752
+Node: sti.c849863
+Node: stq.c849974
+Node: stb.c850085
+Node: expr.c850197
+Node: stc.c850311
+Node: std.c850423
+Node: ste.c850534
+Node: Gotchas (Transforming)850662
+Node: TBD (Transforming)858781
+Node: Philosophy of Code Generation861477
+Node: Two-pass Design867381
+Node: Two-pass Code868538
+Node: Why Two Passes869271
+Node: Challenges Posed875339
+Node: Transforming Statements877823
+Node: Statements Needing Temporaries878673
+Node: Transforming DO WHILE881437
+Node: Transforming Iterative DO882620
+Node: Transforming Block IF883449
+Node: Transforming SELECT CASE884814
+Node: Transforming Expressions888036
+Node: Internal Naming Conventions890025
+Node: Diagnostics893025
+Node: CMPAMBIG894415
+Node: EXPIMP900832
+Node: INTGLOB902068
+Node: LEX904312
+Node: GLOBALS909753
+Node: LINKFAIL912417
+Node: Y2KBAD913041
+Node: Index913391
+
+End Tag Table

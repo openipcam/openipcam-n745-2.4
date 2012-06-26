@@ -1,0 +1,100 @@
+balloc.o: balloc.c \
+   hfs_btree.h
+bdelete.o: bdelete.c \
+   hfs_btree.h
+bfind.o: bfind.c \
+   hfs_btree.h
+bins_del.o: bins_del.c \
+   hfs_btree.h
+binsert.o: binsert.c \
+   hfs_btree.h
+bitmap.o: bitmap.c \
+   hfs.h
+bitops.o: bitops.c \
+   hfs.h
+bnode.o: bnode.c \
+   hfs_btree.h
+brec.o: brec.c \
+   hfs_btree.h
+btree.o: btree.c \
+   hfs_btree.h
+catalog.o: catalog.c \
+   hfs.h
+dir.o: dir.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h
+dir_cap.o: dir_cap.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h
+dir_dbl.o: dir_dbl.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h
+dir_nat.o: dir_nat.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h
+extent.o: extent.c \
+   hfs.h
+file.o: file.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h
+file_cap.o: file_cap.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h
+file_hdr.o: file_hdr.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h
+hfs_btree.h: \
+   hfs.h
+	@touch hfs_btree.h
+hfs.h: \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_sysdep.h
+	@touch hfs.h
+inode.o: inode.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h
+mdb.o: mdb.c \
+   hfs.h
+part_tbl.o: part_tbl.c \
+   hfs.h
+string.o: string.c \
+   hfs.h
+super.o: super.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blkdev.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mac/partition.h)
+sysdep.o: sysdep.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h
+trans.o: trans.c \
+   hfs.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_sb.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs_i.h \
+   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hfs_fs.h
+.PRECIOUS:	hfs_btree.h \
+	hfs.h \
+

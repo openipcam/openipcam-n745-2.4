@@ -1,0 +1,13 @@
+mainmenu_name 'uClinux Configuration'
+mainmenu_option next_comment
+comment 'Target Platform Selection'
+comment 'Choose a Vendor/Product combination.'
+choice 'Vendor/Product' "Winbond/W90N745 CONFIG_DEFAULTS_WINBOND_W90N745 \
+" SecureEdge/SecureEdgeVPN
+comment 'Kernel is linux-2.4.x'
+define_bool CONFIG_DEFAULTS_KERNEL_2_4 y
+bool 'Default all settings (lose changes)'	CONFIG_DEFAULTS_OVERRIDE
+bool 'Customize Kernel Settings'			CONFIG_DEFAULTS_KERNEL
+bool 'Customize Vendor/User Settings'		CONFIG_DEFAULTS_VENDOR
+bool 'Update Default Vendor Settings'		CONFIG_DEFAULTS_VENDOR_UPDATE
+endmenu

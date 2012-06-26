@@ -1,0 +1,78 @@
+#ifndef XCOMM
+#define XCOMM #
+#endif
+
+XCOMM Mplaymidi $Revision: 1.1.1.1 $
+XCOMM This file conatains necessary redefinitions for generating Makefile
+XCOMM You SHOULD NOT edit Imakefile, you should EDIT THIS file instead
+
+XCOMM Note: use XCOMM to comment out
+
+#define USE_GCC
+#define HAS_XPM
+
+#ifdef USE_GCC
+CC= gcc
+XCOMM CDEBUGFLAGS= -g -Wall -pipe -fomit-frame-pointer -static -DHIGH_SPEED=1 -DDEBUG=1
+XCOMM CDEBUGFLAGS= -O -Wall -pipe -fomit-frame-pointer -DHIGH_SPEED=1  -static
+XCOMM CDEBUGFLAGS= -g -Wall -pipe -fomit-frame-pointer -DHIGH_SPEED=1 -DDEBUG=1
+CDEBUGFLAGS= -O -Wall -pipe -fomit-frame-pointer -DHIGH_SPEED=1 
+#else
+CC= cc
+CDEBUGFLAGS= -g -DDEBUG=1
+XCOMM CDEBUGFLAGS= -O
+#endif
+
+XCOMM Xpm lib
+
+#ifdef HAS_XPM
+XPMINC= -I/usr/X11R6/lib
+XPM_DEFINES= -DHasXPM
+XPM_LIBS= -lXpm
+#else
+XPMINC= 
+XPM_DEFINES= 
+XPM_LIBS= 
+#endif
+
+XCOMM binary will be installed when typed "make install"
+XCOMM man page will be installed when type "make install.man"
+
+STATIC_LDFLAGS =
+SHARED_LDFLAGS =
+EXTRA_LOAD_FLAGS =
+
+XCOMM for Interactive UNIX on i386 use the falg -DISC_UNIX with CDEBUGFLAG
+
+INCLUDES = -I. -I./bitmaps $(MCLIENTINCLUDES) -DHAVE_MOTIF=1 
+
+SYS_LIBRARIES= -lm
+
+XCOMM for Interactive UNIX on i386, Use LOCAL_LIBRARIIES below
+
+XCOMM LOCAL_LIBRARIES = $(USRLIBDIR)/libXm.a $(USRLIBDIR)/libXt.a \
+XCOMM	$(USRLIBDIR)/libX11.a 
+
+XCOMM for Interactive UNIX on i386 uncommnet the EXTRA_LIBRARIES
+XCOMM EXTRA_LIBRARIES = -lnsl_s -lc_s -linet /lib/libcposix.a -lPW
+
+XCOMM If your imake has Motif support, the LOCAL_LIBRARIES declaration
+XCOMM should work. If it fails, substitute the LOCAL_LIBRARIES= with one of
+XCOMM these:
+XCOMM LOCAL_LIBRARIES= $(XMLIB) $(XTOOLLIB) $(XLIB)
+XCOMM or
+XCOMM  LOCAL_LIBRARIES= -lXm -lXt -lX11
+XCOMM
+
+LOCAL_LIBRARIES= $(Mimage_LIBS) \
+	$(JPEG_LIBS) $(TIFF_LIBS) $(Mimage_LIBS) $(XPM_LIBS)\
+	$(Xbae_LIBS) XmClientLibs
+
+CCOPTIONS= $(JPEG_DEFINES) $(TIFF_DEFINES) $(XPM_DEFINES)
+
+#ifdef HPArchitecture
+CCOPTIONS= -Aa -D_HPUX_SOURCE -Dhpux
+#endif
+
+XCOMM man page suffix
+MANSUFFIX=1

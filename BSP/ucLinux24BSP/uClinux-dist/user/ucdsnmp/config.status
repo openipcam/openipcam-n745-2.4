@@ -1,0 +1,4 @@
+#!/bin/sh
+# This is a hack to stop configure getting rerun.
+
+exit 0

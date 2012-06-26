@@ -1,0 +1,27 @@
+## Modify the following options for your build
+DOCPHYSADDR	= 0x78000000
+KERNELDIR 	= /usr/local/arm-linux/linux
+INSTALLDIR	= /use/local/ar-linux/work/Driver
+CC		= arm-elf-gcc
+LD		= arm-elf-ld
+
+
+include $(KERNELDIR)/.config
+
+CFLAGS = -D__KERNEL__ -DMODULE -DCOTULLA -DDOCPHYSADDR=$(DOCPHYSADDR)         \
+	-I$(KERNELDIR)/include -I. -O -Os -Wall -Wstrict-prototypes           \
+	-Wno-trigraphs -mapcs -fno-strict-aliasing -fno-common -pipe -mapcs-32 \
+	-march=armv4 -mtune=strongarm -mshort-load-bytes -msoft-float         \
+	-DKBUILD_BASENAME=fldrvlnx -Wa,-mxscale
+
+all:	doc.o 
+
+doc.o:	fldrvlnx.o tsi_doc.o
+	$(LD) -r $^ -o $@ libosak.a
+
+install:
+	cp -f doc.o $(INSTALLDIR) 
+#	cp -f doc.o $(INSTALLDIR)/doc 
+
+clean:
+	rm -f *.o *~ core

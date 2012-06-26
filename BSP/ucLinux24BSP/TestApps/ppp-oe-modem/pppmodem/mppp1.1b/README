@@ -1,0 +1,94 @@
+README for mppp 1.1a and xmppp 1.1a
+--------------------------------
+
+-----------------------------------------------------------------------------
+WARNING! WARNING!  WARNING! WARNING!  WARNING! WARNING!  WARNING! WARNING!
+             >>>> Never make this program setuid root <<<<<
+-----------------------------------------------------------------------------
+Requirement
+===========
+    1) ANSI C compiler if you want to compile.
+    2) At least Motif 1.1a if you wanto to compile the Moitf version. 
+
+ppp and xmppp are two configurable ppp dialers.   mppp is a character 
+based ppp dialer and xmppp is written in X/Motif.   Either one can be used
+to make ppp connection. 
+
+The programs talks to the modem device directly, therefore, no external 
+scripts are needed.
+
+I wrote and tested them on Redhat Linux 4.1. But they should be portable 
+to other Unices with POSIX termios. I wrote it because none of the ppp 
+dialers worked the way I wanted. I wanted the configuration files must be 
+editable by a text editor. It works the way I like. I'm releasing it with 
+the hope that it might be useful to you.
+
+NOTE:   Not enough error checking at this time. So you better have correct
+        configuration and script file in order to make it work preperly.
+
+To Do
+=====
+    * better documentation.
+    * rigorous error checking.
+    * editing configuration and script file from xmppp's edit menu.
+    * allow entering password interactively.
+    * ..and many more.
+
+How you can help
+===============
+I do not have much time to play. So if you find a bug, best thing would be
+to fix it and send me the patch. If you some cool idea, implement it and
+send me the patch.  In any event, let me know.
+
+
+Compile
+=======
+    edit Makefile.no-motif and Xmppp.tmpl. Tunrn on DEBUG option if you want.
+
+    Compiling mppp (character based)
+    ================================
+        $ make clean
+        $ make -f Makefile.no-motif
+    The name of the binary is mppp.
+
+
+    Compiling xmppp (X/Motif)
+    =========================
+        $ xmkmf
+        $ make clean
+        $ make
+    The name of the binary is xmppp.
+
+Install
+=======
+    NOTE:
+    Currently two files are necessary. The name of these files are
+    mppp.cfg and fccc.scr. They must be located at user's $HOME/.mpppdir
+    directory. However this will change in future.
+
+    mkdir $HOME/.mpppdir
+        [if you run ppp as root, it will be at root's home, not yours]
+
+    cp ./dotmpppdir/* $HOME/.mpppdir
+    cd $HOME/.mpppdir
+
+    * edit  mppp.cfg file. 
+        change  
+            MpppLogfile
+            Device
+            InitString
+            Script
+
+    * edit fccc.scr or the name you provided with Script above.
+        - replace <Your login> with your login name
+        - replabe <Your password> with your password.
+
+Enjoy!
+
+--
+Muhammad A Muquit
+Research Computing Services
+Fox Chase Cancer Center.
+
+# ma_muquit@fccc.edu, May-03-1997 (a vacation hack!)
+

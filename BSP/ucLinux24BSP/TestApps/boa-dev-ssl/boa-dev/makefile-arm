@@ -1,0 +1,59 @@
+.SUFFIXES : .x .o .c .s
+#***********************************************************************************************
+#now,the gcc ver has not support separating compiles well,so makefile should modified as follow.
+#by winbond ns24 zswan,06/07/18
+#***********************************************************************************************
+BUILD_ROOT=/usr/local/arm_tools/
+lib=${BUILD_ROOT}arm-elf/lib
+lib1=${BUILD_ROOT}lib/gcc-lib/arm-elf/3.0/
+include=${BUILD_ROOT}arm-elf/inc
+
+CC=arm-elf-gcc -I${include} -I../Library/arm/include -O1 -DEMBED -DDEBUG -DSERVER_SSL -Wl,-elf2flt
+AS=arm-elf-as
+LD=arm-elf-ld
+
+WEC_LDFLAGS=-L../Library/arm/lib -L${lib} -L${lib1}
+
+OBJS = alias.o boa.o config.o get.o hash.o log.o \
+	queue.o read.o request.o response.o signals.o util.o \
+	Help/C_List.o Help/C_String.o Help/HttpServer.o \
+	Help/C_ConfigFile.o Help/C_HttpSupport.o Help/C_MultiPart.o \
+	Help/C_SendFile.o
+
+
+LIBS= -lhttp -lssl -lcrypto -lc -lgcc -lc
+
+TARGET = http
+TESTTARGET = TestBoa
+APPSRCS=TestBoa.c
+all: lib test
+
+lib: $(OBJS)
+	rm -rf ../Library/arm/lib/lib$(TARGET).a
+	$(AR) -r ../Library/arm/lib/lib$(TARGET).a $(OBJS)
+	cp ./Help/*.h ../Library/arm/include/
+
+test:
+	$(CC) $(WEC_LDFLAGS) $(APPSRCS) -o $(TESTTARGET) $(LIBS)
+	flthdr -z $(TESTTARGET)
+	rm -f temp
+	cp $(TESTTARGET) ../../../romdisk/bin
+	genromfs -f romfs.img -d ../../../romdisk/
+	cp romfs.img ../../../image
+	
+.c.o:
+	$(CC) -c -o $*.o $*.c
+
+.s.o:
+	$(AS) -ahld -o $*.o $*.s > NULL
+	del NULL
+
+
+clean:
+	rm -f *.o
+	rm -f *.x
+	rm -f *.gdb
+	rm -f *.map
+	rm -f romfs.img
+	rm -f ${OBJS}
+	rm -f $(TESTTARGET).flat

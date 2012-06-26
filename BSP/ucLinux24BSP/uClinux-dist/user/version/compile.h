@@ -1,0 +1,6 @@
+#define TOOLCHAIN_VERSION "#31 Èý 4ÔÂ 6 16:39:32 CST 2005"
+#define TOOLCHAIN_COMPILE_TIME "16:39:32"
+#define TOOLCHAIN_COMPILE_BY "mcli"
+#define TOOLCHAIN_COMPILE_HOST "localhost.localdomain"
+#define TOOLCHAIN_COMPILE_DOMAIN "localdomain"
+#define TOOLCHAIN_COMPILER "gcc version 3.0"

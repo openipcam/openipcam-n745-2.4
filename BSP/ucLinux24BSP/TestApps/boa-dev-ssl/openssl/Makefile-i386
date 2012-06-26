@@ -1,0 +1,14 @@
+lib:
+	rm -rf ./ssl/libssl.a
+	cd ./ssl; make -f Makefile-i386; cd ..;
+	rm -rf ../Library/i386/lib/libssl.a
+	mv ./ssl/libssl.a ../Library/i386/lib/libssl.a
+	rm -rf ./crypto/libcrypto.a
+	cd ./crypto; make -f Makefile-i386; cd ..;
+	rm -rf ../Library/i386/lib/libcrypto.a
+	mv ./crypto/libcrypto.a ../Library/i386/lib/libcrypto.a
+	cp -rfL ./include/openssl ../Library/i386/include/
+
+clean:
+	cd ./ssl; make -f Makefile-i386 clean; cd ..;
+	cd ./crypto; make -f Makefile-i386 clean; cd ..;

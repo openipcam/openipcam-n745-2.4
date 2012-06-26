@@ -1,0 +1,357 @@
+# Default kernel keymap. This uses 7 modifier combinations.
+keymaps 0-2,4-5,8,12
+# Change the above line into
+#	keymaps 0-2,4-6,8,12
+# in case you want the entries
+#	altgr   control keycode  83 = Boot            
+#	altgr   control keycode 111 = Boot            
+# below.
+#
+# In fact AltGr is used very little, and one more keymap can
+# be saved by mapping AltGr to Alt (and adapting a few entries):
+# keycode 100 = Alt
+#
+keycode   118 = Escape           Escape          
+	alt     keycode   118 = Meta_Escape     
+keycode   22 = one              exclam          
+	alt     keycode   22 = Meta_one        
+keycode   30 = two              at               at              
+	control	keycode   30 = nul             
+	shift	control	keycode   30 = nul             
+	alt	keycode   3 = Meta_two        
+keycode   38 = three            numbersign      
+	control keycode   38 = Escape          
+	alt     keycode   38 = Meta_three      
+keycode   37 = four             dollar           dollar          
+	control keycode   37 = Control_backslash
+	alt     keycode   37 = Meta_four       
+keycode   46 = five             percent         
+	control keycode   46 = Control_bracketright
+	alt     keycode   46 = Meta_five       
+keycode   54 = six              asciicircum     
+	control keycode   54 = Control_asciicircum
+	alt     keycode   54 = Meta_six        
+keycode   61 = seven            ampersand        braceleft       
+	control keycode   61 = Control_underscore
+	alt     keycode   61 = Meta_seven      
+keycode   62 = eight            asterisk         bracketleft     
+	control keycode   62 = Delete          
+	alt     keycode   62 = Meta_eight      
+keycode  70 = nine             parenleft        bracketright    
+	alt     keycode  70 = Meta_nine       
+keycode  69 = zero             parenright       braceright      
+	alt     keycode  69 = Meta_zero       
+keycode  78 = minus            underscore       backslash       
+	control	keycode  78 = Control_underscore
+	shift	control	keycode  78 = Control_underscore
+	alt	keycode  78 = Meta_minus      
+keycode  85 = equal            plus            
+	alt     keycode  85 = Meta_equal      
+keycode  102 = Delete           Delete          
+	control keycode  102 = BackSpace
+	alt     keycode  102 = Meta_Delete     
+keycode  13 = Tab              Tab             
+	alt     keycode  13 = Meta_Tab        
+keycode  21 = q               
+keycode  29 = w               
+keycode  36 = e
+	altgr   keycode  36 = Hex_E   
+keycode  45 = r               
+keycode  44 = t               
+keycode  53 = y               
+keycode  60 = u               
+keycode  67 = i               
+keycode  68 = o               
+keycode  77 = p               
+keycode  84 = bracketleft      braceleft       
+	control keycode  84 = Escape          
+	alt     keycode  84 = Meta_bracketleft
+keycode  91 = bracketright     braceright       asciitilde      
+	control keycode  91 = Control_bracketright
+	alt     keycode  91 = Meta_bracketright
+keycode  90 = Return          
+	alt     keycode  90 = Meta_Control_m  
+keycode  20 = Control         
+keycode  28 = a
+	altgr   keycode  28 = Hex_A
+keycode  27 = s               
+keycode  35 = d
+	altgr   keycode  35 = Hex_D   
+keycode  43 = f
+	altgr   keycode  43 = Hex_F               
+keycode  52 = g               
+keycode  51 = h               
+keycode  59 = j               
+keycode  66 = k               
+keycode  75 = l               
+keycode  76 = semicolon        colon           
+	alt     keycode  76 = Meta_semicolon  
+keycode  82 = apostrophe       quotedbl        
+	control keycode  82 = Control_g       
+	alt     keycode  82 = Meta_apostrophe 
+keycode  14 = grave            asciitilde      
+	control keycode  14 = nul             
+	alt     keycode  14 = Meta_grave      
+keycode  18 = Shift           
+keycode  93 = backslash        bar             
+	control keycode  93 = Control_backslash
+	alt     keycode  93 = Meta_backslash  
+keycode  26 = z               
+keycode  34 = x               
+keycode  33 = c
+	altgr   keycode  33 = Hex_C   
+keycode  42 = v               
+keycode  50 = b
+	altgr   keycode  50 = Hex_B
+keycode  49 = n               
+keycode  58 = m               
+keycode  65 = comma            less            
+	alt     keycode  65 = Meta_comma      
+keycode  73 = period           greater         
+	control keycode  73 = Compose         
+	alt     keycode  73 = Meta_period     
+keycode  74 = slash            question        
+	control keycode  74 = Delete          
+	alt     keycode  74 = Meta_slash      
+keycode  89 = Shift           
+keycode  124 = KP_Multiply     
+keycode  17 = Alt             
+keycode  41 = space            space           
+	control keycode  41 = nul             
+	alt     keycode  41 = Meta_space      
+keycode  88 = Caps_Lock       
+keycode  5 = F1               F11              Console_13      
+	control keycode  5 = F1              
+	alt     keycode  5 = Console_1       
+	control alt     keycode  5 = Console_1       
+keycode  6 = F2               F12              Console_14      
+	control keycode  6 = F2              
+	alt     keycode  6 = Console_2       
+	control alt     keycode  6 = Console_2       
+keycode  4 = F3               F13              Console_15      
+	control keycode  4 = F3              
+	alt     keycode  4 = Console_3       
+	control alt     keycode  4 = Console_3       
+keycode  12 = F4               F14              Console_16      
+	control keycode  12 = F4              
+	alt     keycode  12 = Console_4       
+	control alt     keycode  12 = Console_4       
+keycode  3 = F5               F15              Console_17      
+	control keycode  3 = F5              
+	alt     keycode  3 = Console_5       
+	control alt     keycode  3 = Console_5       
+keycode  11 = F6               F16              Console_18      
+	control keycode  11 = F6              
+	alt     keycode  11 = Console_6       
+	control alt     keycode  11 = Console_6       
+keycode  131 = F7               F17              Console_19      
+	control keycode  131 = F7              
+	alt     keycode  131 = Console_7       
+	control alt     keycode  131 = Console_7       
+keycode  10 = F8               F18              Console_20      
+	control keycode  10 = F8              
+	alt     keycode  10 = Console_8       
+	control alt     keycode  10 = Console_8       
+keycode  1 = F9               F19              Console_21      
+	control keycode  1 = F9              
+	alt     keycode  1 = Console_9       
+	control alt     keycode  1 = Console_9       
+keycode  9 = F10              F20              Console_22      
+	control keycode  9 = F10             
+	alt     keycode  9 = Console_10      
+	control alt     keycode  9 = Console_10      
+keycode  119 = Num_Lock
+	shift   keycode  119 = Bare_Num_Lock
+keycode  126 = Scroll_Lock      Show_Memory      Show_Registers  
+	control keycode  126 = Show_State      
+	alt     keycode  126 = Scroll_Lock     
+keycode  108 = KP_7            
+	alt     keycode  108 = Ascii_7         
+	altgr   keycode  108 = Hex_7         
+keycode  117 = KP_8            
+	alt     keycode  117 = Ascii_8         
+	altgr   keycode  117 = Hex_8         
+keycode  125 = KP_9            
+	alt     keycode  125 = Ascii_9         
+	altgr   keycode  125 = Hex_9         
+keycode  123 = KP_Subtract     
+keycode  107 = KP_4            
+	alt     keycode  107 = Ascii_4         
+	altgr   keycode  107 = Hex_4         
+keycode  115 = KP_5            
+	alt     keycode  115 = Ascii_5         
+	altgr   keycode  115 = Hex_5         
+keycode  116 = KP_6            
+	alt     keycode  116 = Ascii_6         
+	altgr   keycode  116 = Hex_6         
+keycode  121 = KP_Add          
+keycode  105 = KP_1            
+	alt     keycode  105 = Ascii_1         
+	altgr   keycode  105 = Hex_1         
+keycode  114 = KP_2            
+	alt     keycode  114 = Ascii_2         
+	altgr   keycode  114 = Hex_2         
+keycode  122 = KP_3            
+	alt     keycode  122 = Ascii_3         
+	altgr   keycode  122 = Hex_3         
+keycode  112 = KP_0            
+	alt     keycode  112 = Ascii_0         
+	altgr   keycode  112 = Hex_0         
+keycode  113 = KP_Period       
+#	altgr   control keycode  113 = Boot            
+	control alt     keycode  113 = Boot            
+keycode  87 = Last_Console    
+keycode  96 =
+keycode  86 = less             greater          bar             
+	alt     keycode  86 = Meta_less       
+keycode  120 = F11              F11              Console_23      
+	control keycode  120 = F11             
+	alt     keycode  120 = Console_11      
+	control alt     keycode  120 = Console_11      
+keycode  7 = F12              F12              Console_24      
+	control keycode  7 = F12             
+	alt     keycode  7 = Console_12      
+	control alt     keycode  7 = Console_12      
+keycode  83 =
+keycode  97 =
+keycode  98 =
+keycode  92 =
+keycode  71 =
+keycode  94 =
+keycode  95 =
+keycode  90 = KP_Enter        
+keycode  20 = Control         
+keycode  74 = KP_Divide       
+keycode  99 = Control_backslash
+	control keycode  99 = Control_backslash
+	alt     keycode  99 = Control_backslash
+keycode 100 = AltGr           
+keycode 101 = Break           
+keycode 72 = Find            
+keycode 103 = Up              
+keycode 104 = Prior           
+	shift   keycode 104 = Scroll_Backward 
+keycode 128 = Left            
+	alt     keycode 128 = Decr_Console
+keycode 106 = Right           
+	alt     keycode 106 = Incr_Console
+keycode 129 = Select          
+keycode 130 = Down            
+keycode 109 = Next            
+	shift   keycode 109 = Scroll_Forward  
+keycode 110 = Insert          
+keycode 111 = Remove          
+#	altgr   control keycode 111 = Boot            
+	control alt     keycode 111 = Boot            
+keycode 132 = Macro           
+keycode 133 = F13             
+keycode 134 = F14             
+keycode 135 = Help            
+keycode 136 = Do              
+keycode 137 = F17             
+keycode 138 = KP_MinPlus      
+keycode 139 = Pause           
+keycode 140 =
+keycode 141 =
+keycode 142 =
+keycode 143 =
+keycode 144 =
+keycode 145 =
+keycode 146 =
+keycode 127 =
+string F1 = "\033[[A"
+string F2 = "\033[[B"
+string F3 = "\033[[C"
+string F4 = "\033[[D"
+string F5 = "\033[[E"
+string F6 = "\033[17~"
+string F7 = "\033[18~"
+string F8 = "\033[19~"
+string F9 = "\033[20~"
+string F10 = "\033[21~"
+string F11 = "\033[23~"
+string F12 = "\033[24~"
+string F13 = "\033[25~"
+string F14 = "\033[26~"
+string F15 = "\033[28~"
+string F16 = "\033[29~"
+string F17 = "\033[31~"
+string F18 = "\033[32~"
+string F19 = "\033[33~"
+string F20 = "\033[34~"
+string Find = "\033[1~"
+string Insert = "\033[2~"
+string Remove = "\033[3~"
+string Select = "\033[4~"
+string Prior = "\033[5~"
+string Next = "\033[6~"
+string Macro = "\033[M"
+string Pause = "\033[P"
+compose '`' 'A' to 'À'
+compose '`' 'a' to 'à'
+compose '\'' 'A' to 'Á'
+compose '\'' 'a' to 'á'
+compose '^' 'A' to 'Â'
+compose '^' 'a' to 'â'
+compose '~' 'A' to 'Ã'
+compose '~' 'a' to 'ã'
+compose '"' 'A' to 'Ä'
+compose '"' 'a' to 'ä'
+compose 'O' 'A' to 'Å'
+compose 'o' 'a' to 'å'
+compose '0' 'A' to 'Å'
+compose '0' 'a' to 'å'
+compose 'A' 'A' to 'Å'
+compose 'a' 'a' to 'å'
+compose 'A' 'E' to 'Æ'
+compose 'a' 'e' to 'æ'
+compose ',' 'C' to 'Ç'
+compose ',' 'c' to 'ç'
+compose '`' 'E' to 'È'
+compose '`' 'e' to 'è'
+compose '\'' 'E' to 'É'
+compose '\'' 'e' to 'é'
+compose '^' 'E' to 'Ê'
+compose '^' 'e' to 'ê'
+compose '"' 'E' to 'Ë'
+compose '"' 'e' to 'ë'
+compose '`' 'I' to 'Ì'
+compose '`' 'i' to 'ì'
+compose '\'' 'I' to 'Í'
+compose '\'' 'i' to 'í'
+compose '^' 'I' to 'Î'
+compose '^' 'i' to 'î'
+compose '"' 'I' to 'Ï'
+compose '"' 'i' to 'ï'
+compose '-' 'D' to 'Ð'
+compose '-' 'd' to 'ð'
+compose '~' 'N' to 'Ñ'
+compose '~' 'n' to 'ñ'
+compose '`' 'O' to 'Ò'
+compose '`' 'o' to 'ò'
+compose '\'' 'O' to 'Ó'
+compose '\'' 'o' to 'ó'
+compose '^' 'O' to 'Ô'
+compose '^' 'o' to 'ô'
+compose '~' 'O' to 'Õ'
+compose '~' 'o' to 'õ'
+compose '"' 'O' to 'Ö'
+compose '"' 'o' to 'ö'
+compose '/' 'O' to 'Ø'
+compose '/' 'o' to 'ø'
+compose '`' 'U' to 'Ù'
+compose '`' 'u' to 'ù'
+compose '\'' 'U' to 'Ú'
+compose '\'' 'u' to 'ú'
+compose '^' 'U' to 'Û'
+compose '^' 'u' to 'û'
+compose '"' 'U' to 'Ü'
+compose '"' 'u' to 'ü'
+compose '\'' 'Y' to 'Ý'
+compose '\'' 'y' to 'ý'
+compose 'T' 'H' to 'Þ'
+compose 't' 'h' to 'þ'
+compose 's' 's' to 'ß'
+compose '"' 'y' to 'ÿ'
+compose 's' 'z' to 'ß'
+compose 'i' 'j' to 'ÿ'

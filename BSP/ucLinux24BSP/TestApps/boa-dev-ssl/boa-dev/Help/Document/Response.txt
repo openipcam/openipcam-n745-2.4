@@ -1,0 +1,35 @@
+1.
+void SetKeepAliveMode(HTTPCONNECTION hConnection, BOOL bIsKeepAlive);
+	Description:
+		Set if the connection still keeps alive. This function must not be called after "SetHttpHeader".
+
+2.
+void SetHttpHeader(HTTPCONNECTION hConnection, int iStatus, const char *pcTitle, const char *pcEncodings, const char *pcExtraheads, const char *pcContentType, BOOL bShowLength);
+	Description:
+		Set the value in http header which is to be sent to client.
+	Param:
+		iStatus - http response status;
+		pcTitle - http response title;
+		pcEncoding - the encoding type of response data;
+		pcExtraheads - addtional user's http header;
+		pcContentType - the content type of response data;
+		bShowLength - if send the length of body data in http header.
+
+3.
+void AddHttpBody(HTTPCONNECTION hConnection, const char *pcBuf2Add, int iBufLen);
+	Description:
+		Add some data which is wanted to be sent to client;
+
+4.
+void AddHttpBodyString(HTTPCONNECTION hConnection, const char *pcString);
+	Description:
+		Add a string which is wanted to be sent to client;
+
+5.
+void SetSendDataOverFun(HTTPCONNECTION hConnection, SEND_DATA_OVER_PFUN funOnSendDataOver, void *pParam);
+	Description:
+		Specify a function that is called when response data is sent over.
+	Param:
+		typedef int (*SEND_DATA_OVER_PFUN)(HTTPCONNECTION hConnection, time_t *tLastFill, void *pParam);
+		funOnSendDataOver - callback function that to be called when response data is sent over.
+		pParam - a additional parameter when calling "funOnSendDataOver", which can be used to transfer any pointer specified by user;
