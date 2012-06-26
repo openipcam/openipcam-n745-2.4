@@ -1,0 +1,14 @@
+nodetach
+defaultroute
+debug
+dump
+noauth
+nobsdcomp
+nodeflate
+require-mppe
+#require-mppe-128
+#name SONICSEV2003\\\\vip
+user vip
+refuse-eap
+#remotename SONICSEV2003
+pty "pptp 192.168.1.252 --nolaunchpppd"

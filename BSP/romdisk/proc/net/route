@@ -1,0 +1,11 @@
+Iface   Destination     Gateway         Flags   RefCnt  Use     Metric  Mask            MTU     Window  IRTT   
+
+eth0    0000820A        00000000        0001    0       0       0       0000FFFF        40      0       0
+
+lo      0000007F        00000000        0001    0       0       0       000000FF        40      0       0
+
+eth0    00000000        FE01820A        0003    0       0       0       00000000        40      0       0
+
+~
+~
+~

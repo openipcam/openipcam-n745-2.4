@@ -1,0 +1,17 @@
+idle 0
+debug
+nodetach
+lcp-echo-interval 15
+lcp-echo-failure  2
+mtu 1400
+mru 1400
+noipdefault
+hide-password
+defaultroute
+usepeerdns
+persist
+ipcp-accept-remote
+require-mppe
+refuse-eap
+user myname
+pty "/bin/pptp 1.1.1.1 --nolaunchpppd"

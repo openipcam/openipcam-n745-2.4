@@ -1,0 +1,11 @@
+noipdefault
+#noauth
+defaultroute
+hide-password
+nodetach
+mtu 1492
+mru 1492
+user cbhuang
+lcp-echo-interval 20
+lcp-echo-failure 3
+pty '/bin/pppoe -I eth0'

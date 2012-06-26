@@ -1,0 +1,13 @@
+#idle 120
+noipdefault
+defaultroute
+user "guest"
+hide-password
+noaccomp
+nopcomp
+nocrtscts
+lcp-echo-interval 10
+lcp-echo-failure 3
+lock
+nodetach
+pty "/bin/pppoe"

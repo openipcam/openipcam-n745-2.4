@@ -1,0 +1,17 @@
+# Written by mcli
+# for use with the rasd
+/dev/w83977/ttyS0
+115200
+idle 0
+nodetach
+lcp-echo-interval 15
+lcp-echo-failure 10
+noipdefault
+hide-password
+defaultroute
+usepeerdns
+persist
+user 96590
+
+
+

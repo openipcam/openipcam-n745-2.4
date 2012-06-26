@@ -1,0 +1,13 @@
+idle 0
+nodetach
+lcp-echo-interval 15
+lcp-echo-failure 10
+mtu 1492
+mru 1492
+noipdefault
+hide-password
+defaultroute
+plugin pppoe eth1
+usepeerdns
+persist
+ipcp-accept-remote 
