@@ -1,282 +1,282 @@
 af_irda.o: af_irda.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/socket.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sockios.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/net.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/sock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irttp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/discovery.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/socket.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sockios.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/net.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/sock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irttp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/discovery.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
 crc.o: crc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/crc.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/crc.h
 discovery.o: discovery.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/socket.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/discovery.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/socket.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/discovery.h
 irda_device.o: irda_device.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tty.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wireless.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/ioctls.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/dma.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/pkt_sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/wrapper.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irtty/sir.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/winbond/fir.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/sa1100/fir.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/nsc/fir.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/toshiba/fir.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/smc/ircc/fir.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/esi/dongle.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/tekram/dongle.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/actisys/dongle.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/girbil/dongle.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/litelink/dongle.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/old/belkin.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ep7211/ir.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/kmod.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tty.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wireless.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/ioctls.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/dma.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/pkt_sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/wrapper.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irtty/sir.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/winbond/fir.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/sa1100/fir.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/nsc/fir.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/toshiba/fir.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/smc/ircc/fir.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/esi/dongle.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/tekram/dongle.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/actisys/dongle.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/girbil/dongle.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/litelink/dongle.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/old/belkin.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ep7211/ir.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/kmod.h)
 iriap.o: iriap.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/unaligned.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irttp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/iriap_event.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/unaligned.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irttp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/iriap_event.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
 iriap_event.o: iriap_event.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/iriap_event.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/iriap_event.h
 irias_object.o: irias_object.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/socket.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/socket.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h
 irlap.o: irlap.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/random.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_frame.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap_frame.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/dynamic/window.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/random.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_frame.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap_frame.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/dynamic/window.h)
 irlap_event.o: irlap_event.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap_event.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap_frame.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/fast/rr.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/dynamic/window.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap_event.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap_frame.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/fast/rr.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/dynamic/window.h)
 irlap_frame.o: irlap_frame.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/pkt_sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/sock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/unaligned.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/wrapper.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap_frame.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/dynamic/window.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/pkt_sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/sock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/unaligned.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/wrapper.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap_frame.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/dynamic/window.h)
 irlmp.o: irlmp.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/random.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_frame.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/cache/last/lsap.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/random.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_frame.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/cache/last/lsap.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h)
 irlmp_event.o: irlmp_event.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_frame.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_event.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_frame.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_event.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h)
 irlmp_frame.o: irlmp_frame.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_frame.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/discovery.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/cache/last/lsap.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_frame.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/discovery.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/ultra.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/cache/last/lsap.h)
 irproc.o: irproc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/miscdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/miscdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h
 irqueue.o: irqueue.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h
 irsyms.o: irsyms.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irttp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/wrapper.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irtty.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/sysctl.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irlan.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ircomm.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/iriap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irttp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/wrapper.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irtty.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/sysctl.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irlan.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ircomm.h)
 irsysctl.o: irsysctl.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ctype.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sysctl.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/fast/rr.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ctype.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sysctl.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irias_object.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/fast/rr.h)
 irttp.o: irttp.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/unaligned.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irttp.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/unaligned.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irttp.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
 parameters.o: parameters.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/unaligned.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/unaligned.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h
 qos.o: qos.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/irda/dynamic/window.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/parameters.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/qos.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/irda/dynamic/window.h)
 timer.o: timer.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irtty.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_event.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irtty.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlmp_event.h
 wrapper.o: wrapper.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/wrapper.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irtty.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/crc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irlap_frame.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/wrapper.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irtty.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/crc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irlap_frame.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/irda/irda_device.h

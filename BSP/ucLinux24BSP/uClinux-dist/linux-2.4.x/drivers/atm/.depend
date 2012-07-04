@@ -1,368 +1,368 @@
 ambassador.o: ambassador.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
    ambassador.h
 ambassador.h: \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/ambassador/debug.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/ambassador/debug.h)
 	@touch ambassador.h
 atmdev_init.o: atmdev_init.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/zatm.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/nicstar.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/ambassador.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/horizon.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/ia.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/fore200e.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/lanai.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/zatm.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/nicstar.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/ambassador.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/horizon.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/ia.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/fore200e.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/lanai.h)
 atmtcp.o: atmtcp.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm_tcp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm_tcp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h
 eni.o: eni.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/time.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/uio.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm_eni.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/uio.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm_eni.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
    tonga.h \
    midway.h \
    suni.h \
    eni.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/tune/burst.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/rx/16w.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/rx/8w.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/rx/4w.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/rx/2w.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/tx/16w.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/tx/8w.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/tx/4w.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/tx/2w.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/tune/burst.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/rx/16w.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/rx/8w.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/rx/4w.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/rx/2w.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/tx/16w.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/tx/8w.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/tx/4w.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/eni/burst/tx/2w.h)
 eni.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/time.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
    midway.h
 	@touch eni.h
 firestream.o: firestream.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/uio.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/capability.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/uio.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/capability.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
    firestream.h
 fore200e.o: fore200e.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/capability.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm_suni.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/page.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/irq.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/dma.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/sba.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/pgtable.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/capability.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm_suni.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/page.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/irq.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/dma.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/sba.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/pgtable.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
    fore200e.h \
    suni.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/pca.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/tx/retry.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/pca.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/tx/retry.h)
 fore200e.h: \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/sba.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/pca.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/sba.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/fore200e/pca.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h
 	@touch fore200e.h
 horizon.o: horizon.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/time.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/uio.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/uio.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
    horizon.h
 horizon.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/horizon/debug.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/horizon/debug.h)
 	@touch horizon.h
 idt77105.o: idt77105.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/capability.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm_idt77105.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/param.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/capability.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm_idt77105.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/param.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
    idt77105.h
 idt77105.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmioc.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmioc.h
 	@touch idt77105.h
 idt77252.o: idt77252.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/use/suni.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/use/suni.h) \
    suni.h \
    idt77252.h \
    idt77252_tables.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/rcv/all.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/send/idle.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/rcv/all.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/send/idle.h)
 idt77252.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ptrace.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/debug.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ptrace.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/idt77252/debug.h)
 	@touch idt77252.h
 iphase.o: iphase.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/time.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/uio.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/uio.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
    iphase.h \
    suni.h
 iphase.h: \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/ia/debug.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/ia/debug.h)
 	@touch iphase.h
 lanai.o: lanai.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
 nicstar.o: nicstar.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
    nicstar.h \
    nicstarmac.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/nicstar/use/suni.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/nicstar/use/suni.h) \
    suni.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/nicstar/use/idt77105.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/nicstar/use/idt77105.h) \
    idt77105.h \
    nicstarmac.c
 nicstar.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/uio.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm_nicstar.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/uio.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm_nicstar.h
 	@touch nicstar.h
 suni.o: suni.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/capability.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm_suni.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/param.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/capability.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm_suni.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/param.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
    suni.h
 suni.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmioc.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmioc.h
 	@touch suni.h
 uPD98402.o: uPD98402.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
    uPD98402.h
 zatm.o: zatm.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/uio.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm_zatm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/capability.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/uio.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm_zatm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/capability.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
    uPD98401.h \
    uPD98402.h \
    zeprom.h \
    zatm.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/zatm/exact/ts.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/zatm/debug.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/zatm/exact/ts.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/zatm/debug.h)
 zatm.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/zatm/exact/ts.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/zatm/exact/ts.h)
 	@touch zatm.h
 .PRECIOUS:	ambassador.h \
 	eni.h \

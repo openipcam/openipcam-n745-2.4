@@ -1,59 +1,59 @@
 vlan.o: vlan.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/datalink.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/in.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/p8022.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/rtnetlink.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/brlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/notifier.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_vlan.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/datalink.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/in.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/p8022.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/rtnetlink.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/brlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/notifier.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_vlan.h \
    vlan.h \
    vlanproc.h
 vlan_dev.o: vlan_dev.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/in.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/datalink.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/p8022.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/brlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/in.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/datalink.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/p8022.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/brlock.h \
    vlan.h \
    vlanproc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_vlan.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/ip.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/inet.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_vlan.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/ip.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/inet.h)
 vlan.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_vlan.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_vlan.h
 	@touch vlan.h
 vlanproc.o: vlanproc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/stddef.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_vlan.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/stddef.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_vlan.h \
    vlanproc.h \
    vlan.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
 .PRECIOUS:	vlan.h \
 

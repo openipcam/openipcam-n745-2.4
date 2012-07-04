@@ -1,366 +1,366 @@
 addr.o: addr.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
    signaling.h \
    addr.h
 addr.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h
 	@touch addr.h
 atm_misc.o: atm_misc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/errno.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/errno.h
 br2684.o: br2684.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/rtnetlink.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmbr2684.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/rtnetlink.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmbr2684.h \
    ipcommon.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/br2684/ipfilter.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/br2684/fast/trans.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/br2684/ipfilter.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/br2684/fast/trans.h)
 clip.o: clip.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/notifier.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmarp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ip.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/in.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/inetdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/route.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/icmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/param.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/notifier.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmarp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/in.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/inetdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/route.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/icmp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/param.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
    common.h \
    resources.h \
    ipcommon.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/atmclip.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/clip/no/icmp.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/atmclip.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/clip/no/icmp.h)
 common.o: common.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/net.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmarp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/socket.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/capability.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/time.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/sock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/ioctls.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/lane.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/lane/module.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmlec.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/net.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmarp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sonet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/socket.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/capability.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/sock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/ioctls.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/lane.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/lane/module.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmlec.h \
    lec.h \
    lec_arpc.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/mpoa.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/mpoa/module.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/mpoa.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/mpoa/module.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
    mpc.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/tcp.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/tcp/module.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm_tcp.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/pppoatm.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/pppoatm/module.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/br2684.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/br2684/module.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/tcp.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/tcp/module.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm_tcp.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/pppoatm.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/pppoatm/module.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/br2684.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/br2684/module.h) \
    resources.h \
    common.h \
    protocols.h \
    addr.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/clip.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/atmclip.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/clip.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/atmclip.h \
    signaling.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/bridge.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/bridge/module.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/bridge.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/bridge/module.h)
 common.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/net.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/net.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h
 	@touch common.h
 ipcommon.o: ipcommon.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/in.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/in.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
    common.h \
    ipcommon.h
 ipcommon.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h
 	@touch ipcommon.h
 lec_arpc.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmlec.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmlec.h
 	@touch lec_arpc.h
 lec.o: lec.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/sock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ip.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/dst.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/tr.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/trdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmlec.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/bridge.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/bridge/module.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_bridge.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/sock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/dst.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/tr.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/trdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmlec.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/bridge.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/bridge/module.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_bridge.h \
    ../bridge/br_private.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
    lec.h \
    lec_arpc.h \
    resources.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/param.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/inetdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/route.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/param.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/inetdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/route.h
 lec.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmlec.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/bridge.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/bridge/module.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_bridge.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmlec.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/bridge.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/bridge/module.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_bridge.h
 	@touch lec.h
 mpc.o: mpc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/sock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ip.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/checksum.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/dst.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmlec.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/sock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/checksum.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/dst.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmlec.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
    lec.h \
    mpc.h \
    resources.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
 mpc.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
    mpoa_caches.h
 	@touch mpc.h
 mpoa_caches.o: mpoa_caches.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
    mpoa_caches.h \
    mpc.h
 mpoa_caches.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h
 	@touch mpoa_caches.h
 mpoa_proc.o: mpoa_proc.c \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/time.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmmpc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
    mpc.h \
    mpoa_caches.h
 pppoatm.o: pppoatm.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ppp_defs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_ppp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ppp_channel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmppp.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ppp_defs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_ppp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ppp_channel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmppp.h
 proc.o: proc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/stat.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmarp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/param.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/stat.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmarp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/param.h \
    resources.h \
    common.h \
    signaling.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/clip.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/atmclip.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/clip.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/atmclip.h \
    ipcommon.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/lane.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/lane/module.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/lane.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/lane/module.h) \
    lec.h \
    lec_arpc.h
 pvc.o: pvc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/net.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/sock.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/atm/clip.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/atmclip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/net.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmclip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/sock.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/atm/clip.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/atmclip.h \
    resources.h \
    common.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
 raw.o: raw.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
    common.h \
    protocols.h
 resources.o: resources.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ctype.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/sock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ctype.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/sock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
    common.h \
    resources.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
 resources.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h
 	@touch resources.h
 signaling.o: signaling.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmsap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmsvc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmsap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmsvc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
    resources.h \
    signaling.h
 signaling.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmsvc.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmsvc.h
 	@touch signaling.h
 svc.o: svc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/net.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fcntl.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmsap.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmsvc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/sock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/net.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fcntl.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmsap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmsvc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/atmdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/sock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
    resources.h \
    common.h \
    signaling.h \
    addr.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h
 .PRECIOUS:	addr.h \
 	common.h \
 	ipcommon.h \

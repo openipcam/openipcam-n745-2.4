@@ -1,0 +1,3 @@
+ifeq (sock.o skbuff.o iovec.o datagram.o scm.o dev.o dev_mcast.o dst.o neighbour.o rtnetlink.o utils.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += core.o
+endif

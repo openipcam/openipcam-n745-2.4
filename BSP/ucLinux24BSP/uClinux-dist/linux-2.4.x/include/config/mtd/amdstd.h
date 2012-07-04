@@ -1,1 +1,1 @@
-#define CONFIG_MTD_AMDSTD 1
+#undef  CONFIG_MTD_AMDSTD

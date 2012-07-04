@@ -1,57 +1,57 @@
 evdev.o: evdev.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/input.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/input.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h
 input.o: input.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/input.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/random.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/input.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/random.h
 joydev.o: joydev.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/joystick.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/input.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/major.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/miscdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/joystick.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/input.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/major.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/miscdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h
 keybdev.o: keybdev.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kbd_ll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/input.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tty.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kbd_kern.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/x86.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ia64.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/sparc64.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/superh.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ppc.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mac/emumousebtn.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mac/adbkeycodes.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/adb/keyboard.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kbd_ll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/input.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tty.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kbd_kern.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/x86.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ia64.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/sparc64.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/superh.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ppc.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/mac/emumousebtn.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/mac/adbkeycodes.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/adb/keyboard.h)
 mousedev.o: mousedev.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/input.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/random.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/input/mousedev/screen/x.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/input/mousedev/screen/y.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/input.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/random.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/input/mousedev/screen/x.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/input/mousedev/screen/y.h)

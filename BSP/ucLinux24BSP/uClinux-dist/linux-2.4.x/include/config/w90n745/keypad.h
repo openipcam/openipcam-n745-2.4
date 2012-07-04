@@ -1,1 +1,0 @@
-#define CONFIG_W90N745_KEYPAD 1

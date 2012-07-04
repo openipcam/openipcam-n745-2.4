@@ -1,143 +1,143 @@
 i2o_block.o: i2o_block.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/major.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/stat.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/file.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blkdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blkpg.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/hdreg.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/notifier.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/reboot.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/completion.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blk.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/major.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/stat.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/file.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/blkdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/blkpg.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/hdreg.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/notifier.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/reboot.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/completion.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/blk.h
 i2o_config.o: i2o_config.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/miscdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/miscdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h
 i2o_core.o: i2o_core.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/completion.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/reboot.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/completion.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/reboot.h \
    i2o_lan.h
 i2o_lan.o: i2o_lan.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fddidevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/trdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fcdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fddidevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/trdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fcdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
    i2o_lan.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/net/fc.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/tr.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/fddi.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/anylan.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/net/fc.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/tr.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/fddi.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/anylan.h)
 i2o_lan.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fddidevice.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fddidevice.h
 	@touch i2o_lan.h
 i2o_pci.o: i2o_pci.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/mtrr.h)
 i2o_proc.o: i2o_proc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
    i2o_lan.h
 i2o_scsi.o: i2o_scsi.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/prefetch.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/dma.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blk.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/prefetch.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/dma.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/blk.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/i2o.h \
    ../../scsi/scsi.h \
    ../../scsi/hosts.h \
    ../../scsi/sd.h \
    i2o_scsi.h \
    ../../scsi/scsi_module.c
 i2o_scsi.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kdev_t.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kdev_t.h
 	@touch i2o_scsi.h
 .PRECIOUS:	i2o_lan.h \
 	i2o_scsi.h \

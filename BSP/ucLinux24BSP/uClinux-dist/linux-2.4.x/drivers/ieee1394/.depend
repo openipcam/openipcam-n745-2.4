@@ -1,16 +1,16 @@
 amdtp.o: amdtp.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
    hosts.h \
    highlevel.h \
    ieee1394.h \
@@ -18,56 +18,56 @@ amdtp.o: amdtp.c \
    ohci1394.h \
    amdtp.h \
    cmp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h
 amdtp.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/ioctl.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/types.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/ioctl.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/types.h
 	@touch amdtp.h
 cmp.o: cmp.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
    hosts.h \
    highlevel.h \
    ieee1394.h \
    ieee1394_core.h \
    cmp.h
 csr.o: csr.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
    ieee1394_types.h \
    hosts.h \
    ieee1394.h \
    highlevel.h
 dv1394.o: dv1394.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/pgtable.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/page.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/pgtable.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/page.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
    ieee1394.h \
    ieee1394_types.h \
    hosts.h \
@@ -76,35 +76,35 @@ dv1394.o: dv1394.c \
    dv1394.h \
    dv1394-private.h \
    ohci1394.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/devfs/fs.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/devfs/fs.h)
 dv1394-private.h: \
    ieee1394.h \
    ohci1394.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/scatterlist.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/scatterlist.h
 	@touch dv1394-private.h
 eth1394.o: eth1394.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/inetdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ip.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tcp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/inetdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/etherdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_arp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_ether.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tcp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/arp.h \
    ieee1394_types.h \
    ieee1394_core.h \
    ieee1394_transactions.h \
@@ -112,45 +112,45 @@ eth1394.o: eth1394.c \
    highlevel.h \
    eth1394.h
 eth1394.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h
 	@touch eth1394.h
 highlevel.o: highlevel.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
    ieee1394.h \
    ieee1394_types.h \
    hosts.h \
    ieee1394_core.h \
    highlevel.h
 hosts.o: hosts.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
    ieee1394_types.h \
    hosts.h \
    ieee1394_core.h \
    highlevel.h
 hosts.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
    ieee1394_types.h \
    csr.h
 	@touch hosts.h
 ieee1394_core.o: ieee1394_core.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
    ieee1394_types.h \
    ieee1394.h \
    hosts.h \
@@ -160,28 +160,28 @@ ieee1394_core.o: ieee1394_core.c \
    csr.h \
    nodemgr.h \
    ieee1394_hotplug.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
 ieee1394_core.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/devfs_fs_kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/devfs_fs_kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/semaphore.h \
    hosts.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h
 	@touch ieee1394_core.h
 ieee1394.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h
 	@touch ieee1394.h
 ieee1394_hotplug.h: \
    ieee1394_core.h \
    nodemgr.h
 	@touch ieee1394_hotplug.h
 ieee1394_transactions.o: ieee1394_transactions.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
    ieee1394.h \
    ieee1394_types.h \
    hosts.h \
@@ -191,27 +191,27 @@ ieee1394_transactions.h: \
    ieee1394_core.h
 	@touch ieee1394_transactions.h
 ieee1394_types.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kdev_t.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kdev_t.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h
 	@touch ieee1394_types.h
 nodemgr.o: nodemgr.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/completion.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/completion.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
    ieee1394_types.h \
    ieee1394.h \
    hosts.h \
@@ -220,106 +220,106 @@ nodemgr.o: nodemgr.c \
    highlevel.h \
    csr.h \
    nodemgr.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/key.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/descriptor/leaf.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/value.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/leaf/length.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/bus/info/length.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/root/length.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/vendor/id.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/directory/length.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/model/id.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/specifier/id.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/unit/sw/version.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/descriptor/directory.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/key/type/mask.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/node/capabilites.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/unit/directory.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/hotplug.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/key.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/descriptor/leaf.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/value.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/leaf/length.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/bus/info/length.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/root/length.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/vendor/id.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/directory/length.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/model/id.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/specifier/id.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/unit/sw/version.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/descriptor/directory.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/key/type/mask.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/node/capabilites.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/unit/directory.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/hotplug.h)
 ohci1394.o: ohci1394.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/pgtable.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/page.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/all/ppc.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/pgtable.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/page.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/all/ppc.h) \
    ieee1394.h \
    ieee1394_types.h \
    hosts.h \
    ieee1394_core.h \
    highlevel.h \
    ohci1394.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/ohci/dma/debug.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/ohci/dma/debug.h)
 ohci1394.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
    ieee1394_types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h
 	@touch ohci1394.h
 pcilynx.o: pcilynx.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
    ieee1394.h \
    ieee1394_types.h \
    hosts.h \
    ieee1394_core.h \
    highlevel.h \
    pcilynx.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2c.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/i2c-algo-bit.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/pcilynx/ports.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/pcilynx/localram.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/i2c.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/i2c-algo-bit.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/pcilynx/ports.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/pcilynx/localram.h)
 pcilynx.h: \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/pcilynx/ports.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/pcilynx/localram.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/stddef.h
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/pcilynx/ports.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/pcilynx/localram.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/stddef.h
 	@touch pcilynx.h
 raw1394.o: raw1394.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/devfs_fs_kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/devfs_fs_kernel.h \
    ieee1394.h \
    ieee1394_types.h \
    ieee1394_core.h \
@@ -328,33 +328,33 @@ raw1394.o: raw1394.c \
    ieee1394_transactions.h \
    raw1394.h
 raw1394.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/types.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/types.h
 	@touch raw1394.h
 sbp2.o: sbp2.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blk.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blk.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/current.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/scatterlist.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/kbuild/2/5.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/blk.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/blk.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/current.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/atomic.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/scatterlist.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/kbuild/2/5.h) \
    ../scsi/scsi.h \
    ../scsi/hosts.h \
    ../scsi/sd.h \
@@ -367,39 +367,39 @@ sbp2.o: sbp2.c \
    ieee1394_transactions.h \
    ieee1394_hotplug.h \
    sbp2.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/debug/orbs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/debug/dma.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/phys/dma.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/packet/dump.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/key.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/rom/value.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/debug/orbs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/debug/dma.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/phys/dma.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/packet/dump.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/key.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/rom/value.h)
 sbp2.h: \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/phys/dma.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/sbp2/phys/dma.h)
 	@touch sbp2.h
 video1394.o: video1394.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/list.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wait.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/devfs_fs_kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timex.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wait.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/devfs_fs_kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timex.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
    ieee1394.h \
    ieee1394_types.h \
    hosts.h \
@@ -407,7 +407,7 @@ video1394.o: video1394.c \
    highlevel.h \
    video1394.h \
    ohci1394.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ieee1394/verbosedebug.h)
 .PRECIOUS:	amdtp.h \
 	dv1394-private.h \
 	eth1394.h \

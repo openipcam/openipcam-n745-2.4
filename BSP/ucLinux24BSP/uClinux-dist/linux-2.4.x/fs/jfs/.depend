@@ -1,12 +1,12 @@
 file.o: file.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_dmap.h \
    jfs_txnmgr.h \
    jfs_xattr.h \
    jfs_debug.h
 inode.o: inode.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_imap.h \
@@ -14,24 +14,24 @@ inode.o: inode.c \
    jfs_unicode.h \
    jfs_debug.h
 jfs_debug.o: jfs_debug.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ctype.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ctype.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_debug.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/jfs/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/jfs/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h)
 jfs_debug.h: \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/jfs/debug.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/kernel/asserts.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/jfs/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/kernel/asserts.h)
 	@touch jfs_debug.h
 jfs_dmap.o: jfs_dmap.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_dmap.h \
    jfs_imap.h \
@@ -42,7 +42,7 @@ jfs_dmap.h: \
    jfs_txnmgr.h
 	@touch jfs_dmap.h
 jfs_dtree.o: jfs_dtree.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_superblock.h \
    jfs_filsys.h \
@@ -54,14 +54,14 @@ jfs_dtree.h: \
    jfs_btree.h
 	@touch jfs_dtree.h
 jfs_extent.o: jfs_extent.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_dmap.h \
    jfs_extent.h \
    jfs_debug.h
 jfs_imap.o: jfs_imap.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/locks.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/locks.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_dinode.h \
@@ -74,56 +74,56 @@ jfs_imap.h: \
    jfs_txnmgr.h
 	@touch jfs_imap.h
 jfs_incore.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/rwsem.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/rwsem.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/bitops.h \
    jfs_types.h \
    jfs_xtree.h \
    jfs_dtree.h
 	@touch jfs_incore.h
 jfs_inode.o: jfs_inode.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_imap.h \
    jfs_dinode.h \
    jfs_debug.h
 jfs_lock.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h
 	@touch jfs_lock.h
 jfs_logmgr.o: jfs_logmgr.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/locks.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blkdev.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/completion.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/locks.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/blkdev.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/completion.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_metapage.h \
    jfs_txnmgr.h \
    jfs_debug.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h)
 jfs_logmgr.h: \
    jfs_filsys.h \
    jfs_lock.h
 	@touch jfs_logmgr.h
 jfs_metapage.o: jfs_metapage.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_metapage.h \
    jfs_txnmgr.h \
    jfs_debug.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h)
 jfs_metapage.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pagemap.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pagemap.h
 	@touch jfs_metapage.h
 jfs_mount.o: jfs_mount.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/locks.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/locks.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_superblock.h \
@@ -132,10 +132,10 @@ jfs_mount.o: jfs_mount.c \
    jfs_metapage.h \
    jfs_debug.h
 jfs_txnmgr.o: jfs_txnmgr.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/completion.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/completion.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_metapage.h \
@@ -144,17 +144,17 @@ jfs_txnmgr.o: jfs_txnmgr.c \
    jfs_dmap.h \
    jfs_superblock.h \
    jfs_debug.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/jfs/debug.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/jfs/debug.h)
 jfs_txnmgr.h: \
    jfs_logmgr.h
 	@touch jfs_txnmgr.h
 jfs_types.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/nls.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/nls.h
 	@touch jfs_types.h
 jfs_umount.o: jfs_umount.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_superblock.h \
@@ -163,21 +163,21 @@ jfs_umount.o: jfs_umount.c \
    jfs_metapage.h \
    jfs_debug.h
 jfs_unicode.o: jfs_unicode.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
    jfs_types.h \
    jfs_filsys.h \
    jfs_unicode.h \
    jfs_debug.h
 jfs_unicode.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/byteorder.h \
    jfs_types.h
 	@touch jfs_unicode.h
 jfs_uniupr.o: jfs_uniupr.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_unicode.h
 jfs_xtree.o: jfs_xtree.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_metapage.h \
@@ -185,12 +185,12 @@ jfs_xtree.o: jfs_xtree.c \
    jfs_dinode.h \
    jfs_superblock.h \
    jfs_debug.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/jfs/statistics.h)
 jfs_xtree.h: \
    jfs_btree.h
 	@touch jfs_xtree.h
 namei.o: namei.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_inode.h \
    jfs_dinode.h \
@@ -200,8 +200,8 @@ namei.o: namei.c \
    jfs_xattr.h \
    jfs_debug.h
 resize.o: resize.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/locks.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/locks.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_metapage.h \
@@ -212,10 +212,10 @@ resize.o: resize.c \
    jfs_txnmgr.h \
    jfs_debug.h
 super.o: super.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/completion.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/completion.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
    jfs_incore.h \
    jfs_filsys.h \
    jfs_metapage.h \
@@ -223,14 +223,14 @@ super.o: super.c \
    jfs_dmap.h \
    jfs_imap.h \
    jfs_debug.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/jfs/debug.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/jfs/debug.h)
 symlink.o: symlink.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
    jfs_incore.h \
    jfs_xattr.h
 xattr.o: xattr.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/xattr.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/xattr.h \
    jfs_incore.h \
    jfs_dmap.h \
    jfs_debug.h \

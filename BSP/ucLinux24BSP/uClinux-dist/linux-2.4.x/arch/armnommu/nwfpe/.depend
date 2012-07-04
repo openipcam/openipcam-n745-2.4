@@ -3,13 +3,13 @@ double_cpdo.o: double_cpdo.c \
    fpopcode.h \
    fpa11.h
 entry26.o: entry26.S \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/constants.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/constants.h
 extended_cpdo.o: extended_cpdo.c \
    softfloat.h \
    fpopcode.h \
    fpa11.h
 fpa11.o: fpa11.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
    fpa11.h \
    fpopcode.h \
    fpmodule.h \
@@ -23,7 +23,7 @@ fpa11_cpdt.o: fpa11_cpdt.c \
    fpa11.h \
    fpmodule.h \
    fpmodule.inl \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h
 fpa11_cprt.o: fpa11_cprt.c \
    milieu.h \
    softfloat.h \
@@ -37,21 +37,21 @@ fpa11.h: \
    softfloat.h
 	@touch fpa11.h
 fpmodule.o: fpmodule.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/signal.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/signal.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
    softfloat.h \
    fpopcode.h \
    fpmodule.h \
    fpa11.h \
    fpa11.inl \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/debug/user.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/debug/user.h)
 fpmodule.h: \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/cpu/32.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/cpu/32.h)
 	@touch fpmodule.h
 fpopcode.o: fpopcode.c \
    softfloat.h \

@@ -1,0 +1,3 @@
+ifeq (af_netlink.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += netlink.o
+endif

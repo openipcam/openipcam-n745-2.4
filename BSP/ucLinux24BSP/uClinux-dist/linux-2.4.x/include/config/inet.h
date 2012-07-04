@@ -1,1 +1,1 @@
-#undef  CONFIG_INET
+#define CONFIG_INET 1

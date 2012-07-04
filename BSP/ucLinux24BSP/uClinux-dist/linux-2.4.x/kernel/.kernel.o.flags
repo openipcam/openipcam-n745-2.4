@@ -1,0 +1,3 @@
+ifeq (sched.o fork.o exec_domain.o panic.o printk.o module.o exit.o itimer.o info.o time.o softirq.o resource.o sysctl.o acct.o capability.o ptrace.o timer.o user.o signal.o sys.o kmod.o context.o uid16.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += kernel.o
+endif

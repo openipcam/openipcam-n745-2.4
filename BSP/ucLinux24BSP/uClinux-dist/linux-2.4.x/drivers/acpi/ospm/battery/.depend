@@ -1,11 +1,11 @@
 bt.o: bt.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bt.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bt.h
 bt_osl.o: bt_osl.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bt.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/ospm/include/bt.h

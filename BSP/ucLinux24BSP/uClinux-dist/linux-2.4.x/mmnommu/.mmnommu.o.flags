@@ -1,0 +1,3 @@
+ifeq (bootmem.o filemap.o mlock.o mmap.o mprotect.o mremap.o numa.o slab.o swapfile.o vmalloc.o vmscan.o memory.o swap.o swap_state.o oom_kill.o page_alloc.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += mmnommu.o
+endif

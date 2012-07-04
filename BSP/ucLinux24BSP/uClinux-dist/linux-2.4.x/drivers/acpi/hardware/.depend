@@ -1,19 +1,19 @@
 hwacpi.o: hwacpi.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h
 hwgpe.o: hwgpe.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h
 hwregs.o: hwregs.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h
 hwsleep.o: hwsleep.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h
 hwtimer.o: hwtimer.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h

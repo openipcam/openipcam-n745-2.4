@@ -1,0 +1,3 @@
+ifeq (cfi.o flash_u.o image.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += wbflash.o
+endif

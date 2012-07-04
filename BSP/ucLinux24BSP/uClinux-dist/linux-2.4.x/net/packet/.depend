@@ -1,40 +1,40 @@
 af_packet.o: af_packet.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fcntl.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/socket.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/in.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/inet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_packet.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wireless.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/ip.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/protocol.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/sock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/ioctls.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/if_bridge.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/net/divert.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/divert.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/inet.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/net/inet_common.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/dlci.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/packet/multicast.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/packet/mmap.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/sock/packet.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/filter.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/bridge.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/bridge/module.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/kmod.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/net/radio.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fcntl.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/socket.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/in.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/inet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/netdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_packet.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wireless.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kmod.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/ip.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/protocol.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/skbuff.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/sock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/ioctls.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/if_bridge.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/net/divert.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/divert.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/inet.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/net/inet_common.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/dlci.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/packet/multicast.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/packet/mmap.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/sock/packet.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/filter.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/bridge.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/bridge/module.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/kmod.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/net/radio.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h)

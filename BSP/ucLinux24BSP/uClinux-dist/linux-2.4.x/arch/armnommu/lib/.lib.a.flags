@@ -1,0 +1,3 @@
+ifeq (backtrace.o changebit.o csumipv6.o csumpartial.o csumpartialcopy.o csumpartialcopyuser.o clearbit.o copy_page.o delay.o findbit.o memchr.o memcpy.o memset.o memzero.o setbit.o strncpy_from_user.o strnlen_user.o strchr.o strrchr.o testchangebit.o testclearbit.o testsetbit.o uaccess.o io-readsb.o io-writesb.o io-readsw-armv4.o io-writesw-armv4.o io-readsl-armv4.o io-writesl.o,$(strip $(subst $(comma),:,$(EXTRA_ARFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += lib.a
+endif

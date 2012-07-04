@@ -1,1 +1,1 @@
-#define CONFIG_WINBOND_I2C 1
+#undef  CONFIG_WINBOND_I2C

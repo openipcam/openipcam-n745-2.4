@@ -1,61 +1,61 @@
 utalloc.o: utalloc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acparser.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acglobal.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acparser.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acglobal.h
 utcopy.o: utcopy.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h
 utdebug.o: utdebug.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h
 utdelete.o: utdelete.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/actables.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acparser.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/actables.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acparser.h
 uteval.o: uteval.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h
 utglobal.o: utglobal.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h
 utinit.o: utinit.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acparser.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acdispat.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acparser.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acdispat.h
 utmath.o: utmath.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h
 utmisc.o: utmisc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acdebug.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acdebug.h
 utobject.o: utobject.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/actables.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/actables.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h
 utxface.o: utxface.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acdebug.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/drivers/acpi/include/acexcep.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acpi.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acevents.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/achware.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acnamesp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acinterp.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/amlcode.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acdebug.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/drivers/acpi/include/acexcep.h

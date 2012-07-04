@@ -1,0 +1,3 @@
+ifeq (map_funcs.o w90n745_map.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += mapslink.o
+endif

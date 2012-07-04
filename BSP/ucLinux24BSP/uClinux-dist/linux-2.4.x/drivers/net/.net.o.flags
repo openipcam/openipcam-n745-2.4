@@ -1,0 +1,3 @@
+ifeq (Space.o setup.o net_init.o loopback.o w90n745_mac.o auto_irq.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += net.o
+endif

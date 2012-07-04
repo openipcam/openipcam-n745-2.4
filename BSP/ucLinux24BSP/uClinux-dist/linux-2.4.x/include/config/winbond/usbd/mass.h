@@ -1,0 +1,1 @@
+#define CONFIG_WINBOND_USBD_MASS 1

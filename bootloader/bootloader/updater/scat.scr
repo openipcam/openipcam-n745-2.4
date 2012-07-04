@@ -1,0 +1,28 @@
+
+
+
+RAM_LOAD 0x00008000	
+{
+    RAM +0
+    {
+    	init.o(Init, +First)
+        * (+RO)
+        * (+RW,+ZI)
+    }
+
+    HEAP +0 UNINIT
+    {
+        heap.o (+ZI)
+    }
+
+	STACK 0x400000 UNINIT
+	{
+		stack.o (+ZI)
+	}
+
+    VECTOR 0x0
+    {
+        vectors.o (Vect, +First)
+    }
+
+}

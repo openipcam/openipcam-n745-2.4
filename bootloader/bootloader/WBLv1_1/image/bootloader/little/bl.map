@@ -1,0 +1,2503 @@
+
+================================================================================
+
+Image Symbol Table
+
+    Mapping Symbols
+
+    Sym    Value        Execution Region
+
+    $a     0x00000000   RAM
+    $d     0x00000020   RAM
+    $f     0x00000020   RAM
+    $f     0x00000024   RAM
+    $f     0x00000028   RAM
+    $f     0x0000002c   RAM
+    $f     0x00000030   RAM
+    $f     0x00000038   RAM
+    $f     0x0000003c   RAM
+    $a     0x00000040   RAM
+    $d     0x000000ac   RAM
+    $f     0x000000b4   RAM
+    $a     0x000000b8   RAM
+    $d     0x00000984   RAM
+    $a     0x00000990   RAM
+    $d     0x000012e4   RAM
+    $a     0x000012e8   RAM
+    $p     0x00001334   RAM
+    $p     0x000013b4   RAM
+    $p     0x00001448   RAM
+    $d     0x0000145c   RAM
+    $a     0x0000147c   RAM
+    $p     0x00001504   RAM
+    $p     0x00001524   RAM
+    $p     0x00001540   RAM
+    $p     0x00001550   RAM
+    $p     0x000015a8   RAM
+    $p     0x000015dc   RAM
+    $p     0x000015f4   RAM
+    $d     0x00001618   RAM
+    $f     0x00001618   RAM
+    $a     0x00001620   RAM
+    $p     0x000017a8   RAM
+    $p     0x000017c8   RAM
+    $p     0x000017e0   RAM
+    $p     0x000018b0   RAM
+    $p     0x000018d0   RAM
+    $p     0x000018f4   RAM
+    $p     0x00001908   RAM
+    $p     0x00001920   RAM
+    $d     0x00001a30   RAM
+    $a     0x00001a40   RAM
+    $p     0x00001ab8   RAM
+    $p     0x00001adc   RAM
+    $p     0x00001af8   RAM
+    $p     0x00001ba8   RAM
+    $p     0x00001bc4   RAM
+    $d     0x00001c78   RAM
+    $a     0x00001c7c   RAM
+    $p     0x00001cf4   RAM
+    $p     0x00001d10   RAM
+    $p     0x00001d34   RAM
+    $p     0x00001d4c   RAM
+    $p     0x00001e1c   RAM
+    $p     0x00001e3c   RAM
+    $p     0x00001e60   RAM
+    $p     0x00001e74   RAM
+    $p     0x00001e8c   RAM
+    $d     0x00001f90   RAM
+    $a     0x00001fa0   RAM
+    $p     0x00002050   RAM
+    $p     0x00002068   RAM
+    $a     0x00002114   RAM
+    $d     0x00002214   RAM
+    $a     0x00002368   RAM
+    $d     0x00002600   RAM
+    $f     0x0000260c   RAM
+    $a     0x00002610   RAM
+    $d     0x00002614   RAM
+    $f     0x00002614   RAM
+    $a     0x00002618   RAM
+    $d     0x0000261c   RAM
+    $f     0x0000261c   RAM
+    $a     0x00002620   RAM
+    $d     0x00002624   RAM
+    $f     0x00002624   RAM
+    $a     0x00002628   RAM
+    $d     0x0000262c   RAM
+    $f     0x0000262c   RAM
+    $a     0x00002630   RAM
+    $d     0x00002634   RAM
+    $f     0x00002634   RAM
+    $a     0x00002638   RAM
+    $d     0x0000263c   RAM
+    $f     0x0000263c   RAM
+    $a     0x00002640   RAM
+    $d     0x00002644   RAM
+    $f     0x00002644   RAM
+    $a     0x00002648   RAM
+    $d     0x00002670   RAM
+    $f     0x0000268c   RAM
+    $f     0x00002698   RAM
+    $f     0x000026a4   RAM
+    $f     0x000026b0   RAM
+    $f     0x000026bc   RAM
+    $f     0x000026c8   RAM
+    $f     0x000026d4   RAM
+    $f     0x000026e0   RAM
+    $f     0x000026ec   RAM
+    $f     0x000026f8   RAM
+    $f     0x00002704   RAM
+    $f     0x00002710   RAM
+    $f     0x0000271c   RAM
+    $f     0x00002728   RAM
+    $f     0x00002734   RAM
+    $f     0x00002740   RAM
+    $f     0x0000274c   RAM
+    $f     0x00002758   RAM
+    $f     0x00002764   RAM
+    $f     0x00002770   RAM
+    $f     0x0000277c   RAM
+    $f     0x00002788   RAM
+    $f     0x00002794   RAM
+    $f     0x000027a0   RAM
+    $d     0x000027a4   RAM
+    $f     0x000027ac   RAM
+    $d     0x000027b0   RAM
+    $f     0x000027c4   RAM
+    $f     0x000027c8   RAM
+    $f     0x000027cc   RAM
+    $f     0x000027d0   RAM
+    $f     0x000027d4   RAM
+    $f     0x000027ec   RAM
+    $f     0x000027f0   RAM
+    $f     0x000027f4   RAM
+    $f     0x000027f8   RAM
+    $f     0x000027fc   RAM
+    $f     0x00002814   RAM
+    $f     0x00002818   RAM
+    $f     0x0000281c   RAM
+    $f     0x00002820   RAM
+    $f     0x00002824   RAM
+    $f     0x0000283c   RAM
+    $f     0x00002840   RAM
+    $f     0x00002844   RAM
+    $f     0x00002848   RAM
+    $f     0x0000284c   RAM
+    $f     0x00002864   RAM
+    $f     0x00002868   RAM
+    $f     0x0000286c   RAM
+    $f     0x00002870   RAM
+    $f     0x00002874   RAM
+    $f     0x0000288c   RAM
+    $f     0x00002890   RAM
+    $f     0x00002894   RAM
+    $f     0x00002898   RAM
+    $f     0x0000289c   RAM
+    $f     0x000028b4   RAM
+    $f     0x000028b8   RAM
+    $f     0x000028bc   RAM
+    $f     0x000028c0   RAM
+    $f     0x000028c4   RAM
+    $f     0x000028dc   RAM
+    $f     0x000028e0   RAM
+    $f     0x000028e4   RAM
+    $f     0x000028e8   RAM
+    $f     0x000028ec   RAM
+    $f     0x00002904   RAM
+    $f     0x00002908   RAM
+    $f     0x0000290c   RAM
+    $f     0x00002910   RAM
+    $f     0x00002914   RAM
+    $f     0x0000292c   RAM
+    $f     0x00002930   RAM
+    $f     0x00002934   RAM
+    $f     0x00002938   RAM
+    $f     0x0000293c   RAM
+    $f     0x00002954   RAM
+    $f     0x00002958   RAM
+    $f     0x0000295c   RAM
+    $f     0x00002960   RAM
+    $f     0x00002964   RAM
+    $f     0x0000297c   RAM
+    $f     0x00002980   RAM
+    $f     0x00002984   RAM
+    $f     0x00002988   RAM
+    $f     0x0000298c   RAM
+    $f     0x000029a4   RAM
+    $f     0x000029a8   RAM
+    $f     0x000029ac   RAM
+    $f     0x000029b0   RAM
+    $f     0x000029b4   RAM
+    $f     0x000029cc   RAM
+    $f     0x000029d0   RAM
+    $f     0x000029d4   RAM
+    $f     0x000029d8   RAM
+    $f     0x000029dc   RAM
+    $f     0x000029f4   RAM
+    $f     0x000029f8   RAM
+    $f     0x000029fc   RAM
+    $f     0x00002a00   RAM
+    $f     0x00002a04   RAM
+    $f     0x00002a1c   RAM
+    $f     0x00002a20   RAM
+    $f     0x00002a24   RAM
+    $f     0x00002a28   RAM
+    $f     0x00002a2c   RAM
+    $f     0x00002a44   RAM
+    $f     0x00002a48   RAM
+    $f     0x00002a4c   RAM
+    $f     0x00002a50   RAM
+    $f     0x00002a54   RAM
+    $f     0x00002a6c   RAM
+    $f     0x00002a70   RAM
+    $f     0x00002a74   RAM
+    $f     0x00002a78   RAM
+    $f     0x00002a7c   RAM
+    $f     0x00002a94   RAM
+    $f     0x00002a98   RAM
+    $f     0x00002a9c   RAM
+    $f     0x00002aa0   RAM
+    $f     0x00002aa4   RAM
+    $f     0x00002abc   RAM
+    $f     0x00002ac0   RAM
+    $f     0x00002ac4   RAM
+    $f     0x00002ac8   RAM
+    $f     0x00002acc   RAM
+    $f     0x00002ae4   RAM
+    $f     0x00002ae8   RAM
+    $f     0x00002aec   RAM
+    $f     0x00002af0   RAM
+    $f     0x00002af4   RAM
+    $f     0x00002b0c   RAM
+    $f     0x00002b10   RAM
+    $f     0x00002b14   RAM
+    $f     0x00002b18   RAM
+    $f     0x00002b1c   RAM
+    $f     0x00002b34   RAM
+    $f     0x00002b38   RAM
+    $f     0x00002b3c   RAM
+    $f     0x00002b40   RAM
+    $f     0x00002b44   RAM
+    $f     0x00002b5c   RAM
+    $f     0x00002b60   RAM
+    $f     0x00002b64   RAM
+    $f     0x00002b68   RAM
+    $f     0x00002b6c   RAM
+    $f     0x00002b84   RAM
+    $f     0x00002b88   RAM
+    $f     0x00002b8c   RAM
+    $f     0x00002b90   RAM
+    $f     0x00002b94   RAM
+    $f     0x00002bac   RAM
+    $f     0x00002bb0   RAM
+    $f     0x00002bb4   RAM
+    $f     0x00002bb8   RAM
+    $f     0x00002bbc   RAM
+    $f     0x00002bd4   RAM
+    $f     0x00002bd8   RAM
+    $f     0x00002bdc   RAM
+    $f     0x00002be0   RAM
+    $f     0x00002be4   RAM
+    $f     0x00002bfc   RAM
+    $f     0x00002c00   RAM
+    $f     0x00002c04   RAM
+    $f     0x00002c08   RAM
+    $f     0x00002c0c   RAM
+    $f     0x00002c24   RAM
+    $f     0x00002c28   RAM
+    $f     0x00002c2c   RAM
+    $f     0x00002c30   RAM
+    $f     0x00002c34   RAM
+    $f     0x00002c4c   RAM
+    $f     0x00002c50   RAM
+    $f     0x00002c54   RAM
+    $f     0x00002c58   RAM
+    $f     0x00002c5c   RAM
+    $f     0x00002c74   RAM
+    $f     0x00002c78   RAM
+    $f     0x00002c7c   RAM
+    $f     0x00002c80   RAM
+    $f     0x00002c84   RAM
+    $f     0x00002c9c   RAM
+    $f     0x00002ca0   RAM
+    $f     0x00002ca4   RAM
+    $f     0x00002ca8   RAM
+    $f     0x00002cac   RAM
+    $f     0x00002cc4   RAM
+    $f     0x00002cc8   RAM
+    $f     0x00002ccc   RAM
+    $f     0x00002cd0   RAM
+    $f     0x00002cd4   RAM
+    $f     0x00002cec   RAM
+    $f     0x00002cf0   RAM
+    $f     0x00002cf4   RAM
+    $f     0x00002cf8   RAM
+    $f     0x00002cfc   RAM
+    $f     0x00002d14   RAM
+    $f     0x00002d18   RAM
+    $f     0x00002d1c   RAM
+    $f     0x00002d20   RAM
+    $f     0x00002d24   RAM
+    $f     0x00002d3c   RAM
+    $f     0x00002d40   RAM
+    $f     0x00002d44   RAM
+    $f     0x00002d48   RAM
+    $f     0x00002d4c   RAM
+    $f     0x00002d64   RAM
+    $f     0x00002d68   RAM
+    $f     0x00002d6c   RAM
+    $f     0x00002d70   RAM
+    $f     0x00002d74   RAM
+    $f     0x00002d8c   RAM
+    $f     0x00002d90   RAM
+    $f     0x00002d94   RAM
+    $f     0x00002d98   RAM
+    $f     0x00002d9c   RAM
+    $d     0x00002dc8   RAM
+    $a     0x7f000000   ROM
+    $d     0x7f0001a8   ROM
+    $a     0x7f0001d0   ROM
+    $d     0x7f000224   ROM
+    $f     0x7f000244   ROM
+    $f     0x7f000248   ROM
+    $f     0x7f00027c   ROM
+    $a     0x7f000284   ROM
+    $d     0x7f00031c   ROM
+    $a     0x7f00032c   ROM
+    $d     0x7f0003a8   ROM
+    $a     0x7f000464   ROM
+    $d     0x7f0004c4   ROM
+    $a     0x7f0004e4   ROM
+    $d     0x7f000538   ROM
+    $a     0x7f000560   ROM
+    $p     0x7f0008a8   ROM
+    $d     0x7f0008cc   ROM
+    $a     0x7f0008f4   ROM
+    $d     0x7f00090c   ROM
+    $a     0x7f000914   ROM
+    $d     0x7f000a38   ROM
+    $a     0x7f000a40   ROM
+    $d     0x7f000ddc   ROM
+    $a     0x7f000e38   ROM
+    $d     0x7f000e64   ROM
+    $a     0x7f000e7c   ROM
+    $d     0x7f000ff8   ROM
+    $a     0x7f00102c   ROM
+    $d     0x7f001088   ROM
+    $a     0x7f001098   ROM
+    $d     0x7f0010f0   ROM
+    $a     0x7f001168   ROM
+    $d     0x7f001394   ROM
+    $a     0x7f00139c   ROM
+    $d     0x7f0013c8   ROM
+    $a     0x7f0013d0   ROM
+    $d     0x7f0013d8   ROM
+    $a     0x7f0013f8   ROM
+    $d     0x7f001450   ROM
+    $a     0x7f0014a0   ROM
+    $d     0x7f0015c0   ROM
+    $a     0x7f0016a4   ROM
+    $d     0x7f0016e0   ROM
+    $a     0x7f001700   ROM
+    $d     0x7f00188c   ROM
+    $a     0x7f001960   ROM
+    $d     0x7f001a10   ROM
+    $a     0x7f001a38   ROM
+    $d     0x7f001b28   ROM
+    $a     0x7f001b7c   ROM
+    $d     0x7f001bc0   ROM
+    $a     0x7f001ca4   ROM
+    $d     0x7f001e2c   ROM
+    $a     0x7f001ef8   ROM
+    $d     0x7f001fb4   ROM
+    $a     0x7f001fcc   ROM
+    $d     0x7f0020a4   ROM
+    $a     0x7f002160   ROM
+    $d     0x7f002268   ROM
+    $a     0x7f002330   ROM
+    $d     0x7f002374   ROM
+    $a     0x7f002430   ROM
+    $d     0x7f0026cc   ROM
+    $a     0x7f0027c8   ROM
+    $d     0x7f002ab0   ROM
+    $a     0x7f002ae4   ROM
+    $d     0x7f002b10   ROM
+    $a     0x7f002ba8   ROM
+    $d     0x7f002d0c   ROM
+    $a     0x7f002da0   ROM
+    $d     0x7f002e0c   ROM
+    $a     0x7f002e68   ROM
+    $d     0x7f003010   ROM
+    $a     0x7f003060   ROM
+    $d     0x7f003074   ROM
+    $a     0x7f00308c   ROM
+    $d     0x7f003120   ROM
+    $a     0x7f003178   ROM
+    $d     0x7f0034d4   ROM
+    $a     0x7f0035d4   ROM
+    $d     0x7f003830   ROM
+    $a     0x7f003920   ROM
+    $d     0x7f003998   ROM
+    $a     0x7f003a54   ROM
+    $d     0x7f003a78   ROM
+    $a     0x7f003a98   ROM
+    $d     0x7f003ad4   ROM
+    $a     0x7f003b08   ROM
+    $d     0x7f003c1c   ROM
+    $a     0x7f003cb4   ROM
+    $p     0x7f003d48   ROM
+    $d     0x7f003da8   ROM
+    $a     0x7f003e8c   ROM
+    $d     0x7f004208   ROM
+    $a     0x7f004344   ROM
+    $d     0x7f0043cc   ROM
+    $f     0x7f0043dc   ROM
+    $a     0x7f0043e8   ROM
+    $d     0x7f004578   ROM
+    $a     0x7f004588   ROM
+    $d     0x7f004974   ROM
+    $a     0x7f004984   ROM
+    $d     0x7f004bf8   ROM
+    $a     0x7f004d14   ROM
+    $d     0x7f004e50   ROM
+    $a     0x7f004e54   ROM
+    $d     0x7f004fd4   ROM
+    $a     0x7f004fe8   ROM
+    $d     0x7f005020   ROM
+    $a     0x7f005024   ROM
+    $d     0x7f00516c   ROM
+    $a     0x7f005174   ROM
+    $p     0x7f005410   ROM
+    $d     0x7f005a60   ROM
+    $a     0x7f005aa0   ROM
+    $d     0x7f006350   ROM
+    $f     0x7f006350   ROM
+    $f     0x7f006354   ROM
+    $a     0x7f006358   ROM
+    $d     0x7f006394   ROM
+    $a     0x7f006398   ROM
+    $d     0x7f006434   ROM
+    $a     0x7f00645c   ROM
+    $p     0x7f0064ec   ROM
+    $p     0x7f006578   ROM
+    $d     0x7f006a5c   ROM
+    $f     0x7f006a5c   ROM
+    $f     0x7f006a60   ROM
+    $f     0x7f006a64   ROM
+    $a     0x7f006aa8   ROM
+    $d     0x7f006b20   ROM
+    $a     0x7f006b38   ROM
+    $d     0x7f006cd0   ROM
+    $a     0x7f006cd4   ROM
+    $d     0x7f006e34   ROM
+    $a     0x7f006e3c   ROM
+    $p     0x7f006e70   ROM
+    $p     0x7f006ec0   ROM
+    $p     0x7f006ef4   ROM
+    $p     0x7f006f1c   ROM
+    $p     0x7f006f3c   ROM
+    $p     0x7f006f54   ROM
+    $p     0x7f006f74   ROM
+    $p     0x7f006f88   ROM
+    $p     0x7f007384   ROM
+    $d     0x7f0073b4   ROM
+    $a     0x7f00740c   ROM
+    $p     0x7f0074e4   ROM
+    $p     0x7f007600   ROM
+    $p     0x7f0076d8   ROM
+    $d     0x7f00789c   ROM
+    $a     0x7f0078c0   ROM
+    $p     0x7f0078e4   ROM
+    $p     0x7f0078f8   ROM
+    $p     0x7f00790c   ROM
+    $a     0x7f007954   ROM
+    $d     0x7f00795c   ROM
+    $a     0x7f007964   ROM
+    $d     0x7f007994   ROM
+    $a     0x7f00799c   ROM
+    $p     0x7f007a10   ROM
+    $p     0x7f007aa4   ROM
+    $a     0x7f007ad8   ROM
+    $p     0x7f007f3c   ROM
+    $p     0x7f007fb8   ROM
+    $d     0x7f007fc8   ROM
+    $a     0x7f008014   ROM
+    $p     0x7f008054   ROM
+    $p     0x7f0080dc   ROM
+    $p     0x7f00817c   ROM
+    $p     0x7f00819c   ROM
+    $d     0x7f0081a8   ROM
+    $a     0x7f008260   ROM
+    $d     0x7f008290   ROM
+    $a     0x7f00829c   ROM
+    $p     0x7f0082c8   ROM
+    $d     0x7f00882c   ROM
+    $a     0x7f008864   ROM
+    $p     0x7f0088c0   ROM
+    $a     0x7f0088c4   ROM
+    $d     0x7f008c08   ROM
+    $a     0x7f008c40   ROM
+    $d     0x7f008e28   ROM
+    $a     0x7f008e2c   ROM
+    $d     0x7f008f30   ROM
+    $a     0x7f008f34   ROM
+    $d     0x7f008f98   ROM
+    $a     0x7f008f9c   ROM
+    $d     0x7f0090e4   ROM
+    $a     0x7f0090e8   ROM
+    $p     0x7f00924c   ROM
+    $d     0x7f009258   ROM
+    $a     0x7f009260   ROM
+    $d     0x7f009268   ROM
+    $a     0x7f00926c   ROM
+    $d     0x7f009350   ROM
+    $a     0x7f0093cc   ROM
+    $d     0x7f0093e0   ROM
+    $f     0x7f0093e0   ROM
+    $a     0x7f0093e4   ROM
+    $d     0x7f0093e8   ROM
+    $f     0x7f0093e8   ROM
+    $a     0x7f0093ec   ROM
+    $d     0x7f0093f0   ROM
+    $f     0x7f0093f0   ROM
+    $a     0x7f0093f4   ROM
+    $d     0x7f0093f8   ROM
+    $f     0x7f0093f8   ROM
+    $a     0x7f0093fc   ROM
+    $d     0x7f009400   ROM
+    $f     0x7f009400   ROM
+    $a     0x7f009404   ROM
+    $d     0x7f009408   ROM
+    $f     0x7f009408   ROM
+    $a     0x7f00940c   ROM
+    $d     0x7f009410   ROM
+    $f     0x7f009410   ROM
+    $a     0x7f009414   ROM
+    $d     0x7f009418   ROM
+    $f     0x7f009418   ROM
+    $a     0x7f00941c   ROM
+    $d     0x7f009420   ROM
+    $f     0x7f009420   ROM
+    $a     0x7f009424   ROM
+    $d     0x7f009428   ROM
+    $f     0x7f009428   ROM
+    $a     0x7f00942c   ROM
+    $d     0x7f009430   ROM
+    $f     0x7f009430   ROM
+    $a     0x7f009434   ROM
+    $d     0x7f009438   ROM
+    $f     0x7f009438   ROM
+    $a     0x7f00943c   ROM
+    $d     0x7f009440   ROM
+    $f     0x7f009440   ROM
+    $a     0x7f009444   ROM
+    $d     0x7f009644   ROM
+    $a     0x7f009670   ROM
+    $d     0x7f0096c8   ROM
+    $a     0x7f0096d0   ROM
+    $d     0x7f009720   ROM
+    $a     0x7f009728   ROM
+    $d     0x7f00973c   ROM
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    D:\710 bootloader\WBLv1_1\Src\init.s     0x00000000   Number         0  init.o ABSOLUTE
+    Init                                     0x7f000000   ARM Code     644  init.o(Init)
+    <Anonymous Symbol>                       0x00000000   Data          16  init.o(.debug_abbrev)
+    <Anonymous Symbol>                       0x00000000   Data         232  init.o(.debug_line)
+    <Anonymous Symbol>                       0x00000000   Data         112  init.o(.debug_info)
+    Mode_USR                                 0x00000010   Number         0  init.o ABSOLUTE
+    Mode_FIQ                                 0x00000011   Number         0  init.o ABSOLUTE
+    Mode_IRQ                                 0x00000012   Number         0  init.o ABSOLUTE
+    Mode_SVC                                 0x00000013   Number         0  init.o ABSOLUTE
+    Mode_ABT                                 0x00000017   Number         0  init.o ABSOLUTE
+    Mode_UNDEF                               0x0000001b   Number         0  init.o ABSOLUTE
+    Mode_SYS                                 0x0000001f   Number         0  init.o ABSOLUTE
+    F_Bit                                    0x00000040   Number         0  init.o ABSOLUTE
+    I_Bit                                    0x00000080   Number         0  init.o ABSOLUTE
+    SVC_Stack                                0x00007c00   Number         0  init.o ABSOLUTE
+    FIQ_Stack                                0x00007d00   Number         0  init.o ABSOLUTE
+    IRQ_Stack                                0x00007e00   Number         0  init.o ABSOLUTE
+    Abort_Stack                              0x00007f00   Number         0  init.o ABSOLUTE
+    RAM_Limit                                0x00008000   Number         0  init.o ABSOLUTE
+    UND_Stack                                0x00008000   Number         0  init.o ABSOLUTE
+    USR_Stack                                0x00400000   Number         0  init.o ABSOLUTE
+    ROM_Start                                0x7f000000   Number         0  init.o ABSOLUTE
+    version0                                 0x7f000070   ARM Code       0  init.o(Init)
+    version1                                 0x7f000078   ARM Code       0  init.o(Init)
+    update_clkskew                           0x7f000080   ARM Code       0  init.o(Init)
+    unknow_version                           0x7f000088   ARM Code       0  init.o(Init)
+    remap_temp                               0x7f0000a4   ARM Code       0  init.o(Init)
+    remap_EndSysMapJump                      0x7f0000d4   ARM Code       0  init.o(Init)
+    MemBank1Test                             0x7f000164   ARM Code       0  init.o(Init)
+    remap_SystemInitData                     0x7f0001a8   Data           0  init.o(Init)
+    exit                                     0x7f000284   ARM Code       0  init.o(Init)
+    IDREG                                    0xfff00000   Number         0  init.o ABSOLUTE
+    PLLCON                                   0xfff00008   Number         0  init.o ABSOLUTE
+    EBI_Ctrl                                 0xfff01000   Number         0  init.o ABSOLUTE
+    SDRAM_config0                            0xfff01008   Number         0  init.o ABSOLUTE
+    Clk_Skew                                 0xfff01f00   Number         0  init.o ABSOLUTE
+    CAHCON                                   0xfff02000   Number         0  init.o ABSOLUTE
+    AIC_MDCR                                 0xfff82124   Number         0  init.o ABSOLUTE
+    D:\710 bootloader\WBLv1_1\Src\vectors.s  0x00000000   Number         0  vectors.o ABSOLUTE
+    <Anonymous Symbol>                       0x00000070   Data         116  vectors.o(.debug_info)
+    <Anonymous Symbol>                       0x000000e8   Data         132  vectors.o(.debug_line)
+    Vect                                     0x00000000   ARM Code     184  vectors.o(Vect)
+    <Anonymous Symbol>                       0x00000010   Data          16  vectors.o(.debug_abbrev)
+    Reset_Addr                               0x00000020   Data           4  vectors.o(Vect)
+    Undefined_Addr                           0x00000024   Data           4  vectors.o(Vect)
+    SWI_Addr                                 0x00000028   Data           4  vectors.o(Vect)
+    Prefetch_Addr                            0x0000002c   Data           4  vectors.o(Vect)
+    Abort_Addr                               0x00000030   Data           4  vectors.o(Vect)
+    IRQ_Addr                                 0x00000038   Data           4  vectors.o(Vect)
+    FIQ_Addr                                 0x0000003c   Data           4  vectors.o(Vect)
+    Undefined_Handler                        0x00000040   ARM Code       0  vectors.o(Vect)
+    SWI_Handler                              0x00000044   ARM Code       0  vectors.o(Vect)
+    Prefetch_Handler                         0x00000048   ARM Code       0  vectors.o(Vect)
+    Abort_Handler                            0x0000007c   ARM Code       0  vectors.o(Vect)
+    IRQ_Handler                              0x000000a4   ARM Code       0  vectors.o(Vect)
+    FIQ_Handler                              0x000000a8   ARM Code       0  vectors.o(Vect)
+    D:\710 bootloader\WBLv1_1\Src\wbl_info.c 0x00000000   Number         0  wbl_info.o ABSOLUTE
+    .text                                    0x7f00032c   ARM Code       0  wbl_info.o(.text)
+    .constdata                               0x7f00973c   Data           0  wbl_info.o(.constdata)
+    C$debug_frame43                          0x00000000   Data           0  wbl_info.o(.debug_frame)
+    C$debug_loc42                            0x00000000   Data           0  wbl_info.o(.debug_loc)
+    C$debug_macinfo23                        0x00000000   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_pubnames40                       0x00000000   Data           0  wbl_info.o(.debug_pubnames)
+    C$debug_macinfo17                        0x00000018   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_pubnames22                       0x00000020   Data           0  wbl_info.o(.debug_pubnames)
+    C$debug_pubnames16                       0x000000a0   Data           0  wbl_info.o(.debug_pubnames)
+    C$debug_info21                           0x000000e4   Data           0  wbl_info.o(.debug_info)
+    C$debug_pubnames28                       0x00000108   Data           0  wbl_info.o(.debug_pubnames)
+    C$debug_line38                           0x0000016c   Data           0  wbl_info.o(.debug_line)
+    C$debug_info15                           0x000001f0   Data           0  wbl_info.o(.debug_info)
+    C$debug_line20                           0x00000208   Data           0  wbl_info.o(.debug_line)
+    C$debug_line14                           0x00000250   Data           0  wbl_info.o(.debug_line)
+    C$debug_line26                           0x000002a4   Data           0  wbl_info.o(.debug_line)
+    C$debug_macinfo29                        0x000002d8   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_info27                           0x000004ec   Data           0  wbl_info.o(.debug_info)
+    C$debug_info39                           0x0000069c   Data           0  wbl_info.o(.debug_info)
+    .constdata$1                             0x7f00973c   Data           0  wbl_info.o(.constdata)
+    D:\710 bootloader\WBLv1_1\Src\command.c  0x00000000   Number         0  command.o ABSOLUTE
+    .constdata                               0x7f0097cc   Data           0  command.o(.constdata)
+    .data                                    0x000027a4   Data           0  command.o(.data)
+    .data                                    0x00002674   Data           0  command.o(.data)
+    .data                                    0x00002684   Data           0  command.o(.data)
+    .text                                    0x7f000464   ARM Code       0  command.o(.text)
+    C$debug_macinfo11                        0x00000000   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_macinfo35                        0x00000018   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_pubnames10                       0x00000020   Data           0  wbl_info.o(.debug_pubnames)
+    C$debug_frame55                          0x00000048   Data           0  command.o(.debug_frame)
+    C$debug_loc54                            0x00000054   Data           0  command.o(.debug_loc)
+    C$debug_pubnames34                       0x000000a0   Data           0  wbl_info.o(.debug_pubnames)
+    C$debug_info9                            0x000000e4   Data           0  wbl_info.o(.debug_info)
+    C$debug_pubnames46                       0x00000148   Data           0  command.o(.debug_pubnames)
+    C$debug_pubnames58                       0x0000016c   Data           0  command.o(.debug_pubnames)
+    C$debug_pubnames4                        0x0000018c   Data           0  command.o(.debug_pubnames)
+    C$debug_pubnames52                       0x000001d4   Data           0  command.o(.debug_pubnames)
+    C$debug_info33                           0x000001f0   Data           0  wbl_info.o(.debug_info)
+    C$debug_pubnames16                       0x00000204   Data           0  command.o(.debug_pubnames)
+    C$debug_line8                            0x00000208   Data           0  wbl_info.o(.debug_line)
+    C$debug_line32                           0x00000250   Data           0  wbl_info.o(.debug_line)
+    C$debug_line2                            0x000002f4   Data           0  command.o(.debug_line)
+    C$debug_macinfo5                         0x00000300   Data           0  command.o(.debug_macinfo)
+    C$debug_line50                           0x0000039c   Data           0  command.o(.debug_line)
+    C$debug_line14                           0x00000438   Data           0  command.o(.debug_line)
+    C$debug_macinfo17                        0x00000498   Data           0  command.o(.debug_macinfo)
+    C$debug_info45                           0x000007a8   Data           0  command.o(.debug_info)
+    C$debug_info15                           0x0000087c   Data           0  command.o(.debug_info)
+    C$debug_info3                            0x000009b0   Data           0  command.o(.debug_info)
+    C$debug_info57                           0x00000a84   Data           0  command.o(.debug_info)
+    C$debug_info51                           0x00000b50   Data           0  command.o(.debug_info)
+    .data$5                                  0x00002674   Data           0  command.o(.data)
+    .data$10                                 0x00002684   Data           0  command.o(.data)
+    .data$15                                 0x000027a4   Data           0  command.o(.data)
+    I_action                                 0x7f0004e4   ARM Code     124  command.o(.text)
+    .constdata$11                            0x7f0097cc   Data           0  command.o(.constdata)
+    E:\work zone\710bootloader\WBLv1_1\Src\flash.c 0x00000000   Number         0  flash.o ABSOLUTE
+    .text                                    0x000000b8   ARM Code       0  flash.o(.text)
+    i.FlushDCache                            0x00002648   ARM Code       0  flash.o(i.FlushDCache)
+    .data                                    0x000027b0   Data           0  flash.o(.data)
+    .bss                                     0x00003ffc   Data           0  flash.o(.bss)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_frame43                          0x000000b8   Data           0  flash.o(.debug_frame)
+    CheckDataWidth                           0x000000b8   ARM Code     200  flash.o(.text)
+    C$debug_loc42                            0x0000012c   Data           0  flash.o(.debug_loc)
+    C$debug_pubnames28                       0x00000264   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames34                       0x0000028c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames46                       0x000002ac   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames52                       0x000002d0   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames58                       0x000002f4   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames64                       0x00000320   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames70                       0x0000034c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames76                       0x00000378   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames82                       0x000003a4   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames88                       0x000003cc   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames94                       0x000003f4   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames100                      0x0000041c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames106                      0x00000444   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames112                      0x00000470   Data           0  flash.o(.debug_pubnames)
+    C$debug_line38                           0x0000047c   Data           0  flash.o(.debug_line)
+    C$debug_pubnames118                      0x0000049c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames124                      0x000004c8   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames130                      0x000004f4   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames136                      0x0000051c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames142                      0x00000544   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames148                      0x00000570   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames154                      0x0000059c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames160                      0x000005c4   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames166                      0x000005f0   Data           0  flash.o(.debug_pubnames)
+    C$debug_macinfo5                         0x00000614   Data           0  flash.o(.debug_macinfo)
+    C$debug_pubnames172                      0x0000061c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames178                      0x00000648   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames184                      0x00000674   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames190                      0x0000069c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames196                      0x000006c8   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames202                      0x000006f4   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames208                      0x00000720   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames214                      0x00000750   Data           0  flash.o(.debug_pubnames)
+    C$debug_frame367                         0x00000758   Data           0  flash.o(.debug_frame)
+    C$debug_pubnames220                      0x00000780   Data           0  flash.o(.debug_pubnames)
+    C$debug_macinfo23                        0x000007ac   Data           0  flash.o(.debug_macinfo)
+    C$debug_pubnames226                      0x000007ac   Data           0  flash.o(.debug_pubnames)
+    C$debug_macinfo17                        0x000007c4   Data           0  flash.o(.debug_macinfo)
+    C$debug_pubnames232                      0x000007d8   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames238                      0x00000804   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames244                      0x00000834   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames250                      0x00000860   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames256                      0x0000088c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames262                      0x000008b8   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames268                      0x000008e4   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames274                      0x00000910   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames280                      0x0000093c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames286                      0x00000968   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames292                      0x00000994   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames298                      0x000009bc   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames304                      0x000009e4   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames310                      0x00000a10   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames316                      0x00000a38   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames322                      0x00000a60   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames328                      0x00000a88   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames334                      0x00000ab4   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames340                      0x00000ae0   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames346                      0x00000b0c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames352                      0x00000b3c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames358                      0x00000b6c   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames40                       0x00000b8c   Data           0  flash.o(.debug_pubnames)
+    C$debug_info21                           0x00000c90   Data           0  flash.o(.debug_info)
+    C$debug_line2                            0x00000d54   Data           0  flash.o(.debug_line)
+    C$debug_info15                           0x00000da4   Data           0  flash.o(.debug_info)
+    C$debug_line362                          0x00000dec   Data           0  flash.o(.debug_line)
+    C$debug_line20                           0x00000e5c   Data           0  flash.o(.debug_line)
+    C$debug_line14                           0x00000eac   Data           0  flash.o(.debug_line)
+    C$debug_info3                            0x000010ac   Data           0  flash.o(.debug_info)
+    C$debug_pubnames4                        0x000010f0   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames364                      0x00001114   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames22                       0x00001138   Data           0  flash.o(.debug_pubnames)
+    C$debug_info27                           0x00001148   Data           0  flash.o(.debug_info)
+    C$debug_pubnames16                       0x000011b8   Data           0  flash.o(.debug_pubnames)
+    C$debug_info33                           0x00001228   Data           0  flash.o(.debug_info)
+    normal_polling                           0x00001260   ARM Code      68  flash.o(.text)
+    polling16                                0x000012a4   ARM Code      64  flash.o(.text)
+    C$debug_info45                           0x0000131c   Data           0  flash.o(.debug_info)
+    C$debug_info51                           0x000013b0   Data           0  flash.o(.debug_info)
+    C$debug_info57                           0x00001438   Data           0  flash.o(.debug_info)
+    C$debug_info63                           0x000014ec   Data           0  flash.o(.debug_info)
+    C$debug_info69                           0x000015a0   Data           0  flash.o(.debug_info)
+    C$debug_info75                           0x000016d0   Data           0  flash.o(.debug_info)
+    C$debug_info81                           0x00001800   Data           0  flash.o(.debug_info)
+    C$debug_info87                           0x000018fc   Data           0  flash.o(.debug_info)
+    C$debug_info93                           0x000019f8   Data           0  flash.o(.debug_info)
+    C$debug_info99                           0x00001af4   Data           0  flash.o(.debug_info)
+    C$debug_info105                          0x00001bf0   Data           0  flash.o(.debug_info)
+    C$debug_info111                          0x00001ca4   Data           0  flash.o(.debug_info)
+    C$debug_info117                          0x00001d58   Data           0  flash.o(.debug_info)
+    C$debug_info123                          0x00001e0c   Data           0  flash.o(.debug_info)
+    C$debug_info129                          0x00001ec0   Data           0  flash.o(.debug_info)
+    C$debug_info135                          0x00001f6c   Data           0  flash.o(.debug_info)
+    C$debug_info141                          0x00002014   Data           0  flash.o(.debug_info)
+    C$debug_info147                          0x000020e0   Data           0  flash.o(.debug_info)
+    C$debug_info153                          0x000021cc   Data           0  flash.o(.debug_info)
+    C$debug_info159                          0x000022cc   Data           0  flash.o(.debug_info)
+    C$debug_info165                          0x00002378   Data           0  flash.o(.debug_info)
+    C$debug_info171                          0x00002420   Data           0  flash.o(.debug_info)
+    C$debug_info177                          0x000024f8   Data           0  flash.o(.debug_info)
+    C$debug_info183                          0x000025dc   Data           0  flash.o(.debug_info)
+    FlushDCache                              0x00002648   ARM Code      40  flash.o(i.FlushDCache)
+    C$debug_info189                          0x000026e0   Data           0  flash.o(.debug_info)
+    C$debug_info195                          0x00002790   Data           0  flash.o(.debug_info)
+    .data$5                                  0x000027b0   Data           0  flash.o(.data)
+    C$debug_info201                          0x00002854   Data           0  flash.o(.debug_info)
+    C$debug_info207                          0x00002918   Data           0  flash.o(.debug_info)
+    C$debug_info213                          0x00002a18   Data           0  flash.o(.debug_info)
+    C$debug_info219                          0x00002b38   Data           0  flash.o(.debug_info)
+    C$debug_info225                          0x00002c20   Data           0  flash.o(.debug_info)
+    C$debug_info231                          0x00002d08   Data           0  flash.o(.debug_info)
+    C$debug_info237                          0x00002df0   Data           0  flash.o(.debug_info)
+    C$debug_info243                          0x00002ef0   Data           0  flash.o(.debug_info)
+    C$debug_info249                          0x00002ff8   Data           0  flash.o(.debug_info)
+    C$debug_info255                          0x000030b4   Data           0  flash.o(.debug_info)
+    C$debug_info261                          0x000031d0   Data           0  flash.o(.debug_info)
+    C$debug_info267                          0x000032d4   Data           0  flash.o(.debug_info)
+    C$debug_info273                          0x00003398   Data           0  flash.o(.debug_info)
+    C$debug_info279                          0x0000345c   Data           0  flash.o(.debug_info)
+    C$debug_info285                          0x00003510   Data           0  flash.o(.debug_info)
+    C$debug_info291                          0x000035c4   Data           0  flash.o(.debug_info)
+    C$debug_info297                          0x00003688   Data           0  flash.o(.debug_info)
+    C$debug_info303                          0x00003730   Data           0  flash.o(.debug_info)
+    C$debug_info309                          0x00003884   Data           0  flash.o(.debug_info)
+    C$debug_info315                          0x0000396c   Data           0  flash.o(.debug_info)
+    C$debug_info321                          0x00003a54   Data           0  flash.o(.debug_info)
+    C$debug_info327                          0x00003b3c   Data           0  flash.o(.debug_info)
+    C$debug_info333                          0x00003be4   Data           0  flash.o(.debug_info)
+    C$debug_info339                          0x00003ccc   Data           0  flash.o(.debug_info)
+    C$debug_info345                          0x00003dc8   Data           0  flash.o(.debug_info)
+    C$debug_info351                          0x00003efc   Data           0  flash.o(.debug_info)
+    .bss$2                                   0x00003ffc   Data           0  flash.o(.bss)
+    flag@BlockErase_W29EE011_0               0x00003ffc   Data           4  flash.o(.bss)
+    _flash_size                              0x00004000   Data           4  flash.o(.bss)
+    C$debug_info357                          0x00004030   Data           0  flash.o(.debug_info)
+    C$debug_info39                           0x000040bc   Data           0  flash.o(.debug_info)
+    C$debug_info363                          0x00005884   Data           0  flash.o(.debug_info)
+    E:\work zone\710bootloader\WBLv1_1\Src\image.c 0x00000000   Number         0  image.o ABSOLUTE
+    .text                                    0x000012e8   ARM Code       0  image.o(.text)
+    .data                                    0x00002dc8   Data           0  image.o(.data)
+    .bss                                     0x00004004   Data           0  image.o(.bss)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_frame25                          0x00000794   Data           0  image.o(.debug_frame)
+    C$debug_macinfo17                        0x000007ac   Data           0  flash.o(.debug_macinfo)
+    C$debug_macinfo11                        0x000008f4   Data           0  image.o(.debug_macinfo)
+    C$debug_info15                           0x00000c90   Data           0  flash.o(.debug_info)
+    C$debug_line14                           0x00000e5c   Data           0  flash.o(.debug_line)
+    C$debug_line8                            0x00000eac   Data           0  flash.o(.debug_line)
+    C$debug_line20                           0x00000f08   Data           0  image.o(.debug_line)
+    C$debug_pubnames16                       0x00001138   Data           0  flash.o(.debug_pubnames)
+    C$debug_pubnames28                       0x00001220   Data           0  image.o(.debug_pubnames)
+    C$debug_pubnames34                       0x00001240   Data           0  image.o(.debug_pubnames)
+    C$debug_pubnames40                       0x00001260   Data           0  image.o(.debug_pubnames)
+    C$debug_pubnames46                       0x00001280   Data           0  image.o(.debug_pubnames)
+    C$debug_pubnames22                       0x000012a4   Data           0  image.o(.debug_pubnames)
+    C$debug_pubnames10                       0x00001364   Data           0  image.o(.debug_pubnames)
+    C$debug_loc24                            0x000022c4   Data           0  image.o(.debug_loc)
+    .data$0                                  0x00002dc8   Data           0  image.o(.data)
+    flash_type@FindFlash_0                   0x00002dcc   Data           4  image.o(.data)
+    .bss$2                                   0x00004004   Data           0  image.o(.bss)
+    image_footers@FindFooter_0               0x00004004   Data          32  image.o(.bss)
+    C$debug_info9                            0x00005928   Data           0  image.o(.debug_info)
+    C$debug_info27                           0x00005c30   Data           0  image.o(.debug_info)
+    C$debug_info33                           0x00005d44   Data           0  image.o(.debug_info)
+    C$debug_info39                           0x00005e94   Data           0  image.o(.debug_info)
+    C$debug_info45                           0x0000603c   Data           0  image.o(.debug_info)
+    C$debug_info21                           0x00006144   Data           0  image.o(.debug_info)
+    D:\710 bootloader\shell\sh.c             0x00000000   Number         0  sh.o ABSOLUTE
+    .constdata                               0x7f009a90   Data           0  sh.o(.constdata)
+    .text                                    0x7f000560   ARM Code       0  sh.o(.text)
+    .bss                                     0x00004024   Data           0  sh.o(.bss)
+    .data                                    0x00002dd0   Data           0  sh.o(.data)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_line26                           0x00000208   Data           0  wbl_info.o(.debug_line)
+    C$debug_line50                           0x00000250   Data           0  wbl_info.o(.debug_line)
+    C$debug_line98                           0x000002a4   Data           0  wbl_info.o(.debug_line)
+    C$debug_macinfo101                       0x000002d8   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_line32                           0x00000438   Data           0  command.o(.debug_line)
+    C$debug_macinfo35                        0x00000498   Data           0  command.o(.debug_macinfo)
+    C$debug_frame157                         0x000009b0   Data           0  sh.o(.debug_frame)
+    C$debug_macinfo5                         0x00000bb4   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo11                        0x00000e1c   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo29                        0x00000e64   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo53                        0x00000e80   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo71                        0x00000fb0   Data           0  sh.o(.debug_macinfo)
+    C$debug_pubnames148                      0x000013cc   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames160                      0x000013ec   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames166                      0x0000140c   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames172                      0x0000142c   Data           0  sh.o(.debug_pubnames)
+    C$debug_line2                            0x0000143c   Data           0  sh.o(.debug_line)
+    C$debug_pubnames178                      0x00001450   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames184                      0x0000146c   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames190                      0x00001494   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames196                      0x000014bc   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames202                      0x000014dc   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames208                      0x000014f8   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames214                      0x00001514   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames220                      0x00001530   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames226                      0x00001550   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames232                      0x00001574   Data           0  sh.o(.debug_pubnames)
+    C$debug_line152                          0x00001588   Data           0  sh.o(.debug_line)
+    C$debug_pubnames238                      0x00001598   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames244                      0x000015b8   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames250                      0x000015d8   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames256                      0x000015f8   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames262                      0x00001618   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames268                      0x00001638   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames274                      0x0000165c   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames280                      0x0000167c   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames286                      0x0000169c   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames292                      0x000016bc   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames298                      0x000016e0   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames304                      0x00001704   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames310                      0x00001724   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames316                      0x00001748   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames322                      0x00001768   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames328                      0x0000178c   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames4                        0x000017b0   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames154                      0x0000185c   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames10                       0x00001b68   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames28                       0x00001b88   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames34                       0x00001c08   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames52                       0x00001c68   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames70                       0x00001cd0   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames100                      0x00001d48   Data           0  sh.o(.debug_pubnames)
+    C$debug_line8                            0x00002368   Data           0  sh.o(.debug_line)
+    C$debug_line68                           0x000023b8   Data           0  sh.o(.debug_line)
+    .data$0                                  0x00002dd0   Data           0  sh.o(.data)
+    address@G_action_0                       0x00002dd0   Data           4  sh.o(.data)
+    C$debug_loc156                           0x0000305c   Data           0  sh.o(.debug_loc)
+    .bss$2                                   0x00004024   Data           0  sh.o(.bss)
+    argIndex                                 0x00004024   Data           4  sh.o(.bss)
+    argLenIndex                              0x00004028   Data           4  sh.o(.bss)
+    hexAddress@D_action_0                    0x00004030   Data           4  sh.o(.bss)
+    saddr@CP_action_0                        0x00004034   Data           4  sh.o(.bss)
+    taddr@CP_action_1                        0x00004038   Data           4  sh.o(.bss)
+    length@CP_action_2                       0x0000403c   Data           4  sh.o(.bss)
+    idx@CP_action_3                          0x00004040   Data           4  sh.o(.bss)
+    str@GetAddress_0                         0x00004044   Data          11  sh.o(.bss)
+    ArgStack                                 0x00004150   Data          80  sh.o(.bss)
+    ArgLenStack                              0x000041a0   Data          80  sh.o(.bss)
+    C$debug_info27                           0x0000721c   Data           0  sh.o(.debug_info)
+    C$debug_info33                           0x00007328   Data           0  sh.o(.debug_info)
+    C$debug_info3                            0x0000745c   Data           0  sh.o(.debug_info)
+    C$debug_info147                          0x000075d0   Data           0  sh.o(.debug_info)
+    C$debug_info159                          0x00007658   Data           0  sh.o(.debug_info)
+    C$debug_info9                            0x00007750   Data           0  sh.o(.debug_info)
+    C$debug_info165                          0x000077d0   Data           0  sh.o(.debug_info)
+    C$debug_info171                          0x000078dc   Data           0  sh.o(.debug_info)
+    C$debug_info177                          0x000079a8   Data           0  sh.o(.debug_info)
+    C$debug_info183                          0x00007a30   Data           0  sh.o(.debug_info)
+    C$debug_info189                          0x00007b18   Data           0  sh.o(.debug_info)
+    C$debug_info195                          0x00007b94   Data           0  sh.o(.debug_info)
+    C$debug_info201                          0x00007c34   Data           0  sh.o(.debug_info)
+    C$debug_info207                          0x00007d04   Data           0  sh.o(.debug_info)
+    C$debug_info213                          0x00007db4   Data           0  sh.o(.debug_info)
+    C$debug_info219                          0x00007e5c   Data           0  sh.o(.debug_info)
+    C$debug_info225                          0x00007f08   Data           0  sh.o(.debug_info)
+    C$debug_info231                          0x00007fa8   Data           0  sh.o(.debug_info)
+    C$debug_info237                          0x00008010   Data           0  sh.o(.debug_info)
+    C$debug_info243                          0x000080bc   Data           0  sh.o(.debug_info)
+    C$debug_info249                          0x00008134   Data           0  sh.o(.debug_info)
+    C$debug_info255                          0x000082b0   Data           0  sh.o(.debug_info)
+    C$debug_info261                          0x000083ec   Data           0  sh.o(.debug_info)
+    C$debug_info267                          0x00008510   Data           0  sh.o(.debug_info)
+    C$debug_info273                          0x000086fc   Data           0  sh.o(.debug_info)
+    C$debug_info279                          0x000087d0   Data           0  sh.o(.debug_info)
+    C$debug_info285                          0x00008958   Data           0  sh.o(.debug_info)
+    C$debug_info291                          0x000089d0   Data           0  sh.o(.debug_info)
+    C$debug_info51                           0x00008a4c   Data           0  sh.o(.debug_info)
+    C$debug_info297                          0x00008d48   Data           0  sh.o(.debug_info)
+    C$debug_info303                          0x00008e88   Data           0  sh.o(.debug_info)
+    C$debug_info309                          0x00008f00   Data           0  sh.o(.debug_info)
+    C$debug_info315                          0x00009074   Data           0  sh.o(.debug_info)
+    C$debug_info321                          0x000090ec   Data           0  sh.o(.debug_info)
+    C$debug_info327                          0x000091c4   Data           0  sh.o(.debug_info)
+    C$debug_info69                           0x00009274   Data           0  sh.o(.debug_info)
+    C$debug_info99                           0x00009368   Data           0  sh.o(.debug_info)
+    C$debug_info153                          0x0000951c   Data           0  sh.o(.debug_info)
+    _parser                                  0x7f000570   ARM Code     248  sh.o(.text)
+    Hex2String                               0x7f000914   ARM Code      92  sh.o(.text)
+    ScanUserInput                            0x7f000970   ARM Code     208  sh.o(.text)
+    EditMemory                               0x7f000ad4   ARM Code     936  sh.o(.text)
+    |L1.2172|                                0x7f000ddc   Data           0  sh.o(.text)
+    |L1.2208|                                0x7f000e00   Data           0  sh.o(.text)
+    |L1.2232|                                0x7f000e18   Data           0  sh.o(.text)
+    HYC_DumpAddress                          0x7f000e7c   ARM Code     432  sh.o(.text)
+    |L1.4224|                                0x7f0015e0   Data           0  sh.o(.text)
+    |L1.4256|                                0x7f001600   Data           0  sh.o(.text)
+    |L1.4292|                                0x7f001624   Data           0  sh.o(.text)
+    E_usage                                  0x7f0016a4   ARM Code      92  sh.o(.text)
+    |L1.5020|                                0x7f0018fc   Data           0  sh.o(.text)
+    |L1.5044|                                0x7f001914   Data           0  sh.o(.text)
+    |L1.5076|                                0x7f001934   Data           0  sh.o(.text)
+    MSET_usage                               0x7f001b7c   ARM Code     296  sh.o(.text)
+    |L1.7704|                                0x7f002378   Data           0  sh.o(.text)
+    |L1.7728|                                0x7f002390   Data           0  sh.o(.text)
+    |L1.7768|                                0x7f0023b8   Data           0  sh.o(.text)
+    |L1.7796|                                0x7f0023d4   Data           0  sh.o(.text)
+    |L1.7824|                                0x7f0023f0   Data           0  sh.o(.text)
+    _tryTable                                0x7f003cb4   ARM Code     184  sh.o(.text)
+    SET_usage                                0x7f003d6c   ARM Code     288  sh.o(.text)
+    .constdata$1                             0x7f009a90   Data           0  sh.o(.constdata)
+    D:\710 bootloader\shell\main.c           0x00000000   Number         0  main.o ABSOLUTE
+    .constdata                               0x7f009c98   Data           0  main.o(.constdata)
+    .text                                    0x7f003e8c   ARM Code       0  main.o(.text)
+    .bss                                     0x000041f0   Data           0  main.o(.bss)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_line32                           0x00000208   Data           0  wbl_info.o(.debug_line)
+    C$debug_line26                           0x00000250   Data           0  wbl_info.o(.debug_line)
+    C$debug_line38                           0x000002a4   Data           0  wbl_info.o(.debug_line)
+    C$debug_macinfo41                        0x000002d8   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_line86                           0x00000438   Data           0  command.o(.debug_line)
+    C$debug_macinfo89                        0x00000498   Data           0  command.o(.debug_macinfo)
+    C$debug_macinfo11                        0x00000e1c   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo35                        0x00000e64   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo29                        0x00000e80   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo5                         0x00001068   Data           0  main.o(.debug_macinfo)
+    C$debug_frame97                          0x00001128   Data           0  main.o(.debug_frame)
+    C$debug_pubnames10                       0x00001b68   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames34                       0x00001b88   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames88                       0x00001c08   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames28                       0x00001c68   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames4                        0x00001d88   Data           0  main.o(.debug_pubnames)
+    C$debug_pubnames94                       0x00001e0c   Data           0  main.o(.debug_pubnames)
+    C$debug_pubnames40                       0x00001e28   Data           0  main.o(.debug_pubnames)
+    C$debug_line8                            0x00002368   Data           0  sh.o(.debug_line)
+    C$debug_line2                            0x000023fc   Data           0  main.o(.debug_line)
+    C$debug_line92                           0x0000251c   Data           0  main.o(.debug_line)
+    .bss$2                                   0x000041f0   Data           0  main.o(.bss)
+    C$debug_loc96                            0x00006518   Data           0  main.o(.debug_loc)
+    C$debug_info33                           0x0000721c   Data           0  sh.o(.debug_info)
+    C$debug_info87                           0x00007328   Data           0  sh.o(.debug_info)
+    C$debug_info9                            0x00007750   Data           0  sh.o(.debug_info)
+    C$debug_info27                           0x00008a4c   Data           0  sh.o(.debug_info)
+    C$debug_info3                            0x0000d8ac   Data           0  main.o(.debug_info)
+    C$debug_info39                           0x0000da28   Data           0  main.o(.debug_info)
+    C$debug_info93                           0x0000dbd8   Data           0  main.o(.debug_info)
+    .constdata$1                             0x7f009c98   Data           0  main.o(.constdata)
+    D:\710 bootloader\shell\switrap.s        0x00000000   Number         0  switrap.o ABSOLUTE
+    <Anonymous Symbol>                       0x0000df34   Data         108  switrap.o(.debug_info)
+    <Anonymous Symbol>                       0x0000040c   Data          16  switrap.o(.debug_abbrev)
+    WB_Traps                                 0x7f009444   ARM Code     556  switrap.o(WB_Traps)
+    <Anonymous Symbol>                       0x00002688   Data         212  switrap.o(.debug_line)
+    THUMB_AWARE                              0x00000001   Number         0  switrap.o ABSOLUTE
+    swi_correct                              0x7f009480   ARM Code       0  switrap.o(WB_Traps)
+    WB_ExitSWI                               0x7f009504   ARM Code       0  switrap.o(WB_Traps)
+    WB_SWIEnterOS                            0x7f00950c   ARM Code       0  switrap.o(WB_Traps)
+    WB_Sys_FileOpenSWI                       0x7f00952c   ARM Code       0  switrap.o(WB_Traps)
+    WB_ttywrch_SWI                           0x7f009550   ARM Code       0  switrap.o(WB_Traps)
+    WB_Sys_WriteSWI                          0x7f009564   ARM Code       0  switrap.o(WB_Traps)
+    WB_Sys_ReadSWI                           0x7f00957c   ARM Code       0  switrap.o(WB_Traps)
+    WB_readtime_SWI                          0x7f009594   ARM Code       0  switrap.o(WB_Traps)
+    sh_run_SWI                               0x7f0095b0   ARM Code       0  switrap.o(WB_Traps)
+    sh_return_SWI                            0x7f0095f4   ARM Code       0  switrap.o(WB_Traps)
+    sh_get_command_SWI                       0x7f009620   ARM Code       0  switrap.o(WB_Traps)
+    AIC_IMR                                  0xfff82114   Number         0  switrap.o ABSOLUTE
+    AIC_MECR                                 0xfff82120   Number         0  switrap.o ABSOLUTE
+    AIC_MDCR                                 0xfff82124   Number         0  switrap.o ABSOLUTE
+    D:\710 bootloader\shell\timer.c          0x00000000   Number         0  timer.o ABSOLUTE
+    .bss                                     0x00004200   Data           0  timer.o(.bss)
+    .text                                    0x7f004344   ARM Code       0  timer.o(.text)
+    C$debug_macinfo11                        0x00000000   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_pubnames10                       0x00000020   Data           0  wbl_info.o(.debug_pubnames)
+    C$debug_info9                            0x000000e4   Data           0  wbl_info.o(.debug_info)
+    C$debug_line8                            0x00000208   Data           0  wbl_info.o(.debug_line)
+    C$debug_frame31                          0x00001190   Data           0  timer.o(.debug_frame)
+    C$debug_macinfo5                         0x00001220   Data           0  timer.o(.debug_macinfo)
+    C$debug_pubnames22                       0x00001e68   Data           0  timer.o(.debug_pubnames)
+    C$debug_pubnames34                       0x00001e8c   Data           0  timer.o(.debug_pubnames)
+    C$debug_pubnames40                       0x00001ea8   Data           0  timer.o(.debug_pubnames)
+    C$debug_pubnames4                        0x00001ec4   Data           0  timer.o(.debug_pubnames)
+    C$debug_pubnames28                       0x00001ef0   Data           0  timer.o(.debug_pubnames)
+    C$debug_line2                            0x0000275c   Data           0  timer.o(.debug_line)
+    C$debug_line26                           0x000027dc   Data           0  timer.o(.debug_line)
+    .bss$2                                   0x00004200   Data           0  timer.o(.bss)
+    C$debug_loc30                            0x00006644   Data           0  timer.o(.debug_loc)
+    C$debug_info21                           0x0000dfa0   Data           0  timer.o(.debug_info)
+    C$debug_info3                            0x0000e008   Data           0  timer.o(.debug_info)
+    C$debug_info33                           0x0000e09c   Data           0  timer.o(.debug_info)
+    C$debug_info39                           0x0000e114   Data           0  timer.o(.debug_info)
+    C$debug_info27                           0x0000e198   Data           0  timer.o(.debug_info)
+    D:\710 bootloader\shell\heap.c           0x00000000   Number         0  heap.o ABSOLUTE
+    .bss                                     0x00004324   Data           0  heap.o(.bss)
+    .bss                                     0x00004204   Data           0  heap.o(.bss)
+    .bss                                     0x00004328   Data           0  heap.o(.bss)
+    .bss                                     0x00004320   Data           0  heap.o(.bss)
+    .text                                    0x7f0043e8   ARM Code       0  heap.o(.text)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_frame25                          0x000011fc   Data           0  heap.o(.debug_frame)
+    C$debug_macinfo5                         0x000013a0   Data           0  heap.o(.debug_macinfo)
+    C$debug_macinfo11                        0x00001554   Data           0  heap.o(.debug_macinfo)
+    C$debug_pubnames16                       0x00001f28   Data           0  heap.o(.debug_pubnames)
+    C$debug_pubnames28                       0x00001f58   Data           0  heap.o(.debug_pubnames)
+    C$debug_pubnames34                       0x00001f84   Data           0  heap.o(.debug_pubnames)
+    C$debug_pubnames40                       0x00001fa8   Data           0  heap.o(.debug_pubnames)
+    C$debug_pubnames4                        0x00001fcc   Data           0  heap.o(.debug_pubnames)
+    C$debug_pubnames22                       0x000020a0   Data           0  heap.o(.debug_pubnames)
+    C$debug_pubnames10                       0x0000210c   Data           0  heap.o(.debug_pubnames)
+    C$debug_line2                            0x00002854   Data           0  heap.o(.debug_line)
+    C$debug_line20                           0x000028cc   Data           0  heap.o(.debug_line)
+    C$debug_line8                            0x000029dc   Data           0  heap.o(.debug_line)
+    .bss$2                                   0x00004204   Data           0  heap.o(.bss)
+    heap_base                                0x00004204   Data           4  heap.o(.bss)
+    heap_limit                               0x00004208   Data           4  heap.o(.bss)
+    .bss$7                                   0x00004320   Data           0  heap.o(.bss)
+    .bss$12                                  0x00004324   Data           0  heap.o(.bss)
+    .bss$17                                  0x00004328   Data           0  heap.o(.bss)
+    C$debug_loc24                            0x000066a8   Data           0  heap.o(.debug_loc)
+    C$debug_info9                            0x0000e270   Data           0  heap.o(.debug_info)
+    C$debug_info15                           0x0000e3e4   Data           0  heap.o(.debug_info)
+    C$debug_info3                            0x0000e4a4   Data           0  heap.o(.debug_info)
+    C$debug_info27                           0x0000e6e4   Data           0  heap.o(.debug_info)
+    C$debug_info33                           0x0000e7ac   Data           0  heap.o(.debug_info)
+    C$debug_info39                           0x0000e88c   Data           0  heap.o(.debug_info)
+    C$debug_info21                           0x0000e96c   Data           0  heap.o(.debug_info)
+    D:\710 bootloader\shell\bib.c            0x00000000   Number         0  bib.o ABSOLUTE
+    .text                                    0x00002114   ARM Code       0  bib.o(.text)
+    C$debug_macinfo23                        0x00000000   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_pubnames22                       0x00000020   Data           0  wbl_info.o(.debug_pubnames)
+    C$debug_info21                           0x000000e4   Data           0  wbl_info.o(.debug_info)
+    C$debug_pubnames16                       0x00000108   Data           0  wbl_info.o(.debug_pubnames)
+    C$debug_line20                           0x00000208   Data           0  wbl_info.o(.debug_line)
+    C$debug_line26                           0x00000250   Data           0  wbl_info.o(.debug_line)
+    C$debug_line14                           0x000002a4   Data           0  wbl_info.o(.debug_line)
+    C$debug_macinfo17                        0x000002d8   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_info15                           0x000004ec   Data           0  wbl_info.o(.debug_info)
+    C$debug_macinfo29                        0x00000e80   Data           0  sh.o(.debug_macinfo)
+    C$debug_frame61                          0x0000129c   Data           0  bib.o(.debug_frame)
+    C$debug_pubnames58                       0x0000216c   Data           0  bib.o(.debug_pubnames)
+    C$debug_pubnames28                       0x00002190   Data           0  bib.o(.debug_pubnames)
+    C$debug_line56                           0x00002a2c   Data           0  bib.o(.debug_line)
+    C$debug_loc60                            0x0000682c   Data           0  bib.o(.debug_loc)
+    C$debug_info57                           0x0000ebec   Data           0  bib.o(.debug_info)
+    C$debug_info27                           0x0000eca4   Data           0  bib.o(.debug_info)
+    E:\work zone\710bootloader\uprintf\uprintf.c 0x00000000   Number         0  uprintf.o ABSOLUTE
+    .bss                                     0x0000432c   Data           0  uprintf.o(.bss)
+    .text                                    0x7f004588   ARM Code       0  uprintf.o(.text)
+    C$debug_frame2                           0x000012f4   Data           0  uprintf.o(.debug_frame)
+    .bss$2                                   0x0000432c   Data           0  uprintf.o(.bss)
+    net_write_flag                           0x0000432c   Data           4  uprintf.o(.bss)
+    FormatItem                               0x7f0045f8   ARM Code     384  uprintf.o(.text)
+    PutRepChar                               0x7f004820   ARM Code      36  uprintf.o(.text)
+    PutNumber                                0x7f004844   ARM Code     260  uprintf.o(.text)
+    PutStringReverse                         0x7f004948   ARM Code      44  uprintf.o(.text)
+    D:\710 bootloader\shell\irq.s            0x00000000   Number         0  irq.o ABSOLUTE
+    <Anonymous Symbol>                       0x00002af0   Data          96  irq.o(.debug_line)
+    <Anonymous Symbol>                       0x0000efa0   Data         104  irq.o(.debug_info)
+    <Anonymous Symbol>                       0x0000041c   Data          16  irq.o(.debug_abbrev)
+    irq_function                             0x7f009670   ARM Code      96  irq.o(irq_function)
+    TIMER_TISR                               0xfff81018   Number         0  irq.o ABSOLUTE
+    D:\710 bootloader\shell\bootproc.c       0x00000000   Number         0  bootproc.o ABSOLUTE
+    .bss                                     0x00004330   Data           0  bootproc.o(.bss)
+    .text                                    0x7f004984   ARM Code       0  bootproc.o(.text)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_line32                           0x00000208   Data           0  wbl_info.o(.debug_line)
+    C$debug_line26                           0x00000250   Data           0  wbl_info.o(.debug_line)
+    C$debug_line68                           0x000002a4   Data           0  wbl_info.o(.debug_line)
+    C$debug_macinfo71                        0x000002d8   Data           0  wbl_info.o(.debug_macinfo)
+    C$debug_macinfo11                        0x00000e1c   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo35                        0x00000e64   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo29                        0x00000e80   Data           0  sh.o(.debug_macinfo)
+    C$debug_macinfo47                        0x00000fb0   Data           0  sh.o(.debug_macinfo)
+    C$debug_frame91                          0x0000148c   Data           0  bootproc.o(.debug_frame)
+    C$debug_macinfo5                         0x00001580   Data           0  bootproc.o(.debug_macinfo)
+    C$debug_pubnames10                       0x00001b68   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames34                       0x00001b88   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames28                       0x00001c68   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames46                       0x00001cd0   Data           0  sh.o(.debug_pubnames)
+    C$debug_pubnames70                       0x00001e28   Data           0  main.o(.debug_pubnames)
+    C$debug_pubnames4                        0x000021f8   Data           0  bootproc.o(.debug_pubnames)
+    C$debug_pubnames88                       0x00002218   Data           0  bootproc.o(.debug_pubnames)
+    C$debug_line8                            0x00002368   Data           0  sh.o(.debug_line)
+    C$debug_line44                           0x000023b8   Data           0  sh.o(.debug_line)
+    C$debug_line2                            0x00002b50   Data           0  bootproc.o(.debug_line)
+    C$debug_line86                           0x00002c54   Data           0  bootproc.o(.debug_line)
+    .bss$2                                   0x00004330   Data           0  bootproc.o(.bss)
+    C$debug_loc90                            0x0000689c   Data           0  bootproc.o(.debug_loc)
+    C$debug_info33                           0x0000721c   Data           0  sh.o(.debug_info)
+    C$debug_info9                            0x00007750   Data           0  sh.o(.debug_info)
+    C$debug_info27                           0x00008a4c   Data           0  sh.o(.debug_info)
+    C$debug_info45                           0x00009274   Data           0  sh.o(.debug_info)
+    C$debug_info69                           0x0000da28   Data           0  main.o(.debug_info)
+    C$debug_info3                            0x0000f008   Data           0  bootproc.o(.debug_info)
+    C$debug_info87                           0x0000f080   Data           0  bootproc.o(.debug_info)
+    D:\710 bootloader\shell\mem.s            0x00000000   Number         0  mem.o ABSOLUTE
+    <Anonymous Symbol>                       0x0000042c   Data          16  mem.o(.debug_abbrev)
+    <Anonymous Symbol>                       0x0000f4e8   Data         104  mem.o(.debug_info)
+    <Anonymous Symbol>                       0x00002d90   Data          96  mem.o(.debug_line)
+    memory_asm                               0x7f0096d0   ARM Code      88  mem.o(memory_asm)
+    STEP_SIZE                                0x00100000   Number         0  mem.o ABSOLUTE
+    SIGNATURE                                0x12345a15   Number         0  mem.o ABSOLUTE
+    D:\710 bootloader\shell\retarget.c       0x00000000   Number         0  retarget.o ABSOLUTE
+    .text                                    0x7f004d60   ARM Code       0  retarget.o(.text)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_frame31                          0x000014f4   Data           0  retarget.o(.debug_frame)
+    C$debug_macinfo17                        0x00001554   Data           0  heap.o(.debug_macinfo)
+    C$debug_macinfo5                         0x00001720   Data           0  retarget.o(.debug_macinfo)
+    C$debug_macinfo11                        0x000018ec   Data           0  retarget.o(.debug_macinfo)
+    C$debug_pubnames16                       0x0000210c   Data           0  heap.o(.debug_pubnames)
+    C$debug_pubnames22                       0x0000223c   Data           0  retarget.o(.debug_pubnames)
+    C$debug_pubnames34                       0x00002258   Data           0  retarget.o(.debug_pubnames)
+    C$debug_pubnames40                       0x00002278   Data           0  retarget.o(.debug_pubnames)
+    C$debug_pubnames46                       0x00002298   Data           0  retarget.o(.debug_pubnames)
+    C$debug_pubnames52                       0x000022b8   Data           0  retarget.o(.debug_pubnames)
+    C$debug_pubnames58                       0x000022dc   Data           0  retarget.o(.debug_pubnames)
+    C$debug_pubnames4                        0x00002300   Data           0  retarget.o(.debug_pubnames)
+    C$debug_pubnames28                       0x00002320   Data           0  retarget.o(.debug_pubnames)
+    C$debug_pubnames10                       0x00002384   Data           0  retarget.o(.debug_pubnames)
+    C$debug_line14                           0x000029dc   Data           0  heap.o(.debug_line)
+    C$debug_line2                            0x00002df0   Data           0  retarget.o(.debug_line)
+    C$debug_line26                           0x00002e78   Data           0  retarget.o(.debug_line)
+    C$debug_line8                            0x00002f34   Data           0  retarget.o(.debug_line)
+    C$debug_loc30                            0x000069e4   Data           0  retarget.o(.debug_loc)
+    C$debug_info15                           0x0000e270   Data           0  heap.o(.debug_info)
+    C$debug_info3                            0x0000f550   Data           0  retarget.o(.debug_info)
+    C$debug_info9                            0x0000f5d8   Data           0  retarget.o(.debug_info)
+    C$debug_info21                           0x0000f6e4   Data           0  retarget.o(.debug_info)
+    C$debug_info33                           0x0000f78c   Data           0  retarget.o(.debug_info)
+    C$debug_info39                           0x0000f814   Data           0  retarget.o(.debug_info)
+    C$debug_info45                           0x0000f894   Data           0  retarget.o(.debug_info)
+    C$debug_info51                           0x0000f920   Data           0  retarget.o(.debug_info)
+    C$debug_info57                           0x0000f9e4   Data           0  retarget.o(.debug_info)
+    C$debug_info27                           0x0000faf8   Data           0  retarget.o(.debug_info)
+    E:\work zone\710bootloader\Xmodem\xmodem.c 0x00000000   Number         0  xmodem.o ABSOLUTE
+    .bss                                     0x00004334   Data           0  xmodem.o(.bss)
+    .text                                    0x00002368   ARM Code       0  xmodem.o(.text)
+    C$debug_frame3                           0x000015c8   Data           0  xmodem.o(.debug_frame)
+    .bss$2                                   0x00004334   Data           0  xmodem.o(.bss)
+    crcTableBuilt@calctable_0                0x00004334   Data           1  xmodem.o(.bss)
+    E:\work zone\710bootloader\uprintf\serial.c 0x00000000   Number         0  serial.o ABSOLUTE
+    .text                                    0x7f004e54   ARM Code       0  serial.o(.text)
+    C$debug_frame2                           0x0000165c   Data           0  serial.o(.debug_frame)
+    E:\work zone\710bootloader\usb_down\Src\down.c 0x00000000   Number         0  down.o ABSOLUTE
+    .text                                    0x7f004fe8   ARM Code       0  down.o(.text)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_frame43                          0x000016d8   Data           0  down.o(.debug_frame)
+    C$debug_pubnames34                       0x00002408   Data           0  down.o(.debug_pubnames)
+    C$debug_pubnames46                       0x0000242c   Data           0  down.o(.debug_pubnames)
+    C$debug_pubnames52                       0x00002450   Data           0  down.o(.debug_pubnames)
+    C$debug_pubnames40                       0x00002470   Data           0  down.o(.debug_pubnames)
+    C$debug_pubnames16                       0x000024b0   Data           0  down.o(.debug_pubnames)
+    C$debug_line38                           0x00002f84   Data           0  down.o(.debug_line)
+    C$debug_loc42                            0x00006bb8   Data           0  down.o(.debug_loc)
+    C$debug_info3                            0x0000fcf0   Data           0  down.o(.debug_info)
+    C$debug_info33                           0x0000fd60   Data           0  down.o(.debug_info)
+    C$debug_info45                           0x0000fdec   Data           0  down.o(.debug_info)
+    C$debug_info15                           0x0000fe78   Data           0  down.o(.debug_info)
+    C$debug_info51                           0x0001012c   Data           0  down.o(.debug_info)
+    C$debug_info39                           0x000101c8   Data           0  down.o(.debug_info)
+    E:\work zone\710bootloader\zlib\Sources\unzip.c 0x00000000   Number         0  unzip.o ABSOLUTE
+    .text                                    0x7f005024   ARM Code       0  unzip.o(.text)
+    C$debug_frame5                           0x00001740   Data           0  unzip.o(.debug_frame)
+    E:\work zone\710bootloader\usb_down\Src\Usb.c 0x00000000   Number         0  Usb.o ABSOLUTE
+    .data                                    0x00002dd4   Data           0  Usb.o(.data)
+    .text                                    0x7f005174   ARM Code       0  Usb.o(.text)
+    .bss                                     0x00004538   Data           0  Usb.o(.bss)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_frame37                          0x000017b0   Data           0  Usb.o(.debug_frame)
+    C$debug_pubnames16                       0x000024b0   Data           0  down.o(.debug_pubnames)
+    C$debug_pubnames40                       0x00002670   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames46                       0x00002690   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames52                       0x000026b8   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames58                       0x000026e0   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames64                       0x0000270c   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames70                       0x0000273c   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames76                       0x0000276c   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames82                       0x00002794   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames88                       0x000027c0   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames94                       0x000027f0   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames100                      0x00002818   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames106                      0x00002844   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames112                      0x00002874   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames118                      0x000028a4   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames124                      0x000028cc   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames130                      0x000028f0   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames136                      0x00002918   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames142                      0x0000293c   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames148                      0x00002964   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames154                      0x0000298c   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames160                      0x000029b0   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames166                      0x000029d4   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames172                      0x000029fc   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames178                      0x00002a24   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames184                      0x00002a48   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames190                      0x00002a68   Data           0  Usb.o(.debug_pubnames)
+    C$debug_pubnames34                       0x00002a88   Data           0  Usb.o(.debug_pubnames)
+    .data$0                                  0x00002dd4   Data           0  Usb.o(.data)
+    USB_Lang_Id_String                       0x00002dd4   Data           4  Usb.o(.data)
+    USB_Version                              0x00002dd8   Data           4  Usb.o(.data)
+    USB_Device                               0x00002ddc   Data          20  Usb.o(.data)
+    USB_Config                               0x00002df0   Data          32  Usb.o(.data)
+    USB_Vender_Id_String                     0x00002e10   Data          24  Usb.o(.data)
+    USB_Device_Id_String                     0x00002e28   Data          48  Usb.o(.data)
+    C$debug_pubnames22                       0x00002e30   Data           0  Usb.o(.debug_pubnames)
+    USBInit                                  0x00002e58   Data          48  Usb.o(.data)
+    C$debug_pubnames4                        0x00002efc   Data           0  Usb.o(.debug_pubnames)
+    C$debug_line32                           0x00002ff8   Data           0  Usb.o(.debug_line)
+    .bss$2                                   0x00004538   Data           0  Usb.o(.bss)
+    IUSB_HandlerTable                        0x00004568   Data         124  Usb.o(.bss)
+    C$debug_loc36                            0x00006c24   Data           0  Usb.o(.debug_loc)
+    C$debug_info15                           0x0000fe78   Data           0  down.o(.debug_info)
+    C$debug_info39                           0x00010294   Data           0  Usb.o(.debug_info)
+    C$debug_info45                           0x0001036c   Data           0  Usb.o(.debug_info)
+    C$debug_info51                           0x00010414   Data           0  Usb.o(.debug_info)
+    C$debug_info57                           0x000104a0   Data           0  Usb.o(.debug_info)
+    C$debug_info63                           0x00010520   Data           0  Usb.o(.debug_info)
+    C$debug_info69                           0x000105a4   Data           0  Usb.o(.debug_info)
+    C$debug_info75                           0x00010628   Data           0  Usb.o(.debug_info)
+    C$debug_info81                           0x000106a4   Data           0  Usb.o(.debug_info)
+    C$debug_info87                           0x00010724   Data           0  Usb.o(.debug_info)
+    C$debug_info93                           0x000107a8   Data           0  Usb.o(.debug_info)
+    C$debug_info99                           0x00010824   Data           0  Usb.o(.debug_info)
+    C$debug_info105                          0x000108a4   Data           0  Usb.o(.debug_info)
+    C$debug_info111                          0x00010928   Data           0  Usb.o(.debug_info)
+    C$debug_info117                          0x000109ac   Data           0  Usb.o(.debug_info)
+    C$debug_info123                          0x00010a28   Data           0  Usb.o(.debug_info)
+    C$debug_info129                          0x00010aa0   Data           0  Usb.o(.debug_info)
+    C$debug_info135                          0x00010b1c   Data           0  Usb.o(.debug_info)
+    C$debug_info141                          0x00010b94   Data           0  Usb.o(.debug_info)
+    C$debug_info147                          0x00010c10   Data           0  Usb.o(.debug_info)
+    C$debug_info153                          0x00010c94   Data           0  Usb.o(.debug_info)
+    C$debug_info159                          0x00010d0c   Data           0  Usb.o(.debug_info)
+    C$debug_info165                          0x00010d98   Data           0  Usb.o(.debug_info)
+    C$debug_info171                          0x00010e40   Data           0  Usb.o(.debug_info)
+    C$debug_info177                          0x00010ee8   Data           0  Usb.o(.debug_info)
+    C$debug_info21                           0x00010f90   Data           0  Usb.o(.debug_info)
+    C$debug_info3                            0x00011188   Data           0  Usb.o(.debug_info)
+    C$debug_info183                          0x000115c8   Data           0  Usb.o(.debug_info)
+    C$debug_info189                          0x00011668   Data           0  Usb.o(.debug_info)
+    C$debug_info33                           0x00011714   Data           0  Usb.o(.debug_info)
+    E:\work zone\710bootloader\usb_down\Src\uxmodem.c 0x00000000   Number         0  uxmodem.o ABSOLUTE
+    .text                                    0x7f006358   ARM Code       0  uxmodem.o(.text)
+    C$debug_abbrev0                          0x00000020   Data           0  wbl_info.o(.debug_abbrev)
+    C$debug_frame49                          0x00001c48   Data           0  uxmodem.o(.debug_frame)
+    C$debug_pubnames16                       0x000024b0   Data           0  down.o(.debug_pubnames)
+    C$debug_pubnames40                       0x00003188   Data           0  uxmodem.o(.debug_pubnames)
+    C$debug_pubnames52                       0x000031a8   Data           0  uxmodem.o(.debug_pubnames)
+    C$debug_pubnames58                       0x000031c4   Data           0  uxmodem.o(.debug_pubnames)
+    C$debug_pubnames46                       0x000031e4   Data           0  uxmodem.o(.debug_pubnames)
+    C$debug_line44                           0x00003618   Data           0  uxmodem.o(.debug_line)
+    C$debug_loc48                            0x00007548   Data           0  uxmodem.o(.debug_loc)
+    C$debug_info15                           0x0000fe78   Data           0  down.o(.debug_info)
+    C$debug_info39                           0x000125e8   Data           0  uxmodem.o(.debug_info)
+    C$debug_info51                           0x00012678   Data           0  uxmodem.o(.debug_info)
+    C$debug_info57                           0x0001271c   Data           0  uxmodem.o(.debug_info)
+    C$debug_info45                           0x00012888   Data           0  uxmodem.o(.debug_info)
+    E:\work zone\710bootloader\zlib\Sources\inflate.c 0x00000000   Number         0  inflate.o ABSOLUTE
+    .constdata                               0x7f009c9e   Data           0  inflate.o(.constdata)
+    .text                                    0x7f00645c   ARM Code       0  inflate.o(.text)
+    C$debug_frame11                          0x00001cd0   Data           0  inflate.o(.debug_frame)
+    .constdata$1                             0x7f009c9e   Data           0  inflate.o(.constdata)
+    mark@inflateSync_0                       0x7f009c9e   Data           4  inflate.o(.constdata)
+    E:\work zone\710bootloader\zlib\Sources\adler32.c 0x00000000   Number         0  adler32.o ABSOLUTE
+    .text                                    0x7f006cd4   ARM Code       0  adler32.o(.text)
+    C$debug_frame5                           0x00001e30   Data           0  adler32.o(.debug_frame)
+    E:\work zone\710bootloader\zlib\Sources\infblock.c 0x00000000   Number         0  infblock.o ABSOLUTE
+    .text                                    0x7f006e3c   ARM Code       0  infblock.o(.text)
+    .constdata                               0x7f009ca4   Data           0  infblock.o(.constdata)
+    C$debug_frame14                          0x00001e8c   Data           0  infblock.o(.debug_frame)
+    .constdata$1                             0x7f009ca4   Data           0  infblock.o(.constdata)
+    border                                   0x7f009ca4   Data          76  infblock.o(.constdata)
+    E:\work zone\710bootloader\zlib\Sources\zutil.c 0x00000000   Number         0  zutil.o ABSOLUTE
+    .text                                    0x7f007954   ARM Code       0  zutil.o(.text)
+    .data                                    0x00002e88   Data           0  zutil.o(.data)
+    .constdata                               0x7f009cf0   Data           0  zutil.o(.constdata)
+    C$debug_frame10                          0x00001f8c   Data           0  zutil.o(.debug_frame)
+    .data$0                                  0x00002e88   Data           0  zutil.o(.data)
+    .constdata$1                             0x7f009cf0   Data           0  zutil.o(.constdata)
+    E:\work zone\710bootloader\zlib\Sources\infutil.c 0x00000000   Number         0  infutil.o ABSOLUTE
+    .text                                    0x7f00799c   ARM Code       0  infutil.o(.text)
+    .data                                    0x00002eb0   Data           0  infutil.o(.data)
+    C$debug_frame14                          0x00002008   Data           0  infutil.o(.debug_frame)
+    .data$5                                  0x00002eb0   Data           0  infutil.o(.data)
+    E:\work zone\710bootloader\zlib\Sources\inftrees.c 0x00000000   Number         0  inftrees.o ABSOLUTE
+    .data                                    0x00002ef4   Data           0  inftrees.o(.data)
+    .constdata                               0x7f009d68   Data           0  inftrees.o(.constdata)
+    .text                                    0x7f007ad8   ARM Code       0  inftrees.o(.text)
+    C$debug_frame12                          0x00002064   Data           0  inftrees.o(.debug_frame)
+    .data$0                                  0x00002ef4   Data           0  inftrees.o(.data)
+    fixed_bl                                 0x00002ef4   Data           4  inftrees.o(.data)
+    fixed_bd                                 0x00002ef8   Data           4  inftrees.o(.data)
+    fixed_tl                                 0x00002efc   Data        4096  inftrees.o(.data)
+    fixed_td                                 0x00003efc   Data         256  inftrees.o(.data)
+    huft_build                               0x7f007ad8   ARM Code    1068  inftrees.o(.text)
+    .constdata$1                             0x7f009d68   Data           0  inftrees.o(.constdata)
+    cplens                                   0x7f009d68   Data         124  inftrees.o(.constdata)
+    cplext                                   0x7f009de4   Data         124  inftrees.o(.constdata)
+    cpdist                                   0x7f009e60   Data         120  inftrees.o(.constdata)
+    cpdext                                   0x7f009ed8   Data         120  inftrees.o(.constdata)
+    E:\work zone\710bootloader\zlib\Sources\infcodes.c 0x00000000   Number         0  infcodes.o ABSOLUTE
+    .text                                    0x7f00829c   ARM Code       0  infcodes.o(.text)
+    C$debug_frame15                          0x00002158   Data           0  infcodes.o(.debug_frame)
+    E:\work zone\710bootloader\zlib\Sources\inffast.c 0x00000000   Number         0  inffast.o ABSOLUTE
+    .text                                    0x7f0088c4   ARM Code       0  inffast.o(.text)
+    C$debug_frame15                          0x000021f8   Data           0  inffast.o(.debug_frame)
+    ../../angel/startup.s                    0x00000000   Number         0  __main.o ABSOLUTE
+    <Anonymous Symbol>                       0x00002260   Data          60  __main.o(.debug_frame)
+    !!!                                      0x7f000284   ARM Code     168  __main.o(!!!)
+    _move_region                             0x7f0002a4   ARM Code       0  __main.o(!!!)
+    _move_loop                               0x7f0002d4   ARM Code       0  __main.o(!!!)
+    _zero_region                             0x7f0002e8   ARM Code       0  __main.o(!!!)
+    _zero_loop                               0x7f00030c   ARM Code       0  __main.o(!!!)
+    _region_table                            0x7f00031c   Data           0  __main.o(!!!)
+    ../../armsys.c                           0x00000000   Number         0  _no_redirect.o ABSOLUTE
+    .text                                    0x7f008c40   ARM Code       0  _no_redirect.o(.text)
+    C$debug_frame18                          0x0000229c   Data           0  _no_redirect.o(.debug_frame)
+    ../../memcpset.s                         0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    <Anonymous Symbol>                       0x000022e8   Data          60  rt_memcpy.o(.debug_frame)
+    .text                                    0x7f008c48   ARM Code     180  rt_memcpy.o(.text)
+    _memcpy_dest_aligned                     0x7f008c7c   ARM Code       0  rt_memcpy.o(.text)
+    _memcpy_src1_loop                        0x7f008c9c   ARM Code       0  rt_memcpy.o(.text)
+    _memcpy_src2_loop                        0x7f008cbc   ARM Code       0  rt_memcpy.o(.text)
+    _memcpy_src3_loop                        0x7f008cdc   ARM Code       0  rt_memcpy.o(.text)
+    ../../memcpset.s                         0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    .text                                    0x7f008cfc   ARM Code     108  rt_memcpy_w.o(.text)
+    <Anonymous Symbol>                       0x00002324   Data          84  rt_memcpy_w.o(.debug_frame)
+    _memcpy_aligned_loop                     0x7f008d08   ARM Code       0  rt_memcpy_w.o(.text)
+    _memcpy_small                            0x7f008d20   ARM Code       0  rt_memcpy_w.o(.text)
+    ../../division.s                         0x00000000   Number         0  rt_udiv.o ABSOLUTE
+    <Anonymous Symbol>                       0x00002378   Data          68  rt_udiv.o(.debug_frame)
+    .text                                    0x7f008d68   ARM Code     192  rt_udiv.o(.text)
+    ../../memcpset.s                         0x00000000   Number         0  strcmp.o ABSOLUTE
+    .text                                    0x7f008e28   Data         160  strcmp.o(.text)
+    <Anonymous Symbol>                       0x000023bc   Data          84  strcmp.o(.debug_frame)
+    _ones_word                               0x7f008e28   Data           4  strcmp.o(.text)
+    _strcmp_loop                             0x7f008e40   ARM Code       0  strcmp.o(.text)
+    _strcmp_return                           0x7f008e90   ARM Code       0  strcmp.o(.text)
+    _strcmp_byteloop                         0x7f008e98   ARM Code       0  strcmp.o(.text)
+    _strcmp_byteend                          0x7f008ec0   ARM Code       0  strcmp.o(.text)
+    ../../string.c                           0x00000000   Number         0  strcpy.o ABSOLUTE
+    .text                                    0x7f008ec8   ARM Code       0  strcpy.o(.text)
+    C$debug_frame12                          0x00002410   Data           0  strcpy.o(.debug_frame)
+    ../../string.c                           0x00000000   Number         0  strlen.o ABSOLUTE
+    .text                                    0x7f008f34   ARM Code       0  strlen.o(.text)
+    C$debug_frame12                          0x00002460   Data           0  strlen.o(.debug_frame)
+    ../../angel/sys.s                        0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    <Anonymous Symbol>                       0x0000249c   Data          68  use_no_semi.o(.debug_frame)
+    .text                                    0x7f008f9c   ARM Code       4  use_no_semi.o(.text)
+    ../../angel/kernel.s                     0x00000000   Number         0  kernel.o ABSOLUTE
+    <Anonymous Symbol>                       0x000024e0   Data          88  kernel.o(.debug_frame)
+    .text                                    0x7f008fa0   ARM Code      40  kernel.o(.text)
+    __rt_abort1                              0x7f008fc4   ARM Code       0  kernel.o(.text)
+    ../../angel/rt.s                         0x00000000   Number         0  rt_div0.o ABSOLUTE
+    <Anonymous Symbol>                       0x00002538   Data          60  rt_div0.o(.debug_frame)
+    .text                                    0x7f008fc8   ARM Code      12  rt_div0.o(.text)
+    ../../stdlib.c                           0x00000000   Number         0  exit.o ABSOLUTE
+    .text                                    0x7f008fd4   ARM Code       0  exit.o(.text)
+    C$debug_frame12                          0x00002574   Data           0  exit.o(.debug_frame)
+    ../../armsys.c                           0x00000000   Number         0  lib_init.o ABSOLUTE
+    .text                                    0x7f008fec   ARM Code       0  lib_init.o(.text)
+    C$debug_frame18                          0x000025c0   Data           0  lib_init.o(.debug_frame)
+    ../../angel/rt.s                         0x00000000   Number         0  rt_raise.o ABSOLUTE
+    <Anonymous Symbol>                       0x0000263c   Data          80  rt_raise.o(.debug_frame)
+    .text                                    0x7f0090e8   ARM Code      24  rt_raise.o(.text)
+    ../../stkheap1.s                         0x00000000   Number         0  stkheap1.o ABSOLUTE
+    .text                                    0x7f009100   ARM Code     252  stkheap1.o(.text)
+    <Anonymous Symbol>                       0x0000268c   Data         128  stkheap1.o(.debug_frame)
+    _heap_overflow                           0x7f0091ec   ARM Code       0  stkheap1.o(.text)
+    ../../signal.c                           0x00000000   Number         0  __raise.o ABSOLUTE
+    .text                                    0x7f0091fc   ARM Code       0  __raise.o(.text)
+    C$debug_frame15                          0x0000270c   Data           0  __raise.o(.debug_frame)
+    ../../angel/sys.s                        0x00000000   Number         0  libspace.o ABSOLUTE
+    .bss                                     0x000045f0   Data          96  libspace.o(.bss)
+    .text                                    0x7f009260   ARM Code      12  libspace.o(.text)
+    <Anonymous Symbol>                       0x00002768   Data          68  libspace.o(.debug_frame)
+    __libspace_start                         0x000045f0   Data          96  libspace.o(.bss)
+    ../../fpinit.s                           0x00000000   Number         0  fpinit.o ABSOLUTE
+    x$fpl$fpinit                             0x7f009728   ARM Code      20  fpinit.o(x$fpl$fpinit)
+    <Anonymous Symbol>                       0x000027ac   Data          76  fpinit.o(.debug_frame)
+    ../../signal.c                           0x00000000   Number         0  defsig.o ABSOLUTE
+    .constdata                               0x7f009f50   Data           0  defsig.o(.constdata)
+    .text                                    0x7f00926c   ARM Code       0  defsig.o(.text)
+    C$debug_frame15                          0x000027f8   Data           0  defsig.o(.debug_frame)
+    .constdata$1                             0x7f009f50   Data           0  defsig.o(.constdata)
+    messages@__default_signal_handler_0      0x7f009f50   Data          23  defsig.o(.constdata)
+    ../../angel/rt.s                         0x00000000   Number         0  rt_fp_status_addr.o ABSOLUTE
+    <Anonymous Symbol>                       0x00002844   Data          76  rt_fp_status_addr.o(.debug_frame)
+    .text                                    0x7f0093cc   ARM Code      16  rt_fp_status_addr.o(.text)
+    ../../unhosted.s                         0x00000000   Number         0  sigdefs.o ABSOLUTE
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$ARM_ISAv4$M$PE$A:L22$X:L11$S22$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    NET_getchar                               - Undefined Weak Reference
+    NET_kbhit                                 - Undefined Weak Reference
+    NET_putchar                               - Undefined Weak Reference
+    __Heap_DescSize                           - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __argv_alloc                              - Undefined Weak Reference
+    __call_ctors()                            - Undefined Weak Reference
+    __cpp_finalise                            - Undefined Weak Reference
+    __cpp_initialise                          - Undefined Weak Reference
+    __rt_get_argv                             - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    __user_heap_extend                        - Undefined Weak Reference
+    __user_stack_slop                         - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    FlashDelay                               0x00000180   ARM Code      24  flash.o(.text)
+    BlockLock_W28J800TT                      0x00000198   ARM Code     128  flash.o(.text)
+    BlockSize_W28J800TT                      0x00000218   ARM Code      44  flash.o(.text)
+    BlockSize_W28J800BT                      0x00000244   ARM Code      44  flash.o(.text)
+    BlockErase_W28J800TT                     0x00000270   ARM Code     128  flash.o(.text)
+    BlockWrite_W28J800TT                     0x000002f0   ARM Code     120  flash.o(.text)
+    ReadPID_Winbond                          0x00000368   ARM Code      96  flash.o(.text)
+    ReadPID_W28J800TT                        0x000003c8   ARM Code      36  flash.o(.text)
+    ReadPID_W28J800BT                        0x000003ec   ARM Code      36  flash.o(.text)
+    ReadPID_W28J160TT                        0x00000410   ARM Code      36  flash.o(.text)
+    ReadPID_W28J320TT                        0x00000434   ARM Code      36  flash.o(.text)
+    BlockSize_W28J320TT                      0x00000458   ARM Code      44  flash.o(.text)
+    BlockSize_W28J320BT                      0x00000484   ARM Code      44  flash.o(.text)
+    BlockSize_W28J160BT                      0x000004b0   ARM Code      44  flash.o(.text)
+    BlockSize_W28J160TT                      0x000004dc   ARM Code      36  flash.o(.text)
+    BlockLock_W39L010                        0x00000500   ARM Code       8  flash.o(.text)
+    BlockSize_W39L010                        0x00000508   ARM Code      32  flash.o(.text)
+    BlockErase_W39L010                       0x00000528   ARM Code     112  flash.o(.text)
+    BlockWrite_W39L010                       0x00000598   ARM Code     124  flash.o(.text)
+    ReadPID_W39L010                          0x00000614   ARM Code     164  flash.o(.text)
+    BlockLock_W29EE011                       0x000006b8   ARM Code       8  flash.o(.text)
+    BlockSize_W29EE011                       0x000006c0   ARM Code      32  flash.o(.text)
+    BlockErase_W29EE011                      0x000006e0   ARM Code     116  flash.o(.text)
+    BlockWrite_W29EE011                      0x00000754   ARM Code     116  flash.o(.text)
+    ReadPID_W29EE011                         0x000007c8   ARM Code     180  flash.o(.text)
+    BlockLock_AM29LV800BB                    0x0000087c   ARM Code       8  flash.o(.text)
+    BlockSize_AM29LV800BB                    0x00000884   ARM Code      72  flash.o(.text)
+    BlockSize_AM29LV800BT                    0x000008cc   ARM Code      72  flash.o(.text)
+    BlockErase_AM29LV800BB                   0x00000914   ARM Code     124  flash.o(.text)
+    BlockWrite_AM29LV800BB                   0x00000990   ARM Code     144  flash.o(.text)
+    ReadPID_AM29LV                           0x00000a20   ARM Code     120  flash.o(.text)
+    ReadPID_AM29LV800BB                      0x00000a98   ARM Code      28  flash.o(.text)
+    ReadPID_AM29LV160DB                      0x00000ab4   ARM Code      28  flash.o(.text)
+    ReadPID_AM29LV320DB                      0x00000ad0   ARM Code      28  flash.o(.text)
+    BlockErase_SST39VF6401                   0x00000aec   ARM Code     112  flash.o(.text)
+    ReadPID_SST39VF6401                      0x00000b5c   ARM Code     124  flash.o(.text)
+    BlockSize_M29W320DT                      0x00000bd8   ARM Code      68  flash.o(.text)
+    BlockWrite_M29W320DT                     0x00000c1c   ARM Code     136  flash.o(.text)
+    ReadPID_M29WL320DB                       0x00000ca4   ARM Code     132  flash.o(.text)
+    BlockSize_AM29LV160DB                    0x00000d28   ARM Code      72  flash.o(.text)
+    BlockSize_AM29LV160DT                    0x00000d70   ARM Code      76  flash.o(.text)
+    BlockSize_AM29LV320DB                    0x00000dbc   ARM Code      44  flash.o(.text)
+    BlockSize_AM29LV320DT                    0x00000de8   ARM Code      44  flash.o(.text)
+    BlockLock_E28F640                        0x00000e14   ARM Code      92  flash.o(.text)
+    BlockSize_E28F640                        0x00000e70   ARM Code      32  flash.o(.text)
+    BlockWrite_E28F640                       0x00000e90   ARM Code      84  flash.o(.text)
+    BlockErase_E28F640                       0x00000ee4   ARM Code     184  flash.o(.text)
+    ReadPID_E28F640                          0x00000f9c   ARM Code      88  flash.o(.text)
+    ReadPID_E28F128                          0x00000ff4   ARM Code      88  flash.o(.text)
+    ReadPID_E28F320                          0x0000104c   ARM Code      88  flash.o(.text)
+    BlockSize_SST39VF160                     0x000010a4   ARM Code      32  flash.o(.text)
+    ReadPID_SST39VF160                       0x000010c4   ARM Code      40  flash.o(.text)
+    BlockErase_SST39VF160                    0x000010ec   ARM Code     112  flash.o(.text)
+    BlockErase_MX28F160C3B                   0x0000115c   ARM Code     128  flash.o(.text)
+    BlockWrite_MX28F160C3B                   0x000011dc   ARM Code     120  flash.o(.text)
+    FlashSize                                0x00001254   ARM Code      12  flash.o(.text)
+    FindFlash                                0x000012e8   ARM Code     144  image.o(.text)
+    FindFooter                               0x00001378   ARM Code     260  image.o(.text)
+    FindImage                                0x0000147c   ARM Code      84  image.o(.text)
+    DelBlock                                 0x000014d0   ARM Code     156  image.o(.text)
+    DelImage                                 0x0000156c   ARM Code     180  image.o(.text)
+    CorruptCheck                             0x00001620   ARM Code     276  image.o(.text)
+    WriteImage                               0x00001734   ARM Code     780  image.o(.text)
+    WriteRawImage                            0x00001a40   ARM Code     572  image.o(.text)
+    WriteFile2Image                          0x00001c7c   ARM Code     804  image.o(.text)
+    ChangeImageType                          0x00001fa0   ARM Code     256  image.o(.text)
+    ImageCheck                               0x000020a0   ARM Code     116  image.o(.text)
+    BIB_ShowInfo                             0x00002114   ARM Code     596  bib.o(.text)
+    _crc                                     0x00002368   ARM Code      72  xmodem.o(.text)
+    calctable                                0x000023b0   ARM Code      72  xmodem.o(.text)
+    xmodem                                   0x000023f8   ARM Code     520  xmodem.o(.text)
+    $Ven$AA$L$$Reset_Handler                 0x00002610   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$uprintf                       0x00002618   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$__rt_memcpy                   0x00002620   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$ukbhit                        0x00002628   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$uputchar                      0x00002630   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$ugetchar                      0x00002638   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$sleep                         0x00002640   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    shell_prompt                             0x00002674   Data          15  command.o(.data)
+    NU_Commands                              0x00002684   Data         288  command.o(.data)
+    NU_CommandTable                          0x000027a4   Data          12  command.o(.data)
+    flash                                    0x000027b0   Data        1560  flash.o(.data)
+    _flash_buffer                            0x00002dc8   Data           4  image.o(.data)
+    z_errmsg                                 0x00002e88   Data          40  zutil.o(.data)
+    inflate_mask                             0x00002eb0   Data          68  infutil.o(.data)
+    _net_init                                0x0000402c   Data           4  sh.o(.bss)
+    command_buffer                           0x0000404f   Data         256  sh.o(.bss)
+    memory_size                              0x000041f0   Data           4  main.o(.bss)
+    semi_stack                               0x000041f4   Data           4  main.o(.bss)
+    my_heap                                  0x000041f8   Data           8  main.o(.bss)
+    clkTck                                   0x00004200   Data           4  timer.o(.bss)
+    my_heap_tail                             0x0000420c   Data           4  heap.o(.bss)
+    my_heap_table                            0x00004210   Data         256  heap.o(.bss)
+    heap_info                                0x00004310   Data          16  heap.o(.bss)
+    FileCount                                0x00004320   Data           4  heap.o(.bss)
+    ExceptionStatus                          0x00004324   Data           4  heap.o(.bss)
+    ExceptionLinkReg                         0x00004328   Data           4  heap.o(.bss)
+    enableUSB                                0x00004330   Data           4  bootproc.o(.bss)
+    crcTable                                 0x00004336   Data         512  xmodem.o(.bss)
+    USBModeFlag                              0x00004538   Data           1  Usb.o(.bss)
+    ResetFlag                                0x00004539   Data           1  Usb.o(.bss)
+    Bulk_First_Flag                          0x0000453a   Data           1  Usb.o(.bss)
+    DMA_CInt_A_Flag                          0x0000453b   Data           1  Usb.o(.bss)
+    DMA_CInt_B_Flag                          0x0000453c   Data           1  Usb.o(.bss)
+    DMA_CInt_C_Flag                          0x0000453d   Data           1  Usb.o(.bss)
+    Token_Input_A_Flag                       0x0000453e   Data           1  Usb.o(.bss)
+    Token_Input_C_Flag                       0x0000453f   Data           1  Usb.o(.bss)
+    bulksetflag                              0x00004540   Data           1  Usb.o(.bss)
+    bulkoutsetflag                           0x00004541   Data           1  Usb.o(.bss)
+    DEV_RES_Flag                             0x00004542   Data           1  Usb.o(.bss)
+    GET_DEV_Flag                             0x00004543   Data           1  Usb.o(.bss)
+    GET_CFG_Flag                             0x00004544   Data           1  Usb.o(.bss)
+    GET_STR_Flag                             0x00004545   Data           1  Usb.o(.bss)
+    CLA_CMD_Oflag                            0x00004546   Data           1  Usb.o(.bss)
+    VEN_CMD_Oflag                            0x00004547   Data           1  Usb.o(.bss)
+    VEN_CMD_Iflag                            0x00004548   Data           1  Usb.o(.bss)
+    MCCI_CMD_Oflag                           0x00004549   Data           1  Usb.o(.bss)
+    MCCI_CMD_Iflag                           0x0000454a   Data           1  Usb.o(.bss)
+    CLA_CMD_Iflag                            0x0000454b   Data           1  Usb.o(.bss)
+    CTL_BKI_Eflag                            0x0000454c   Data           1  Usb.o(.bss)
+    Bulk_Out_Transfer_Size                   0x00004550   Data           4  Usb.o(.bss)
+    Bulk_set_length                          0x00004554   Data           4  Usb.o(.bss)
+    Bulkout_set_length                       0x00004558   Data           4  Usb.o(.bss)
+    USB_MEM_START                            0x0000455c   Data           4  Usb.o(.bss)
+    USB_CtlOut_Format                        0x00004560   Data           8  Usb.o(.bss)
+    USB_EP_Inf_Array                         0x000045e4   Data           9  Usb.o(.bss)
+    Image$$RAM$$ZI$$Limit                    0x00004650   Number         0  anon$$obj.o ABSOLUTE
+    Reset_Go                                 0x7f000000   ARM Code       0  init.o(Init)
+    Reset_Handler                            0x7f0001d0   ARM Code       0  init.o(Init)
+    __main                                   0x7f000284   ARM Code     152  __main.o(!!!)
+    WBL_info                                 0x7f00032c   ARM Code     312  wbl_info.o(.text)
+    debug_wait                               0x7f000464   ARM Code     128  command.o(.text)
+    _toupper                                 0x7f000560   ARM Code      16  sh.o(.text)
+    NU_parse                                 0x7f000668   ARM Code     652  sh.o(.text)
+    sh                                       0x7f0008f4   ARM Code      32  sh.o(.text)
+    chartohex                                0x7f000a40   ARM Code      52  sh.o(.text)
+    s2hex                                    0x7f000a74   ARM Code      96  sh.o(.text)
+    bootPROM_yesno                           0x7f00102c   ARM Code     108  sh.o(.text)
+    ExceptionCheck                           0x7f001098   ARM Code     208  sh.o(.text)
+    validhex                                 0x7f001168   ARM Code     116  sh.o(.text)
+    validdec                                 0x7f0011dc   ARM Code      48  sh.o(.text)
+    s2ip                                     0x7f00120c   ARM Code     136  sh.o(.text)
+    s2dec                                    0x7f001294   ARM Code      64  sh.o(.text)
+    s2u                                      0x7f0012d4   ARM Code      64  sh.o(.text)
+    GetAddress                               0x7f001314   ARM Code     136  sh.o(.text)
+    wmemcpy                                  0x7f00139c   ARM Code      36  sh.o(.text)
+    INTF_action                              0x7f0013c0   ARM Code      16  sh.o(.text)
+    ERROR_action                             0x7f0013d0   ARM Code      40  sh.o(.text)
+    H_action                                 0x7f0013f8   ARM Code     168  sh.o(.text)
+    D_action                                 0x7f0014a0   ARM Code     516  sh.o(.text)
+    E_action                                 0x7f001700   ARM Code     224  sh.o(.text)
+    MX_action                                0x7f0017e0   ARM Code     384  sh.o(.text)
+    MT_action                                0x7f001960   ARM Code     216  sh.o(.text)
+    G_action                                 0x7f001a38   ARM Code     116  sh.o(.text)
+    B_action                                 0x7f001aac   ARM Code     208  sh.o(.text)
+    MSET_action                              0x7f001ca4   ARM Code     240  sh.o(.text)
+    setmem                                   0x7f001d94   ARM Code     108  sh.o(.text)
+    CP_usage                                 0x7f001e00   ARM Code     248  sh.o(.text)
+    CP_action                                0x7f001ef8   ARM Code     212  sh.o(.text)
+    USB_action                               0x7f001fcc   ARM Code     404  sh.o(.text)
+    CACHE_action                             0x7f002160   ARM Code     464  sh.o(.text)
+    FX_usage                                 0x7f002330   ARM Code     256  sh.o(.text)
+    FX_action                                0x7f002430   ARM Code     920  sh.o(.text)
+    FT_usage                                 0x7f0027c8   ARM Code      68  sh.o(.text)
+    FT_action                                0x7f00280c   ARM Code     728  sh.o(.text)
+    DEL_usage                                0x7f002ae4   ARM Code     196  sh.o(.text)
+    DEL_action                               0x7f002ba8   ARM Code     504  sh.o(.text)
+    UNZIP_action                             0x7f002da0   ARM Code     200  sh.o(.text)
+    RUN_action                               0x7f002e68   ARM Code     188  sh.o(.text)
+    LS_action                                0x7f002f24   ARM Code     316  sh.o(.text)
+    CHK_usage                                0x7f003060   ARM Code      44  sh.o(.text)
+    CHK_action                               0x7f00308c   ARM Code     236  sh.o(.text)
+    SET_action                               0x7f003178   ARM Code    1960  sh.o(.text)
+    TERM_action                              0x7f003920   ARM Code     308  sh.o(.text)
+    BOOT_action                              0x7f003a54   ARM Code      68  sh.o(.text)
+    ATTRIB_usage                             0x7f003a98   ARM Code     112  sh.o(.text)
+    ATTRIB_action                            0x7f003b08   ARM Code     428  sh.o(.text)
+    main                                     0x7f003e8c   ARM Code    1208  main.o(.text)
+    init_timer                               0x7f004344   ARM Code      56  timer.o(.text)
+    clock                                    0x7f00437c   ARM Code      12  timer.o(.text)
+    sleep                                    0x7f004388   ARM Code      68  timer.o(.text)
+    __user_initial_stackheap                 0x7f0043e8   ARM Code      40  heap.o(.text)
+    __Heap_ProvideMemory                     0x7f004410   ARM Code      80  heap.o(.text)
+    __Heap_Alloc                             0x7f004460   ARM Code     140  heap.o(.text)
+    __Heap_Free                              0x7f0044ec   ARM Code     140  heap.o(.text)
+    IsNetWrite                               0x7f004588   ARM Code      12  uprintf.o(.text)
+    SetNetWrite                              0x7f004594   ARM Code      12  uprintf.o(.text)
+    uputchar                                 0x7f0045a0   ARM Code      52  uprintf.o(.text)
+    UART_PutString                           0x7f0045d4   ARM Code      36  uprintf.o(.text)
+    uprintf                                  0x7f004778   ARM Code      88  uprintf.o(.text)
+    ugetchar                                 0x7f0047d0   ARM Code      40  uprintf.o(.text)
+    ukbhit                                   0x7f0047f8   ARM Code      40  uprintf.o(.text)
+    BootProcess                              0x7f004984   ARM Code     988  bootproc.o(.text)
+    fputc                                    0x7f004d60   ARM Code      32  retarget.o(.text)
+    ferror                                   0x7f004d80   ARM Code       8  retarget.o(.text)
+    _sys_exit                                0x7f004d88   ARM Code      20  retarget.o(.text)
+    _ttywrch                                 0x7f004d9c   ARM Code      24  retarget.o(.text)
+    print_sys_buf                            0x7f004db4   ARM Code      40  retarget.o(.text)
+    fil_sys_buf                              0x7f004ddc   ARM Code     116  retarget.o(.text)
+    init_serial                              0x7f004e54   ARM Code      92  serial.o(.text)
+    sendchar                                 0x7f004eb0   ARM Code      56  serial.o(.text)
+    serial_kbhit                             0x7f004ee8   ARM Code      24  serial.o(.text)
+    serial_getchar                           0x7f004f00   ARM Code      24  serial.o(.text)
+    UART_Speed                               0x7f004f18   ARM Code     188  serial.o(.text)
+    Disable_USB                              0x7f004fe8   ARM Code      32  down.o(.text)
+    Enable_USB                               0x7f005008   ARM Code      20  down.o(.text)
+    usb_down                                 0x7f00501c   ARM Code       4  down.o(.text)
+    validZipID                               0x7f005024   ARM Code      40  unzip.o(.text)
+    unzip                                    0x7f00504c   ARM Code     296  unzip.o(.text)
+    USB_Setup_Endpoint                       0x7f005174   ARM Code     444  Usb.o(.text)
+    USB_Init                                 0x7f005330   ARM Code     196  Usb.o(.text)
+    USBIRQ_IntHandler                        0x7f0053f4   ARM Code      40  Usb.o(.text)
+    USB_ISR_EpC_Bus_Err                      0x7f00541c   ARM Code      16  Usb.o(.text)
+    USB_ISR_EpC_DMA_Complete                 0x7f00542c   ARM Code      28  Usb.o(.text)
+    USB_ISR_EpC_Token_Input                  0x7f005448   ARM Code      28  Usb.o(.text)
+    USB_ISR_EpC_Stall                        0x7f005464   ARM Code      16  Usb.o(.text)
+    USB_ISR_EpB_Bus_Err                      0x7f005474   ARM Code      16  Usb.o(.text)
+    USB_ISR_EpB_DMA_Complete                 0x7f005484   ARM Code      56  Usb.o(.text)
+    USB_ISR_EpB_Token_Input                  0x7f0054bc   ARM Code      16  Usb.o(.text)
+    USB_ISR_EpB_Stall                        0x7f0054cc   ARM Code      16  Usb.o(.text)
+    USB_ISR_EpA_Bus_Err                      0x7f0054dc   ARM Code      16  Usb.o(.text)
+    USB_ISR_EpA_DMA_Complete                 0x7f0054ec   ARM Code      28  Usb.o(.text)
+    USB_ISR_EpA_Token_Input                  0x7f005508   ARM Code      28  Usb.o(.text)
+    USB_ISR_EpA_Stall                        0x7f005524   ARM Code      16  Usb.o(.text)
+    USB_ISR_Reset_End                        0x7f005534   ARM Code      64  Usb.o(.text)
+    Get_Dev_Dpr_In                           0x7f005574   ARM Code     272  Usb.o(.text)
+    Outp_Byte                                0x7f005684   ARM Code      96  Usb.o(.text)
+    Vender_Data_In                           0x7f0056e4   ARM Code     320  Usb.o(.text)
+    Class_Data_In                            0x7f005824   ARM Code      32  Usb.o(.text)
+    USB_ISR_CtlIn                            0x7f005844   ARM Code     116  Usb.o(.text)
+    Vender_Data_Out                          0x7f0058b8   ARM Code     488  Usb.o(.text)
+    Class_Data_Out                           0x7f005aa0   ARM Code       4  Usb.o(.text)
+    USB_ISR_CtlOut                           0x7f005aa4   ARM Code      68  Usb.o(.text)
+    USB_Cmd_Parsing                          0x7f005ae8   ARM Code     104  Usb.o(.text)
+    USB_All_Flag_Clear                       0x7f005b50   ARM Code      56  Usb.o(.text)
+    USB_ISR_Vendor_Cmd                       0x7f005b88   ARM Code     272  Usb.o(.text)
+    USB_ISR_Class_Cmd                        0x7f005c98   ARM Code      60  Usb.o(.text)
+    USB_ISR_Str_Des                          0x7f005cd4   ARM Code     196  Usb.o(.text)
+    USB_ISR_Conf_Des                         0x7f005d98   ARM Code     104  Usb.o(.text)
+    USB_ISR_Dev_Des                          0x7f005e00   ARM Code     104  Usb.o(.text)
+    USB_ISR_Error                            0x7f005e68   ARM Code      16  Usb.o(.text)
+    USB_ISR_Resume                           0x7f005e78   ARM Code      16  Usb.o(.text)
+    USB_ISR_Suspend                          0x7f005e88   ARM Code      40  Usb.o(.text)
+    USB_ISR_Reset_Start                      0x7f005eb0   ARM Code      88  Usb.o(.text)
+    USB_Int_ISR                              0x7f005f08   ARM Code     244  Usb.o(.text)
+    USBHandler                               0x7f005ffc   ARM Code       4  Usb.o(.text)
+    USB_Int_Init                             0x7f006000   ARM Code      80  Usb.o(.text)
+    SDRAM_USB_Transfer                       0x7f006050   ARM Code     352  Usb.o(.text)
+    SDRAM2USB_Bulk                           0x7f0061b0   ARM Code     104  Usb.o(.text)
+    USB2SDRAM_Bulk                           0x7f006218   ARM Code     104  Usb.o(.text)
+    SDRAM2USB_Int                            0x7f006280   ARM Code     104  Usb.o(.text)
+    usb_recv                                 0x7f0062e8   ARM Code      32  Usb.o(.text)
+    usb_send                                 0x7f006308   ARM Code      72  Usb.o(.text)
+    usleep                                   0x7f006358   ARM Code      20  uxmodem.o(.text)
+    dump                                     0x7f00636c   ARM Code      44  uxmodem.o(.text)
+    UXmodem                                  0x7f006398   ARM Code     196  uxmodem.o(.text)
+    inflateReset                             0x7f00645c   ARM Code      80  inflate.o(.text)
+    inflateEnd                               0x7f0064ac   ARM Code      80  inflate.o(.text)
+    inflateInit2_                            0x7f0064fc   ARM Code     288  inflate.o(.text)
+    inflateInit_                             0x7f00661c   ARM Code      16  inflate.o(.text)
+    inflate                                  0x7f00662c   ARM Code    1292  inflate.o(.text)
+    inflateSetDictionary                     0x7f006b38   ARM Code     156  inflate.o(.text)
+    inflateSync                              0x7f006bd4   ARM Code     220  inflate.o(.text)
+    inflateSyncPoint                         0x7f006cb0   ARM Code      32  inflate.o(.text)
+    adler32                                  0x7f006cd4   ARM Code     352  adler32.o(.text)
+    inflate_blocks_reset                     0x7f006e3c   ARM Code     148  infblock.o(.text)
+    inflate_blocks_new                       0x7f006ed0   ARM Code     236  infblock.o(.text)
+    inflate_blocks                           0x7f006fbc   ARM Code    2308  infblock.o(.text)
+    inflate_blocks_free                      0x7f0078c0   ARM Code      88  infblock.o(.text)
+    inflate_set_dictionary                   0x7f007918   ARM Code      40  infblock.o(.text)
+    inflate_blocks_sync_point                0x7f007940   ARM Code      20  infblock.o(.text)
+    zlibVersion                              0x7f007954   ARM Code      16  zutil.o(.text)
+    zError                                   0x7f007964   ARM Code      16  zutil.o(.text)
+    zcalloc                                  0x7f007974   ARM Code      12  zutil.o(.text)
+    zcfree                                   0x7f007980   ARM Code      20  zutil.o(.text)
+    inflate_flush                            0x7f00799c   ARM Code     316  infutil.o(.text)
+    inflate_trees_bits                       0x7f007f04   ARM Code     272  inftrees.o(.text)
+    inflate_trees_dynamic                    0x7f008014   ARM Code     588  inftrees.o(.text)
+    inflate_trees_fixed                      0x7f008260   ARM Code      48  inftrees.o(.text)
+    inflate_codes_new                        0x7f00829c   ARM Code      80  infcodes.o(.text)
+    inflate_codes                            0x7f0082ec   ARM Code    1476  infcodes.o(.text)
+    inflate_codes_free                       0x7f0088b0   ARM Code      20  infcodes.o(.text)
+    inflate_fast                             0x7f0088c4   ARM Code     892  inffast.o(.text)
+    _main_redirection                        0x7f008c40   ARM Code       4  _no_redirect.o(.text)
+    _main                                    0x7f008c44   ARM Code       4  _no_redirect.o(.text)
+    __rt_memcpy                              0x7f008c48   ARM Code     180  rt_memcpy.o(.text)
+    __rt_memcpy_w                            0x7f008cfc   ARM Code     108  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes                        0x7f008d48   ARM Code       0  rt_memcpy_w.o(.text)
+    __rt_udiv                                0x7f008d68   ARM Code     192  rt_udiv.o(.text)
+    strcmp                                   0x7f008e2c   ARM Code     156  strcmp.o(.text)
+    strcpy                                   0x7f008ec8   ARM Code     104  strcpy.o(.text)
+    strlen                                   0x7f008f34   ARM Code     100  strlen.o(.text)
+    __32__use_no_semihosting_swi             0x7f008f9c   ARM Code       0  use_no_semi.o(.text)
+    __semihosting_swi_guard                  0x7f008f9c   ARM Code       0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x7f008f9c   ARM Code       4  use_no_semi.o(.text)
+    __rt_entry                               0x7f008fa0   ARM Code       0  kernel.o(.text)
+    __32__rt_exit                            0x7f008fb0   ARM Code       0  kernel.o(.text)
+    __rt_exit                                0x7f008fb0   ARM Code      16  kernel.o(.text)
+    __32__rt_abort                           0x7f008fc0   ARM Code       0  kernel.o(.text)
+    __rt_abort                               0x7f008fc0   ARM Code       8  kernel.o(.text)
+    __rt_div0                                0x7f008fc8   ARM Code      12  rt_div0.o(.text)
+    exit                                     0x7f008fd4   ARM Code      24  exit.o(.text)
+    __rt_lib_init                            0x7f008fec   ARM Code     228  lib_init.o(.text)
+    __rt_lib_shutdown                        0x7f0090d0   ARM Code      20  lib_init.o(.text)
+    __32__rt_raise                           0x7f0090e8   ARM Code       0  rt_raise.o(.text)
+    __rt_raise                               0x7f0090e8   ARM Code      24  rt_raise.o(.text)
+    __rt_stackheap_init                      0x7f009100   ARM Code     144  stkheap1.o(.text)
+    __rt_heap_extend                         0x7f009190   ARM Code     108  stkheap1.o(.text)
+    __raise                                  0x7f0091fc   ARM Code      92  __raise.o(.text)
+    __user_libspace                          0x7f009260   ARM Code       8  libspace.o(.text)
+    __default_signal_handler                 0x7f00926c   ARM Code     352  defsig.o(.text)
+    __rt_fp_status_addr                      0x7f0093cc   ARM Code      16  rt_fp_status_addr.o(.text)
+    $Ven$AA$L$$FlashSize                     0x7f0093dc   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$FindImage                     0x7f0093e4   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$BIB_ShowInfo                  0x7f0093ec   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$xmodem                        0x7f0093f4   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$DelImage                      0x7f0093fc   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$CorruptCheck                  0x7f009404   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$WriteRawImage                 0x7f00940c   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$WriteImage                    0x7f009414   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$DelBlock                      0x7f00941c   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$FindFooter                    0x7f009424   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$ImageCheck                    0x7f00942c   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$ChangeImageType               0x7f009434   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    $Ven$AA$L$$FindFlash                     0x7f00943c   ARM Code       0  anon$$obj.o(Veneer$$Code)
+    WB_TrapSWI                               0x7f009444   ARM Code       0  switrap.o(WB_Traps)
+    EnableIRQ                                0x7f009670   ARM Code       0  irq.o(irq_function)
+    DisableIRQ                               0x7f009688   ARM Code       0  irq.o(irq_function)
+    timer_handler                            0x7f0096a0   ARM Code       0  irq.o(irq_function)
+    MemSize                                  0x7f0096d0   ARM Code       0  mem.o(memory_asm)
+    _fp_init                                 0x7f009728   ARM Code      20  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x7f009738   ARM Code       0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x7f00a07c   Data           0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x7f00a094   Data           0  anon$$obj.o(Region$$Table)
+    ZISection$$Table$$Base                   0x7f00a094   Data           0  anon$$obj.o(ZISection$$Table)
+    ZISection$$Table$$Limit                  0x7f00a0a4   Data           0  anon$$obj.o(ZISection$$Table)
+    __SIG_IGN                                0xfffffffd   Number         0  sigdefs.o ABSOLUTE
+    __SIG_ERR                                0xfffffffe   Number         0  sigdefs.o ABSOLUTE
+    __SIG_DFL                                0xffffffff   Number         0  sigdefs.o ABSOLUTE
+
+
+================================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x7f000000
+
+  Load Region ROM_LOAD (Base: 0x7f000000, Size: 0x0000e0a0, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ROM (Base: 0x7f000000, Size: 0x0000a0a4, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr  Idx  E Section Name        Object
+
+    0x7f000000   0x00000284   Code   RO     1   * Init                init.o
+    0x7f000284   0x000000a8   Code   RO   747   * !!!                 __main.o(c_a__un.l)
+    0x7f00032c   0x00000138   Code   RO     9     .text               wbl_info.o
+    0x7f000464   0x000000fc   Code   RO    36     .text               command.o
+    0x7f000560   0x0000392c   Code   RO   282     .text               sh.o(shell_li.a)
+    0x7f003e8c   0x000004b8   Code   RO   435     .text               main.o(shell_li.a)
+    0x7f004344   0x000000a4   Code   RO   457     .text               timer.o(shell_li.a)
+    0x7f0043e8   0x000001a0   Code   RO   478     .text               heap.o(shell_li.a)
+    0x7f004588   0x000003fc   Code   RO   521     .text               uprintf.o(uprintf_li.a)
+    0x7f004984   0x000003dc   Code   RO   529     .text               bootproc.o(shell_li.a)
+    0x7f004d60   0x000000f4   Code   RO   544     .text               retarget.o(shell_li.a)
+    0x7f004e54   0x00000194   Code   RO   580     .text               serial.o(uprintf_li.a)
+    0x7f004fe8   0x0000003c   Code   RO   582     .text               down.o(usbcom_li.a)
+    0x7f005024   0x00000150   Code   RO   606     .text               unzip.o(zlib_li.a)
+    0x7f005174   0x000011e4   Code   RO   608     .text               Usb.o(usbcom_li.a)
+    0x7f006358   0x00000104   Code   RO   701     .text               uxmodem.o(usbcom_li.a)
+    0x7f00645c   0x00000878   Code   RO   723     .text               inflate.o(zlib_li.a)
+    0x7f006cd4   0x00000168   Code   RO   726     .text               adler32.o(zlib_li.a)
+    0x7f006e3c   0x00000b18   Code   RO   728     .text               infblock.o(zlib_li.a)
+    0x7f007954   0x00000048   Code   RO   731     .text               zutil.o(zlib_li.a)
+    0x7f00799c   0x0000013c   Code   RO   735     .text               infutil.o(zlib_li.a)
+    0x7f007ad8   0x000007c4   Code   RO   738     .text               inftrees.o(zlib_li.a)
+    0x7f00829c   0x00000628   Code   RO   743     .text               infcodes.o(zlib_li.a)
+    0x7f0088c4   0x0000037c   Code   RO   745     .text               inffast.o(zlib_li.a)
+    0x7f008c40   0x00000008   Code   RO   749     .text               _no_redirect.o(c_a__un.l)
+    0x7f008c48   0x000000b4   Code   RO   751     .text               rt_memcpy.o(c_a__un.l)
+    0x7f008cfc   0x0000006c   Code   RO   753     .text               rt_memcpy_w.o(c_a__un.l)
+    0x7f008d68   0x000000c0   Code   RO   755     .text               rt_udiv.o(c_a__un.l)
+    0x7f008e28   0x000000a0   Code   RO   757     .text               strcmp.o(c_a__un.l)
+    0x7f008ec8   0x0000006c   Code   RO   759     .text               strcpy.o(c_a__un.l)
+    0x7f008f34   0x00000068   Code   RO   761     .text               strlen.o(c_a__un.l)
+    0x7f008f9c   0x00000004   Code   RO   763     .text               use_no_semi.o(c_a__un.l)
+    0x7f008fa0   0x00000028   Code   RO   765     .text               kernel.o(c_a__un.l)
+    0x7f008fc8   0x0000000c   Code   RO   767     .text               rt_div0.o(c_a__un.l)
+    0x7f008fd4   0x00000018   Code   RO   769     .text               exit.o(c_a__un.l)
+    0x7f008fec   0x000000fc   Code   RO   771     .text               lib_init.o(c_a__un.l)
+    0x7f0090e8   0x00000018   Code   RO   773     .text               rt_raise.o(c_a__un.l)
+    0x7f009100   0x000000fc   Code   RO   775     .text               stkheap1.o(c_a__un.l)
+    0x7f0091fc   0x00000064   Code   RO   777     .text               __raise.o(c_a__un.l)
+    0x7f009260   0x0000000c   Code   RO   779     .text               libspace.o(c_a__un.l)
+    0x7f00926c   0x00000160   Code   RO   784     .text               defsig.o(c_a__un.l)
+    0x7f0093cc   0x00000010   Code   RO   787     .text               rt_fp_status_addr.o(c_a__un.l)
+    0x7f0093dc   0x00000008   Code   RO   792     Veneer$$Code        anon$$obj.o
+    0x7f0093e4   0x00000008   Code   RO   793     Veneer$$Code        anon$$obj.o
+    0x7f0093ec   0x00000008   Code   RO   794     Veneer$$Code        anon$$obj.o
+    0x7f0093f4   0x00000008   Code   RO   795     Veneer$$Code        anon$$obj.o
+    0x7f0093fc   0x00000008   Code   RO   796     Veneer$$Code        anon$$obj.o
+    0x7f009404   0x00000008   Code   RO   797     Veneer$$Code        anon$$obj.o
+    0x7f00940c   0x00000008   Code   RO   798     Veneer$$Code        anon$$obj.o
+    0x7f009414   0x00000008   Code   RO   799     Veneer$$Code        anon$$obj.o
+    0x7f00941c   0x00000008   Code   RO   800     Veneer$$Code        anon$$obj.o
+    0x7f009424   0x00000008   Code   RO   801     Veneer$$Code        anon$$obj.o
+    0x7f00942c   0x00000008   Code   RO   802     Veneer$$Code        anon$$obj.o
+    0x7f009434   0x00000008   Code   RO   803     Veneer$$Code        anon$$obj.o
+    0x7f00943c   0x00000008   Code   RO   804     Veneer$$Code        anon$$obj.o
+    0x7f009444   0x0000022c   Code   RO   453     WB_Traps            switrap.o(shell_li.a)
+    0x7f009670   0x00000060   Code   RO   525     irq_function        irq.o(shell_li.a)
+    0x7f0096d0   0x00000058   Code   RO   540     memory_asm          mem.o(shell_li.a)
+    0x7f009728   0x00000014   Code   RO   782     x$fpl$fpinit        fpinit.o(f_a_p.l)
+    0x7f00973c   0x00000090   Data   RO    10     .constdata          wbl_info.o
+    0x7f0097cc   0x000002c4   Data   RO    39     .constdata          command.o
+    0x7f009a90   0x00000208   Data   RO   284     .constdata          sh.o(shell_li.a)
+    0x7f009c98   0x00000006   Data   RO   436     .constdata          main.o(shell_li.a)
+    0x7f009c9e   0x00000004   Data   RO   724     .constdata          inflate.o(zlib_li.a)
+    0x7f009ca2   0x00000002   PAD
+    0x7f009ca4   0x0000004c   Data   RO   729     .constdata          infblock.o(zlib_li.a)
+    0x7f009cf0   0x00000075   Data   RO   733     .constdata          zutil.o(zlib_li.a)
+    0x7f009d65   0x00000003   PAD
+    0x7f009d68   0x000001e8   Data   RO   740     .constdata          inftrees.o(zlib_li.a)
+    0x7f009f50   0x0000012b   Data   RO   785     .constdata          defsig.o(c_a__un.l)
+    0x7f00a07b   0x00000001   PAD
+    0x7f00a07c   0x00000018   Data   RO   790     Region$$Table       anon$$obj.o
+    0x7f00a094   0x00000010   Data   RO   791     ZISection$$Table    anon$$obj.o
+
+
+    Execution Region RAM (Base: 0x00000000, Size: 0x00004650, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr  Idx  E Section Name        Object
+
+    0x00000000   0x000000b8   Code   RO     5   * Vect                vectors.o
+    0x000000b8   0x00001230   Code   RO    63     .text               flash.o(flash_li.a)
+    0x000012e8   0x00000e2c   Code   RO   256     .text               image.o(flash_li.a)
+    0x00002114   0x00000254   Code   RO   508     .text               bib.o(shell_li.a)
+    0x00002368   0x000002a8   Code   RO   577     .text               xmodem.o(Xmodem_li.a)
+    0x00002610   0x00000008   Code   RO   805     Veneer$$Code        anon$$obj.o
+    0x00002618   0x00000008   Code   RO   806     Veneer$$Code        anon$$obj.o
+    0x00002620   0x00000008   Code   RO   807     Veneer$$Code        anon$$obj.o
+    0x00002628   0x00000008   Code   RO   808     Veneer$$Code        anon$$obj.o
+    0x00002630   0x00000008   Code   RO   809     Veneer$$Code        anon$$obj.o
+    0x00002638   0x00000008   Code   RO   810     Veneer$$Code        anon$$obj.o
+    0x00002640   0x00000008   Code   RO   811     Veneer$$Code        anon$$obj.o
+    0x00002648   0x0000002c   Code   RO    64     i.FlushDCache       flash.o(flash_li.a)
+    0x00002674   0x0000000f   Data   RW    37     .data               command.o
+    0x00002683   0x00000001   PAD
+    0x00002684   0x00000120   Data   RW    38     .data               command.o
+    0x000027a4   0x0000000c   Data   RW    40     .data               command.o
+    0x000027b0   0x00000618   Data   RW    66     .data               flash.o(flash_li.a)
+    0x00002dc8   0x00000008   Data   RW   257     .data               image.o(flash_li.a)
+    0x00002dd0   0x00000004   Data   RW   283     .data               sh.o(shell_li.a)
+    0x00002dd4   0x000000b4   Data   RW   609     .data               Usb.o(usbcom_li.a)
+    0x00002e88   0x00000028   Data   RW   732     .data               zutil.o(zlib_li.a)
+    0x00002eb0   0x00000044   Data   RW   736     .data               infutil.o(zlib_li.a)
+    0x00002ef4   0x00001108   Data   RW   739     .data               inftrees.o(zlib_li.a)
+    0x00003ffc   0x00000008   Zero   RW    65     .bss                flash.o(flash_li.a)
+    0x00004004   0x00000020   Zero   RW   258     .bss                image.o(flash_li.a)
+    0x00004024   0x000001cc   Zero   RW   285     .bss                sh.o(shell_li.a)
+    0x000041f0   0x00000010   Zero   RW   437     .bss                main.o(shell_li.a)
+    0x00004200   0x00000004   Zero   RW   458     .bss                timer.o(shell_li.a)
+    0x00004204   0x0000011c   Zero   RW   479     .bss                heap.o(shell_li.a)
+    0x00004320   0x00000004   Zero   RW   480     .bss                heap.o(shell_li.a)
+    0x00004324   0x00000004   Zero   RW   481     .bss                heap.o(shell_li.a)
+    0x00004328   0x00000004   Zero   RW   482     .bss                heap.o(shell_li.a)
+    0x0000432c   0x00000004   Zero   RW   522     .bss                uprintf.o(uprintf_li.a)
+    0x00004330   0x00000004   Zero   RW   530     .bss                bootproc.o(shell_li.a)
+    0x00004334   0x00000202   Zero   RW   578     .bss                xmodem.o(Xmodem_li.a)
+    0x00004536   0x00000002   PAD
+    0x00004538   0x000000b8   Zero   RW   610     .bss                Usb.o(usbcom_li.a)
+    0x000045f0   0x00000060   Zero   RW   780     .bss                libspace.o(c_a__un.l)
+
+
+
+  Load Region LR$$Debug (Base: 0x00000000, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER$$Debug (Base: 0x00000000, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr  Idx  E Section Name        Object
+
+    0x00000000   0x00000010   Dbug   RW     4     .debug_abbrev       init.o
+    0x00000010   0x00000010   Dbug   RW     8     .debug_abbrev       vectors.o
+    0x00000020   0x000003ec   Dbug   RW    20     .debug_abbrev       wbl_info.o
+    0x0000040c   0x00000010   Dbug   RW   456     .debug_abbrev       switrap.o(shell_li.a)
+    0x0000041c   0x00000010   Dbug   RW   528     .debug_abbrev       irq.o(shell_li.a)
+    0x0000042c   0x00000010   Dbug   RW   543     .debug_abbrev       mem.o(shell_li.a)
+    0x00000000   0x00000048   Dbug   RW    19     .debug_frame        wbl_info.o
+    0x00000048   0x00000070   Dbug   RW    55     .debug_frame        command.o
+    0x000000b8   0x000006a0   Dbug   RW   236     .debug_frame        flash.o(flash_li.a)
+    0x00000758   0x0000003c   Dbug   RW   244     .debug_frame        flash.o(flash_li.a)
+    0x00000794   0x0000021c   Dbug   RW   278     .debug_frame        image.o(flash_li.a)
+    0x000009b0   0x00000778   Dbug   RW   386     .debug_frame        sh.o(shell_li.a)
+    0x00001128   0x00000068   Dbug   RW   447     .debug_frame        main.o(shell_li.a)
+    0x00001190   0x0000006c   Dbug   RW   477     .debug_frame        timer.o(shell_li.a)
+    0x000011fc   0x000000a0   Dbug   RW   503     .debug_frame        heap.o(shell_li.a)
+    0x0000129c   0x00000058   Dbug   RW   516     .debug_frame        bib.o(shell_li.a)
+    0x000012f4   0x00000198   Dbug   RW   524     .debug_frame        uprintf.o(uprintf_li.a)
+    0x0000148c   0x00000068   Dbug   RW   539     .debug_frame        bootproc.o(shell_li.a)
+    0x000014f4   0x000000d4   Dbug   RW   572     .debug_frame        retarget.o(shell_li.a)
+    0x000015c8   0x00000094   Dbug   RW   579     .debug_frame        xmodem.o(Xmodem_li.a)
+    0x0000165c   0x0000007c   Dbug   RW   581     .debug_frame        serial.o(uprintf_li.a)
+    0x000016d8   0x00000068   Dbug   RW   596     .debug_frame        down.o(usbcom_li.a)
+    0x00001740   0x00000070   Dbug   RW   607     .debug_frame        unzip.o(zlib_li.a)
+    0x000017b0   0x00000498   Dbug   RW   695     .debug_frame        Usb.o(usbcom_li.a)
+    0x00001c48   0x00000088   Dbug   RW   716     .debug_frame        uxmodem.o(usbcom_li.a)
+    0x00001cd0   0x00000160   Dbug   RW   725     .debug_frame        inflate.o(zlib_li.a)
+    0x00001e30   0x0000005c   Dbug   RW   727     .debug_frame        adler32.o(zlib_li.a)
+    0x00001e8c   0x00000100   Dbug   RW   730     .debug_frame        infblock.o(zlib_li.a)
+    0x00001f8c   0x0000007c   Dbug   RW   734     .debug_frame        zutil.o(zlib_li.a)
+    0x00002008   0x0000005c   Dbug   RW   737     .debug_frame        infutil.o(zlib_li.a)
+    0x00002064   0x000000f4   Dbug   RW   742     .debug_frame        inftrees.o(zlib_li.a)
+    0x00002158   0x000000a0   Dbug   RW   744     .debug_frame        infcodes.o(zlib_li.a)
+    0x000021f8   0x00000068   Dbug   RW   746     .debug_frame        inffast.o(zlib_li.a)
+    0x00002260   0x0000003c   Dbug   RW   748     .debug_frame        __main.o(c_a__un.l)
+    0x0000229c   0x0000004c   Dbug   RW   750     .debug_frame        _no_redirect.o(c_a__un.l)
+    0x000022e8   0x0000003c   Dbug   RW   752     .debug_frame        rt_memcpy.o(c_a__un.l)
+    0x00002324   0x00000054   Dbug   RW   754     .debug_frame        rt_memcpy_w.o(c_a__un.l)
+    0x00002378   0x00000044   Dbug   RW   756     .debug_frame        rt_udiv.o(c_a__un.l)
+    0x000023bc   0x00000054   Dbug   RW   758     .debug_frame        strcmp.o(c_a__un.l)
+    0x00002410   0x00000050   Dbug   RW   760     .debug_frame        strcpy.o(c_a__un.l)
+    0x00002460   0x0000003c   Dbug   RW   762     .debug_frame        strlen.o(c_a__un.l)
+    0x0000249c   0x00000044   Dbug   RW   764     .debug_frame        use_no_semi.o(c_a__un.l)
+    0x000024e0   0x00000058   Dbug   RW   766     .debug_frame        kernel.o(c_a__un.l)
+    0x00002538   0x0000003c   Dbug   RW   768     .debug_frame        rt_div0.o(c_a__un.l)
+    0x00002574   0x0000004c   Dbug   RW   770     .debug_frame        exit.o(c_a__un.l)
+    0x000025c0   0x0000007c   Dbug   RW   772     .debug_frame        lib_init.o(c_a__un.l)
+    0x0000263c   0x00000050   Dbug   RW   774     .debug_frame        rt_raise.o(c_a__un.l)
+    0x0000268c   0x00000080   Dbug   RW   776     .debug_frame        stkheap1.o(c_a__un.l)
+    0x0000270c   0x0000005c   Dbug   RW   778     .debug_frame        __raise.o(c_a__un.l)
+    0x00002768   0x00000044   Dbug   RW   781     .debug_frame        libspace.o(c_a__un.l)
+    0x000027ac   0x0000004c   Dbug   RW   783     .debug_frame        fpinit.o(f_a_p.l)
+    0x000027f8   0x0000004c   Dbug   RW   786     .debug_frame        defsig.o(c_a__un.l)
+    0x00002844   0x0000004c   Dbug   RW   788     .debug_frame        rt_fp_status_addr.o(c_a__un.l)
+    0x00000000   0x00000070   Dbug   RW     2     .debug_info         init.o
+    0x00000070   0x00000074   Dbug   RW     6     .debug_info         vectors.o
+    0x000000e4   0x0000010c   Dbug   RW    25     .debug_info         wbl_info.o
+    0x000001f0   0x000002fc   Dbug   RW    29     .debug_info         wbl_info.o
+    0x000004ec   0x000001b0   Dbug   RW    33     .debug_info         wbl_info.o
+    0x0000069c   0x0000010c   Dbug   RW    16     .debug_info         wbl_info.o
+    0x000007a8   0x000000d4   Dbug   RW    42     .debug_info         command.o
+    0x0000087c   0x00000134   Dbug   RW    57     .debug_info         command.o
+    0x000009b0   0x000000d4   Dbug   RW    48     .debug_info         command.o
+    0x00000a84   0x000000cc   Dbug   RW    45     .debug_info         command.o
+    0x00000b50   0x00000140   Dbug   RW    52     .debug_info         command.o
+    0x00000c90   0x00000114   Dbug   RW   249     .debug_info         flash.o(flash_li.a)
+    0x00000da4   0x00000308   Dbug   RW   253     .debug_info         flash.o(flash_li.a)
+    0x000010ac   0x0000009c   Dbug   RW   238     .debug_info         flash.o(flash_li.a)
+    0x00001148   0x000000e0   Dbug   RW    68     .debug_info         flash.o(flash_li.a)
+    0x00001228   0x000000f4   Dbug   RW    71     .debug_info         flash.o(flash_li.a)
+    0x0000131c   0x00000094   Dbug   RW    74     .debug_info         flash.o(flash_li.a)
+    0x000013b0   0x00000088   Dbug   RW    77     .debug_info         flash.o(flash_li.a)
+    0x00001438   0x000000b4   Dbug   RW    80     .debug_info         flash.o(flash_li.a)
+    0x000014ec   0x000000b4   Dbug   RW    83     .debug_info         flash.o(flash_li.a)
+    0x000015a0   0x00000130   Dbug   RW    86     .debug_info         flash.o(flash_li.a)
+    0x000016d0   0x00000130   Dbug   RW    89     .debug_info         flash.o(flash_li.a)
+    0x00001800   0x000000fc   Dbug   RW    92     .debug_info         flash.o(flash_li.a)
+    0x000018fc   0x000000fc   Dbug   RW    95     .debug_info         flash.o(flash_li.a)
+    0x000019f8   0x000000fc   Dbug   RW    98     .debug_info         flash.o(flash_li.a)
+    0x00001af4   0x000000fc   Dbug   RW   101     .debug_info         flash.o(flash_li.a)
+    0x00001bf0   0x000000b4   Dbug   RW   104     .debug_info         flash.o(flash_li.a)
+    0x00001ca4   0x000000b4   Dbug   RW   107     .debug_info         flash.o(flash_li.a)
+    0x00001d58   0x000000b4   Dbug   RW   110     .debug_info         flash.o(flash_li.a)
+    0x00001e0c   0x000000b4   Dbug   RW   113     .debug_info         flash.o(flash_li.a)
+    0x00001ec0   0x000000ac   Dbug   RW   116     .debug_info         flash.o(flash_li.a)
+    0x00001f6c   0x000000a8   Dbug   RW   119     .debug_info         flash.o(flash_li.a)
+    0x00002014   0x000000cc   Dbug   RW   122     .debug_info         flash.o(flash_li.a)
+    0x000020e0   0x000000ec   Dbug   RW   125     .debug_info         flash.o(flash_li.a)
+    0x000021cc   0x00000100   Dbug   RW   128     .debug_info         flash.o(flash_li.a)
+    0x000022cc   0x000000ac   Dbug   RW   131     .debug_info         flash.o(flash_li.a)
+    0x00002378   0x000000a8   Dbug   RW   134     .debug_info         flash.o(flash_li.a)
+    0x00002420   0x000000d8   Dbug   RW   137     .debug_info         flash.o(flash_li.a)
+    0x000024f8   0x000000e4   Dbug   RW   140     .debug_info         flash.o(flash_li.a)
+    0x000025dc   0x00000104   Dbug   RW   143     .debug_info         flash.o(flash_li.a)
+    0x000026e0   0x000000b0   Dbug   RW   146     .debug_info         flash.o(flash_li.a)
+    0x00002790   0x000000c4   Dbug   RW   149     .debug_info         flash.o(flash_li.a)
+    0x00002854   0x000000c4   Dbug   RW   152     .debug_info         flash.o(flash_li.a)
+    0x00002918   0x00000100   Dbug   RW   155     .debug_info         flash.o(flash_li.a)
+    0x00002a18   0x00000120   Dbug   RW   158     .debug_info         flash.o(flash_li.a)
+    0x00002b38   0x000000e8   Dbug   RW   161     .debug_info         flash.o(flash_li.a)
+    0x00002c20   0x000000e8   Dbug   RW   164     .debug_info         flash.o(flash_li.a)
+    0x00002d08   0x000000e8   Dbug   RW   167     .debug_info         flash.o(flash_li.a)
+    0x00002df0   0x00000100   Dbug   RW   170     .debug_info         flash.o(flash_li.a)
+    0x00002ef0   0x00000108   Dbug   RW   173     .debug_info         flash.o(flash_li.a)
+    0x00002ff8   0x000000bc   Dbug   RW   176     .debug_info         flash.o(flash_li.a)
+    0x000030b4   0x0000011c   Dbug   RW   179     .debug_info         flash.o(flash_li.a)
+    0x000031d0   0x00000104   Dbug   RW   182     .debug_info         flash.o(flash_li.a)
+    0x000032d4   0x000000c4   Dbug   RW   185     .debug_info         flash.o(flash_li.a)
+    0x00003398   0x000000c4   Dbug   RW   188     .debug_info         flash.o(flash_li.a)
+    0x0000345c   0x000000b4   Dbug   RW   191     .debug_info         flash.o(flash_li.a)
+    0x00003510   0x000000b4   Dbug   RW   194     .debug_info         flash.o(flash_li.a)
+    0x000035c4   0x000000c4   Dbug   RW   197     .debug_info         flash.o(flash_li.a)
+    0x00003688   0x000000a8   Dbug   RW   200     .debug_info         flash.o(flash_li.a)
+    0x00003730   0x00000154   Dbug   RW   203     .debug_info         flash.o(flash_li.a)
+    0x00003884   0x000000e8   Dbug   RW   206     .debug_info         flash.o(flash_li.a)
+    0x0000396c   0x000000e8   Dbug   RW   209     .debug_info         flash.o(flash_li.a)
+    0x00003a54   0x000000e8   Dbug   RW   212     .debug_info         flash.o(flash_li.a)
+    0x00003b3c   0x000000a8   Dbug   RW   215     .debug_info         flash.o(flash_li.a)
+    0x00003be4   0x000000e8   Dbug   RW   218     .debug_info         flash.o(flash_li.a)
+    0x00003ccc   0x000000fc   Dbug   RW   221     .debug_info         flash.o(flash_li.a)
+    0x00003dc8   0x00000134   Dbug   RW   224     .debug_info         flash.o(flash_li.a)
+    0x00003efc   0x00000134   Dbug   RW   227     .debug_info         flash.o(flash_li.a)
+    0x00004030   0x0000008c   Dbug   RW   230     .debug_info         flash.o(flash_li.a)
+    0x000040bc   0x000017c8   Dbug   RW   233     .debug_info         flash.o(flash_li.a)
+    0x00005884   0x000000a4   Dbug   RW   242     .debug_info         flash.o(flash_li.a)
+    0x00005928   0x00000308   Dbug   RW   279     .debug_info         image.o(flash_li.a)
+    0x00005c30   0x00000114   Dbug   RW   260     .debug_info         image.o(flash_li.a)
+    0x00005d44   0x00000150   Dbug   RW   263     .debug_info         image.o(flash_li.a)
+    0x00005e94   0x000001a8   Dbug   RW   266     .debug_info         image.o(flash_li.a)
+    0x0000603c   0x00000108   Dbug   RW   269     .debug_info         image.o(flash_li.a)
+    0x00006144   0x000010d8   Dbug   RW   275     .debug_info         image.o(flash_li.a)
+    0x0000721c   0x0000010c   Dbug   RW   399     .debug_info         sh.o(shell_li.a)
+    0x00007328   0x00000134   Dbug   RW   401     .debug_info         sh.o(shell_li.a)
+    0x0000745c   0x00000174   Dbug   RW   379     .debug_info         sh.o(shell_li.a)
+    0x000075d0   0x00000088   Dbug   RW   289     .debug_info         sh.o(shell_li.a)
+    0x00007658   0x000000f8   Dbug   RW   292     .debug_info         sh.o(shell_li.a)
+    0x00007750   0x00000080   Dbug   RW   388     .debug_info         sh.o(shell_li.a)
+    0x000077d0   0x0000010c   Dbug   RW   295     .debug_info         sh.o(shell_li.a)
+    0x000078dc   0x000000cc   Dbug   RW   298     .debug_info         sh.o(shell_li.a)
+    0x000079a8   0x00000088   Dbug   RW   301     .debug_info         sh.o(shell_li.a)
+    0x00007a30   0x000000e8   Dbug   RW   304     .debug_info         sh.o(shell_li.a)
+    0x00007b18   0x0000007c   Dbug   RW   307     .debug_info         sh.o(shell_li.a)
+    0x00007b94   0x000000a0   Dbug   RW   310     .debug_info         sh.o(shell_li.a)
+    0x00007c34   0x000000d0   Dbug   RW   313     .debug_info         sh.o(shell_li.a)
+    0x00007d04   0x000000b0   Dbug   RW   316     .debug_info         sh.o(shell_li.a)
+    0x00007db4   0x000000a8   Dbug   RW   319     .debug_info         sh.o(shell_li.a)
+    0x00007e5c   0x000000ac   Dbug   RW   322     .debug_info         sh.o(shell_li.a)
+    0x00007f08   0x000000a0   Dbug   RW   325     .debug_info         sh.o(shell_li.a)
+    0x00007fa8   0x00000068   Dbug   RW   328     .debug_info         sh.o(shell_li.a)
+    0x00008010   0x000000ac   Dbug   RW   331     .debug_info         sh.o(shell_li.a)
+    0x000080bc   0x00000078   Dbug   RW   334     .debug_info         sh.o(shell_li.a)
+    0x00008134   0x0000017c   Dbug   RW   337     .debug_info         sh.o(shell_li.a)
+    0x000082b0   0x0000013c   Dbug   RW   340     .debug_info         sh.o(shell_li.a)
+    0x000083ec   0x00000124   Dbug   RW   343     .debug_info         sh.o(shell_li.a)
+    0x00008510   0x000001ec   Dbug   RW   346     .debug_info         sh.o(shell_li.a)
+    0x000086fc   0x000000d4   Dbug   RW   349     .debug_info         sh.o(shell_li.a)
+    0x000087d0   0x00000188   Dbug   RW   352     .debug_info         sh.o(shell_li.a)
+    0x00008958   0x00000078   Dbug   RW   355     .debug_info         sh.o(shell_li.a)
+    0x000089d0   0x0000007c   Dbug   RW   358     .debug_info         sh.o(shell_li.a)
+    0x00008a4c   0x000002fc   Dbug   RW   410     .debug_info         sh.o(shell_li.a)
+    0x00008d48   0x00000140   Dbug   RW   361     .debug_info         sh.o(shell_li.a)
+    0x00008e88   0x00000078   Dbug   RW   364     .debug_info         sh.o(shell_li.a)
+    0x00008f00   0x00000174   Dbug   RW   367     .debug_info         sh.o(shell_li.a)
+    0x00009074   0x00000078   Dbug   RW   370     .debug_info         sh.o(shell_li.a)
+    0x000090ec   0x000000d8   Dbug   RW   373     .debug_info         sh.o(shell_li.a)
+    0x000091c4   0x000000b0   Dbug   RW   376     .debug_info         sh.o(shell_li.a)
+    0x00009274   0x000000f4   Dbug   RW   413     .debug_info         sh.o(shell_li.a)
+    0x00009368   0x000001b4   Dbug   RW   423     .debug_info         sh.o(shell_li.a)
+    0x0000951c   0x00004390   Dbug   RW   383     .debug_info         sh.o(shell_li.a)
+    0x0000d8ac   0x0000017c   Dbug   RW   440     .debug_info         main.o(shell_li.a)
+    0x0000da28   0x000001b0   Dbug   RW   448     .debug_info         main.o(shell_li.a)
+    0x0000dbd8   0x0000035c   Dbug   RW   444     .debug_info         main.o(shell_li.a)
+    0x0000df34   0x0000006c   Dbug   RW   454     .debug_info         switrap.o(shell_li.a)
+    0x0000dfa0   0x00000068   Dbug   RW   461     .debug_info         timer.o(shell_li.a)
+    0x0000e008   0x00000094   Dbug   RW   470     .debug_info         timer.o(shell_li.a)
+    0x0000e09c   0x00000078   Dbug   RW   464     .debug_info         timer.o(shell_li.a)
+    0x0000e114   0x00000084   Dbug   RW   467     .debug_info         timer.o(shell_li.a)
+    0x0000e198   0x000000d8   Dbug   RW   474     .debug_info         timer.o(shell_li.a)
+    0x0000e270   0x00000174   Dbug   RW   505     .debug_info         heap.o(shell_li.a)
+    0x0000e3e4   0x000000c0   Dbug   RW   484     .debug_info         heap.o(shell_li.a)
+    0x0000e4a4   0x00000240   Dbug   RW   496     .debug_info         heap.o(shell_li.a)
+    0x0000e6e4   0x000000c8   Dbug   RW   487     .debug_info         heap.o(shell_li.a)
+    0x0000e7ac   0x000000e0   Dbug   RW   490     .debug_info         heap.o(shell_li.a)
+    0x0000e88c   0x000000e0   Dbug   RW   493     .debug_info         heap.o(shell_li.a)
+    0x0000e96c   0x00000280   Dbug   RW   500     .debug_info         heap.o(shell_li.a)
+    0x0000ebec   0x000000b8   Dbug   RW   513     .debug_info         bib.o(shell_li.a)
+    0x0000eca4   0x000002fc   Dbug   RW   517     .debug_info         bib.o(shell_li.a)
+    0x0000efa0   0x00000068   Dbug   RW   526     .debug_info         irq.o(shell_li.a)
+    0x0000f008   0x00000078   Dbug   RW   532     .debug_info         bootproc.o(shell_li.a)
+    0x0000f080   0x00000468   Dbug   RW   536     .debug_info         bootproc.o(shell_li.a)
+    0x0000f4e8   0x00000068   Dbug   RW   541     .debug_info         mem.o(shell_li.a)
+    0x0000f550   0x00000088   Dbug   RW   565     .debug_info         retarget.o(shell_li.a)
+    0x0000f5d8   0x0000010c   Dbug   RW   574     .debug_info         retarget.o(shell_li.a)
+    0x0000f6e4   0x000000a8   Dbug   RW   547     .debug_info         retarget.o(shell_li.a)
+    0x0000f78c   0x00000088   Dbug   RW   550     .debug_info         retarget.o(shell_li.a)
+    0x0000f814   0x00000080   Dbug   RW   553     .debug_info         retarget.o(shell_li.a)
+    0x0000f894   0x0000008c   Dbug   RW   556     .debug_info         retarget.o(shell_li.a)
+    0x0000f920   0x000000c4   Dbug   RW   559     .debug_info         retarget.o(shell_li.a)
+    0x0000f9e4   0x00000114   Dbug   RW   562     .debug_info         retarget.o(shell_li.a)
+    0x0000faf8   0x000001f8   Dbug   RW   569     .debug_info         retarget.o(shell_li.a)
+    0x0000fcf0   0x00000070   Dbug   RW   605     .debug_info         down.o(usbcom_li.a)
+    0x0000fd60   0x0000008c   Dbug   RW   584     .debug_info         down.o(usbcom_li.a)
+    0x0000fdec   0x0000008c   Dbug   RW   587     .debug_info         down.o(usbcom_li.a)
+    0x0000fe78   0x000002b4   Dbug   RW   599     .debug_info         down.o(usbcom_li.a)
+    0x0001012c   0x0000009c   Dbug   RW   590     .debug_info         down.o(usbcom_li.a)
+    0x000101c8   0x000000cc   Dbug   RW   593     .debug_info         down.o(usbcom_li.a)
+    0x00010294   0x000000d8   Dbug   RW   614     .debug_info         Usb.o(usbcom_li.a)
+    0x0001036c   0x000000a8   Dbug   RW   617     .debug_info         Usb.o(usbcom_li.a)
+    0x00010414   0x0000008c   Dbug   RW   620     .debug_info         Usb.o(usbcom_li.a)
+    0x000104a0   0x00000080   Dbug   RW   623     .debug_info         Usb.o(usbcom_li.a)
+    0x00010520   0x00000084   Dbug   RW   626     .debug_info         Usb.o(usbcom_li.a)
+    0x000105a4   0x00000084   Dbug   RW   629     .debug_info         Usb.o(usbcom_li.a)
+    0x00010628   0x0000007c   Dbug   RW   632     .debug_info         Usb.o(usbcom_li.a)
+    0x000106a4   0x00000080   Dbug   RW   635     .debug_info         Usb.o(usbcom_li.a)
+    0x00010724   0x00000084   Dbug   RW   638     .debug_info         Usb.o(usbcom_li.a)
+    0x000107a8   0x0000007c   Dbug   RW   641     .debug_info         Usb.o(usbcom_li.a)
+    0x00010824   0x00000080   Dbug   RW   644     .debug_info         Usb.o(usbcom_li.a)
+    0x000108a4   0x00000084   Dbug   RW   647     .debug_info         Usb.o(usbcom_li.a)
+    0x00010928   0x00000084   Dbug   RW   650     .debug_info         Usb.o(usbcom_li.a)
+    0x000109ac   0x0000007c   Dbug   RW   653     .debug_info         Usb.o(usbcom_li.a)
+    0x00010a28   0x00000078   Dbug   RW   656     .debug_info         Usb.o(usbcom_li.a)
+    0x00010aa0   0x0000007c   Dbug   RW   659     .debug_info         Usb.o(usbcom_li.a)
+    0x00010b1c   0x00000078   Dbug   RW   662     .debug_info         Usb.o(usbcom_li.a)
+    0x00010b94   0x0000007c   Dbug   RW   665     .debug_info         Usb.o(usbcom_li.a)
+    0x00010c10   0x00000084   Dbug   RW   668     .debug_info         Usb.o(usbcom_li.a)
+    0x00010c94   0x00000078   Dbug   RW   671     .debug_info         Usb.o(usbcom_li.a)
+    0x00010d0c   0x0000008c   Dbug   RW   674     .debug_info         Usb.o(usbcom_li.a)
+    0x00010d98   0x000000a8   Dbug   RW   677     .debug_info         Usb.o(usbcom_li.a)
+    0x00010e40   0x000000a8   Dbug   RW   680     .debug_info         Usb.o(usbcom_li.a)
+    0x00010ee8   0x000000a8   Dbug   RW   683     .debug_info         Usb.o(usbcom_li.a)
+    0x00010f90   0x000001f8   Dbug   RW   696     .debug_info         Usb.o(usbcom_li.a)
+    0x00011188   0x00000440   Dbug   RW   699     .debug_info         Usb.o(usbcom_li.a)
+    0x000115c8   0x000000a0   Dbug   RW   686     .debug_info         Usb.o(usbcom_li.a)
+    0x00011668   0x000000ac   Dbug   RW   689     .debug_info         Usb.o(usbcom_li.a)
+    0x00011714   0x00000ed4   Dbug   RW   692     .debug_info         Usb.o(usbcom_li.a)
+    0x000125e8   0x00000090   Dbug   RW   704     .debug_info         uxmodem.o(usbcom_li.a)
+    0x00012678   0x000000a4   Dbug   RW   707     .debug_info         uxmodem.o(usbcom_li.a)
+    0x0001271c   0x0000016c   Dbug   RW   710     .debug_info         uxmodem.o(usbcom_li.a)
+    0x00012888   0x000001c0   Dbug   RW   713     .debug_info         uxmodem.o(usbcom_li.a)
+    0x00000000   0x000000e8   Dbug   RW     3     .debug_line         init.o
+    0x000000e8   0x00000084   Dbug   RW     7     .debug_line         vectors.o
+    0x0000016c   0x0000009c   Dbug   RW    15     .debug_line         wbl_info.o
+    0x00000208   0x00000048   Dbug   RW    24     .debug_line         wbl_info.o
+    0x00000250   0x00000054   Dbug   RW    28     .debug_line         wbl_info.o
+    0x000002a4   0x00000050   Dbug   RW    32     .debug_line         wbl_info.o
+    0x000002f4   0x000000a8   Dbug   RW    47     .debug_line         command.o
+    0x0000039c   0x0000009c   Dbug   RW    51     .debug_line         command.o
+    0x00000438   0x00000044   Dbug   RW    56     .debug_line         command.o
+    0x0000047c   0x000008d8   Dbug   RW   232     .debug_line         flash.o(flash_li.a)
+    0x00000d54   0x00000098   Dbug   RW   237     .debug_line         flash.o(flash_li.a)
+    0x00000dec   0x00000070   Dbug   RW   241     .debug_line         flash.o(flash_li.a)
+    0x00000e5c   0x00000050   Dbug   RW   248     .debug_line         flash.o(flash_li.a)
+    0x00000eac   0x0000005c   Dbug   RW   252     .debug_line         flash.o(flash_li.a)
+    0x00000f08   0x00000534   Dbug   RW   274     .debug_line         image.o(flash_li.a)
+    0x0000143c   0x0000014c   Dbug   RW   378     .debug_line         sh.o(shell_li.a)
+    0x00001588   0x00000de0   Dbug   RW   382     .debug_line         sh.o(shell_li.a)
+    0x00002368   0x00000050   Dbug   RW   387     .debug_line         sh.o(shell_li.a)
+    0x000023b8   0x00000044   Dbug   RW   412     .debug_line         sh.o(shell_li.a)
+    0x000023fc   0x00000120   Dbug   RW   439     .debug_line         main.o(shell_li.a)
+    0x0000251c   0x0000016c   Dbug   RW   443     .debug_line         main.o(shell_li.a)
+    0x00002688   0x000000d4   Dbug   RW   455     .debug_line         switrap.o(shell_li.a)
+    0x0000275c   0x00000080   Dbug   RW   469     .debug_line         timer.o(shell_li.a)
+    0x000027dc   0x00000078   Dbug   RW   473     .debug_line         timer.o(shell_li.a)
+    0x00002854   0x00000078   Dbug   RW   495     .debug_line         heap.o(shell_li.a)
+    0x000028cc   0x00000110   Dbug   RW   499     .debug_line         heap.o(shell_li.a)
+    0x000029dc   0x00000050   Dbug   RW   504     .debug_line         heap.o(shell_li.a)
+    0x00002a2c   0x000000c4   Dbug   RW   512     .debug_line         bib.o(shell_li.a)
+    0x00002af0   0x00000060   Dbug   RW   527     .debug_line         irq.o(shell_li.a)
+    0x00002b50   0x00000104   Dbug   RW   531     .debug_line         bootproc.o(shell_li.a)
+    0x00002c54   0x0000013c   Dbug   RW   535     .debug_line         bootproc.o(shell_li.a)
+    0x00002d90   0x00000060   Dbug   RW   542     .debug_line         mem.o(shell_li.a)
+    0x00002df0   0x00000088   Dbug   RW   564     .debug_line         retarget.o(shell_li.a)
+    0x00002e78   0x000000bc   Dbug   RW   568     .debug_line         retarget.o(shell_li.a)
+    0x00002f34   0x00000050   Dbug   RW   573     .debug_line         retarget.o(shell_li.a)
+    0x00002f84   0x00000074   Dbug   RW   592     .debug_line         down.o(usbcom_li.a)
+    0x00002ff8   0x00000620   Dbug   RW   691     .debug_line         Usb.o(usbcom_li.a)
+    0x00003618   0x000000bc   Dbug   RW   712     .debug_line         uxmodem.o(usbcom_li.a)
+    0x00000000   0x00000054   Dbug   RW    18     .debug_loc          wbl_info.o
+    0x00000054   0x000000d8   Dbug   RW    54     .debug_loc          command.o
+    0x0000012c   0x00002198   Dbug   RW   235     .debug_loc          flash.o(flash_li.a)
+    0x000022c4   0x00000d98   Dbug   RW   277     .debug_loc          image.o(flash_li.a)
+    0x0000305c   0x000034bc   Dbug   RW   385     .debug_loc          sh.o(shell_li.a)
+    0x00006518   0x0000012c   Dbug   RW   446     .debug_loc          main.o(shell_li.a)
+    0x00006644   0x00000064   Dbug   RW   476     .debug_loc          timer.o(shell_li.a)
+    0x000066a8   0x00000184   Dbug   RW   502     .debug_loc          heap.o(shell_li.a)
+    0x0000682c   0x00000070   Dbug   RW   515     .debug_loc          bib.o(shell_li.a)
+    0x0000689c   0x00000148   Dbug   RW   538     .debug_loc          bootproc.o(shell_li.a)
+    0x000069e4   0x000001d4   Dbug   RW   571     .debug_loc          retarget.o(shell_li.a)
+    0x00006bb8   0x0000006c   Dbug   RW   595     .debug_loc          down.o(usbcom_li.a)
+    0x00006c24   0x00000924   Dbug   RW   694     .debug_loc          Usb.o(usbcom_li.a)
+    0x00007548   0x00000194   Dbug   RW   715     .debug_loc          uxmodem.o(usbcom_li.a)
+    0x00000000   0x00000018   Dbug   RW    27     .debug_macinfo      wbl_info.o
+    0x00000018   0x000002c0   Dbug   RW    31     .debug_macinfo      wbl_info.o
+    0x000002d8   0x00000028   Dbug   RW    35     .debug_macinfo      wbl_info.o
+    0x00000300   0x00000198   Dbug   RW    50     .debug_macinfo      command.o
+    0x00000498   0x0000017c   Dbug   RW    59     .debug_macinfo      command.o
+    0x00000614   0x00000198   Dbug   RW   240     .debug_macinfo      flash.o(flash_li.a)
+    0x000007ac   0x00000018   Dbug   RW   251     .debug_macinfo      flash.o(flash_li.a)
+    0x000007c4   0x00000130   Dbug   RW   255     .debug_macinfo      flash.o(flash_li.a)
+    0x000008f4   0x000002c0   Dbug   RW   281     .debug_macinfo      image.o(flash_li.a)
+    0x00000bb4   0x00000268   Dbug   RW   381     .debug_macinfo      sh.o(shell_li.a)
+    0x00000e1c   0x00000048   Dbug   RW   390     .debug_macinfo      sh.o(shell_li.a)
+    0x00000e64   0x0000001c   Dbug   RW   398     .debug_macinfo      sh.o(shell_li.a)
+    0x00000e80   0x00000130   Dbug   RW   409     .debug_macinfo      sh.o(shell_li.a)
+    0x00000fb0   0x000000b8   Dbug   RW   415     .debug_macinfo      sh.o(shell_li.a)
+    0x00001068   0x000001b8   Dbug   RW   442     .debug_macinfo      main.o(shell_li.a)
+    0x00001220   0x00000180   Dbug   RW   472     .debug_macinfo      timer.o(shell_li.a)
+    0x000013a0   0x000001b4   Dbug   RW   498     .debug_macinfo      heap.o(shell_li.a)
+    0x00001554   0x0000002c   Dbug   RW   507     .debug_macinfo      heap.o(shell_li.a)
+    0x00001580   0x000001a0   Dbug   RW   534     .debug_macinfo      bootproc.o(shell_li.a)
+    0x00001720   0x000001cc   Dbug   RW   567     .debug_macinfo      retarget.o(shell_li.a)
+    0x000018ec   0x000001f0   Dbug   RW   576     .debug_macinfo      retarget.o(shell_li.a)
+    0x00000000   0x00000020   Dbug   RW    17     .debug_pubnames     wbl_info.o
+    0x00000020   0x00000080   Dbug   RW    26     .debug_pubnames     wbl_info.o
+    0x000000a0   0x00000068   Dbug   RW    30     .debug_pubnames     wbl_info.o
+    0x00000108   0x00000040   Dbug   RW    34     .debug_pubnames     wbl_info.o
+    0x00000148   0x00000024   Dbug   RW    43     .debug_pubnames     command.o
+    0x0000016c   0x00000020   Dbug   RW    46     .debug_pubnames     command.o
+    0x0000018c   0x00000048   Dbug   RW    49     .debug_pubnames     command.o
+    0x000001d4   0x00000030   Dbug   RW    53     .debug_pubnames     command.o
+    0x00000204   0x00000060   Dbug   RW    58     .debug_pubnames     command.o
+    0x00000264   0x00000028   Dbug   RW    69     .debug_pubnames     flash.o(flash_li.a)
+    0x0000028c   0x00000020   Dbug   RW    72     .debug_pubnames     flash.o(flash_li.a)
+    0x000002ac   0x00000024   Dbug   RW    75     .debug_pubnames     flash.o(flash_li.a)
+    0x000002d0   0x00000024   Dbug   RW    78     .debug_pubnames     flash.o(flash_li.a)
+    0x000002f4   0x0000002c   Dbug   RW    81     .debug_pubnames     flash.o(flash_li.a)
+    0x00000320   0x0000002c   Dbug   RW    84     .debug_pubnames     flash.o(flash_li.a)
+    0x0000034c   0x0000002c   Dbug   RW    87     .debug_pubnames     flash.o(flash_li.a)
+    0x00000378   0x0000002c   Dbug   RW    90     .debug_pubnames     flash.o(flash_li.a)
+    0x000003a4   0x00000028   Dbug   RW    93     .debug_pubnames     flash.o(flash_li.a)
+    0x000003cc   0x00000028   Dbug   RW    96     .debug_pubnames     flash.o(flash_li.a)
+    0x000003f4   0x00000028   Dbug   RW    99     .debug_pubnames     flash.o(flash_li.a)
+    0x0000041c   0x00000028   Dbug   RW   102     .debug_pubnames     flash.o(flash_li.a)
+    0x00000444   0x0000002c   Dbug   RW   105     .debug_pubnames     flash.o(flash_li.a)
+    0x00000470   0x0000002c   Dbug   RW   108     .debug_pubnames     flash.o(flash_li.a)
+    0x0000049c   0x0000002c   Dbug   RW   111     .debug_pubnames     flash.o(flash_li.a)
+    0x000004c8   0x0000002c   Dbug   RW   114     .debug_pubnames     flash.o(flash_li.a)
+    0x000004f4   0x00000028   Dbug   RW   117     .debug_pubnames     flash.o(flash_li.a)
+    0x0000051c   0x00000028   Dbug   RW   120     .debug_pubnames     flash.o(flash_li.a)
+    0x00000544   0x0000002c   Dbug   RW   123     .debug_pubnames     flash.o(flash_li.a)
+    0x00000570   0x0000002c   Dbug   RW   126     .debug_pubnames     flash.o(flash_li.a)
+    0x0000059c   0x00000028   Dbug   RW   129     .debug_pubnames     flash.o(flash_li.a)
+    0x000005c4   0x0000002c   Dbug   RW   132     .debug_pubnames     flash.o(flash_li.a)
+    0x000005f0   0x0000002c   Dbug   RW   135     .debug_pubnames     flash.o(flash_li.a)
+    0x0000061c   0x0000002c   Dbug   RW   138     .debug_pubnames     flash.o(flash_li.a)
+    0x00000648   0x0000002c   Dbug   RW   141     .debug_pubnames     flash.o(flash_li.a)
+    0x00000674   0x00000028   Dbug   RW   144     .debug_pubnames     flash.o(flash_li.a)
+    0x0000069c   0x0000002c   Dbug   RW   147     .debug_pubnames     flash.o(flash_li.a)
+    0x000006c8   0x0000002c   Dbug   RW   150     .debug_pubnames     flash.o(flash_li.a)
+    0x000006f4   0x0000002c   Dbug   RW   153     .debug_pubnames     flash.o(flash_li.a)
+    0x00000720   0x00000030   Dbug   RW   156     .debug_pubnames     flash.o(flash_li.a)
+    0x00000750   0x00000030   Dbug   RW   159     .debug_pubnames     flash.o(flash_li.a)
+    0x00000780   0x0000002c   Dbug   RW   162     .debug_pubnames     flash.o(flash_li.a)
+    0x000007ac   0x0000002c   Dbug   RW   165     .debug_pubnames     flash.o(flash_li.a)
+    0x000007d8   0x0000002c   Dbug   RW   168     .debug_pubnames     flash.o(flash_li.a)
+    0x00000804   0x00000030   Dbug   RW   171     .debug_pubnames     flash.o(flash_li.a)
+    0x00000834   0x0000002c   Dbug   RW   174     .debug_pubnames     flash.o(flash_li.a)
+    0x00000860   0x0000002c   Dbug   RW   177     .debug_pubnames     flash.o(flash_li.a)
+    0x0000088c   0x0000002c   Dbug   RW   180     .debug_pubnames     flash.o(flash_li.a)
+    0x000008b8   0x0000002c   Dbug   RW   183     .debug_pubnames     flash.o(flash_li.a)
+    0x000008e4   0x0000002c   Dbug   RW   186     .debug_pubnames     flash.o(flash_li.a)
+    0x00000910   0x0000002c   Dbug   RW   189     .debug_pubnames     flash.o(flash_li.a)
+    0x0000093c   0x0000002c   Dbug   RW   192     .debug_pubnames     flash.o(flash_li.a)
+    0x00000968   0x0000002c   Dbug   RW   195     .debug_pubnames     flash.o(flash_li.a)
+    0x00000994   0x00000028   Dbug   RW   198     .debug_pubnames     flash.o(flash_li.a)
+    0x000009bc   0x00000028   Dbug   RW   201     .debug_pubnames     flash.o(flash_li.a)
+    0x000009e4   0x0000002c   Dbug   RW   204     .debug_pubnames     flash.o(flash_li.a)
+    0x00000a10   0x00000028   Dbug   RW   207     .debug_pubnames     flash.o(flash_li.a)
+    0x00000a38   0x00000028   Dbug   RW   210     .debug_pubnames     flash.o(flash_li.a)
+    0x00000a60   0x00000028   Dbug   RW   213     .debug_pubnames     flash.o(flash_li.a)
+    0x00000a88   0x0000002c   Dbug   RW   216     .debug_pubnames     flash.o(flash_li.a)
+    0x00000ab4   0x0000002c   Dbug   RW   219     .debug_pubnames     flash.o(flash_li.a)
+    0x00000ae0   0x0000002c   Dbug   RW   222     .debug_pubnames     flash.o(flash_li.a)
+    0x00000b0c   0x00000030   Dbug   RW   225     .debug_pubnames     flash.o(flash_li.a)
+    0x00000b3c   0x00000030   Dbug   RW   228     .debug_pubnames     flash.o(flash_li.a)
+    0x00000b6c   0x00000020   Dbug   RW   231     .debug_pubnames     flash.o(flash_li.a)
+    0x00000b8c   0x00000564   Dbug   RW   234     .debug_pubnames     flash.o(flash_li.a)
+    0x000010f0   0x00000024   Dbug   RW   239     .debug_pubnames     flash.o(flash_li.a)
+    0x00001114   0x00000024   Dbug   RW   243     .debug_pubnames     flash.o(flash_li.a)
+    0x00001138   0x00000080   Dbug   RW   250     .debug_pubnames     flash.o(flash_li.a)
+    0x000011b8   0x00000068   Dbug   RW   254     .debug_pubnames     flash.o(flash_li.a)
+    0x00001220   0x00000020   Dbug   RW   261     .debug_pubnames     image.o(flash_li.a)
+    0x00001240   0x00000020   Dbug   RW   264     .debug_pubnames     image.o(flash_li.a)
+    0x00001260   0x00000020   Dbug   RW   267     .debug_pubnames     image.o(flash_li.a)
+    0x00001280   0x00000024   Dbug   RW   270     .debug_pubnames     image.o(flash_li.a)
+    0x000012a4   0x000000c0   Dbug   RW   276     .debug_pubnames     image.o(flash_li.a)
+    0x00001364   0x00000068   Dbug   RW   280     .debug_pubnames     image.o(flash_li.a)
+    0x000013cc   0x00000020   Dbug   RW   290     .debug_pubnames     sh.o(shell_li.a)
+    0x000013ec   0x00000020   Dbug   RW   293     .debug_pubnames     sh.o(shell_li.a)
+    0x0000140c   0x00000020   Dbug   RW   296     .debug_pubnames     sh.o(shell_li.a)
+    0x0000142c   0x00000024   Dbug   RW   299     .debug_pubnames     sh.o(shell_li.a)
+    0x00001450   0x0000001c   Dbug   RW   302     .debug_pubnames     sh.o(shell_li.a)
+    0x0000146c   0x00000028   Dbug   RW   305     .debug_pubnames     sh.o(shell_li.a)
+    0x00001494   0x00000028   Dbug   RW   308     .debug_pubnames     sh.o(shell_li.a)
+    0x000014bc   0x00000020   Dbug   RW   311     .debug_pubnames     sh.o(shell_li.a)
+    0x000014dc   0x0000001c   Dbug   RW   314     .debug_pubnames     sh.o(shell_li.a)
+    0x000014f8   0x0000001c   Dbug   RW   317     .debug_pubnames     sh.o(shell_li.a)
+    0x00001514   0x0000001c   Dbug   RW   320     .debug_pubnames     sh.o(shell_li.a)
+    0x00001530   0x00000020   Dbug   RW   323     .debug_pubnames     sh.o(shell_li.a)
+    0x00001550   0x00000024   Dbug   RW   326     .debug_pubnames     sh.o(shell_li.a)
+    0x00001574   0x00000024   Dbug   RW   329     .debug_pubnames     sh.o(shell_li.a)
+    0x00001598   0x00000020   Dbug   RW   332     .debug_pubnames     sh.o(shell_li.a)
+    0x000015b8   0x00000020   Dbug   RW   335     .debug_pubnames     sh.o(shell_li.a)
+    0x000015d8   0x00000020   Dbug   RW   338     .debug_pubnames     sh.o(shell_li.a)
+    0x000015f8   0x00000020   Dbug   RW   341     .debug_pubnames     sh.o(shell_li.a)
+    0x00001618   0x00000020   Dbug   RW   344     .debug_pubnames     sh.o(shell_li.a)
+    0x00001638   0x00000024   Dbug   RW   347     .debug_pubnames     sh.o(shell_li.a)
+    0x0000165c   0x00000020   Dbug   RW   350     .debug_pubnames     sh.o(shell_li.a)
+    0x0000167c   0x00000020   Dbug   RW   353     .debug_pubnames     sh.o(shell_li.a)
+    0x0000169c   0x00000020   Dbug   RW   356     .debug_pubnames     sh.o(shell_li.a)
+    0x000016bc   0x00000024   Dbug   RW   359     .debug_pubnames     sh.o(shell_li.a)
+    0x000016e0   0x00000024   Dbug   RW   362     .debug_pubnames     sh.o(shell_li.a)
+    0x00001704   0x00000020   Dbug   RW   365     .debug_pubnames     sh.o(shell_li.a)
+    0x00001724   0x00000024   Dbug   RW   368     .debug_pubnames     sh.o(shell_li.a)
+    0x00001748   0x00000020   Dbug   RW   371     .debug_pubnames     sh.o(shell_li.a)
+    0x00001768   0x00000024   Dbug   RW   374     .debug_pubnames     sh.o(shell_li.a)
+    0x0000178c   0x00000024   Dbug   RW   377     .debug_pubnames     sh.o(shell_li.a)
+    0x000017b0   0x000000ac   Dbug   RW   380     .debug_pubnames     sh.o(shell_li.a)
+    0x0000185c   0x0000030c   Dbug   RW   384     .debug_pubnames     sh.o(shell_li.a)
+    0x00001b68   0x00000020   Dbug   RW   389     .debug_pubnames     sh.o(shell_li.a)
+    0x00001b88   0x00000080   Dbug   RW   400     .debug_pubnames     sh.o(shell_li.a)
+    0x00001c08   0x00000060   Dbug   RW   402     .debug_pubnames     sh.o(shell_li.a)
+    0x00001c68   0x00000068   Dbug   RW   411     .debug_pubnames     sh.o(shell_li.a)
+    0x00001cd0   0x00000078   Dbug   RW   414     .debug_pubnames     sh.o(shell_li.a)
+    0x00001d48   0x00000040   Dbug   RW   424     .debug_pubnames     sh.o(shell_li.a)
+    0x00001d88   0x00000084   Dbug   RW   441     .debug_pubnames     main.o(shell_li.a)
+    0x00001e0c   0x0000001c   Dbug   RW   445     .debug_pubnames     main.o(shell_li.a)
+    0x00001e28   0x00000040   Dbug   RW   449     .debug_pubnames     main.o(shell_li.a)
+    0x00001e68   0x00000024   Dbug   RW   462     .debug_pubnames     timer.o(shell_li.a)
+    0x00001e8c   0x0000001c   Dbug   RW   465     .debug_pubnames     timer.o(shell_li.a)
+    0x00001ea8   0x0000001c   Dbug   RW   468     .debug_pubnames     timer.o(shell_li.a)
+    0x00001ec4   0x0000002c   Dbug   RW   471     .debug_pubnames     timer.o(shell_li.a)
+    0x00001ef0   0x00000038   Dbug   RW   475     .debug_pubnames     timer.o(shell_li.a)
+    0x00001f28   0x00000030   Dbug   RW   485     .debug_pubnames     heap.o(shell_li.a)
+    0x00001f58   0x0000002c   Dbug   RW   488     .debug_pubnames     heap.o(shell_li.a)
+    0x00001f84   0x00000024   Dbug   RW   491     .debug_pubnames     heap.o(shell_li.a)
+    0x00001fa8   0x00000024   Dbug   RW   494     .debug_pubnames     heap.o(shell_li.a)
+    0x00001fcc   0x000000d4   Dbug   RW   497     .debug_pubnames     heap.o(shell_li.a)
+    0x000020a0   0x0000006c   Dbug   RW   501     .debug_pubnames     heap.o(shell_li.a)
+    0x0000210c   0x00000060   Dbug   RW   506     .debug_pubnames     heap.o(shell_li.a)
+    0x0000216c   0x00000024   Dbug   RW   514     .debug_pubnames     bib.o(shell_li.a)
+    0x00002190   0x00000068   Dbug   RW   518     .debug_pubnames     bib.o(shell_li.a)
+    0x000021f8   0x00000020   Dbug   RW   533     .debug_pubnames     bootproc.o(shell_li.a)
+    0x00002218   0x00000024   Dbug   RW   537     .debug_pubnames     bootproc.o(shell_li.a)
+    0x0000223c   0x0000001c   Dbug   RW   548     .debug_pubnames     retarget.o(shell_li.a)
+    0x00002258   0x00000020   Dbug   RW   551     .debug_pubnames     retarget.o(shell_li.a)
+    0x00002278   0x00000020   Dbug   RW   554     .debug_pubnames     retarget.o(shell_li.a)
+    0x00002298   0x00000020   Dbug   RW   557     .debug_pubnames     retarget.o(shell_li.a)
+    0x000022b8   0x00000024   Dbug   RW   560     .debug_pubnames     retarget.o(shell_li.a)
+    0x000022dc   0x00000024   Dbug   RW   563     .debug_pubnames     retarget.o(shell_li.a)
+    0x00002300   0x00000020   Dbug   RW   566     .debug_pubnames     retarget.o(shell_li.a)
+    0x00002320   0x00000064   Dbug   RW   570     .debug_pubnames     retarget.o(shell_li.a)
+    0x00002384   0x00000084   Dbug   RW   575     .debug_pubnames     retarget.o(shell_li.a)
+    0x00002408   0x00000024   Dbug   RW   585     .debug_pubnames     down.o(usbcom_li.a)
+    0x0000242c   0x00000024   Dbug   RW   588     .debug_pubnames     down.o(usbcom_li.a)
+    0x00002450   0x00000020   Dbug   RW   591     .debug_pubnames     down.o(usbcom_li.a)
+    0x00002470   0x00000040   Dbug   RW   594     .debug_pubnames     down.o(usbcom_li.a)
+    0x000024b0   0x000001c0   Dbug   RW   600     .debug_pubnames     down.o(usbcom_li.a)
+    0x00002670   0x00000020   Dbug   RW   615     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002690   0x00000028   Dbug   RW   618     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000026b8   0x00000028   Dbug   RW   621     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000026e0   0x0000002c   Dbug   RW   624     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x0000270c   0x00000030   Dbug   RW   627     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x0000273c   0x00000030   Dbug   RW   630     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x0000276c   0x00000028   Dbug   RW   633     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002794   0x0000002c   Dbug   RW   636     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000027c0   0x00000030   Dbug   RW   639     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000027f0   0x00000028   Dbug   RW   642     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002818   0x0000002c   Dbug   RW   645     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002844   0x00000030   Dbug   RW   648     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002874   0x00000030   Dbug   RW   651     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000028a4   0x00000028   Dbug   RW   654     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000028cc   0x00000024   Dbug   RW   657     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000028f0   0x00000028   Dbug   RW   660     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002918   0x00000024   Dbug   RW   663     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x0000293c   0x00000028   Dbug   RW   666     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002964   0x00000028   Dbug   RW   669     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x0000298c   0x00000024   Dbug   RW   672     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000029b0   0x00000024   Dbug   RW   675     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000029d4   0x00000028   Dbug   RW   678     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x000029fc   0x00000028   Dbug   RW   681     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002a24   0x00000024   Dbug   RW   684     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002a48   0x00000020   Dbug   RW   687     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002a68   0x00000020   Dbug   RW   690     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002a88   0x000003a8   Dbug   RW   693     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002e30   0x000000cc   Dbug   RW   697     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00002efc   0x0000028c   Dbug   RW   700     .debug_pubnames     Usb.o(usbcom_li.a)
+    0x00003188   0x00000020   Dbug   RW   705     .debug_pubnames     uxmodem.o(usbcom_li.a)
+    0x000031a8   0x0000001c   Dbug   RW   708     .debug_pubnames     uxmodem.o(usbcom_li.a)
+    0x000031c4   0x00000020   Dbug   RW   711     .debug_pubnames     uxmodem.o(usbcom_li.a)
+    0x000031e4   0x00000034   Dbug   RW   714     .debug_pubnames     uxmodem.o(usbcom_li.a)
+
+
+================================================================================
+
+Image component sizes
+
+
+      Code    RO Data    RW Data    ZI Data      Debug   
+
+      1552        892        315          0       8052   Object Totals
+     47008       1510       6220       1618     143940   Library Totals
+
+================================================================================
+
+
+      Code    RO Data    RW Data    ZI Data      Debug   
+
+     48560       2402       6535       1618     151992   Grand Totals
+
+================================================================================
+
+    Total RO  Size(Code + RO Data)                50962 (  49.77kB)
+    Total RW  Size(RW Data + ZI Data)              8153 (   7.96kB)
+    Total ROM Size(Code + RO Data + RW Data)      57497 (  56.15kB)
+
+================================================================================
+

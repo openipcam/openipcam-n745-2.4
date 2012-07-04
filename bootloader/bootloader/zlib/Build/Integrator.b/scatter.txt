@@ -1,0 +1,46 @@
+LR_1 0x8000
+
+{
+
+    ER_RO +0
+
+    {
+
+        boot.o (SelfBoot, +FIRST)
+
+        *(+RO)
+
+    }
+
+
+
+    ER_RW +0
+
+    {
+
+        *(+RW)
+
+    }
+
+
+
+    ER_ZI +0
+
+    {
+
+        *(+ZI)
+
+    }
+
+
+
+    ER_ZI_EXTRA +0
+
+    {
+
+	driver.o(+ZI)
+
+    }
+
+}
+

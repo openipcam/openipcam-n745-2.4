@@ -1,0 +1,3 @@
+ifeq (infblock.o infcodes.o inffast.o inflate.o inftrees.o infutil.o inflate_syms.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += zlib_inflate.o
+endif

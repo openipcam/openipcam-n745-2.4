@@ -1,1 +1,1 @@
-#define CONFIG_MTD_WINBOND 1
+#undef  CONFIG_MTD_WINBOND

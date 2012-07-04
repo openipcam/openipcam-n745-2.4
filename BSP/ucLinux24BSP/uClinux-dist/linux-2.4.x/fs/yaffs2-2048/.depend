@@ -1,0 +1,159 @@
+devextras.h: \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/stat.h
+	@touch devextras.h
+yaffs_checkptrw.o: yaffs_checkptrw.c \
+   yaffs_checkptrw.h
+yaffs_checkptrw.h: \
+   yaffs_guts.h
+	@touch yaffs_checkptrw.h
+yaffs_ecc.o: yaffs_ecc.c \
+   yportenv.h \
+   yaffs_ecc.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/ecc/wrong/order.h)
+yaffs_fs.o: yaffs_fs.c \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/list.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pagemap.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mtd/mtd.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ctype.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/statfs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/locks.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   yportenv.h \
+   yaffs_guts.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mtd/mtd.h \
+   yaffs_mtdif.h \
+   yaffs_mtdif2.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/disable/write/verify.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/auto/yaffs2.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/checkpoint/reserved/blocks.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/does/ecc.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/disable/wide/tnodes.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/yaffs2.h)
+yaffs_guts.o: yaffs_guts.c \
+   yportenv.h \
+   yaffsinterface.h \
+   yaffs_guts.h \
+   yaffs_tagsvalidity.h \
+   yaffs_tagscompat.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/own/sort.h) \
+   yaffs_qsort.h \
+   yaffs_nand.h \
+   yaffs_checkptrw.h \
+   yaffs_nand.h \
+   yaffs_packedtags2.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/wince.h) \
+   yaffs_ecc.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/always/check/chunk/erased.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/case/insensitive.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/short/names/in/ram.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/tnode/list/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/use/own/sort.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/disable/lazy/load.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/yaffs2.h)
+yaffs_guts.h: \
+   devextras.h \
+   yportenv.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/no/yaffs1.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/unicode.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/yaffs2.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/wince.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/tnode/list/debug.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/short/names/in/ram.h)
+	@touch yaffs_guts.h
+yaffs_mtdif2.o: yaffs_mtdif2.c \
+   yportenv.h \
+   yaffs_mtdif2.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mtd/mtd.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   yaffs_packedtags2.h
+yaffs_mtdif2.h: \
+   yaffs_guts.h
+	@touch yaffs_mtdif2.h
+yaffs_mtdif.o: yaffs_mtdif.c \
+   yportenv.h \
+   yaffs_mtdif.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mtd/mtd.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mtd/nand.h
+yaffs_mtdif.h: \
+   yaffs_guts.h
+	@touch yaffs_mtdif.h
+yaffs_nand.o: yaffs_nand.c \
+   yaffs_nand.h \
+   yaffs_tagscompat.h \
+   yaffs_tagsvalidity.h
+yaffs_nandemul2k.h: \
+   yaffs_guts.h
+	@touch yaffs_nandemul2k.h
+yaffs_nand.h: \
+   yaffs_guts.h
+	@touch yaffs_nand.h
+yaffs_packedtags1.o: yaffs_packedtags1.c \
+   yaffs_packedtags1.h \
+   yportenv.h
+yaffs_packedtags1.h: \
+   yaffs_guts.h
+	@touch yaffs_packedtags1.h
+yaffs_packedtags2.o: yaffs_packedtags2.c \
+   yaffs_packedtags2.h \
+   yportenv.h \
+   yaffs_tagsvalidity.h
+yaffs_packedtags2.h: \
+   yaffs_guts.h \
+   yaffs_ecc.h
+	@touch yaffs_packedtags2.h
+yaffs_qsort.o: yaffs_qsort.c \
+   yportenv.h
+yaffs_tagscompat.o: yaffs_tagscompat.c \
+   yaffs_guts.h \
+   yaffs_tagscompat.h \
+   yaffs_ecc.h
+yaffs_tagscompat.h: \
+   yaffs_guts.h
+	@touch yaffs_tagscompat.h
+yaffs_tagsvalidity.o: yaffs_tagsvalidity.c \
+   yaffs_tagsvalidity.h
+yaffs_tagsvalidity.h: \
+   yaffs_guts.h
+	@touch yaffs_tagsvalidity.h
+yportenv.h: \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/wince.h) \
+   moduleconfig.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/direct.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/yaffs/util.h) \
+   devextras.h
+	@touch yportenv.h
+.PRECIOUS:	devextras.h \
+	yaffs_checkptrw.h \
+	yaffs_guts.h \
+	yaffs_mtdif2.h \
+	yaffs_mtdif.h \
+	yaffs_nandemul2k.h \
+	yaffs_nand.h \
+	yaffs_packedtags1.h \
+	yaffs_packedtags2.h \
+	yaffs_tagscompat.h \
+	yaffs_tagsvalidity.h \
+	yportenv.h \
+

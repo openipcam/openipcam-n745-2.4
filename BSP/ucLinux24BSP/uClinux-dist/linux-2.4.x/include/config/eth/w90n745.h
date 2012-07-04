@@ -1,0 +1,1 @@
+#define CONFIG_ETH_W90N745 1

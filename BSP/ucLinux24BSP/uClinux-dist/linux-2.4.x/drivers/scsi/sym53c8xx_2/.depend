@@ -1,50 +1,50 @@
 sym53c8xx.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/iomapped.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/scsi/ncr53c8xx/iomapped.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/default/tags.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/scsi/ncr53c8xx/default/tags.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/max/tags.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/scsi/ncr53c8xx/max/tags.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/scsi/scsicam.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/dma/addressing/mode.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/default/sync.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/max/lun.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/iomapped.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/scsi/ncr53c8xx/iomapped.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/default/tags.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/scsi/ncr53c8xx/default/tags.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/max/tags.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/scsi/ncr53c8xx/max/tags.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/scsi/scsicam.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/dma/addressing/mode.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/default/sync.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/scsi/sym53c8xx/max/lun.h)
 	@touch sym53c8xx.h
 sym_fw.o: sym_fw.c \
    sym_glue.h \
    sym_fw1.h \
    sym_fw2.h
 sym_glue.o: sym_glue.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
    sym_glue.h \
    ../scsi_module.c
 sym_glue.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/dma.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/spinlock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/signal.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/time.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timer.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/stat.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/blk.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/irq.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/dma.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/spinlock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/signal.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/time.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timer.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/stat.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/blk.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/irq.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
    ../scsi.h \
    ../hosts.h \
    ../constants.h \
    ../sd.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
    sym53c8xx.h \
    sym_misc.h \
    sym_conf.h \

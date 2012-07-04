@@ -1,0 +1,3 @@
+ifeq (open.o read_write.o devices.o file_table.o buffer.o super.o block_dev.o char_dev.o stat.o exec.o pipe.o namei.o fcntl.o ioctl.o readdir.o select.o fifo.o locks.o dcache.o inode.o attr.o bad_inode.o file.o iobuf.o dnotify.o filesystems.o namespace.o seq_file.o xattr.o noquot.o binfmt_script.o binfmt_flat.o proc/proc.o partitions/partitions.o ramfs/ramfs.o fat/fat.o msdos/msdos.o vfat/vfat.o nls/nls.o jffs2/jffs2.o romfs/romfs.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += fs.o
+endif

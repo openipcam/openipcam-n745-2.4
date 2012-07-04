@@ -1,0 +1,3 @@
+ifeq (chipreg.o cfi_probe.o cfi_util.o cfi_cmdset_0002.o gen_probe.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += chipslink.o
+endif

@@ -1,0 +1,3 @@
+ifeq (-D__KERNEL__ -I/home/nuvoton/uClinux-dist/linux-2.4.x/include -Wall -Wstrict-prototypes -Wno-trigraphs -O2 -fno-strict-aliasing -fno-common -fno-common -pipe -fno-builtin -D__linux__ -D__WB_EVB__ -DNO_MM -mapcs-32 -march=armv4 -mtune=arm7tdmi -mshort-load-bytes -nostdinc -iwithprefix include,$(strip $(subst $(comma),:,$(CFLAGS) $(EXTRA_CFLAGS_nostdinc) $(CFLAGS_noquot.o))))
+FILES_FLAGS_UP_TO_DATE += noquot.o
+endif

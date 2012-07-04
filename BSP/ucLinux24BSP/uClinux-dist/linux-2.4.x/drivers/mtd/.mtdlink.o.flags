@@ -1,0 +1,3 @@
+ifeq (mtdcore.o mtdpart.o mtdchar.o mtdblock.o mtd_blkdevs-24.o chips/chipslink.o maps/mapslink.o devices/devlink.o nand/nandlink.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += mtdlink.o
+endif

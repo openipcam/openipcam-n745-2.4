@@ -1,0 +1,3 @@
+ifeq (usbcore.o usb-ohci.o wbusbd/w90n745_usbd.o storage/storage.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += usbdrv.o
+endif

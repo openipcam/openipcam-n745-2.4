@@ -1,21 +1,21 @@
 fc-10.o: fc-10.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/fdc-io.h \
    ../lowlevel/fc-10.h
 fdc-io.o: fdc-io.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/dma.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/irq.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioport.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/dma.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/irq.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/fdc-io.h \
    ../lowlevel/fdc-isr.h \
@@ -24,22 +24,22 @@ fdc-io.o: fdc-io.c \
    ../lowlevel/ftape-ctl.h \
    ../lowlevel/ftape-calibr.h \
    ../lowlevel/fc-10.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/base.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/irq.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/dma.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/thr.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/max/rate.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/probe/fc10.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/mach2.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/base.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/irq.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/dma.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/thr.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/max/rate.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/probe/fc10.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/mach2.h)
 fdc-io.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fdreg.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fdreg.h \
    ../lowlevel/ftape-bsm.h
 	@touch fdc-io.h
 fdc-isr.o: fdc-isr.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/dma.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/dma.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/fdc-isr.h \
    ../lowlevel/fdc-io.h \
@@ -49,48 +49,48 @@ fdc-isr.o: fdc-isr.c \
    ../lowlevel/ftape-calibr.h \
    ../lowlevel/ftape-bsm.h
 ftape-bsm.o: ftape-bsm.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/ftape-bsm.h \
    ../lowlevel/ftape-ctl.h \
    ../lowlevel/ftape-rw.h
 ftape-bsm.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape-header-segment.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape-header-segment.h
 	@touch ftape-bsm.h
 ftape-buffer.o: ftape-buffer.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mman.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/dma.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mman.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/dma.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
    ../lowlevel/ftape-rw.h \
    ../lowlevel/ftape-read.h \
    ../lowlevel/ftape-tracing.h
 ftape-calibr.o: ftape-calibr.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/timex.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/timex.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/timex.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/timex.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/ftape-calibr.h \
    ../lowlevel/fdc-io.h
 ftape-ctl.o: ftape-ctl.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mman.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mman.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/ftape-io.h \
    ../lowlevel/ftape-ctl.h \
@@ -98,26 +98,26 @@ ftape-ctl.o: ftape-ctl.c \
    ../lowlevel/ftape-read.h \
    ../lowlevel/ftape-rw.h \
    ../lowlevel/ftape-bsm.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/two/drives.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/two/drives.h)
 ftape-ctl.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mtio.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape-vendors.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mtio.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape-vendors.h \
    ../lowlevel/ftape-rw.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape-header-segment.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape-header-segment.h
 	@touch ftape-ctl.h
 ftape-ecc.o: ftape-ecc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/ftape-ecc.h
 ftape-ecc.h: \
    ../lowlevel/ftape-bsm.h
 	@touch ftape-ecc.h
 ftape-format.o: ftape-format.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/ftape-io.h \
    ../lowlevel/ftape-ctl.h \
@@ -126,18 +126,18 @@ ftape-format.o: ftape-format.c \
    ../lowlevel/ftape-bsm.h \
    ../lowlevel/ftape-format.h
 ftape-init.o: ftape-init.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/signal.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/major.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/zftape.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/zftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/signal.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/major.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/zftape.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/zftape.h \
    ../lowlevel/ftape-init.h \
    ../lowlevel/ftape_syms.h \
    ../lowlevel/ftape-io.h \
@@ -149,24 +149,24 @@ ftape-init.o: ftape-init.c \
    ../lowlevel/ftape-buffer.h \
    ../lowlevel/ftape-proc.h \
    ../lowlevel/ftape-tracing.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/nr/buffers.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/no/trace/at/all.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/nr/buffers.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/no/trace/at/all.h)
 ftape-init.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/signal.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/linkage.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/signal.h
 	@touch ftape-init.h
 ftape-io.o: ftape-io.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/system.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mtio.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/system.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ioctl.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mtio.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/fdc-io.h \
    ../lowlevel/ftape-io.h \
@@ -177,30 +177,30 @@ ftape-io.o: ftape-io.c \
    ../lowlevel/ftape-init.h \
    ../lowlevel/ftape-calibr.h
 ftape-io.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape-vendors.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape-vendors.h
 	@touch ftape-io.h
 ftape-proc.o: ftape-proc.c \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/proc/fs.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/proc/fs.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/proc/fs.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
    ../lowlevel/ftape-io.h \
    ../lowlevel/ftape-ctl.h \
    ../lowlevel/ftape-proc.h \
    ../lowlevel/ftape-tracing.h
 ftape-proc.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h
 	@touch ftape-proc.h
 ftape-read.o: ftape-read.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/ftape-read.h \
    ../lowlevel/ftape-io.h \
@@ -210,10 +210,10 @@ ftape-read.o: ftape-read.c \
    ../lowlevel/ftape-ecc.h \
    ../lowlevel/ftape-bsm.h
 ftape-rw.o: ftape-rw.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/ftape-rw.h \
    ../lowlevel/fdc-io.h \
@@ -227,28 +227,28 @@ ftape-rw.h: \
    ../lowlevel/fdc-io.h \
    ../lowlevel/ftape-init.h \
    ../lowlevel/ftape-bsm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/unaligned.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/unaligned.h
 	@touch ftape-rw.h
 ftape-setup.o: ftape-setup.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/fdc-io.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/no/trace/at/all.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/base.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/irq.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/dma.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/thr.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/fdc/max/rate.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/probe/fc10.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/mach2.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/no/trace/at/all.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/base.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/irq.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/dma.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/thr.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/fdc/max/rate.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/probe/fc10.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/mach2.h)
 ftape_syms.o: ftape_syms.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/ftape-init.h \
    ../lowlevel/fdc-io.h \
@@ -260,26 +260,26 @@ ftape_syms.o: ftape_syms.c \
    ../lowlevel/ftape-bsm.h \
    ../lowlevel/ftape-buffer.h \
    ../lowlevel/ftape-format.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/no/trace/at/all.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/no/trace/at/all.h)
 ftape_syms.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h
 	@touch ftape_syms.h
 ftape-tracing.o: ftape-tracing.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
    ../lowlevel/ftape-tracing.h
 ftape-tracing.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/no/trace/at/all.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/no/trace.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/ft/full/debug.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/no/trace/at/all.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/no/trace.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/ft/full/debug.h)
 	@touch ftape-tracing.h
 ftape-write.o: ftape-write.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/string.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/segment.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/string.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/segment.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/ftape.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/qic117.h \
    ../lowlevel/ftape-tracing.h \
    ../lowlevel/ftape-write.h \
    ../lowlevel/ftape-read.h \

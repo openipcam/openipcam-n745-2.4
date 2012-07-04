@@ -7,9 +7,9 @@ skcsum.o: skcsum.c \
    h/skdrv2nd.h
 skge.o: skge.c \
    h/skversion.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
    h/skdrv1st.h \
    h/skdrv2nd.h
 skgehwt.o: skgehwt.c \
@@ -47,7 +47,7 @@ sklm80.o: sklm80.c \
    h/lm80.h \
    h/skdrv2nd.h
 skproc.o: skproc.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
    h/skdrv1st.h \
    h/skdrv2nd.h
 skqueue.o: skqueue.c \

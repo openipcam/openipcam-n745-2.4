@@ -1,0 +1,6 @@
+#define UTS_VERSION "#446 Tue Jul 3 19:48:27 CST 2012"
+#define LINUX_COMPILE_TIME "19:48:27"
+#define LINUX_COMPILE_BY "root"
+#define LINUX_COMPILE_HOST "embedded"
+#define LINUX_COMPILE_DOMAIN "localdomain"
+#define LINUX_COMPILER "gcc version 3.0"

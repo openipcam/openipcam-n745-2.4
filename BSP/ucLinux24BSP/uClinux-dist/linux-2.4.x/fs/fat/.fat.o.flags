@@ -1,0 +1,3 @@
+ifeq (buffer.o cache.o dir.o file.o inode.o misc.o cvf.o fatfs_syms.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += fat.o
+endif

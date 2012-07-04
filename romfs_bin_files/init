@@ -1,0 +1,17 @@
+#ifconfig eth0 10.130.249.126 netmask 255.255.0.0
+#ifconfig eth1 up
+#route add -net 239.0.0.0 netmask 255.0.0.0 eth0
+#ifconfig lo 127.0.0.1
+#route add -host 255.255.255.255 eth0
+#mkfs o
+#mount -t minix /dev/rom1 /config
+#mount -t ramfs none /config
+#mount -t ramfs none /swap
+mount -t proc none /proc
+#mount -t ramfs none /var/run
+mount -t ramfs none /usr
+#mount -t ramfs none /etc/Html/Jpeg
+#ifconfig eth0 mtu 1492
+#dns
+#inetd&
+sh

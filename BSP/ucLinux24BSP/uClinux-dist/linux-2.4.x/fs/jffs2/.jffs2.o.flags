@@ -1,0 +1,3 @@
+ifeq (compr.o dir.o file.o ioctl.o nodelist.o malloc.o read.o nodemgmt.o readinode.o write.o scan.o gc.o symlink-v24.o build.o erase.o background.o fs.o writev.o super-v24.o crc32.o rbtree.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += jffs2.o
+endif

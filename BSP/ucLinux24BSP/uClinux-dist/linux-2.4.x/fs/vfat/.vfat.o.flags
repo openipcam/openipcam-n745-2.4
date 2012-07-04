@@ -1,0 +1,3 @@
+ifeq (namei.o vfatfs_syms.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += vfat.o
+endif

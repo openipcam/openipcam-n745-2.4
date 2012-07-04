@@ -1,1 +1,1 @@
-#define CONFIG_SOUND 1
+#undef  CONFIG_SOUND

@@ -1,0 +1,3 @@
+ifeq (ll_rw_blk.o blkpg.o genhd.o elevator.o blkmem.o rd.o loop.o flash/wbflash.o export.o,$(strip $(subst $(comma),:,$(EXTRA_LDFLAGS) $(obj-y))))
+FILES_FLAGS_UP_TO_DATE += block.o
+endif

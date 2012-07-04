@@ -3,13 +3,13 @@ ati_pcigart.h: \
 	@touch ati_pcigart.h
 drm_agpsupport.h: \
    drmP.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h
 	@touch drm_agpsupport.h
 drm_auth.h: \
    drmP.h
 	@touch drm_auth.h
 drm_bufs.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
    drmP.h
 	@touch drm_bufs.h
 drm_context.h: \
@@ -17,18 +17,18 @@ drm_context.h: \
 	@touch drm_context.h
 drm_dma.h: \
    drmP.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h
 	@touch drm_dma.h
 drm_drawable.h: \
    drmP.h
 	@touch drm_drawable.h
 drm_fops.h: \
    drmP.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h
 	@touch drm_fops.h
 drm.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/ioctl.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/xfree86/version.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/ioctl.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/xfree86/version.h) \
    mga_drm.h \
    i810_drm.h \
    r128_drm.h \
@@ -50,42 +50,42 @@ drm_lock.h: \
 	@touch drm_lock.h
 drm_memory.h: \
    drmP.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wrapper.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wrapper.h
 	@touch drm_memory.h
 drmP.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/current.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/miscdevice.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/init.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/file.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/version.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/mm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/pgtable.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/mman.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/mtrr.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp.h) \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/agp/module.h) \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/types.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/agp_backend.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/pgalloc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/current.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/miscdevice.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/proc_fs.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/init.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/file.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/wrapper.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/version.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/mm.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/pgtable.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/mman.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/uaccess.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/mtrr.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/agp.h) \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/agp/module.h) \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/types.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/agp_backend.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/tqueue.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/pgalloc.h \
    drm.h
 	@touch drmP.h
 drm_proc.h: \
    drmP.h
 	@touch drm_proc.h
 drm_scatter.h: \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/vmalloc.h \
    drmP.h
 	@touch drm_scatter.h
 drm_stub.h: \
@@ -95,7 +95,7 @@ drm_vm.h: \
    drmP.h
 	@touch drm_vm.h
 ffb_context.o: ffb_context.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
    ffb.h \
    drmP.h \
    ffb_drv.h
@@ -103,9 +103,9 @@ ffb_drv.o: ffb_drv.c \
    ffb.h \
    drmP.h \
    ffb_drv.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sched.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/shmparam.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sched.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/smp_lock.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/shmparam.h \
    drm_auth.h \
    drm_bufs.h \
    drm_dma.h \
@@ -123,8 +123,8 @@ gamma_dma.o: gamma_dma.c \
    gamma.h \
    drmP.h \
    gamma_drv.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h
 gamma_drv.o: gamma_drv.c \
    gamma.h \
    drmP.h \
@@ -148,11 +148,11 @@ i810_dma.o: i810_dma.c \
    i810.h \
    drmP.h \
    i810_drv.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/drm/i810/xfree/41.h)
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/drm/i810/xfree/41.h)
 i810_drm.h: \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/xfree86/version.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/xfree86/version.h)
 	@touch i810_drm.h
 i810_drv.o: i810_drv.c \
    i810.h \
@@ -178,8 +178,8 @@ i830_dma.o: i830_dma.c \
    i830.h \
    drmP.h \
    i830_drv.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h
 i830_drv.o: i830_drv.c \
    i830.h \
    drmP.h \
@@ -204,8 +204,8 @@ mga_dma.o: mga_dma.c \
    mga.h \
    drmP.h \
    mga_drv.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h
 mga_drv.o: mga_drv.c \
    mga.h \
    drmP.h \
@@ -239,10 +239,10 @@ r128_cce.o: r128_cce.c \
    r128.h \
    drmP.h \
    r128_drv.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h
 r128_drm.h: \
-   $(wildcard /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/config/xfree86/version.h)
+   $(wildcard /home/nuvoton/uClinux-dist/linux-2.4.x/include/config/xfree86/version.h)
 	@touch r128_drm.h
 r128_drv.o: r128_drv.c \
    r128.h \
@@ -270,13 +270,13 @@ r128_state.o: r128_state.c \
    drmP.h \
    r128_drv.h \
    drm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h
 radeon_cp.o: radeon_cp.c \
    radeon.h \
    drmP.h \
    radeon_drv.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/interrupt.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h
 radeon_drv.o: radeon_drv.c \
    radeon.h \
    drmP.h \
@@ -303,7 +303,7 @@ radeon_state.o: radeon_state.c \
    drmP.h \
    radeon_drv.h \
    drm.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h
 sis_drv.o: sis_drv.c \
    sis.h \
    drmP.h \
@@ -326,18 +326,18 @@ sis_drv.o: sis_drv.c \
    drm_vm.h \
    drm_stub.h
 sis_ds.o: sis_ds.c \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/module.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/delay.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/errno.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/slab.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/poll.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/asm/io.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/pci.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/module.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/delay.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/errno.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/kernel.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/slab.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/poll.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/asm/io.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/pci.h \
    sis_ds.h
 sis_mm.o: sis_mm.c \
    sis.h \
-   /home/andy/tmp/745/W90PN745/uClinux-dist/linux-2.4.x/include/linux/sisfb.h \
+   /home/nuvoton/uClinux-dist/linux-2.4.x/include/linux/sisfb.h \
    drmP.h \
    sis_drm.h \
    sis_drv.h \
