@@ -1,0 +1,245 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <getopt.h>
+#include <errno.h>
+#include <limits.h>
+
+#define inpw(port)	(*((volatile unsigned int *)port));
+#define outpw(port,val)  (*((volatile unsigned int *)port)=(val));
+
+#define Base_Addr               0xFFF00000;
+#define BASE_IN_DEC		(unsigned int)4293918720;
+#define GPIO_CFG                (Base_Addr+0x83000);
+#define GPIO_OFFSET		0xFFF80000;
+
+/*
+#define writeGPIO(reg, val) 	(*((volatile unsigned int *)(GPIO_CFG+reg))=(val));
+#define readGPIO(reg)           (*((volatile unsigned int *)(GPIO_CFG+reg)));
+outpw ( address , val)
+inpw (address)
+
+eg
+
+myVal = inpw (0xfff83020);
+
+printk ('ADDRESS value is:  %s', myVal); 
+*/
+
+
+void show_eth(){
+	int i;
+	printf ("We are in show eth0\n");
+	i= inpw (0xfff83020);
+	printf ("value at 0xfff83020 is: %d",i);
+}
+
+
+void fix_eth(){
+	int i;
+	i = outpw (0xFFF83020,0x55555);
+	printf ("\nDid we get lucky. Punk?\n");
+}
+int bit_value (int value,int pos) {
+	if ( ((value) & (1<<(pos))) )
+           { 
+		return (1);
+	    }
+	else {
+		return (0);
+	}
+}
+
+
+void show_p(int val){
+	int i;	unsigned long j;
+
+	printf ("\n");
+
+	//SHOW GPIO Port 0 (directly)
+	i= inpw (0xfff83000);
+        printf ("\nGPIO_CFG0 0xFFF830000 Value: %d\n",i);
+        printf ("\nPT0CFG0:  %d %d", bit_value(i,0),bit_value(i,1));
+        printf ("\nPT0CFG1:  %d %d", bit_value(i,2),bit_value(i,3));
+        printf ("\nPT0CFG2:  %d %d", bit_value(i,4),bit_value(i,5));
+        printf ("\nPT0CFG3:  %d %d", bit_value(i,6),bit_value(i,7));
+        printf ("\nPT0CFG4:  %d %d", bit_value(i,8),bit_value(i,9));
+	printf ("\n");
+
+	//SHOW GPIO_DIR0
+	i= inpw (0xFFF83004);
+	printf ("\nGPIO_DIR0 0xFFF83004 Value: %d\n",i);
+	printf ("\nOMDEN0[4:0]:  %d %d %d %d %d\n", bit_value (i,0), bit_value(i,1), bit_value (i,2),bit_value (i,3), bit_value(i,4) );
+	printf ("\nPUPEN0[3:0]:  %d %d %d %d\n", bit_value(i,16), bit_value(i,17), bit_value(i,18), bit_value (i,19));
+
+	//SHOW GPIO_DATAOUT0
+	i= inpw (0xFFF83008);
+	printf ("\nDATAOUT0:  Value is: %d\n",i);
+	i=i <<3;
+	i=i >>3;
+	printf ("\nDATAOUT0: Bitwise cleared value is: %d \n",i);
+
+
+
+/*        //SHOW GPIO location VAL
+        printf ("\nUSING GPIO + val: %d\n",val);
+        j = (unsigned int)GPIO_OFFSET+val;
+        printf ("\nUsing GPIO Value %X\n",j);
+        i = inpw (j);
+        printf ("GPIO 1 Port 0  LOC=%X vs 0xFFF83020? Value: %d\n",j,i);
+        printf ("PT0CFG0:  %d %d", bit_value(i,0),bit_value(i,1));
+        printf ("\nPT0CFG1:  %d %d", bit_value(i,2),bit_value(i,3));
+        printf ("\nPT0CFG2:  %d %d", bit_value(i,4),bit_value(i,5));
+        printf ("\nPT0CFG3:  %d %d", bit_value(i,6),bit_value(i,7));
+        printf ("\nPT0CFG4:  %d %d", bit_value(i,8),bit_value(i,9));
+	printf ("\n");
+
+*/
+
+        //SHOW GPIO PORT 1 CONFIG REGISTER
+        i = inpw (0xfff83010);
+        printf ("\nGPIO Port 1 0xFFF83010 CONFIG REGISTER Value: %d\n",i);
+        printf ("\nPT1CFG0:  %d %d", bit_value(i,0),bit_value(i,1));
+        printf ("\nPT1CFG1:  %d %d", bit_value(i,2),bit_value(i,3));
+	printf ("\n");
+
+	//SHOW GPIO_DIR1
+	i= inpw (0xFFF8301R4);
+        printf ("\nGPIO_DIR1 0xFFF83014 Value: %d\n",;
+        printf ("\nOMDEN2[7:0]:  %d %d %d %d %d %d %d\n", bit_value (i,0), bit_value(i,1), bit_value (i,2),bit_value (i,3), bit_value(i,4), 
+                bit_value (i,5), bit_value(i,6), bit_value (i,7));
+
+        printf ("\nOMDEN2[9:8]: %d %d\n", bit_value(i,8), bit_value (i,9));
+
+
+
+	//SHOW GPIO_CFG2
+	i = inpw (0xFFF83020);
+	printf ("\nGPIO_CFG2  0xFFF83020 Value: %d\n",i);
+        printf ("\nPT2CFG0:  %d %d", bit_value(i,0),bit_value(i,1));
+        printf ("\nPT2CFG1:  %d %d", bit_value(i,2),bit_value(i,3));
+        printf ("\nPT2CFG2:  %d %d", bit_value(i,4),bit_value(i,5));
+        printf ("\nPT2CFG3:  %d %d", bit_value(i,6),bit_value(i,7));
+        printf ("\nPT2CFG4:  %d %d", bit_value(i,8),bit_value(i,9));
+        printf ("\nPT2CFG0:  %d %d", bit_value(i,10),bit_value(i,11));
+        printf ("\nPT2CFG1:  %d %d", bit_value(i,12),bit_value(i,13));
+        printf ("\nPT2CFG2:  %d %d", bit_value(i,14),bit_value(i,15));
+        printf ("\nPT2CFG3:  %d %d", bit_value(i,16),bit_value(i,17));
+        printf ("\nPT2CFG4:  %d %d", bit_value(i,18),bit_value(i,19));
+	printf ("\n");
+
+	//SHOW GPIO_DIR2
+	i= inpw (0xFFF83024);
+	printf ("\nGPIO_DIR2 0xFFF83024 Value: %d\n",i);
+	printf ("\nOMDEN2[7:0]:  %d %d %d %d %d %d %d\n", bit_value (i,0), bit_value(i,1), bit_value (i,2),bit_value (i,3), bit_value(i,4), 
+		bit_value (i,5), bit_value(i,6), bit_value (i,7));
+
+	printf ("\nOMDEN2[9:8]: %d %d\n", bit_value(i,8), bit_value (i,9));
+
+
+	printf ("\nPUPEN2: %d %d %d %d %d %d %d %d %d",bit_value(i,0),bit_value(i,1), bit_value (i,2),bit_value (i,3), bit_value(i,4),
+		 bit_value (i,5), bit_value(i,6), bit_value (i,7), bit_value(i,8), bit_value (i,9));
+
+
+	//SHOW GPIO_CFG4
+        i = inpw (0xFFF83040);
+        printf ("\nGPIO_CFG4  0xFFF83040 Value: %d\n",i);
+        printf ("\nPT4CFG10:  %d %d", bit_value(i,20),bit_value(i,21));
+	printf ("\n");
+
+	//SHOW GPIO_DIR4
+
+
+
+	
+
+
+
+
+	printf ("\n\n");//Putting it here, as we'll be adding lots of other shit above...
+}
+
+
+void usage() {
+	printf ("\n -r ADDRESS at offset 0xFFF8000 + r value   Reads a value from hex address specified\n");
+	printf (" -w ADDRESS VALUE		Writes a value to the hex address specified\n\n\n");
+	printf (" -e 					Reads the ethernet gpio value\n");
+	printf (" -p					Prints the gpio port value bits\n");
+	printf (" -f					Push 0x55555 at Ethernet GPIO\n");
+	printf ("Example:  getaddr   -r 3020\n\n");
+}
+
+void read_value(int loc) {
+	int i;unsigned long where;
+	
+	printf ("HEX Value: %x\nDec Value: %d\n",loc,loc);
+	where = GPIO_OFFSET+loc;
+	printf ("Offset to read: %X\n", where);
+	i = inpw (where);
+	printf ("Value at %x is %d\n",where, i);
+}
+
+
+void write_value (long loc, int val) {
+        int i;unsigned long where;
+	where = BASE_IN_DEC + loc;
+
+        printf ("HEX Value: %x\nDec Value: %d\n",loc,loc);
+        printf ("Offset to write: %X\n", where);
+        i = outpw (where, val);
+        printf ("Writing Value at %x with  %d\n",where, val);
+	printf ("\n\nReading Value again:\n");
+	read_value (loc);
+}
+int main (int argc, char *const *argv)
+{
+	int c;
+	char *endptr;
+	long loc, val;
+
+	if (argc < 2) {
+		usage();
+		return(0);
+	}
+
+	while  ((c = getopt (argc, argv, "r:w:ep:f")) != -1) {
+		switch (c) {
+			case 'f':
+				printf ("Fix eth0?\n");
+				fix_eth();
+				return(0);
+			case 'r':
+				printf ("got r!\n");
+				loc = strtol(optarg, &endptr, 16);
+				read_value(loc);
+				//do read value, and show
+				return(0);
+			break;
+			
+			case 'w':
+				printf ("got w!\n");
+				loc = strtol(optarg,&endptr,16);
+				val = atol( argv[optind++] );
+				//printf ("loc: %d val: %d\n",loc,val);
+				write_value (loc, val);
+				//do write value and show
+				return(0);
+			break;
+			
+			case 'e':
+				printf ("got e!\n");
+				show_eth();
+				return (0);
+				break;
+
+
+			case 'p':
+				printf ("In P");
+				val = atoi(optarg);
+				show_p(val);
+				return (0);
+				break;
+		}		
+	}
+
+	return (0);	
+}

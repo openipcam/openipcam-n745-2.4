@@ -1,5 +1,5 @@
-#define UTS_VERSION "#446 Tue Jul 3 19:48:27 CST 2012"
-#define LINUX_COMPILE_TIME "19:48:27"
+#define UTS_VERSION "#450 Tue Jul 10 17:43:53 CST 2012"
+#define LINUX_COMPILE_TIME "17:43:53"
 #define LINUX_COMPILE_BY "root"
 #define LINUX_COMPILE_HOST "embedded"
 #define LINUX_COMPILE_DOMAIN "localdomain"
